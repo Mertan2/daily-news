@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Specific-Interest Report — May 13, 2026</title>
+<style>
+  :root {
+    --bg: #0a0e14;
+    --panel: #131820;
+    --panel-2: #1b2230;
+    --border: #2a3441;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #79c0ff;
+    --warn: #ff7b72;
+    --good: #7ee787;
+    --highlight: #f0883e;
+    --purple: #d2a8ff;
+    --pink: #ffa7c4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .container { max-width: 940px; margin: 0 auto; padding: 32px 24px 64px; }
+  header { padding-bottom: 20px; margin-bottom: 28px; border-bottom: 2px solid var(--border); }
+  .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
+  h1 { font-size: 32px; margin: 0 0 8px; }
+  .subtitle { color: var(--muted); font-size: 15px; }
+  .toc {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 18px 0 32px;
+  }
+  .toc ol { margin: 6px 0 0; padding-left: 22px; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  section.virus { border-left-color: var(--warn); }
+  section.mideast { border-left-color: var(--warn); }
+  section.quantum { border-left-color: var(--purple); }
+  section.neuro { border-left-color: var(--pink); }
+  section.science { border-left-color: var(--good); }
+  h2 { margin: 0 0 6px; font-size: 22px; }
+  .deck { color: var(--muted); font-style: italic; margin: 0 0 14px; }
+  h3 { font-size: 16px; margin: 18px 0 4px; color: var(--text); }
+  p { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  a:hover { text-decoration: underline; }
+  .kv {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 6px 16px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  .kv b { color: var(--accent); }
+  .pill {
+    display: inline-block;
+    padding: 2px 9px;
+    font-size: 11px;
+    background: var(--border);
+    color: var(--text);
+    border-radius: 10px;
+    margin: 0 6px 4px 0;
+    letter-spacing: 0.5px;
+  }
+  .pill.warn { background: #4a1f1f; color: var(--warn); }
+  .pill.good { background: #1f3a25; color: var(--good); }
+  .pill.tech { background: #2a3a52; color: var(--accent); }
+  .takeaway {
+    background: var(--panel-2);
+    border-left: 3px solid var(--highlight);
+    padding: 10px 14px;
+    margin: 14px 0 4px;
+    font-size: 14px;
+  }
+  .takeaway b { color: var(--highlight); }
+  .sources { font-size: 13px; color: var(--muted); margin-top: 14px; border-top: 1px dashed var(--border); padding-top: 10px; }
+  .sources a { color: var(--muted); }
+  footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  @media (max-width: 640px) {
+    .kv { grid-template-columns: 1fr; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="eyebrow">Specific-Interest Report</div>
+    <h1>Topics you flagged in <code>request.md</code> — May 13, 2026</h1>
+    <div class="subtitle">AI Market · Neurological Computers · Quantum Computing · New Spreading Virus · Middle East Tensions · Critical Science. Companion to <a href="daily-briefing.html">daily-briefing.html</a> and <a href="weekly-report.html">weekly-report.html</a>.</div>
+  </header>
+
+  <div class="toc">
+    <strong>Contents</strong>
+    <ol>
+      <li><a href="#ai">AI Market — Anthropic 80×, Apple vs Gemini, OpenAI Realtime-2</a></li>
+      <li><a href="#neuro">Neurological Computers — Neuralink everywhere-robot, neuromorphic at 1/1000 power</a></li>
+      <li><a href="#quantum">Quantum Computing — Q-CTRL × IBM 3,000× speedup, JUPITER 50-qubit sim</a></li>
+      <li><a href="#virus">New Spreading Virus — MV Hondius Andes hantavirus, 11 cases, 3 deaths</a></li>
+      <li><a href="#mideast">Middle East Tensions — Iran ceasefire on "life support," Gaza, Israel–Türkiye</a></li>
+      <li><a href="#science">Any New Thing in Science (Critical) — positronium interference, super El Niño, GLP-1 maintenance</a></li>
+    </ol>
+  </div>
+
+  <!-- AI MARKET -->
+  <section id="ai">
+    <h2>1. AI Market</h2>
+    <p class="deck">Anthropic projects ~80× growth in 2026. Alphabet is past $4.6T. OpenAI is rebuilding around real-time voice. The capital-spend cycle keeps lengthening.</p>
+
+    <div class="kv">
+      <b>Anthropic</b><div>+$40B Google + $5B Amazon (with $100B AWS spend); $1.5B Blackstone/Goldman/General Atlantic JV to deploy Claude across portfolio cos; chip deals with Google &amp; Broadcom reportedly worth hundreds of billions; Claude for Financial Services and M365 integration launched.</div>
+      <b>OpenAI</b><div>Three new real-time audio models — GPT-Realtime-2, GPT-Realtime-Translate (70+ languages), GPT-Realtime-Whisper. Raising ~$4B for "OpenAI Deployment Company"; weighing engineering-services acquisitions.</div>
+      <b>Alphabet</b><div>Q1 revenue $110B (+22%); Google Cloud +63% to $20B; Gemini API run-rate ~$15B (up from ~$9B). Market cap above $4.6T (+~160% YoY). Android being rebuilt around Gemini before Apple's WWDC AI reboot.</div>
+      <b>Microsoft</b><div>Q1 revenue $82.9B; Azure +39%; all three segments beat. Stock −4% on FY26 capex guide of $190B.</div>
+      <b>Meta</b><div>Q1 +33% to $56B; 2026 capex guidance raised to $135B.</div>
+      <b>Tesla</b><div>Consensus 45¢ EPS on $24.8B revenue — both down y/y. Dan Ives still has TSLA on his AI-winner list.</div>
+    </div>
+
+    <h3>What changed this week</h3>
+    <ul>
+      <li><strong>Anthropic moves enterprise hard.</strong> The Blackstone JV is the most concrete sign that frontier-LLM revenue is consolidating around portfolio-level deployments rather than API self-service. Combined with the Google &amp; Amazon refresh, Anthropic now sits on multi-year compute and distribution.</li>
+      <li><strong>Google's distribution flywheel.</strong> 63% cloud growth and ~$15B Gemini API run-rate, plus an Android rebuild around Gemini, is the strongest case yet that owning "most of the stack" matters more than the model alone.</li>
+      <li><strong>Microsoft's spend signal scared the market.</strong> $190B FY26 capex is a step-change. Investors are tolerating it for now — but earnings dispersion between "AI winners and losers" is widening.</li>
+      <li><strong>Anthropic's Claude Mythos disclosure (yesterday)</strong> — a model the company says it is <em>withholding</em> because it can autonomously find software vulnerabilities — was a watershed for responsible-scaling discourse, and a likely catalyst for new Biden/Trump-era policy fights.</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> The market is becoming a stack-and-distribution game more than a model game. Anthropic is buying its way to scale; Google is leveraging an installed base; OpenAI is monetising real-time interfaces; Apple is the next test case (WWDC). Watch for an antitrust angle if rare-earth talks at the Trump–Xi summit veer into AI hardware.</div>
+
+    <div class="sources">
+      <a href="https://medium.com/@abhishekmonpara198/the-2026-ai-sovereign-era-openais-courtroom-chaos-anthropic-s-white-house-battles-and-google-s-5e63f48d9721">Medium — 2026 AI Sovereign Era</a> ·
+      <a href="https://press.airstreet.com/p/state-of-ai-may-2026">Air Street — State of AI May 2026</a> ·
+      <a href="https://llm-stats.com/llm-updates">LLM-Stats — Updates</a> ·
+      <a href="https://blockchain.news/ainews/anthropic-and-openai-dominate-2026-ai-race">Blockchain.News — Anthropic / OpenAI dominate</a> ·
+      <a href="https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html">CNBC — Gemini-on-Android</a> ·
+      <a href="https://www.cnbc.com/2026/05/10/alphabet-160percent-rally-in-year-reflects-value-of-owning-most-of-ai-stack.html">CNBC — Alphabet +160% YoY</a> ·
+      <a href="https://www.cnbc.com/2026/05/03/big-tech-earnings-show-how-big-smart-spending-can-be-rewarded-by-the-market.html">CNBC — Smart spend rewarded</a> ·
+      <a href="https://imfounder.com/science-tech/ai/ai-updates-may-2026/">IM Founder — 7 explosive AI updates</a>
+    </div>
+  </section>
+
+  <!-- NEUROLOGICAL COMPUTERS -->
+  <section id="neuro" class="neuro">
+    <h2>2. Neurological Computers</h2>
+    <p class="deck">Two parallel races: implantable BCIs (Neuralink, Synchron, Precision Neuroscience) and neuromorphic chips (Loihi 3, NorthPole, Akida 2.0).</p>
+
+    <h3>Implantable BCIs</h3>
+    <ul>
+      <li><span class="pill tech">May 7</span>Neuralink unveiled a <strong>next-generation surgical robot capable of accessing virtually any region of the human brain</strong>. Long-term goal: a "generalised neural interface" covering paralysis, Parkinson's, epilepsy, sensory disorders.</li>
+      <li><span class="pill tech">Roadmap</span>Musk confirmed <strong>high-volume production</strong> in 2026 with "almost entirely automated" surgery; threads now go <em>through</em> the dura without removal.</li>
+      <li><span class="pill">Competition</span>BISC's ultra-thin, single-chip implant packs tens of thousands of electrodes with a wireless link.</li>
+      <li><span class="pill">Reality check</span>STAT's January feature flagged the gap between Neuralink's vision and clinical trial pace; Synchron remains the more cautious clinical leader.</li>
+    </ul>
+
+    <h3>Neuromorphic / brain-inspired chips</h3>
+    <ul>
+      <li><span class="pill">Apr–May</span><strong>A new brain-like chip cuts AI energy use by up to 70%</strong> while enabling on-device learning (ScienceDaily, April).</li>
+      <li><span class="pill tech">Hardware</span>Intel's Loihi 3, IBM's NorthPole and BrainChip's Akida 2.0 deliver brain-inspired compute at <strong>~1/1000 the power of GPUs</strong>, with ~100× faster sensory processing.</li>
+      <li><span class="pill">Theory</span>Nature Communications: "Neuromorphic Twins" for personalised brain-state modelling in real time — bridges between BCIs and adaptive therapy.</li>
+      <li><span class="pill">Math benchmark</span>Brain-inspired machines outperform expectations on math-heavy benchmarks (ScienceDaily, February).</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> The "neurological computer" stack is finally vertical: implant → on-device neuromorphic compute → adaptive personal models. Expect <em>regulatory</em> pace, not engineering pace, to be the binding constraint in 2026–27 — and watch for whether the FDA's pending Makary resignation slows or accelerates BCI approvals.</div>
+
+    <div class="sources">
+      <a href="https://x.com/elonmusk/status/2006513491105165411">Musk on X — Neuralink mass production</a> ·
+      <a href="https://yourstory.com/2026/05/neuralink-surgical-robot-brain-interface-2026">YourStory — Surgical robot</a> ·
+      <a href="https://thedebrief.org/neuralink-set-to-launch-high-volume-brain-implant-production-as-competitors-weigh-in/">The Debrief — Competitor view</a> ·
+      <a href="https://www.foxnews.com/health/elon-musk-shares-plan-mass-produce-brain-implants-paralysis-neurological-disease">Fox News — Mass production plan</a> ·
+      <a href="https://www.mddionline.com/digital-health/elon-musk-s-neuralink-to-ramp-up-bci-device-production-in-2026">MDDI — BCI ramp 2026</a> ·
+      <a href="https://www.statnews.com/2026/01/05/neuralink-brain-computer-interface-medical-device-vs-transhumanism/">STAT — Vision vs. reality</a> ·
+      <a href="https://www.sciencedaily.com/releases/2026/04/260422044633.htm">ScienceDaily — 70% energy cut</a> ·
+      <a href="https://techxplore.com/news/2026-05-brain-smarter-efficient-hardware.html">TechXplore — Brain-inspired hardware</a> ·
+      <a href="https://www.aitechboss.com/neuromorphic-computing-2026-ai-hardware/">AI Tech Boss — Neuromorphic 2026</a> ·
+      <a href="https://www.nature.com/articles/s41467-026-68923-1">Nature Comms — Neuromorphic Twins</a> ·
+      <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2025.1570104/full">Frontiers — Neuromorphic algorithms</a> ·
+      <a href="https://www.sciencedaily.com/releases/2026/02/260213223923.htm">ScienceDaily — Brain machines do math</a>
+    </div>
+  </section>
+
+  <!-- QUANTUM -->
+  <section id="quantum" class="quantum">
+    <h2>3. Quantum Computing</h2>
+    <p class="deck">A 3,000× speedup on a real materials problem; a fully simulated 50-qubit machine; and a path to fault-tolerance now measured in months, not decades.</p>
+
+    <h3>Headline this week</h3>
+    <ul>
+      <li><strong>Q-CTRL × IBM:</strong> 3,000× speedup simulating the Fermi–Hubbard model on a 120-qubit IBM system using runtime error suppression. The first credible "useful quantum advantage" in materials-science workloads, integrated into the IBM Quantum Platform.</li>
+      <li><strong>JUPITER (Germany):</strong> Europe's new exascale supercomputer fully simulated a 50-qubit quantum computer classically — a benchmark wall for "quantum supremacy" claims and a tool for verifying real quantum systems.</li>
+      <li><strong>IBM Nighthawk (120-qubit):</strong> On track for verified quantum advantage by end-2026, with a 10× error-correction speed-up booked a year ahead of schedule.</li>
+    </ul>
+
+    <h3>Where the field stands</h3>
+    <ul>
+      <li><span class="pill">Hardware</span>IBM Condor 433 qubits · Google Willow 1,000 qubits · Atom Computing 1,225 qubits (neutral atoms) · Microsoft topological-qubit prototypes.</li>
+      <li><span class="pill good">Error correction</span>Google's early-2026 surface-code result showed adding more physical qubits to a logical qubit <em>reduces</em> the logical error rate — the long-elusive "break-even."</li>
+      <li><span class="pill tech">Money</span>$17.3B in active quantum-computing investment in 2026, per industry trackers.</li>
+      <li><span class="pill">Neutral atoms</span>IEEE Spectrum profile flags neutral-atom platforms as 2026's biggest scaling story.</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> "Practical quantum advantage" has stopped being a theoretical claim and become a workload-specific benchmark. Materials science is now the first beachhead; pharma and crypto-cracking remain medium-term. The competitive shape is <em>multi-platform</em> (superconducting, neutral atoms, topological), not winner-take-all.</div>
+
+    <div class="sources">
+      <a href="https://quantumcomputingreport.com/news/">Quantum Computing Report</a> ·
+      <a href="https://www.programming-helper.com/tech/quantum-computing-breakthrough-2026-ibm-google-qubit-race">Programming Helper — Quantum 2026</a> ·
+      <a href="https://www.programming-helper.com/tech/quantum-computing-commercial-breakthrough-2026-ibm-google-achievements">Programming Helper — Commercial breakthrough</a> ·
+      <a href="https://www.programming-helper.com/tech/quantum-computing-race-2026-ibm-google-microsoft-breakthroughs-advantage">Programming Helper — Race heats up</a> ·
+      <a href="https://spectrum.ieee.org/neutral-atom-quantum-computing">IEEE Spectrum — Neutral-atom</a> ·
+      <a href="https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance">IBM — Processors &amp; algorithms</a> ·
+      <a href="https://www.ibm.com/quantum/blog/large-scale-ftqc">IBM — Path to FTQC</a> ·
+      <a href="https://www.ibm.com/roadmaps/quantum/2026/">IBM Quantum Atlas 2026</a> ·
+      <a href="https://www.spinquanta.com/news-detail/quantum-computers-the-revolutionary-technology-transforming-computing-in-2026">SpinQ — 2026 transformation</a>
+    </div>
+  </section>
+
+  <!-- VIRUS -->
+  <section id="virus" class="virus">
+    <h2>4. New Spreading Virus — Andes Hantavirus (MV Hondius)</h2>
+    <p class="deck">11 cases, 3 deaths, 23 nationalities. The first plausibly person-to-person hantavirus cluster outside South America. Risk to the public remains low.</p>
+
+    <div class="kv">
+      <b>Pathogen</b><div>Andes hantavirus — the only hantavirus documented to spread person-to-person; transmission requires close, prolonged contact with a symptomatic individual.</div>
+      <b>Vehicle</b><div>MV Hondius — Dutch-flagged cruise ship, ~23 nationalities including 9 EU/EEA, US passengers from at least 5 states.</div>
+      <b>Case count</b><div>11 cases (9 confirmed, 2 probable) as of May 12. 3 deaths. Illness window April 6–28.</div>
+      <b>Course</b><div>Fever → GI symptoms → rapid progression to pneumonia, ARDS and shock (hantavirus pulmonary syndrome).</div>
+      <b>Risk assessment</b><div>WHO: low risk to global population. CDC: low risk to US public. WHO chief Tedros: "Not another Covid."</div>
+      <b>Response</b><div>CDC met the ship in Canary Islands (May 7); ECDC and WHO coordinating across 9 EU/EEA countries; case isolation, medical evacuation and lab investigations underway. France's Macron: "under control" domestically.</div>
+    </div>
+
+    <h3>What to watch</h3>
+    <ul>
+      <li>Whether <strong>any non-cruise-linked secondary transmission</strong> emerges among contacts in the next 14–28 days.</li>
+      <li>How robust the person-to-person transmission signal really is — Nature notes uncertainty around droplet vs. close-contact mode.</li>
+      <li>Cruise-industry implications: ship sanitation protocols, ECDC reporting templates, port-call screening.</li>
+      <li>Whether vaccines/therapeutics under development for Sin Nombre virus get repurposed-attention for Andes virus.</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> This is not a pandemic precursor and authorities are united on that. But it <em>is</em> a useful stress test of post-Covid surveillance infrastructure, and it puts hantavirus on the WHO priority-pathogen radar.</div>
+
+    <div class="sources">
+      <a href="https://www.cdc.gov/hantavirus/situation-summary/index.html">CDC — Situation summary</a> ·
+      <a href="https://www.cdc.gov/han/php/notices/han00528.html">CDC HAN 00528</a> ·
+      <a href="https://www.cdc.gov/hantavirus/faq/index.html">CDC — FAQ</a> ·
+      <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599">WHO — DON599</a> ·
+      <a href="https://www.who.int/news/item/07-05-2026-who-s-response-to-hantavirus-cases-linked-to-a-cruise-ship">WHO — Response statement</a> ·
+      <a href="https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak">ECDC — May 12 update</a> ·
+      <a href="https://www.ecdc.europa.eu/en/publications-data/hantavirus-associated-cluster-illness-cruise-ship-ecdc-assessment-and">ECDC — Assessment</a> ·
+      <a href="https://www.nbcnews.com/health/health-news/hantavirus-us-andes-cruise-ship-2026-spread-symptoms-rcna344575">NBC News — Spread &amp; symptoms</a> ·
+      <a href="https://www.cnn.com/2026/05/11/us/live-news/hantavirus-cruise-outbreak">CNN — Passenger monitoring</a> ·
+      <a href="https://www.aljazeera.com/news/2026/5/11/where-did-the-hantavirus-outbreak-start-and-where-has-it-spread">Al Jazeera — Outbreak geography</a> ·
+      <a href="https://www.today.com/health/news/hantavirus-pandemic-risk-2026-cruise-ship-outbreak-covid-rcna344538">TODAY — Pandemic risk experts</a> ·
+      <a href="https://www.nature.com/articles/d41586-026-01512-w">Nature — Outbreak uncertainty</a>
+    </div>
+  </section>
+
+  <!-- MIDEAST -->
+  <section id="mideast" class="mideast">
+    <h2>5. Middle East Tensions</h2>
+    <p class="deck">Iran ceasefire on "life support." Hormuz closed since Feb 28. Gaza ceasefire fraying. And with Iran "defanged," analysts now point at Israel–Türkiye as the next flashpoint.</p>
+
+    <h3>Iran war &amp; ceasefire</h3>
+    <ul>
+      <li>Trump rejected Iran's latest counterproposal as "garbage" (May 10); ceasefire on "massive life support."</li>
+      <li>Iran's parliament speaker (May 12): IRGC "ready to teach a lesson" to any aggressor.</li>
+      <li>Pentagon comptroller Jules Hurst pegs U.S. cost of the war at $29B.</li>
+      <li>Strait of Hormuz largely blocked since Feb 28 — EIA warns (today, May 13) of an additional ~$20/bbl if closure persists. WTI ~$102; Brent slipped after Monday's $114.4 close.</li>
+      <li>Lebanon remains outside the ceasefire framework. IDF: Hezbollah fired rockets and a drone at south-Lebanon positions yesterday.</li>
+      <li>Trump warns U.S. will "finish the job" in Iran, "peacefully or otherwise."</li>
+    </ul>
+
+    <h3>Gaza ceasefire fraying</h3>
+    <ul>
+      <li>Since Oct 2025 ceasefire, Israel has expanded control of Gaza from ~53% (under the original map) to ~58%.</li>
+      <li>WHO: 43,000 Gazans with life-altering wounds.</li>
+      <li>Israel approved a law authorising the death penalty for October 7 detainees.</li>
+      <li>Flotilla activist Saif Abu Keshek deported to Greece after a week in Israeli custody.</li>
+    </ul>
+
+    <h3>The next flashpoint: Israel–Türkiye</h3>
+    <ul>
+      <li>Washington Times and FDD: with Iran sidelined, structural Israel–Türkiye tensions move "to the fore." Erdoğan's confrontational Gaza line plus Türkiye's EU defence pitch raise the stakes.</li>
+      <li>Türkiye reopened the Akçakale border crossing with Syria after 12 years — partially defused the Kurdish flank as the PKK announced disarmament.</li>
+      <li>Trump heads to Beijing today; the Iran war is one of three top agenda items. China's Iran-oil purchases are also under direct U.S. sanctions pressure (12 entities sanctioned May 11).</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> The Iran war is the prime mover for global inflation, gasoline politics, the Russia–Ukraine truce collapse and the Trump–Xi optics. Energy markets are the most sensitive indicator — watch Brent above $115 and US gasoline > $4/gal as the political-risk threshold inside the White House.</div>
+
+    <div class="sources">
+      <a href="https://www.cnn.com/2026/05/11/world/live-news/iran-war-proposal-trump">CNN — Ceasefire on life support</a> ·
+      <a href="https://www.washingtonpost.com/politics/2026/05/10/iran-response-us-proposal-war/">Washington Post — "Garbage" response</a> ·
+      <a href="https://time.com/article/2026/05/11/us-iran-israel-war-trump-netanyahu-peace-talks-latest/">TIME — US–Iran status</a> ·
+      <a href="https://www.aljazeera.com/news/liveblog/2026/5/12/iran-war-live-trump-slams-iranian-proposal-as-ceasefire-hangs-by-a-thread">Al Jazeera — Iran war live</a> ·
+      <a href="https://www.aljazeera.com/news/2026/5/8/what-we-know-about-irans-response-to-the-latest-us-ceasefire-proposal">Al Jazeera — Iran response</a> ·
+      <a href="https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire">Wikipedia — 2026 Iran war ceasefire</a> ·
+      <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis">Wikipedia — Hormuz crisis</a> ·
+      <a href="https://www.voiceofemirates.com/en/news/2026/05/13/us-eia-oil-prices-could-surge-20-per-barrel-if-strait-of-hormuz-closure-persists/">VoE — EIA $20 warning</a> ·
+      <a href="https://www.aljazeera.com/economy/2026/5/5/oil-prices-surge-as-violence-flares-in-strait-of-hormuz">Al Jazeera — Hormuz oil surge</a> ·
+      <a href="https://acleddata.com/update/middle-east-overview-may-2026">ACLED — May overview</a> ·
+      <a href="https://fmep.org/resource/top-news-analysis-on-israel-palestine-may-1-8-2026/">FMEP — Israel/Palestine analysis</a> ·
+      <a href="https://www.fdd.org/analysis/2026/04/20/turkey-israel-tensions-deepen-amid-erdogans-confrontational-policy/">FDD — Türkiye–Israel</a> ·
+      <a href="https://www.washingtontimes.com/news/2026/may/12/middle-east-defanged-iran-israel-turkey-tensions-move-fore/">Washington Times — Next flashpoint</a>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section id="science" class="science">
+    <h2>6. Any New Thing in Science (Critical)</h2>
+    <p class="deck">A first-ever quantum-interference observation in positronium. Brown-fat metabolism finally has a "switch." Wildfires up 20% from the prior record. And a definitive GLP-1 weight-maintenance trial.</p>
+
+    <h3>Physics</h3>
+    <ul>
+      <li><strong>Wave-like interference in positronium</strong> observed for the first time — clean test of QED at the matter–antimatter boundary.</li>
+      <li>Thousands-of-atoms metal particles shown to be in <strong>quantum superposition</strong> in a record-breaking experiment.</li>
+      <li>JUPITER (Europe's exascale) fully simulated a <strong>50-qubit quantum computer</strong> classically — a benchmark wall and a verification tool.</li>
+    </ul>
+
+    <h3>Cell biology &amp; longevity</h3>
+    <ul>
+      <li><strong>McGill</strong>: hidden molecular "switch" turns on calorie-burning in brown fat.</li>
+      <li><strong>Univ. of Sydney</strong>: a four-week dietary change made older adults <em>biologically younger</em> on standard markers.</li>
+      <li><strong>Univ. of Rochester</strong>: naked-mole-rat longevity gene transplanted into mice extended healthspan and lifespan (carried over from last week).</li>
+      <li><strong>Limb regeneration</strong>: a shared gene set across axolotls, zebrafish and mice maps a future human-regeneration toolkit.</li>
+    </ul>
+
+    <h3>Drug science (today)</h3>
+    <ul>
+      <li><strong>Nature Medicine</strong> published the ATTAIN-MAINTAIN GLP-1 trial: 75–80% of weight loss and cardiometabolic gains maintained. Caveat: up to ~40% of mass lost on high-efficacy GLP-1s is lean tissue — sarcopenia risk is the next research frontier.</li>
+      <li>GLP-1 effects now being studied across heart failure, chronic liver disease, OSA and substance-use disorder.</li>
+    </ul>
+
+    <h3>Climate &amp; planetary</h3>
+    <ul>
+      <li><strong>Wildfires Jan–Apr 2026 burned 150M ha — 20% above the previous record.</strong></li>
+      <li>Zero Carbon Analytics: 61% probability of El Niño emergence May–Jul; super-El-Niño scenario credible.</li>
+      <li>US: 431 billion-dollar weather/climate disasters since 1980, ~$3.1T cumulative.</li>
+    </ul>
+
+    <h3>AI for science</h3>
+    <ul>
+      <li>Novo Nordisk × OpenAI partnership (last week) for AI-led obesity/diabetes drug discovery is now a template multiple pharmas are emulating.</li>
+      <li>Microsoft's $10B Japan AI buildout (with SoftBank/Sakura) lands new compute capacity for Japanese pharma and materials labs.</li>
+    </ul>
+
+    <div class="takeaway"><b>What it means:</b> 2026's science feels like the year quantum, neurotech and metabolic medicine all left "proof of concept" behind — the bottleneck is shifting to manufacturing, regulation and energy. Climate is moving the opposite direction: bigger fires, bigger oscillations, less margin.</div>
+
+    <div class="sources">
+      <a href="https://www.sciencedaily.com/releases/2026/05/260508022653.htm">ScienceDaily — Universe-changing discovery</a> ·
+      <a href="https://www.sciencedaily.com/">ScienceDaily — Top stories</a> ·
+      <a href="https://www.nature.com/news">Nature — News</a> ·
+      <a href="https://breakthroughprize.org/News/98">Breakthrough Prize 2026</a> ·
+      <a href="https://en.wikipedia.org/wiki/2026_in_science">Wikipedia — 2026 in science</a> ·
+      <a href="https://huxley.media/en/scientific-forecast-2026-the-year-of-major-experiments">Huxley — 2026 forecast</a> ·
+      <a href="https://www.cas.org/resources/cas-insights/scientific-breakthroughs-2026-emerging-trends-watch">CAS — Emerging trends 2026</a> ·
+      <a href="https://www.nature.com/articles/d41586-025-04114-0">Nature — Science in 2026</a> ·
+      <a href="https://news.weill.cornell.edu/news/2026/05/oral-glp-1-medication-helps-patients-maintain-weight-loss">Weill Cornell — Oral GLP-1</a> ·
+      <a href="https://www.nature.com/articles/s41587-025-02932-1">Nature Biotechnology — GLP-1 as longevity drug</a> ·
+      <a href="https://harvardsciencereview.org/2026/02/23/the-glp-1-aftermath-what-the-science-says-about-muscle-loss-and-cellular-aging/">Harvard Science Review — Muscle loss</a> ·
+      <a href="https://news.harvard.edu/gazette/story/2026/02/whats-next-for-glp-1s/">Harvard Gazette — What's next for GLP-1</a> ·
+      <a href="https://www.usnews.com/news/world/articles/2026-05-12/global-fire-outbreaks-hit-record-high-as-unprecedented-heat-extremes-loom-scientists-say">US News — Record fires</a> ·
+      <a href="https://www.euronews.com/2026/05/12/from-record-heat-to-floods-and-drought-whats-in-store-if-a-super-el-nino-hits-this-year">Euronews — Super El Niño</a> ·
+      <a href="https://www.greenpeace.org/international/story/82686/climate-emergencies-photos-of-2026-so-far/">Greenpeace — Climate emergencies 2026</a> ·
+      <a href="https://www.ncei.noaa.gov/access/billions/">NOAA NCEI — Billion-dollar disasters</a>
+    </div>
+  </section>
+
+  <footer>
+    Specific-Interest Report generated automatically by the news-check scheduled task at 09:00 local on 2026-05-13. Topic list driven by <code>request.md</code>. No <code>learngoals</code> file was present, so the teaching section was omitted — if you create that file (free-text learning goals, one per line), the next run will produce a teaching HTML alongside this report.
+  </footer>
+</div>
+</body>
+</html>

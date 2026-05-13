@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Daily News Briefings</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2028;
+    --panel-2: #232b36;
+    --line: #2a3441;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --good: #7ee787;
+    --warn: #f0883e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 24px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 28px; }
+  h1 { margin: 0 0 6px; font-size: 30px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 14px; }
+  h2 { margin: 32px 0 12px; font-size: 18px; letter-spacing: -0.01em; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+  a.card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  a.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card .title { font-size: 17px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+  .card .desc { font-size: 13.5px; color: var(--muted); }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .pill.daily { color: var(--good); border-color: rgba(126, 231, 135, 0.3); }
+  .pill.weekly { color: var(--warn); border-color: rgba(240, 136, 62, 0.3); }
+  .disclaimer {
+    background: rgba(240, 136, 62, 0.08);
+    border: 1px solid rgba(240, 136, 62, 0.25);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-bottom: 8px;
+  }
+  footer { margin-top: 40px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+  code { background: var(--panel-2); padding: 1px 6px; border-radius: 4px; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Daily News Briefings</h1>
+  <div class="sub">Cross-region news sweep, refreshed every day.</div>
+</header>
+
+<div class="disclaimer">
+  Automated summaries from public news sources at the time stamped on each file. Verify with the original outlet before acting on anything.
+</div>
+
+<h2>Reports</h2>
+<div class="grid">
+  <a class="card" href="daily-briefing.html">
+    <div class="title">Daily Briefing <span class="pill daily">fresh today</span></div>
+    <div class="desc">Today's news across US, Europe, Turkey, China, Japan. Rewritten each day.</div>
+  </a>
+  <a class="card" href="weekly-report.html">
+    <div class="title">Weekly Report <span class="pill weekly">accumulating</span></div>
+    <div class="desc">Running context for the week, edited each day rather than replaced.</div>
+  </a>
+  <a class="card" href="specific-topics.html">
+    <div class="title">Specific Topics</div>
+    <div class="desc">Deeper dive on the topics in your local <code>request.md</code>.</div>
+  </a>
+  <a class="card" href="learning-goals.html">
+    <div class="title">Learning Goals</div>
+    <div class="desc">Teaching pages built from <code>learngoals.md</code>. Only present when goals are set.</div>
+  </a>
+</div>
+
+<footer>
+  Generated automatically. Source: <a href="https://github.com/Mertan2/daily-news" style="color:var(--accent)">github.com/Mertan2/daily-news</a>
+</footer>
+
+</div>
+</body>
+</html>
