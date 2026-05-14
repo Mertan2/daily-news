@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Specific-Interest Report — May 13, 2026</title>
+<title>Specific-Interest Report — May 14, 2026</title>
 <style>
   :root {
     --bg: #0a0e14;
@@ -78,16 +78,11 @@
   ul { padding-left: 22px; }
   li { margin: 4px 0; }
   a { color: var(--accent); }
-  a:hover { text-decoration: underline; }
   .kv {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 6px 16px;
-    background: var(--panel-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin: 14px 0;
+    grid-template-columns: 130px 1fr;
+    gap: 8px 14px;
+    margin: 10px 0 14px;
     font-size: 14px;
   }
   .kv b { color: var(--accent); }
@@ -125,222 +120,207 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific-Interest Report</div>
-    <h1>Topics you flagged in <code>request.md</code> — May 13, 2026</h1>
+    <h1>Topics you flagged in <code>request.md</code> — May 14, 2026</h1>
     <div class="subtitle">AI Market · Neurological Computers · Quantum Computing · New Spreading Virus · Middle East Tensions · Critical Science. Companion to <a href="daily-briefing.html">daily-briefing.html</a> and <a href="weekly-report.html">weekly-report.html</a>.</div>
   </header>
 
   <div class="toc">
     <strong>Contents</strong>
     <ol>
-      <li><a href="#ai">AI Market — Big-Tech $725B capex, Anthropic/Apple/Google realign</a></li>
-      <li><a href="#neuro">Neurological Computers — Neuralink robot, Paradromics speed record, hafnium chips</a></li>
-      <li><a href="#quantum">Quantum Computing — Q-CTRL × IBM 3,000×, JUPITER 50-qubit sim, Willow Echoes</a></li>
-      <li><a href="#virus">New Spreading Virus — MV Hondius Andes hantavirus (WHO DON600)</a></li>
-      <li><a href="#mideast">Middle East Tensions — Beijing-Iran assurance, Hormuz tolls, Lebanon strikes</a></li>
-      <li><a href="#science">Critical Science — positronium wave, record wildfires, Mars organics, GLP-1 oral</a></li>
+      <li><a href="#ai">AI Market — Anthropic flips OpenAI on enterprise; $950B raise; H200s greenlit for China</a></li>
+      <li><a href="#neuro">Neurological Computers — Paradromics in humans today; Neuralink 45 enrolled</a></li>
+      <li><a href="#quantum">Quantum Computing — Kyoto's one-shot W-state readout; Q-CTRL/IBM holds the advantage</a></li>
+      <li><a href="#virus">New Spreading Virus — Hondius cluster flat at 11/3; surveillance window still open</a></li>
+      <li><a href="#mideast">Middle East Tensions — Hormuz cracks open one tanker; Lebanon dead reach 380</a></li>
+      <li><a href="#science">Critical Science — Venus hydraulic jump explained, brown-dwarf catalogue doubled</a></li>
     </ol>
   </div>
 
   <!-- AI MARKET -->
   <section id="ai">
     <h2>1. AI Market</h2>
-    <p class="deck">The story today is consolidation. Capex is racing past $700B, distribution is becoming as decisive as the model, and the antitrust shoe could drop any time.</p>
+    <p class="deck">Today's story is Anthropic taking the enterprise crown from OpenAI — quantitatively, by revenue and by valuation. The China-chip thaw is the side plot.</p>
 
-    <p>The AI market entered May with three forces colliding: hyperscaler capex now tracking $725B for 2026 (Microsoft $190B, Amazon $200B, Alphabet ~$150B, Meta $135B), enterprise revenue inflecting (OpenAI revenue chief Dresser: a "tipping point"), and a hardware-supply crisis that even the biggest spenders cannot fully out-run — Microsoft CFO Amy Hood disclosed $25B of MSFT's record budget went straight to higher memory and chip pricing. Sitting above all of it: Nvidia, which crossed a $5T market cap on April 24, the first chip company there, and still controls ~80% of training silicon. The story today is not whether AI is profitable; it is who owns the stack.</p>
+    <p>Ramp's May AI Index, released May 13, shows <strong>Anthropic at 34.4% of paying business customers vs. OpenAI's 32.3%</strong> — a stunning flip from May 2025 when Anthropic sat at just 9%. By February Anthropic was winning ~70% of new enterprise head-to-heads. Revenue tells the same story: <strong>Anthropic hit a $30B annualised run-rate in April</strong>, surpassing OpenAI's $24–25B, and is now in talks to raise <strong>~$50B at a $950B valuation</strong>, which would top OpenAI's $854B mark and make Anthropic the world's most valuable private company.</p>
+
+    <p>Building on yesterday's chip-deal thread, <strong>Nvidia's 2026 AI-equity bets have crossed $40B</strong>: $30B in OpenAI (10 GW of systems), <strong>$3.2B in Corning and $2.1B in IREN</strong> for 5 GW of DSX-branded infrastructure. Today's geopolitical hinge: <strong>Commerce cleared ~10 Chinese firms</strong> — Alibaba, Tencent, ByteDance, JD.com — to buy Nvidia H200s. No deliveries have occurred, but the export-control thaw is real, and <strong>Jensen Huang is in Beijing</strong> with Trump's delegation. Microsoft's $190B 2026 capex now includes a <strong>3,200-acre Cheyenne campus</strong>; Meta's <strong>Hyperion (Louisiana, 2,250 acres, ~5 GW, $10B)</strong> is greenlit; Alphabet bumped 2026 capex guidance to <strong>$180–190B</strong>.</p>
 
     <div class="kv">
-      <b>Anthropic</b><div>$1.5B JV with Blackstone, Goldman Sachs and General Atlantic to deploy Claude across portfolio companies; +$40B from Google, +$5B from Amazon (with $100B AWS commitment); chip deals with Google &amp; Broadcom. Claude for Financial Services + M365 integration live. CEO has floated ~80× growth in 2026. Holding back Claude "Mythos" — autonomous-vuln-finding capability.</div>
-      <b>OpenAI</b><div>Three real-time audio models. New "Deployment Company" partnership w/ 19 investors/consultancies incl. Bain, Goldman, SoftBank; acquired applied-AI consultancy Tomoro. Raising ~$4B around it.</div>
-      <b>Alphabet</b><div>Q1 +22% to $110B; Google Cloud +63% to $20B; Gemini API run-rate ~$15B (up from $9B). Mkt cap above $4.6T. Android being rebuilt around Gemini before Apple's June 8 WWDC AI reboot.</div>
-      <b>Microsoft</b><div>FY26 capex $190B; CFO attributed $25B of that to memory/chip pricing. Azure +39%. Stock briefly off 4% on the guide.</div>
-      <b>Apple</b><div>WWDC keynote June 8. iOS 27 to open Siri to Claude/Gemini/ChatGPT via an Extensions system; "Siri 2.0" rumored to feel chatbot-like.</div>
-      <b>Nvidia</b><div>$5T market cap April 24 (first chip co.). ~80% of AI training chip market; FY26 revenue ~$130B.</div>
+      <b>Anthropic</b><div>34.4% enterprise share (Ramp May Index), $30B ARR, in talks for $50B/$950B; $1.5B JV with Blackstone/Goldman/General Atlantic; +$40B Google, +$5B Amazon ($100B AWS commitment); chip deals Google + Broadcom; Claude for Financial Services + M365 integration live. Holding back "Claude Mythos" — autonomous-vuln-finder.</div>
+      <b>OpenAI</b><div>32.3% enterprise share, $24–25B ARR; three real-time audio models; "Deployment Company" with 19 partners; acquired Tomoro; raising ~$4B at the deployment vehicle. $854B mark.</div>
+      <b>Alphabet</b><div>Q1 +22% to $110B; Cloud +63% to $20B; Gemini API ~$15B run-rate. 2026 capex bumped to $180–190B. Android being rebuilt around Gemini ahead of Apple's June 8 WWDC AI reboot.</div>
+      <b>Microsoft</b><div>FY26 capex $190B; CFO attributed $25B to memory/chip price inflation. Azure +39%. New 3,200-acre Cheyenne campus.</div>
+      <b>Meta</b><div>Hyperion (Louisiana, ~5 GW, $10B, 2,250 acres) greenlit.</div>
+      <b>Nvidia</b><div>$5T market cap. 2026 AI-equity bets &gt;$40B (OpenAI $30B + Corning $3.2B + IREN $2.1B). H200s cleared for ~10 Chinese firms — no deliveries yet. Huang in Beijing with Trump.</div>
     </div>
 
-    <h3>Today's most significant stories</h3>
+    <h3>Today's most significant moves</h3>
     <ul>
-      <li><strong>FDA Commissioner Makary resigns (May 12).</strong> Indirect AI relevance: the FDA also gates AI/SaMD and BCI approvals; Kyle Diamantas takes over as acting. Watch whether the change slows or accelerates BCI / AI-medical-device clearances. <a href="https://www.cnbc.com/2026/05/12/trump-fda-commissioner-marty-makary-out.html">CNBC</a></li>
-      <li><strong>Google races Gemini-on-Android ahead of Apple's WWDC reboot.</strong> "Transitioning from operating system to intelligence system." <a href="https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html">CNBC</a></li>
-      <li><strong>Google says it thwarted a first-of-its-kind AI-driven mass-exploit attempt.</strong> Anthropic withholding Mythos is the policy bookend. <a href="https://fortune.com/2026/05/12/google-hackers-using-ai-to-weaponize-zero-day-vulnerabilities/">Fortune</a> · <a href="https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html">CNBC</a></li>
-      <li><strong>Big-Tech AI capex revised again.</strong> $725B in 2026; memory-chip prices alone are reshaping budgets. <a href="https://fortune.com/2026/04/29/microsoft-meta-google-ai-capex-spending-billions/">Fortune</a> · <a href="https://www.tomshardware.com/tech-industry/big-tech/microsoft-attributed-25-billion-of-its-record-ai-budget-to-memory-chip-costs">Tom's Hardware</a></li>
-      <li><strong>Microsoft, Google and xAI sign on to pre-launch government model testing.</strong> Quietly significant — formalises "red-team-as-a-permit" mechanic. <a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models">CNN Business</a></li>
+      <li><strong>Anthropic flips OpenAI on paying-business share</strong> per Ramp's May Index. <a href="https://techcrunch.com/2026/05/13/anthropic-business-customers-openai/">TechCrunch</a> · <a href="https://www.theaiinsider.tech/2026/05/14/anthropic-overtakes-openai-eyes-950b-valuation/">TheAIInsider</a></li>
+      <li><strong>$50B raise at $950B valuation</strong> talks underway — would make Anthropic the most valuable private company. <a href="https://www.theaiinsider.tech/2026/05/14/anthropic-overtakes-openai-eyes-950b-valuation/">TheAIInsider</a></li>
+      <li><strong>US clears H200 chip sales to 10 China firms</strong> ahead of Trump-Xi Day 2. <a href="https://www.reuters.com/2026/05/14/us-clears-h200-china/">Reuters</a> · <a href="https://www.cnbc.com/2026/05/14/nvidia-h200-china/">CNBC</a></li>
+      <li><strong>Nvidia 2026 AI-equity bets &gt;$40B</strong>. <a href="https://thenextweb.com/2026/05/11/nvidia-40bn-ai-equity-bets/">TheNextWeb</a></li>
+      <li><strong>Microsoft's 3,200-acre Cheyenne campus joins the $190B 2026 capex envelope.</strong> <a href="https://www.fool.com/2026/05/14/microsoft-cheyenne-ai-campus/">Motley Fool</a></li>
     </ul>
 
-    <div class="takeaway"><b>What it means:</b> AI is increasingly a stack-and-distribution game. Anthropic is buying enterprise distribution via JVs; Google is leveraging an installed Android/cloud base; OpenAI is monetising real-time UIs; Apple is the next test case on June 8. Watch the Trump–Xi communiqué for any rare-earth / chip language that re-prices Nvidia.</div>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Anthropic just took the enterprise crown and is closing a round that would make it the most valuable private company on earth, while Washington quietly reopened part of the China AI-chip market on the eve of the Xi summit. The big-tech capex envelope is now ~$725B for 2026 — enough that "AI is in a bubble" is the wrong question. The right one is "who owns the stack."</div>
 
     <div class="sources">
-      <a href="https://llm-stats.com/llm-updates">LLM-Stats — Updates</a> ·
-      <a href="https://llm-stats.com/ai-news">LLM-Stats — News</a> ·
-      <a href="https://www.cnbc.com/2026/05/11/open-ai-dresser-enterprise-business.html">CNBC — Tipping point</a> ·
-      <a href="https://www.statista.com/chart/35046/capital-expenditure-of-meta-alphabet-amazon-and-microsoft/">Statista — $725B</a> ·
-      <a href="https://blogs.nvidia.com/blog/state-of-ai-report-2026/">NVIDIA — State of AI</a> ·
-      <a href="https://intellectia.ai/blog/nvidia-5-trillion-market-cap-ai-chip-demand-2026">Intellectia — Nvidia $5T</a> ·
-      <a href="https://imfounder.com/science-tech/ai/ai-updates-may-2026/">IM Founder — May 2026 updates</a> ·
-      <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">Crescendo — Latest</a> ·
-      <a href="https://www.techrepublic.com/article/news-apple-wwdc-2026-ios-27-siri-ai-preview/">TechRepublic — WWDC preview</a> ·
-      <a href="https://felloai.com/wwdc-2026-preview/">FelloAI — WWDC</a>
+      <a href="https://techcrunch.com/2026/05/13/anthropic-business-customers-openai/">TechCrunch — Anthropic flips OpenAI on enterprise</a> ·
+      <a href="https://www.reuters.com/2026/05/14/us-clears-h200-china/">Reuters — H200 sales to China cleared</a> ·
+      <a href="https://www.cnbc.com/2026/05/14/nvidia-h200-china/">CNBC</a> ·
+      <a href="https://thenextweb.com/2026/05/11/nvidia-40bn-ai-equity-bets/">TheNextWeb — Nvidia $40B AI bets</a> ·
+      <a href="https://www.theaiinsider.tech/2026/05/14/anthropic-overtakes-openai-eyes-950b-valuation/">TheAIInsider — $950B</a> ·
+      <a href="https://www.fool.com/2026/05/14/microsoft-cheyenne-ai-campus/">Motley Fool — Microsoft Cheyenne</a>
     </div>
   </section>
 
-  <!-- NEUROLOGICAL COMPUTERS -->
+  <!-- NEUROTECH -->
   <section id="neuro" class="neuro">
-    <h2>2. Neurological Computers</h2>
-    <p class="deck">Two parallel races are merging into one stack: implantable BCIs at the input, neuromorphic chips at the compute, adaptive personal models in between.</p>
+    <h2>2. Neurological Computers / Neurotech</h2>
+    <p class="deck">Today is the milestone day for Paradromics — first in-human Connexus implant. The Neuralink-only era is over.</p>
 
-    <p>The "neurological computer" stack is finally vertical. On the implant side, Neuralink, Synchron, Paradromics and Precision Neuroscience are running clinical trials simultaneously for the first time. On the compute side, brain-inspired chips like Intel's Loihi 3, IBM's NorthPole and a new Cambridge-led hafnium-oxide neuromorphic device claim 70%–99.9% energy reductions vs GPUs for the sensory and adaptive workloads that BCIs need. The binding constraint in 2026 is no longer engineering — it is the FDA. Makary's resignation yesterday makes the next 12 months newly unpredictable for device clearances.</p>
+    <p>At the <strong>University of Michigan on May 14</strong>, Paradromics completed its <strong>first successful human implantation of the Connexus BCI</strong> — a dime-sized device with <strong>420 micro-needle electrodes</strong> placed in the temporal lobe of an epilepsy patient already undergoing planned neurosurgery. <strong>Dr. Oren Sagher</strong> performed the surgery and <strong>Dr. Matthew Willsey</strong> led the research placement. Implant + removal time: <strong>~20 minutes</strong>. The device successfully recorded neural activity at single-neuron resolution during the procedure. This is the milestone yesterday's brief flagged was coming via Connexus's >200 bps demo (~20× Neuralink's initial benchmark), and it puts Paradromics into clinical-stage operations.</p>
 
-    <h3>Implantable BCIs — today's most significant items</h3>
+    <p>For context on the competition: <strong>Neuralink reported 45 enrolled participants</strong> across three continents in its April 2026 update, with 85% of spinal-injury participants hitting pick-and-place tasks within 150% of non-injured baselines. Neuralink's next-gen surgical robot can now reach virtually any brain region; high-volume production targeted for 2026 with near-fully-automated dura-piercing insertion. On the chip side, <strong>Cambridge-led hafnium-oxide neuromorphic chip</strong> announced May 13 claims a 70% AI-energy cut — a separate neuromorphic-computing track that complements implant work without competing for the same FDA pathway.</p>
+
+    <h3>Where the gap closes — and where it doesn't</h3>
     <ul>
-      <li><strong>Neuralink's "everywhere" surgical robot.</strong> Musk highlighted on May 7 that the next-gen system can access "virtually any region of the human brain." Threads now go through the dura, no removal needed. High-volume production begins in 2026 with almost-fully-automated insertion. <a href="https://yourstory.com/2026/05/neuralink-surgical-robot-brain-interface-2026">YourStory</a> · <a href="https://interestingengineering.com/science/neuralink-unveils-surgical-robot-to-automate-bci">Interesting Engineering</a> · <a href="https://x.com/elonmusk/status/2006513491105165411">Musk on X</a></li>
-      <li><strong>Paradromics Connexus benchmark.</strong> &gt;200 bits/second information transfer rate, &gt;20× the initial reported performance of Neuralink. FDA-approved IDE for speech restoration (Nov 2025). <a href="https://www.paradromics.com/blog/bci-benchmarking">Paradromics</a> · <a href="https://www.statnews.com/2025/11/20/fda-approves-paradromics-bci-trial-for-speech-restoration/">STAT</a></li>
-      <li><strong>Synchron's vascular approach.</strong> Less-invasive — no craniotomy. US feasibility done; pivotal study for FDA PMA in prep. <a href="https://bciintel.com/state-of-bci-2026/">BCIIntel — State of BCI 2026</a></li>
-      <li><strong>Precision Neuroscience.</strong> Holds 510(k) clearance; chronic-implant trials moving forward. <a href="https://www.programming-helper.com/tech/brain-computer-interfaces-2026-neuralink-paradromics-medical-breakthroughs">Programming Helper — BCI 2026</a></li>
+      <li>Paradromics' 420-electrode array delivers higher per-implant bandwidth (>200 bps in demos); Neuralink's edge is scale and integration (45 enrolled, surgical robot, mass-production roadmap).</li>
+      <li>Today's Michigan placement was intra-operative — implant + removal during a planned neurosurgery, not a chronic implantation. Paradromics' next step is a fully chronic clinical trial.</li>
+      <li>The two systems target similar near-term applications (motor decoding for paralysis, communication for ALS); but Paradromics' temporal-lobe demonstration today is a signal it has broader cortical-region flexibility.</li>
     </ul>
 
-    <h3>Neuromorphic / brain-inspired hardware</h3>
-    <ul>
-      <li><strong>Hafnium-oxide nanodevice.</strong> Cambridge / collaborators redesigned the deposition recipe (oxygen added only after the first layer); the resulting device mimics neuron behaviour and could slash AI energy use by up to <strong>70%</strong>. <a href="https://www.cam.ac.uk/research/news/new-computer-chip-material-inspired-by-the-human-brain-could-slash-ai-energy-use">Cambridge</a> · <a href="https://www.sciencedaily.com/releases/2026/04/260422044633.htm">ScienceDaily</a></li>
-      <li><strong>Intel Loihi 3 + IBM NorthPole.</strong> ~1,000× more power-efficient than GPUs for real-time robotics / sensory processing in commercial deployments. <a href="https://www.machinebrief.com/news/intel-neuromorphic-loihi-3-brain-computing-edge-ai-2026">Machine Brief</a> · <a href="https://www.aitechboss.com/neuromorphic-computing-2026-ai-hardware/">AI Tech Boss</a></li>
-      <li><strong>NeuroFEM on Loihi 2.</strong> Brain-like compute can now solve the equations behind physics simulations — energy cost far below CPUs and scaling near-linearly with cores. <a href="https://www.zmescience.com/science/news-science/neuromorphic-computing-breakthrough/">ZME Science</a></li>
-    </ul>
-
-    <div class="takeaway"><b>What it means:</b> The binding constraint is regulatory, not silicon. With Makary out, two scenarios: (a) acting Commissioner Diamantas keeps the existing BCI track, in which case Paradromics speech-restoration data lands as the next milestone; or (b) the White House appoints a deregulator and timelines compress for everyone, accelerating Neuralink + Synchron together. Worth watching the FDA's CDRH leadership in parallel.</div>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Paradromics is officially in humans with 420-electrode resolution. The Neuralink-vs-Paradromics race is now a real two-horse contest rather than a Neuralink monologue, and the regulatory clock starts here.</div>
 
     <div class="sources">
-      <a href="https://www.mexc.com/news/1078605">MEXC — Brain regions</a> ·
-      <a href="https://eandt.theiet.org/2026/05/01/neuralink-builds-surgical-robot-implant-its-brain-chip-humans">E&amp;T — Robot</a> ·
-      <a href="https://www.ubergizmo.com/2026/05/neuralink-surgical-robot/">Ubergizmo — Robot</a> ·
-      <a href="https://mobygeek.com/ict-news/elon-musk-highlights-neuralink-breakthrough-with-new-surgical-robot-for-brain-implants-16462">MobyGeek</a> ·
-      <a href="https://interestingengineering.com/culture/elon-musk-neuralink-tesla-2026-plans">IE — Mass production</a> ·
-      <a href="https://www.paradromics.com/news/paradromics-receives-fda-approval-for-the-connect-one-clinical-study-with-the-connexus-brain-computer-interface">Paradromics — Connect-One</a> ·
-      <a href="https://www.medrxiv.org/content/10.64898/2026.02.01.26345325v1">medRxiv — Surgical planning</a> ·
-      <a href="https://www.embs.org/pulse/articles/silicon-synapses-the-bold-frontier-of-brain-computer-integration/">IEEE Pulse — Silicon synapses</a> ·
-      <a href="https://robocloud-dashboard.vercel.app/learn/blog/neuromorphic-robotics-2026">RoboCloud — Neuromorphic robotics</a> ·
-      <a href="https://markets.financialcontent.com/wral/article/tokenring-2026-1-21-the-brain-inspired-revolution-neuromorphic-computing-goes-mainstream-in-2026">FinancialContent — Neuromorphic mainstream</a>
+      <a href="https://www.michiganmedicine.org/news/2026-05/paradromics-bci-first-recording">Michigan Medicine — First in-human recording</a> ·
+      <a href="https://www.paradromics.com/news/2026-05-14-connexus-first-human">Paradromics — Connexus First-In-Human</a> ·
+      <a href="https://www.nature.com/articles/d41586-026-01432-x">Nature — A brain implant that could rival Neuralink's enters clinical trials</a> ·
+      <a href="https://techfundingnews.com/paradromics-challenges-neuralink-first-human/">TechFundingNews</a> ·
+      <a href="https://applyingai.com/2026/04/transforming-bcis-neuralink-2026/">ApplyingAI — Neuralink 2026 breakthroughs</a>
     </div>
   </section>
 
   <!-- QUANTUM -->
   <section id="quantum" class="quantum">
     <h2>3. Quantum Computing</h2>
-    <p class="deck">A 3,000× speedup on a real materials problem; the first verifiable quantum advantage published in Nature; and a fault-tolerance ladder now measured in months, not decades.</p>
+    <p class="deck">Kyoto's one-shot W-state readout unblocks a long-standing bottleneck for quantum networks. Q-CTRL/IBM holds the "useful advantage" anchor.</p>
 
-    <p>2026 is the year quantum stopped being only a roadmap. The Q-CTRL × IBM materials-science demo on a 120-qubit machine — done in two minutes instead of 100 classical hours, within 1% accuracy — is the first credible "useful quantum advantage" in an industrially relevant workload. Google's Willow chip went one step further by publishing a verifiable quantum advantage in <em>Nature</em>: a Quantum Echoes algorithm 13,000× faster than the best classical alternative and reproducible on hardware. And Germany's new exascale supercomputer JUPITER fully simulated a 50-qubit quantum computer classically — the wall that future "supremacy" claims will have to clear.</p>
+    <p>The new headline is Japan's <strong>W-state breakthrough</strong> announced May 13: a <strong>Kyoto University + Hiroshima University</strong> team built a tabletop photonic circuit that performs <strong>one-shot identification of 3-photon W states</strong> — a class of multi-photon entanglement that has eluded direct measurement for decades. The trick exploits <strong>cyclic shift symmetry</strong> via a photonic quantum-Fourier-transform circuit, and the method generalises to any number of photons. W states matter because future quantum networks need fast, scalable verification of fragile multipartite entanglement — this turns a repeated-trial chore into an instant read, with direct implications for quantum teleportation and large-scale quantum computing protocols.</p>
 
-    <h3>Today's most significant stories</h3>
+    <p>Beyond Japan, <strong>IBM's May 4 "Decade of Quantum on the Cloud"</strong> anniversary anchors the broader trajectory — the <strong>Q-CTRL/IBM 3,000× Fermi-Hubbard speedup</strong> remains the standing "useful advantage" benchmark from yesterday's brief. JUPITER (Germany) classically simulates a 50-qubit machine; Google Willow Quantum Echoes 13,000× over classical, in *Nature*. Harvard researchers separately said May 4 that the field is <strong>advancing faster than expected</strong>, and 2026 has already seen a three-node New York fiber-network entanglement-swapping demo plus integrated photonic chips generating and measuring multipartite cluster states on-die.</p>
+
+    <h3>The state of the race</h3>
     <ul>
-      <li><strong>Q-CTRL × IBM 3,000× speedup (showcased at IBM Think Boston).</strong> Practical quantum advantage on Fermi-Hubbard materials simulation; Cleveland Clinic and Oak Ridge co-present. <a href="https://thequantuminsider.com/2026/05/06/qctrl-practical-quantum-advantage-materials-discovery/">Quantum Insider</a> · <a href="https://q-ctrl.com/blog/practical-quantum-advantage-signals-a-new-commercial-era-for-quantum-computing">Q-CTRL</a> · <a href="https://research.ibm.com/blog/ibm-think-2026-modeling-the-universe-with-quantum-computing">IBM Research</a></li>
-      <li><strong>Google Willow Quantum Echoes.</strong> First verifiable quantum advantage in <em>Nature</em>; 13,000× speedup; results independently replicable. <a href="https://www.programming-helper.com/tech/quantum-computing-race-2026-ibm-google-microsoft-breakthroughs-advantage">Programming Helper</a></li>
-      <li><strong>JUPITER fully simulates a 50-qubit machine.</strong> Sets the classical-supremacy threshold; tool for verifying real quantum systems. <a href="https://www.sciencedaily.com/releases/2026/05/260508022653.htm">ScienceDaily</a></li>
-      <li><strong>IBM Heron R2 156 qubits, Nighthawk 120-qubit roadmap.</strong> Targeting verified quantum advantage by year-end; 10× error-correction speed-up booked a year ahead of schedule. <a href="https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance">IBM Newsroom</a></li>
-      <li><strong>Neutral-atom platforms scaling.</strong> Atom Computing 1,225 qubits; flagged by industry trackers as the biggest 2026 scaling story. <a href="https://quantumcomputingreport.com/news/">Quantum Computing Report</a></li>
+      <li><strong>Useful advantage:</strong> Q-CTRL × IBM 3,000× on 120-qubit Fermi-Hubbard simulation remains the standing benchmark.</li>
+      <li><strong>Verification:</strong> Kyoto/Hiroshima one-shot W-state readout unlocks the multipartite-entanglement verification stack — necessary for any quantum network deployment.</li>
+      <li><strong>Hardware diversification:</strong> Photonic, superconducting, neutral-atom and trapped-ion roadmaps all logged measurable progress in 2026.</li>
+      <li><strong>China integration:</strong> Origin Wukong's third-gen superconducting quantum computer reportedly fine-tuning billion-parameter AI models; the 15th Five-Year Plan formally targets quantum and AI as "new drivers of growth."</li>
     </ul>
 
-    <div class="takeaway"><b>What it means:</b> "Quantum advantage" is no longer a single threshold but a spectrum, and the first commercially relevant rungs (materials, optimisation, chemistry) are being climbed now. Watch Q-Day risk reprice: any 2026 fault-tolerance milestone shortens the post-quantum-crypto migration deadline for banks and governments.</div>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Q-CTRL/IBM still dominates the hardware-utility narrative. Kyoto's one-shot W-state readout unblocks a long-standing bottleneck for scalable quantum networks — measure-then-trust just got an order of magnitude faster.</div>
 
     <div class="sources">
-      <a href="https://www.ibm.com/roadmaps/quantum/2026/">IBM — 2026 Atlas</a> ·
-      <a href="https://thequantuminsider.com/2025/05/16/quantum-computing-roadmaps-a-look-at-the-maps-and-predictions-of-major-quantum-players/">QI — Roadmaps</a> ·
-      <a href="https://www.tipranks.com/news/ibms-quantum-push-gets-real-with-210x-accuracy-breakthrough">TipRanks — 210× accuracy</a> ·
-      <a href="https://www.ibm.com/quantum/hardware">IBM — Hardware</a> ·
-      <a href="https://tech-insider.org/google-quantum-computing-neutral-atom-willow-2026/">TechInsider — Willow / neutral atoms</a> ·
-      <a href="https://www.riverlane.com/blog/quantum-error-correction-our-2025-trends-and-2026-predictions">Riverlane — QEC trends</a> ·
-      <a href="https://www.crispidea.com/quantum-computing-industry-outlook-2026/">Crispidea — Outlook</a> ·
-      <a href="https://quantumzeitgeist.com/us-quantum-computing-companies-2026/">QZ — US co's</a> ·
-      <a href="https://www.programming-helper.com/tech/quantum-computing-breakthrough-2026-ibm-google-qubit-race">PH — Race</a> ·
-      <a href="https://www.ibm.com/quantum/blog/decade-of-quantum">IBM — Decade in the cloud</a>
+      <a href="https://www.sciencedaily.com/2026/05/13/quantum-breakthrough-teleportation/">ScienceDaily — Quantum breakthrough</a> ·
+      <a href="https://scitechdaily.com/scientists-capture-w-state/">SciTechDaily — W state captured</a> ·
+      <a href="https://newsable.asianetnews.com/science/kyoto-w-state">Asianet — Kyoto first experimental W-state measurement</a> ·
+      <a href="https://newsroom.ibm.com/2026-05-04-Decade-of-Quantum-on-the-Cloud">IBM Newsroom — Decade of Quantum on the Cloud</a> ·
+      <a href="https://thequantuminsider.com/2026/05/04/harvard-quantum-advancing-faster-than-expected/">Quantum Insider — Harvard</a>
     </div>
   </section>
 
   <!-- VIRUS -->
   <section id="virus" class="virus">
-    <h2>4. New Spreading Virus — MV Hondius hantavirus cluster</h2>
-    <p class="deck">Eleven cases (9 confirmed/2 probable in newer counts; 7+2 in the latest WHO DON), three deaths, one ship, six destination countries. Andes virus — the only hantavirus that spreads human-to-human.</p>
+    <h2>4. New Spreading Virus — MV Hondius Andes Hantavirus</h2>
+    <p class="deck">Case count flat at 11 / 3 deaths. Surveillance window still open as repatriated passengers complete incubation.</p>
 
-    <p>On May 2, the WHO was notified of severe respiratory illness on the MV Hondius, a Dutch cruise ship that left Ushuaia, Argentina on April 1. The pathogen was identified as Andes hantavirus — the one hantavirus known to spread person-to-person, and even then almost only with close, sustained contact. The Spanish Ministry of Health let the ship dock at Tenerife on May 10; 147 people including additional medical resources were on board; passengers were repatriated to six European countries and Canada. As of May 11, WHO's DON600 lists 7 confirmed + 2 probable cases and 3 deaths (2 attributable to hantavirus, 1 still under investigation). Several outlets report a higher running case count of 11 once probable cases are folded in.</p>
+    <p>Numbers have barely moved since yesterday's snapshot. <strong>ECDC's May 13 update</strong>: 11 total cases — <strong>9 confirmed + 2 probable + 1 inconclusive</strong> — and <strong>3 deaths</strong> (2 lab-confirmed Andes virus). Passenger disembarkation and repatriation were completed May 11 after Tenerife arrival. <strong>CDC issued Health Alert Network HAN00528</strong> classifying it a <strong>Level 3 response</strong> but rating US public-health risk "extremely low." WHO continues to flag the unique feature: <strong>Andes is the only hantavirus known to spread human-to-human</strong>, possibly airborne in close-contact settings — a feature that explains why a single cruise environment produced a cluster while broader propagation has not occurred.</p>
 
-    <div class="kv">
-      <b>Pathogen</b><div>Andes virus (Bunyavirales / Hantaviridae). Reservoir: long-tailed pygmy rice rat in southern South America. Only hantavirus with documented human-to-human transmission, typically requiring prolonged close contact, possibly airborne in very close proximity.</div>
-      <b>Index case</b><div>Most probably acquired infection ashore in Argentina during pre-cruise activities; on-board cases linked epidemiologically and temporally to case 1's illness.</div>
-      <b>Mortality risk</b><div>Hantavirus Cardiopulmonary Syndrome (HCPS): historical case-fatality 30–50% in South America. No specific antiviral; supportive ICU care is the standard.</div>
-      <b>Risk to general public</b><div>Low. CDC and ECDC concur. No community spread documented; contact tracing focused on cabin-mates, medical staff, and close family.</div>
-    </div>
+    <p>Repatriation hit <strong>six European countries plus Canada</strong>. No fresh confirmed cluster outside MV Hondius passengers has been reported May 13–14. The Tedros "not another Covid" framing from yesterday is holding — risk-of-epidemic is still rated low. The Nebraska Medicine biocontainment census is unchanged at 15 quarantine + 1 biocontainment. France has had one severe-form patient reported by ABC News earlier in the week; Macron's "under control" framing has not been retracted.</p>
 
-    <h3>Today's most significant items</h3>
+    <h3>What to watch</h3>
     <ul>
-      <li><strong>WHO DON600 update (May 11): 7 confirmed + 2 probable + 3 deaths.</strong> <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600">WHO</a> · <a href="https://www.who.int/news/item/07-05-2026-who-s-response-to-hantavirus-cases-linked-to-a-cruise-ship">WHO Response</a></li>
-      <li><strong>Macron: situation "under control" in France;</strong> Tedros: "not another Covid." EU health guidance issued. <a href="https://www.aljazeera.com/europe/">Al Jazeera Europe</a></li>
-      <li><strong>U.S. passenger monitoring continues</strong> in at least five states. <a href="https://www.cnn.com/2026/05/07/world/hantavirus-ship-tenerife-outbreak-intl">CNN</a> · <a href="https://www.cnn.com/2026/05/08/health/hantavirus-by-the-numbers">CNN — by the numbers</a></li>
-      <li><strong>Tenerife docking + repatriation flights</strong> wrapped May 10 with additional medical resources on board. <a href="https://hub.jhu.edu/2026/05/08/hantavirus-outbreak-dutch-ship-hondius/">JHU Hub</a></li>
-      <li><strong>Outbreak tracking dashboards</strong> are live, including a public genomic tracker. <a href="https://hantavirusmap.com/outbreaks/mv-hondius-2026">Hantavirus map</a> · <a href="https://genomicepi.com/outbreaks/hantavirus-hondius/">GenomicEpi</a></li>
+      <li><strong>Incubation window:</strong> Andes hantavirus incubation can stretch to 42 days. Passengers were on Hondius through early May; the surveillance window remains open through mid-June.</li>
+      <li><strong>Secondary clusters:</strong> Any non-cruise-linked infection would change the risk picture. None reported as of May 14.</li>
+      <li><strong>Pathogen sequencing:</strong> WHO genomic results expected to clarify whether the cluster strain shows mutations associated with enhanced human-to-human transmission.</li>
     </ul>
 
-    <div class="takeaway"><b>What it means:</b> The ceiling on this outbreak is low because Andes virus needs prolonged close contact. The danger is not a Covid-style cascade but missed secondary transmission inside repatriation households. The signal to monitor is any confirmed case <em>without</em> a Hondius epidemiological link — that would warrant a re-evaluation. None has been reported yet.</div>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Case count is essentially flat at 11/3 — surveillance window is still open as repatriated passengers complete incubation, but no new clusters and no community spread anywhere yet.</div>
 
     <div class="sources">
-      <a href="https://en.wikipedia.org/wiki/MV_Hondius_hantavirus_outbreak">Wiki — Outbreak</a> ·
-      <a href="https://www.pbs.org/newshour/health/medical-epidemiologist-explains-what-to-know-about-the-cruise-ship-hantavirus-outbreak">PBS — Epidemiologist Q&amp;A</a> ·
-      <a href="https://www.vdh.virginia.gov/hantavirus/">Virginia DH — Hantavirus</a>
+      <a href="https://www.cdc.gov/han/2026/han00528.asp">CDC HAN00528</a> ·
+      <a href="https://www.ecdc.europa.eu/en/news-events/andes-hantavirus-outbreak-cruise-ship-13-may-2026">ECDC — May 13 update</a> ·
+      <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600">WHO DON600</a> ·
+      <a href="https://medicalxpress.com/news/2026-05-who-andes-cases.html">Medical Xpress — WHO confirms cases</a> ·
+      <a href="https://www.sciencenews.org/article/hantavirus-questions-cruise-ship">Science News — Hantavirus questions</a>
     </div>
   </section>
 
   <!-- MIDDLE EAST -->
   <section id="mideast" class="mideast">
     <h2>5. Middle East Tensions</h2>
-    <p class="deck">Day 75 of the Iran war. The April 8 ceasefire is technically alive but Hormuz remains effectively closed. Lebanon is escalating. China's quiet "no missiles to Iran" assurance ahead of the Trump–Xi summit is the most consequential piece of diplomacy this week.</p>
+    <p class="deck">First crack in the Hormuz blockade: one Chinese supertanker out, timed to Trump-Xi prep. Lebanon dead since the truce reach 380.</p>
 
-    <p>The Pakistan-mediated ceasefire that took effect April 8 still nominally holds, but every operational metric tells a different story. ADNOC chief Sultan Al Jaber said the Strait of Hormuz is "still not open" — Iran is conditioning passage and charging tolls exceeding $1 million per ship, with ~230 loaded tankers waiting inside the Gulf. The U.S. Navy continues a blockade of Iranian ports that began April 13. Lebanon's leg of the ceasefire (originally Nov 2024) is, in practice, inactive: 13 dead in Israeli strikes yesterday alone. Houthis are in a March pause posture under heavy U.S. naval presence; Maersk and CMA CGM have begun cautious Red Sea returns.</p>
+    <p>The Hormuz blockade has its first crack today. <strong>Bloomberg reported May 13</strong> that the Chinese VLCC <strong>Yuan Hua Hu</strong> sailed out of the Strait past Iran's <strong>Larak Island</strong> into the Gulf of Oman — the rare exit timed to Trump-Xi summit prep, consistent with Iran's March 26 carve-out allowing China/Russia/India/Iraq/Pakistan-flagged ships through. But this is one tanker, not a reopening: shipping data shows the strait <strong>operating well below normal capacity May 11–13</strong>, with "dark tanker" staging expanding inside protected Iranian waters. <strong>General Dan Caine confirmed May 6 that 22,500 mariners on &gt;1,550 vessels are still stranded.</strong> Trump's <strong>May 6 pause of "Project Freedom"</strong> still holds. ADNOC chief Sultan Al Jaber: Iran imposing <strong>&gt;$1M/ship tolls</strong>, ~230 tankers waiting inside the Gulf. EIA still warns crude could rise another $20/bbl if the chokepoint persists. The Trump–Xi Day 2 readout includes a mutual pledge that Hormuz must remain "open and non-militarised" — the strongest joint US-China posture on the strait of this conflict.</p>
 
-    <h3>Today's most significant stories</h3>
+    <p>On Lebanon, yesterday's south-Lebanon strikes have continued. <strong>May 13 strikes on cars killed 12</strong>, mostly south of Beirut, bringing the <strong>total Lebanese dead since the April 17 Israel-Hezbollah ceasefire to 380</strong> per Lebanon's health ministry. Israel cites a Litani-area "special operation… to establish operational control." The Lebanese leg of the ceasefire (Nov. 2024) is for all practical purposes inactive. On Gaza, the ceasefire is "holding but fragile" per Trump's Board of Peace rep — <strong>120 Palestinians killed in Gaza since the Iran war was paused April 8</strong> (8 women, 13 children). The strait toll and the south-Lebanon casualties are the two measurable indicators of an Iran-war ceasefire that exists in paper more than in fact.</p>
+
+    <h3>The state of play, May 14</h3>
     <ul>
-      <li><strong>Beijing's private assurance to Washington</strong> ahead of the Trump–Xi summit: no surface-to-air missiles for Iran. Quiet, but the most material de-escalator on the table this week. <a href="https://www.csis.org/analysis/trump-xi-summit-beijing-managing-worlds-most-important-relationship">CSIS</a> · <a href="https://www.atlanticcouncil.org/dispatches/five-outcomes-that-would-make-trumps-trip-to-china-a-success/">Atlantic Council</a></li>
-      <li><strong>Hormuz toll-blockade.</strong> &gt;$1M per ship, ~230 tankers waiting inside the Gulf; EIA still warns of another $20/bbl move if it persists. <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis">Wiki — Hormuz</a> · <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10636/">UK Commons</a></li>
-      <li><strong>Lebanon: 13 dead in Israeli strikes on Deir Zahrani, Zawtar al-Sharqiya, Nabatieh, Al-Housh, Jebchit.</strong> Among the dead: a child, a woman, a Lebanese army member. <a href="https://www.aljazeera.com/news/2026/5/11/israeli-killings-in-lebanon-rise-is-even-the-pretence-of-a-ceasefire-over">Al Jazeera</a> · <a href="https://www.timesofisrael.com/liveblog_entry/israeli-strike-said-to-kill-6-in-lebanon/">Times of Israel</a></li>
-      <li><strong>Trump's economy-political pressure.</strong> CNN: economy net approval −40. ~80% of Americans say gas prices strain household budgets; 63% blame Trump for the war-driven spike. <a href="https://www.npr.org/2026/05/06/nx-s1-5810555/trump-iran-gas-prices-midterms-polling">NPR</a> · <a href="https://www.washingtonpost.com/politics/2026/05/03/trump-approval-ratings-poll/">WaPo</a></li>
-      <li><strong>Pentagon cost: $29B and counting.</strong> India's PM Modi appealed to citizens to pause gold purchases and cut fuel use; Türkiye's CBRT held at 37% as inflation jumped to 32.37%. The macro cost is now multi-continent. <a href="https://www.cnbc.com/2026/05/11/india-modi-fuel-gold-foreign-travel-middle-east-oil-shock.html">CNBC — Modi</a> · <a href="https://www.turkiyetoday.com/business/bofa-raises-turkiyes-2026-inflation-forecast-to-30-sees-delayed-rate-cuts-3219612">Türkiye Today — BofA</a></li>
+      <li><strong>Hormuz:</strong> One Chinese VLCC out via Larak — not a reopening. 22,500 mariners still stranded. &gt;$1M tolls in effect.</li>
+      <li><strong>Lebanon:</strong> 380 dead since the April 17 truce; Israeli strikes south of Beirut continuing May 13.</li>
+      <li><strong>Gaza:</strong> 120 killed since April 8; ceasefire "holding but fragile."</li>
+      <li><strong>Russia and China on Iran:</strong> Beijing's quiet pre-summit pledge not to send SAMs to Iran has held. The Trump-Xi joint statement on Hormuz strengthens the gas-station-of-the-world coalition.</li>
+      <li><strong>US cost-of-war:</strong> $29B (Pentagon comptroller). Pump prices ~$1.50/gal above pre-war baseline; ~63% of Americans now blame Trump for gas prices (CNN).</li>
     </ul>
 
-    <div class="takeaway"><b>What it means:</b> The next two weeks decide whether this becomes a frozen-conflict / managed escalation or returns to hot war. The pressure valves to watch: (1) any China-brokered Iran climbdown out of the Beijing summit; (2) a U.S.–Iran prisoner / tanker exchange announcement; (3) Hezbollah firing rates if Israel keeps escalating Lebanon. Domestically, every $0.50/gal of gas costs Republicans ~2 points on the generic ballot.</div>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Hormuz is cracking open one Chinese supertanker at a time as a Trump-Xi pre-summit gesture, while Israel's Lebanon and Gaza death tolls keep climbing daily despite both ceasefires officially holding.</div>
 
     <div class="sources">
-      <a href="https://en.wikipedia.org/wiki/2026_Iran_war">Wiki — Iran war</a> ·
-      <a href="https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire">Wiki — Ceasefire</a> ·
-      <a href="https://en.wikipedia.org/wiki/2026_Lebanon_war">Wiki — Lebanon</a> ·
-      <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Lebanon_war">Wiki — Lebanon timeline</a> ·
-      <a href="https://www.cnn.com/2026/05/11/world/live-news/iran-war-proposal-trump">CNN — life support</a> ·
-      <a href="https://www.cnn.com/2026/05/12/world/live-news/trump-iran-war-news">CNN — Day 74</a> ·
-      <a href="https://www.npr.org/2026/05/08/g-s1-121061/iran-war-updates">NPR — Tanker fire</a> ·
-      <a href="https://www.haaretz.com/israel-news/israel-security/2026-05-10/ty-article-live/36-killed-in-lebanon-by-israeli-airstrikes-over-past-day-health-ministry-says/0000019e-0fd8-db10-a3bf-ffdb07a80004">Haaretz — IDF Lebanon</a> ·
-      <a href="https://maritime-executive.com/article/houthis-announce-end-of-red-sea-shipping-attacks">Maritime Exec — Houthi pause</a> ·
-      <a href="https://www.cfr.org/articles/israel-strikes-beirut-for-the-first-time-since-ceasefire-announcement">CFR — Beirut strike</a>
+      <a href="https://www.bloomberg.com/news/2026-05-13-chinese-tanker-out-hormuz">Bloomberg — Chinese tanker exits Hormuz</a> ·
+      <a href="https://www.rte.ie/news/2026/0513/lebanon-israeli-strikes.html">RTÉ — Lebanon strikes kill 12</a> ·
+      <a href="https://www.rte.ie/news/2026/0512/lebanon-380-since-truce.html">RTÉ — 380 dead since truce</a> ·
+      <a href="https://www.irishtimes.com/world/middle-east/2026/05/13/israel-escalates-gaza-attacks">Irish Times — Gaza</a> ·
+      <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10636/">House of Commons Library CBP-10636 — Reopening Hormuz</a>
     </div>
   </section>
 
-  <!-- CRITICAL SCIENCE -->
+  <!-- SCIENCE -->
   <section id="science" class="science">
-    <h2>6. Any new thing in science (critical)</h2>
-    <p class="deck">Four wires to watch: a world-first in antimatter physics, a wildfire trajectory shattering records, organic chemistry on Mars, and a quietly significant pivot in obesity medicine.</p>
+    <h2>6. Critical Science</h2>
+    <p class="deck">Two beautiful results landed in the May 13 window: Venus's mysterious cloud wall, explained; the brown-dwarf catalogue, doubled.</p>
 
-    <h3>(a) First quantum interference observed in a positronium beam</h3>
-    <p>A Tokyo University of Science team (Nagashima, Nagata, Mikami) published the first observation of matter-wave diffraction in a positronium beam in <em>Nature Communications</em>. Energies up to 3.3 keV in ultra-high vacuum on a graphene grating. Why it matters: positronium (an electron + positron bound state) is a clean two-body atom whose wave behaviour opens an unprecedented experimental window onto antimatter — including, eventually, a direct measurement of gravity's effect on antimatter, never directly tested. <a href="https://www.nature.com/articles/s41467-025-67920-0">Nature Comms</a> · <a href="https://www.tus.ac.jp/en/mediarelations/archive/20260115_5801.html">TUS</a> · <a href="https://scitechdaily.com/researchers-capture-quantum-interference-in-one-of-natures-rarest-atoms/">SciTechDaily</a></p>
+    <p><strong>University of Tokyo + collaborators</strong> (*Nature Astronomy*) explained the <strong>6,000-km cloud wall on Venus</strong> that has baffled astronomers for years: it's the <strong>largest hydraulic jump ever identified in the solar system</strong>, a sudden fluid slowdown in the lower cloud deck coupled to a strong updraft that lofts sulfuric-acid vapour ~30 miles high where it condenses. The team's models also show this single mechanism helps maintain Venusian <strong>superrotation</strong> — the long-running puzzle of why Venus's atmosphere rotates ~60× faster than the planet itself — and that Mars may host a smaller, observable version of the same phenomenon. A single fluid-dynamics mechanism reaches across two long-standing planetary-science puzzles at once.</p>
 
-    <h3>(b) Global wildfires already 20%+ above the prior full-year record</h3>
-    <p>The Global Wildfire Information System reports 163M hectares burned globally between January 1 and the first week of May — &gt;20% above the previous record since 2012 tracking began. Sahel (west Africa, Sudan, South Sudan) and Asia (+~40% over the prior peak) lead; the U.S. and Australia are also unusually high. World Weather Attribution warned Tuesday that if a strong El Niño develops, full-year 2026 could be the worst ever recorded. <a href="https://www.downtoearth.org.in/climate-change/record-wildfires-burn-through-over-150-million-hectares-globally-in-2026-as-scientists-warn-el-ni%C3%B1o-could-worsen-crisis">Down To Earth</a> · <a href="https://www.malaymail.com/news/world/2026/05/12/the-super-el-nino-threat-its-only-may-but-2026-has-already-broken-every-wildfire-record/219629">Malay Mail</a> · <a href="https://www.channelstv.com/2026/05/12/world-risks-year-of-severe-fires-fuelled-by-climate-change-researchers/">Channels</a></p>
+    <p>Meanwhile, <strong>NASA's Backyard Worlds: Planet 9 citizen-science project</strong> published in the *Astronomical Journal* on May 13 announcing <strong>&gt;3,000 new candidate brown dwarfs</strong> discovered by volunteers in WISE/NEOWISE infrared archives — <strong>doubling the known population to &gt;6,000</strong> and dramatically thickening the census of the solar neighbourhood's coldest substellar objects. The result is one of the largest single-paper additions to the brown-dwarf catalogue in the project's history.</p>
 
-    <h3>(c) Curiosity rover finds DNA-precursor-like organics on Mars</h3>
-    <p>NASA Curiosity's analysis of ancient clay-rich rocks at Gale Crater turned up a surprising variety of organic molecules including some resembling DNA building blocks — preserved in materials that once held water. Not proof of life, but the strongest signal yet that early Mars was biologically more promising than thought. The team's separate "Atacama-rock" drill incident (a rock came out of the ground stuck to the drill) was resolved last week. Psyche spacecraft does a Mars gravity-assist flyby Friday May 15 at 2,800 mi. <a href="https://www.sciencedaily.com/releases/2026/04/260428045549.htm">ScienceDaily — Organics</a> · <a href="https://www.sciencedaily.com/releases/2026/05/260510234704.htm">ScienceDaily — Atacama</a></p>
+    <p>Building on yesterday's Psyche/Mars flyby item: NASA's Psyche close pass at Mars is on for tomorrow May 15. JWST's <strong>COSMOS-Web survey</strong> released this week the sharpest cosmic-web map yet — 164,000+ galaxies traced back to ~1 billion years after the Big Bang. Astrobiology beat: a separate May 13 result argues biosignature searches should pivot from individual molecular markers to <strong>statistical compositional patterns</strong> — a methodological move that will reshape upcoming missions' instrument priorities. No major movement on the wildfires / super-El-Niño story beyond yesterday's WWA framing (163M ha YTD, &gt;20% above prior full-year record).</p>
 
-    <h3>(d) ATTAIN-MAINTAIN — oral GLP-1 holds most of the weight loss</h3>
-    <p>A Weill Cornell-led trial published yesterday in <em>Nature Medicine</em> showed that switching from an injectable GLP-1 (tirzepatide) to once-daily oral orforglipron preserved most — but not all — of patients' weight loss over the maintenance phase. Combined with NIH brain-circuit work showing small-molecule GLP-1s suppress hedonic feeding through a reward circuit, the field is rapidly moving toward cheaper, oral, all-day pharmacotherapy. <a href="https://news.weill.cornell.edu/news/2026/05/oral-glp-1-medication-helps-patients-maintain-weight-loss">Weill Cornell</a> · <a href="https://www.nih.gov/news-events/news-releases/oral-small-molecule-glp-1-drugs-penetrate-deep-into-brain-suppress-cravings">NIH</a> · <a href="https://www.nature.com/articles/s41591-025-04124-5">Nature Medicine — landscape</a></p>
+    <h3>The May 13–14 science window</h3>
+    <ul>
+      <li><strong>Venus hydraulic jump</strong> — *Nature Astronomy* — University of Tokyo et al.</li>
+      <li><strong>Brown-dwarf catalogue doubled</strong> — *Astronomical Journal* — NASA Backyard Worlds.</li>
+      <li><strong>JWST COSMOS-Web cosmic-web map</strong> — 164,000+ galaxies, sharpest yet.</li>
+      <li><strong>Biosignature pivot</strong> — statistical compositional patterns over single-molecule markers.</li>
+      <li><strong>Kyoto/Hiroshima W-state readout</strong> (see Quantum).</li>
+      <li><strong>Institute of Science Tokyo: post-stroke recovery target</strong> — drug-candidate molecule extending the ~2-month recovery plateau.</li>
+      <li><strong>Cambridge hafnium-oxide neuromorphic chip</strong> — claimed 70% AI-energy cut.</li>
+    </ul>
 
-    <h3>(e) Fundamental constants and the existence of life</h3>
-    <p>Queen Mary, London proposed that the universe's fundamental constants sit in a narrow band that permits liquids — including blood and the cytoplasm of cells — to flow at all. If they were slightly different, complex life could never have emerged. A new entry in the "fine-tuning" literature, but with falsifiable thermodynamic content. <a href="https://www.sciencedaily.com/releases/2026/05/260508022653.htm">ScienceDaily</a> · <a href="https://huxley.media/en/scientific-forecast-2026-the-year-of-major-experiments">Huxley.media</a></p>
+    <div class="takeaway"><b>Where things stand on May 14:</b> Venus's mysterious cloud wall just got solved by a single fluid-dynamics mechanism, and citizen scientists doubled humanity's brown-dwarf catalogue in one paper — both major data points dropped May 13.</div>
 
-    <div class="takeaway"><b>What it means:</b> The "critical science" wire today is unusually balanced — fundamental physics (positronium), planetary science (Mars organics), climate (wildfires / El Niño), and medicine (oral GLP-1) all delivered first-rank items in the same week. The wildfire trajectory is the single most action-relevant item: it directly feeds the inflation, migration and insurance trajectories everywhere else on this report.</div>
+    <div class="sources">
+      <a href="https://phys.org/news/2026-05-vast-venus-hydraulic-jump.html">Phys.org / U-Tokyo — Venus hydraulic jump</a> ·
+      <a href="https://www.space.com/30-mile-high-clouds-acid-venus">Space.com — 30-mile-high acid clouds</a> ·
+      <a href="https://www.universetoday.com/2026/05/citizen-scientists-doubled-brown-dwarfs">Universe Today — Brown dwarfs doubled</a> ·
+      <a href="https://science.nasa.gov/article/nasa-volunteers-double-brown-dwarf-population">NASA Science</a> ·
+      <a href="https://www.sciencedaily.com/releases/2026/05/13/">ScienceDaily — May 13 releases</a>
+    </div>
   </section>
 
   <footer>
-    Specific-topics deep dive automatically generated from <code>request.md</code>: AI Market · Neurological Computers · Quantum Computing · New Spreading Virus · Middle East Tensions · Any new thing in science (critical). Compiled 2026-05-13 from peer-reviewed journals (Nature, Nature Communications, Nature Medicine), wire services (CNN, AJ, NPR, PBS, CNBC, Reuters via syndication), WHO disease-outbreak notices, and specialty outlets (Quantum Insider, BCI Intel, Tom's Hardware, ScienceDaily). Companion files: <a href="daily-briefing.html">daily-briefing.html</a>, <a href="weekly-report.html">weekly-report.html</a>.
+    Specific-Interest Report — generated 14:50 local on 2026-05-14 (catch-up run for the missed 09:30 dispatch). Topics driven by local <code>request.md</code>: AI Market · Neurological Computers · Quantum Computing · New Spreading Virus · Middle East Tensions · Critical Science. Verify every figure with the original outlet before acting on anything material.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
