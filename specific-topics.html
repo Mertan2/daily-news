@@ -3,299 +3,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Specific Topics — Sunday, May 24, 2026</title>
+<title>Specific Topics — Thursday, May 28, 2026</title>
 <style>
   :root {
     --bg: #0f1419;
     --panel: #1a2028;
-    --border: #2a3441;
+    --panel-2: #232b36;
+    --line: #2a3441;
     --text: #e6edf3;
     --muted: #8b949e;
     --accent: #58a6ff;
-    --highlight: #f0883e;
-    --warn: #ff7b72;
     --good: #7ee787;
+    --warn: #f0883e;
+    --alert: #ff7b72;
     --purple: #d2a8ff;
-    --teal: #56d4dd;
   }
   @media (prefers-color-scheme: light) {
     :root {
       --bg: #f6f7f9;
       --panel: #ffffff;
-      --border: #dde1e8;
+      --panel-2: #f0f2f6;
+      --line: #dde1e8;
       --text: #1a1d23;
       --muted: #5b6573;
       --accent: #0969da;
-      --highlight: #9a6700;
-      --warn: #cf222e;
       --good: #1a7f37;
+      --warn: #9a6700;
+      --alert: #cf222e;
       --purple: #6f42c1;
-      --teal: #1b7c83;
     }
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     background: var(--bg);
     color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
     line-height: 1.65;
   }
-  .container { max-width: 980px; margin: 0 auto; padding: 32px 24px 64px; }
-  header {
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 18px;
-    margin-bottom: 28px;
-  }
-  .eyebrow { color: var(--accent); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-  h1 { font-size: 32px; margin: 0 0 8px; }
-  .subtitle { color: var(--muted); font-size: 15px; }
-  .nav { margin: 8px 0 16px; }
-  .nav a { margin-right: 12px; font-size: 13px; }
-  .toc {
+  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 22px 80px; }
+  header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 28px; }
+  .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
+  h1 { margin: 6px 0 4px; font-size: 28px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 14px; font-style: italic; }
+  .topic {
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 18px;
-    margin: 12px 0 24px;
-    font-size: 14px;
-  }
-  .toc a { margin-right: 14px; color: var(--accent); }
-  h2 {
-    font-size: 24px;
-    margin: 40px 0 12px;
-    padding: 8px 14px;
-    border-left: 5px solid var(--accent);
-    background: var(--panel);
-    border-radius: 0 6px 6px 0;
-  }
-  h2.ai { border-left-color: var(--highlight); }
-  h2.neuro { border-left-color: var(--purple); }
-  h2.quantum { border-left-color: var(--teal); }
-  h2.virus { border-left-color: var(--warn); }
-  h2.me { border-left-color: var(--warn); }
-  h2.sci { border-left-color: var(--good); }
-  h3 { font-size: 18px; margin: 18px 0 4px; color: var(--text); }
-  p { margin: 8px 0; }
-  .card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 14px 18px;
-    margin: 12px 0;
-  }
-  .card.flag { border-left: 3px solid var(--highlight); }
-  .stat {
-    display: inline-block;
-    font-size: 12px;
-    padding: 2px 8px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
     border-radius: 10px;
-    background: rgba(126, 231, 135, 0.12);
-    color: var(--good);
-    margin: 2px 4px 2px 0;
-    font-family: ui-monospace, SFMono-Regular, monospace;
+    padding: 18px 22px;
+    margin: 20px 0;
   }
-  .stat.warn { background: rgba(255, 123, 114, 0.12); color: var(--warn); }
-  .stat.tech { background: rgba(240, 136, 62, 0.14); color: var(--highlight); }
-  .stat.sci { background: rgba(210, 168, 255, 0.14); color: var(--purple); }
-  .stat.qc { background: rgba(86, 212, 221, 0.14); color: var(--teal); }
-  ul { padding-left: 22px; margin: 6px 0 12px; }
-  li { margin: 4px 0; }
+  .topic h2 {
+    margin: 0 0 6px;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  .topic .from-request { color: var(--muted); font-size: 12.5px; margin: 0 0 14px; font-style: italic; }
+  .topic h3 { font-size: 14.5px; margin: 12px 0 4px; color: var(--accent); }
+  ul { padding-left: 22px; margin: 6px 0 8px; }
+  li { margin: 5px 0; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .meta { color: var(--muted); font-size: 13px; }
+  strong { color: var(--text); }
+  .pill {
+    display: inline-block;
+    font-size: 10.5px;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    margin-right: 6px;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .pill.alert { color: var(--alert); border-color: rgba(255, 123, 114, 0.35); }
+  .pill.market { color: var(--good); border-color: rgba(126, 231, 135, 0.3); }
+  .pill.tech { color: var(--accent); border-color: rgba(88, 166, 255, 0.3); }
+  .pill.sci { color: var(--purple); border-color: rgba(210, 168, 255, 0.3); }
   .disclaimer {
-    margin-top: 28px;
-    padding: 12px 16px;
-    background: var(--panel);
-    border: 1px dashed var(--border);
-    border-radius: 6px;
+    background: rgba(240, 136, 62, 0.08);
+    border: 1px solid rgba(240, 136, 62, 0.25);
+    border-radius: 10px;
+    padding: 12px 14px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12.5px;
+    margin: 0 0 14px;
   }
-  footer {
-    margin-top: 40px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
+  footer { margin-top: 36px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .nav { margin: 14px 0 8px; font-size: 13px; }
+  .nav a { margin-right: 12px; }
+  .takeaway {
+    background: var(--panel-2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 12px 0 4px;
+    font-size: 13.5px;
     color: var(--muted);
-    font-size: 13px;
+    border-left: 3px solid var(--accent);
   }
+  .takeaway strong { color: var(--text); }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <div class="eyebrow">Specific Topics · Sun May 24, 2026</div>
-    <h1>AI Market · Neurological Computers · Quantum · Outbreaks · Middle East · Critical Science</h1>
-    <div class="subtitle">Deep dive on the user's six tracked subjects (<code>request.md</code>). Numbers, names, papers, dates. Single-sourced items are flagged inline.</div>
-    <div class="nav">
-      <a href="./daily-briefing.html">→ Daily Briefing</a>
-      <a href="./weekly-report.html">→ Weekly Report</a>
-    </div>
-    <div class="toc">
-      <a href="#ai">1 · AI Market</a>
-      <a href="#neuro">2 · Neurological Computers</a>
-      <a href="#quantum">3 · Quantum Computing</a>
-      <a href="#virus">4 · New Spreading Virus</a>
-      <a href="#me">5 · Middle East Tensions</a>
-      <a href="#sci">6 · Critical Science</a>
-    </div>
-  </header>
+<div class="wrap">
 
-  <h2 class="ai" id="ai">1 · AI Market</h2>
+<header>
+  <div class="eyebrow">Specific Topics</div>
+  <h1>Deeper dive — Thursday, May 28, 2026</h1>
+  <div class="sub">Pulled from your local <code>request.md</code>. Six topics: AI market · neurological computers · quantum computing · spreading viruses · Middle East tensions · new in science.</div>
+</header>
 
-  <div class="card flag">
-    <h3>Anthropic past $1T on Forge; primary round closing "as soon as next week" at $900B+ post-money</h3>
-    <p>Forge Global CEO Kelly Rodriques confirmed Friday that Anthropic is implying ~$1T on the secondary market — nearly tripling the $380B reference from three months ago. OpenAI sits at ~$880B on the same platform. <strong>Bloomberg late Friday:</strong> the primary round closes "as soon as next week" at <strong>$30B+ on $900B+ post-money</strong>, co-led by Sequoia, Dragoneer, Altimeter and Greenoaks.</p>
-    <p>Q2 disclosure to investors: <span class="stat tech">Rev $10.9B</span> <span class="stat tech">+127% q/q</span> <span class="stat">Op profit $559M (first ever)</span> <span class="stat">Compute-to-revenue 56¢/$ (was 71¢)</span> — two years ahead of internal plan. Annualized revenue north of <strong>$30B</strong> vs OpenAI's ~$25B.</p>
-    <p><strong>Karpathy at Anthropic.</strong> Andrej Karpathy (OpenAI co-founder, ex-Tesla AI/FSD lead) started Tuesday May 19 on Anthropic's pre-training team under Nick Joseph; charter is using Claude itself to accelerate pre-training research.</p>
-    <p><strong>Compute commitments.</strong> SpaceX S-1 disclosed Anthropic will pay xAI/Colossus <strong>$1.25B/month through May 2029</strong> for 300 MW and 220,000+ GPUs (~$45B total). Friday: Anthropic confirmed in talks to use Microsoft's <strong>Maia (Athena) chips</strong> atop the $5B Microsoft investment and $30B Azure commitment. <strong>DoD $25B 5-year master AI procurement (May 1)</strong> excluded Anthropic over its acceptable-use policy; awards went to OpenAI, Google, Microsoft, Nvidia, AWS, SpaceX, Reflection, Oracle + four integrators.</p>
-    <p><strong>Saturday addition:</strong> Anthropic + Gates Foundation announced a <strong>$200M / 4-yr</strong> partnership.</p>
-  </div>
+<div class="disclaimer">
+  These are deep dives on the topics you flagged in <code>request.md</code>. Snapshot built from public sources as of Thursday morning, May 28, 2026 — confirm with original outlets and pre-print servers before acting on any specific claim.
+</div>
 
-  <div class="card">
-    <h3>Trump AI cybersecurity EO postponed indefinitely</h3>
-    <p>Thursday May 21: Trump pulled the voluntary frontier-model 90-day pre-release-access framework <strong>hours before signing</strong>, with the CEOs already in attendance. Trump: "we're leading China, we're leading everybody, and I didn't want to do anything to get in the way of that lead." Sacks reportedly "hated it." Precipitating event still: Anthropic's <em>Mythos</em> autonomous-vulnerability finder.</p>
-  </div>
+<nav class="nav">
+  <a href="#ai">AI market</a>
+  <a href="#neuro">Neurological computers</a>
+  <a href="#quantum">Quantum computing</a>
+  <a href="#virus">New spreading virus</a>
+  <a href="#mideast">Middle East tensions</a>
+  <a href="#science">New in science (critical)</a>
+</nav>
 
-  <div class="card">
-    <h3>OpenAI disproves an Erdős 1946 conjecture; Gemini 3.5 ships</h3>
-    <p>OpenAI's internal reasoning model produced a deep algebraic-number-theory argument disproving Erdős's 1946 planar-unit-distance / square-grid conjecture — verified by Gowers, Alon, Shankar and Tsimerman. Annualized ARR ~$25B. <strong>Google Gemini 3.5 Flash</strong> launched Wednesday at I/O: <span class="stat tech">76.2% Terminal-Bench 2.1</span> <span class="stat tech">1656 Elo GDPval-AA</span> <span class="stat tech">83.6% MCP Atlas</span> 4× faster than 3.1 Pro, 25% cheaper at $1.50/$9 per Mtok. 3.5 Pro rolls out June.</p>
-  </div>
+<section class="topic" id="ai">
+  <h2>1 · AI market</h2>
+  <p class="from-request">From request.md: "AI Market"</p>
 
-  <div class="card">
-    <h3>Nvidia Q1 FY27, hyperscaler capex, enterprise share</h3>
-    <p>Wednesday May 20 Q1 FY27 print: <span class="stat">Rev $81.6B +85% y/y</span> <span class="stat">Data Center $75.2B +92%</span> <span class="stat">$80B additional buyback</span> <span class="stat">Dividend hiked 25×</span> <span class="stat">FCF $48.6B</span> <span class="stat">EPS $1.87 non-GAAP</span> <span class="stat">Q2 guide $91B</span>. <strong>H200-China program still at zero shipments</strong> since December 2025 authorization. <strong>Hyperscaler 2026 capex ~$725B</strong> (MSFT, Meta, Amazon, Alphabet). Meta raised to $125–145B; Amazon $44.2B Q1. <strong>Menlo Ventures enterprise LLM share:</strong> <span class="stat tech">Anthropic 40%</span> <span class="stat tech">OpenAI 27%</span> <span class="stat tech">Google 21%</span>. xAI dissolved May 6 into SpaceX as SpaceXAI division; Grok 4.3 rolled out. <strong>Claude Code ~4% of all public GitHub commits</strong> (SemiAnalysis projects 20%+ by year-end).</p>
-  </div>
+  <h3><span class="pill tech">Funding</span>Anthropic $30B+ at $900B+ post-money — closing this week</h3>
+  <p>Anthropic's primary round is reportedly <strong>closing this week</strong> at a post-money north of <strong>$900B</strong> — co-led by Sequoia, Dragoneer, Altimeter and Greenoaks (each ~$2B), with Peter Thiel's Founders Fund and General Catalyst also participating. If priced at $950B it would make Anthropic the world's most valuable AI startup, leapfrogging OpenAI's ~$850B mark from earlier rounds. Anthropic Q1 revenue was <strong>$4.8B</strong>; Q2 is tracking ~<strong>$10.9B</strong> with its <strong>first-ever $559M operating profit</strong> — annualised run-rate ~$45B versus OpenAI's ~$25B (Feb). Ramp's April AI Index put Anthropic at 34.4% of paying business customers vs OpenAI 32.3% — first crossover. Menlo Ventures has Anthropic at ~40% of enterprise LLM spend (OpenAI 27%, Google 21%).</p>
 
-  <h2 class="neuro" id="neuro">2 · Neurological Computers</h2>
+  <h3><span class="pill tech">IPO race</span>OpenAI confidential S-1 "as soon as Friday"; the token-pricing crisis</h3>
+  <p><strong>OpenAI's confidential IPO prospectus could land Friday May 29</strong>, per CNBC sourcing. Anthropic also "eyeing a 2026 IPO." But both companies face a fresh problem: <em>cheap AI</em>. Chinese labs are pricing tokens at a fraction of US frontier rates, while Western challengers — Nvidia (Nemotron), Cohere, Reflection, Mistral — are shipping smaller, more efficient alternatives. CNBC's framing this week: "cheap AI could derail OpenAI and Anthropic's IPOs." Investing.com is calling it the <strong>"AI token pricing crisis"</strong> behind the OpenAI/Anthropic revenue race — at trillion-dollar-adjacent valuations the prospectus has to demonstrate enterprise-revenue concentration and growth durable enough to justify the multiple. Nvidia, sitting on Q1 FY27 record revenue of $81.6B and $80B added buyback, was nonetheless <em>flat-to-down after-hours</em> on its print — the bar drifts higher.</p>
 
-  <div class="card flag">
-    <h3>Paradromics Connexus implanted at U-Mich May 14 — third clinical site</h3>
-    <p>Dr. Oren Sagher (surgery), Dr. Matthew Willsey (research) implanted the <strong>421-microelectrode, sub-dime-sized array</strong> in the temporal lobe of an epilepsy patient for ~20 minutes; safe high-resolution single-unit recording in humans confirmed. Adds U-Mich as the third site of the Connect-One trial. Published sheep data: ~200 bps — roughly <strong>25× Neuralink's 8-bps cursor record</strong>.</p>
-  </div>
+  <h3><span class="pill tech">Compute</span>Hyperscaler capex ~$725B; Anthropic-SpaceX $1.25B/mo compute deal</h3>
+  <p>2026 hyperscaler capex now tracks ~<strong>$725B</strong>: MSFT $190B, Meta $125-145B, Alphabet $180-190B. Anthropic disclosed a <strong>$1.25B/month compute partnership with SpaceX through 2029</strong> for Colossus access — the single largest publicly-announced compute commitment by any AI lab. Anthropic-Gates Foundation also announced a $200M / 4-yr partnership Saturday May 23.</p>
 
-  <div class="card">
-    <h3>Neuralink next-gen robot announcement (May 7)</h3>
-    <p>Surgical robot threads through dura without removal, compensates for cardiac/respiratory motion in real time, uses <strong>8 optical-coherence-tomography cameras</strong> — opens Parkinson's, refractory epilepsy, treatment-resistant depression. N1 placed in 20+ patients across US/UK/Canada/UAE per latest disclosures.</p>
-  </div>
+  <h3><span class="pill alert">Regulation</span>The pulled-EO + state-level fragmentation</h3>
+  <p>The <strong>AI cybersecurity executive order</strong> that would have created a voluntary 90-day pre-release government-access framework for frontier models <em>and</em> extended pre-access to critical-infrastructure providers (banks, energy) was <strong>abruptly pulled by Trump at the May 21 signing event</strong> after he said he "didn't like certain aspects" and worried it could "interfere with American competitiveness." Markets are still digesting the postponement. State-level fragmentation continues: NY's RAISE Act remains in force; CA's SB-53 is on the governor's desk; CO's reasonable-care AI rule takes effect in October. Anthropic's <strong>Mythos autonomous-vulnerability finder</strong> was the catalyzing artifact behind the federal push.</p>
 
-  <div class="card">
-    <h3>BISC, Cambridge HfO₂ memristor, Synchron, INBRAIN, Motif</h3>
-    <p><strong>BISC</strong> (Stanford/Columbia, <em>Nature Electronics</em> Dec 2025): single 50-µm thinned CMOS, <span class="stat sci">65,536 electrodes</span> <span class="stat sci">1,024 simultaneous recording channels</span> <span class="stat sci">16,384 stimulation channels</span> ~3 mm³ volume.</p>
-    <p><strong>Cambridge HfO₂ memristor</strong> (Science Advances, ~May 12-13): million-fold lower switching currents than conventional oxide memristors with hundreds of stable conductance levels — projected <strong>~70% AI energy cut</strong>, spike-timing-dependent plasticity demonstrated.</p>
-    <p><strong>Synchron:</strong> 12 patients implanted in COMMAND endovascular trial; $200M Series D funds the pivotal trial across 4+ US sites in 2026 toward first BCI PMA. <strong>INBRAIN:</strong> graphene cortical interface differentiates cancer vs healthy tissue at micrometer scale during tumor resection. <strong>Motif Neurotech:</strong> FDA IDE approved for treatment-resistant-depression trial; MintNeuro collaboration on miniaturized stimulators. <strong>ONWARD Medical:</strong> third AR-BCI implant in Lausanne. <strong>Blackrock Neurotech</strong> MoveAgain has FDA Breakthrough Device designation; 30,000+ implant patient-days.</p>
-  </div>
+  <div class="takeaway"><strong>Bottom line:</strong> Q2 2026 is shaping up as the most reflexive moment for the AI market since the 2023 ChatGPT inflection: simultaneous trillion-dollar valuations, dueling IPO clocks, hyperscaler capex levels with no precedent, AND a pricing race-to-the-bottom from open-source / Chinese alternatives. Watch the Anthropic round close, the OpenAI S-1, and Brent — the macro picture for the AI trade still rotates on the Iran-Hormuz energy tape.</div>
+</section>
 
-  <h2 class="quantum" id="quantum">3 · Quantum Computing</h2>
+<section class="topic" id="neuro">
+  <h2>2 · Neurological computers (BCI &amp; neuromorphic)</h2>
+  <p class="from-request">From request.md: "Neurological Computers"</p>
 
-  <div class="card flag">
-    <h3>$2.013B in CHIPS Act quantum incentives announced May 21 — IBM $1B for a pure-play quantum foundry</h3>
-    <p>Commerce announcement across nine firms in exchange for minority equity stakes: <strong>IBM $1B</strong> (matched, for "Anderson" pure-play quantum wafer foundry), GlobalFoundries $375M, D-Wave / Rigetti / Infleqtion / PsiQuantum / Quantinuum / Atom Computing $100M each, Diraq $38M. RGTI +30.57%, INFQ +31.44% Thursday. Macron Friday added <strong>€1B to France's Quantum Plan</strong>.</p>
-  </div>
+  <h3><span class="pill sci">First-ever</span>Tsinghua's two-way adaptive BCI</h3>
+  <p>Bioengineers at <strong>Tsinghua University</strong> published the world's <strong>first two-way adaptive brain-computer interface</strong> using a memristor-based adaptive neuromorphic decoder (<em>Nature Electronics</em>). "Two-way adaptive" is the key phrase — the brain and the decoder learn from each other in a closed loop rather than the user training a static decoder. Energy footprint is dramatically lower than digital decoders because of the memristor substrate, which is the neuromorphic equivalent of analog computing.</p>
 
-  <div class="card">
-    <h3>Jiuzhang 4.0 — 3,050 photons, 10⁵⁴× supercomputer speedup</h3>
-    <p>USTC, Pan Jianwei lab; published <em>Nature</em> May 13. <span class="stat qc">3,050 photons</span> <span class="stat qc">1,024 squeezed states</span> <span class="stat qc">8,176-mode interferometer</span> Gaussian boson sampling at <strong>10⁵⁴× the top supercomputer</strong>. Up from 255 photons in Jiuzhang 3.0. Biggest single jump in optical quantum since 2019.</p>
-  </div>
+  <h3><span class="pill sci">Scale</span>Yale's NeuroScale — local-cluster sync replacing global clock</h3>
+  <p>Yale researchers introduced <strong>NeuroScale</strong>, replacing the global synchronization clock of conventional neuromorphic chips with a decentralized scheme that synchronizes only local clusters of neurons and synapses that <em>directly</em> interact. The biological analogue: cortical microcircuits don't share a global timing signal. This is one of the cleanest pieces of work in 2026 on the path from chip-scale to system-scale neuromorphic computing.</p>
 
-  <div class="card">
-    <h3>Other May milestones — neutral atom, photonic W-state, exascale simulation, Fermi-Hubbard speedup</h3>
-    <p><strong>Kyoto + Hiroshima photonic W-state</strong> (May 13): entangled measurement exploiting cyclic-shift symmetry closes a <strong>25-year open problem</strong> (open since the GHZ-state proposal) with a 3-photon experimental demonstration.</p>
-    <p><strong>Jülich JUPITER + NVIDIA JUQCS-50</strong> (May 11): <strong>first full universal 50-qubit simulation</strong> on exascale, beating the prior 48-qubit Jülich/K-computer record; 16,000+ GH200 nodes, on-the-fly 8× memory compression.</p>
-    <p><strong>ETH Zurich</strong> Nature: <strong>17,000 simultaneous neutral-atom qubit-pair swap gates at 99.91% fidelity</strong> in &lt;1 ms using path-symmetry-based interactions.</p>
-    <p><strong>Oxford "quadsqueezing"</strong> (<em>Nature Physics</em> May 1): first fourth-order squeezing in a single trapped ion, &gt;100× faster than conventional approaches.</p>
-    <p><strong>Fujitsu × Institute of Science Tokyo</strong> Quantum-and-HPC Infrastructure Collaborative Research Cluster operational May 15 across Ookayama (quantum) and Yokohama (HPC).</p>
-    <p><strong>Q-CTRL × IBM</strong> (Think 2026, May 6): <strong>3,000× speedup on 120-qubit Fermi-Hubbard</strong> model with 10,000+ 2-qubit gates — 2 minutes on QPU vs &gt;100 hours classical TDVP. Xanadu published QROM optimization halving Toffoli overhead.</p>
-  </div>
+  <h3><span class="pill sci">Hardware</span>Brain-inspired chips out of energy-efficiency necessity</h3>
+  <p>As traditional CMOS chips reach their physical limits and AI inference demands more energy, neuromorphic computing is back in the conversation as a possible bridge. <strong>Cambridge HfO₂ memristor (May 13)</strong> delivered a ~70% AI-energy cut on representative workloads. The argument runs: if Moore's Law has fully tapered, then either silicon photonics, 3D stacking, or neuromorphic substrates are the only credible scale-out paths.</p>
 
-  <h2 class="virus" id="virus">4 · New Spreading Virus</h2>
+  <h3><span class="pill sci">In-human BCI</span>Neuralink at scale; Paradromics densest dataset</h3>
+  <p><strong>Neuralink</strong> is in "high-volume production" mode per Musk — second-generation implant with FDA approval; <strong>speech-restoration FDA Breakthrough Device Designation</strong>; "almost entirely automated surgical flow" target for 2026. Last disclosed: 45 enrolled across 3 continents, 12 implanted; Grok integration brought closed-vocabulary word-error rate below 10%. <strong>Paradromics' Connexus</strong> (dime-sized 421-microwire array, single-neuron resolution) remains the densest in-human dataset — sheep showed ~200 bps, roughly 25× Neuralink's 8-bps cursor baseline. <strong>BISC</strong> third platform: 50-µm CMOS with 1,000+ recording and 16,000+ stim channels. <strong>BCI market</strong> ~$3.32B in 2026 per industry tracking.</p>
 
-  <div class="card flag">
-    <h3>Ebola Bundibugyo PHEIC — Uganda confirms 3 new cases Saturday (total 5)</h3>
-    <p><strong>WHO Director-General Tedros declared PHEIC May 17.</strong> As of May 23: <span class="stat warn">746 suspected</span> <span class="stat warn">83 confirmed</span> <span class="stat warn">176 suspected deaths</span> <span class="stat warn">9 confirmed deaths</span> across DRC (Ituri, Nord-Kivu, Sud-Kivu — Sud-Kivu added May 21 as imported case from Tshopo) and Uganda.</p>
-    <p><strong>Uganda Saturday update:</strong> 3 new confirmed cases bring total to 5 (Kampala); driver who transported Uganda's first patient and a health worker among links. WHO <strong>IHR Emergency Committee first met Friday May 22</strong> and issued temporary recommendations.</p>
-    <p><strong>Dr. Peter Stafford</strong>, American medical missionary (Serge / board-certified general &amp; burn surgeon at Bunia's Nyankunde Hospital since 2023), remains in <strong>BSL-4 isolation at Berlin's Charité</strong>; "cautiously optimistic" per ABC. Wife Dr. Rebekah Stafford and four kids housed in separate Charité unit.</p>
-    <p><strong>No approved Bundibugyo-strain vaccine or therapeutic</strong> — historic CFR 25–40%. CDC + DHS enhanced screening live at five US international airports since May 18 (IAD/Dulles, JFK, Newark, ATL added May 21); <strong>IAH Houston added effective May 26</strong>.</p>
-  </div>
+  <h3><span class="pill sci">Real neurons</span>Artificial neurons that <em>physically</em> reproduce biological behavior</h3>
+  <p>Recent work has demonstrated artificial neurons that physically reproduce the way real neurons operate — unlike digital processors or earlier neuromorphic chips that only <em>simulate</em> brain activity via mathematical models. The implication is energy: a neuron-as-circuit-element does not need to compute through a multiply-accumulate pipeline to behave neuron-like.</p>
 
-  <div class="card">
-    <h3>Hantavirus MV Hondius (Andes virus) — stabilising; lone US positive now triple-negative</h3>
-    <p>11 cases (9 confirmed, 2 probable); 3 deaths (last May 2). <strong>No new cases since the May 21 update.</strong> The single US passenger positive has since tested negative three times — drops effective total to 10. CDC monitoring <strong>41 Americans</strong> on 42-day surveillance through mid-June. ECDC EU/EEA risk "very low." Ship disinfection ongoing at Rotterdam with 5 crew aboard. Dutch crew member who left in Tenerife repatriated and isolating. Andes virus the causative agent.</p>
-  </div>
+  <div class="takeaway"><strong>Bottom line:</strong> The 2026 story is <em>both directions converging</em>: BCIs (Neuralink, Paradromics, BISC) scaling out in humans while neuromorphic substrates (Tsinghua, Yale NeuroScale, Cambridge HfO₂) scale out the chip side. The next-12-month milestone watch: Neuralink high-volume production proof, Paradromics first-in-human data, and the first cross-vendor BCI interoperability standard.</div>
+</section>
 
-  <div class="card">
-    <h3>H5N1 — Idaho dairy cluster spreading; ≥20 commercial poultry detections this month</h3>
-    <p>≥20 commercial poultry detections this month: Colorado, NC, Wisconsin, Pennsylvania (PA cumulative 8.7M YTD). <strong>Idaho's April 13 cluster — originally 5 dairies — has propagated to 17 dairies across 5 counties</strong> under quarantine; spread is cow-to-cow, not migratory. Cumulative US poultry losses &gt;206M birds across 50 states + PR over four years; table-egg layers ~75% of losses. ~11 US human cases YTD 2026, all mild; CDC risk "low." USDA/APHIS $100M HPAI Poultry Innovation Grand Challenge ongoing.</p>
-  </div>
+<section class="topic" id="quantum">
+  <h2>3 · Quantum computing</h2>
+  <p class="from-request">From request.md: "Quantum Computing"</p>
 
-  <h2 class="me" id="me">5 · Middle East Tensions</h2>
+  <h3><span class="pill sci">Fault tolerance</span>Harvard / Lukin lab pulls timeline forward</h3>
+  <p>Researchers at the <strong>Mikhail Lukin lab at Harvard</strong> published a fault-tolerance advance significant enough that the field's median timeline for "some form" of a fault-tolerant quantum computer just moved from "end of next decade" to <strong>"end of this decade"</strong> — i.e., 2029-2030 instead of late 2030s. Fault tolerance is the make-or-break threshold for useful quantum: until you can correct calculation errors faster than they accrue, you cannot run a sustained quantum program. This is the Harvard team that has been publishing back-to-back logical-qubit breakthroughs on neutral-atom arrays.</p>
 
-  <div class="card flag">
-    <h3>5th round Rome talks ended without deal Friday; draft MOU expected Sunday afternoon</h3>
-    <p>Friday's 2.5-hour session at the Omani Embassy in Camilluccia (Witkoff + State policy planning director Michael Anton vs FM Abbas Araghchi, mediated by Oman's Badr al-Busaidi) ended with "<strong>some but not conclusive progress</strong>" across three competing frameworks. Araghchi: "too complex to be resolved in just two or three meetings"; agreement "just inches away" but criticised "maximalist" US demands.</p>
-    <p><strong>Trump Saturday Truth Social:</strong> agreement "largely negotiated, subject to finalization" and "the Strait of Hormuz will be opened." Spoke with leaders of Saudi Arabia, UAE, Qatar, Pakistan, Türkiye, Egypt, Jordan and Bahrain plus Israel. <strong>To Axios separately: "solid 50/50"</strong> on a deal vs resuming the war.</p>
-    <p><em>Draft MOU components (per Axios + Washington Times exclusives):</em> 60-day ceasefire extension; phased Hormuz reopening; lifting of US blockade; release of frozen Iranian funds; 30–60 day window for detailed nuclear curbs. Rubio insists Hormuz reopens "without tolls." VP Vance + Witkoff + Kushner have signed off; Iran's parliament speaker Qalibaf has too; sent to leaders for final approval.</p>
-    <p><strong>Pentagon (CBS Friday):</strong> preparing fresh strike options as hedge; some forces moved out of region; Trump told Pentagon "be prepared to go forward with a full, large scale assault on a moment's notice" if no deal. <strong>War cost to date $25–29B.</strong></p>
-  </div>
+  <h3><span class="pill sci">Simulation</span>JUPITER + NVIDIA 50-qubit universal simulation</h3>
+  <p>The <strong>Jülich Supercomputing Centre + NVIDIA</strong> fully simulated a universal 50-qubit quantum computer on JUPITER — beats the 2019 48-qubit world record. Why simulate quantum on classical hardware? Validation: every new quantum chip needs a "ground truth" classical reference to score against. 50 qubits is the largest universal reference now available.</p>
 
-  <div class="card">
-    <h3>Khamenei stays the course; NYT exposes Ahmadinejad regime-change plan</h3>
-    <p>Mojtaba Khamenei reportedly directed Thursday that Iran's <strong>~440 kg of 60%-enriched uranium</strong> remain on Iranian soil — closes the most-discussed off-ramp. Dilution under IAEA floated as a "feasible formula."</p>
-    <p><strong>NYT bombshell:</strong> original US-Israeli war plan envisioned <strong>killing Khamenei and installing former president Mahmoud Ahmadinejad</strong>. The opening-salvo strike on his residence was actually directed at the IRGC officers enforcing his house arrest — freed him but wounded him; he then disengaged and his whereabouts are unknown.</p>
-    <p><strong>Netanyahu chaired his second security-cabinet meeting Thursday</strong> on renewing strikes; spoke with Trump Sunday evening. <strong>Pakistan army chief Asim Munir landed in Tehran Friday</strong>, met Araghchi; <strong>Qatar took mediator role May 22</strong>.</p>
-  </div>
+  <h3><span class="pill sci">Photonic</span>Kyoto + Hiroshima "W states" detected instantly</h3>
+  <p>A photonic team from <strong>Kyoto and Hiroshima Universities</strong> designed a circuit that <strong>instantly detects three-photon "W states"</strong> — these are entangled multi-particle states central to quantum teleportation and quantum communication protocols. Demonstrated experimentally with three photons; stable and accurate. This resolves a ~25-year open instrumentation problem.</p>
 
-  <div class="card">
-    <h3>Lebanon — Saturday strikes kill 28+; cumulative past 3,000 since March 2</h3>
-    <p>Saturday's Israeli package: 5 in Al-Baqbouq north of Tyre (IDF: "Hezbollah infrastructure"); 9 killed, 6 injured in a Seir al-Gharbiya residential building (Nabatieh district); Hezbollah underground weapons site hit in Beqaa; Lebanese army barracks in Nabatieh struck (one soldier wounded). IDF says <strong>Staff Sgt Noam Hamburger (23) killed Friday</strong> near border. <strong>Lebanese Health Ministry: 3,042 killed, &gt;1M displaced</strong> (&gt;20% of Lebanon's population). Iran FM Araghchi to Hezbollah's Naim Qassem: Tehran "will not give up its support."</p>
-  </div>
+  <h3><span class="pill sci">Optical &amp; superconducting</span>Jiuzhang 4.0, ETH 17,000-atom, Oxford quadsqueezing</h3>
+  <ul>
+    <li><strong>Jiuzhang 4.0</strong> (Pan Jianwei lab, USTC, <em>Nature</em>): 3,050-photon optical quantum computer, claimed ~10⁵⁴× speedup over the world's fastest classical supercomputer on Gaussian boson sampling. Biggest single jump in optical quantum since 2019.</li>
+    <li><strong>ETH Zürich</strong>: 17,000-atom array with 99.91%-fidelity gates (<em>Nature</em>) — the kind of fidelity number that finally crosses surface-code thresholds at scale.</li>
+    <li><strong>Oxford "quadsqueezing"</strong> (<em>Nature Physics</em>): first-ever demonstration of <em>quadsqueezing</em> — an elusive fourth-order quantum effect, &gt;100× faster than previous squeezing demonstrations. Useful for ultra-precise sensing.</li>
+    <li><strong>Fujitsu × Sci-Tokyo</strong>: launched joint quantum-and-HPC cluster May 15 (operational tests now passed).</li>
+    <li><strong>Q-CTRL × IBM</strong>: 3,000× speedup on a 120-qubit Fermi-Hubbard simulation (Think 2026 reveal).</li>
+  </ul>
 
-  <div class="card">
-    <h3>Hormuz, Houthis, Iraq bases, Syria gates</h3>
-    <p><strong>Brent settled $103.54 Friday close</strong> (intraday high $106), down &gt;5% on the week; WTI off &gt;8% on Iran-deal optimism. <strong>Hormuz tanker flows at ~5% of pre-war average</strong>; 1,550+ vessels and 22,500 mariners trapped (Bloomberg). <strong>Israel's two covert bases in Iraq's western desert</strong> detailed by WSJ then NYT — special-forces logistics/SAR; one Iraqi soldier + one civilian killed protecting one. <strong>Akçakale-Tel Abyad Syria gate reopened May 12</strong> after 12-year closure; 6 of 12 Turkey-Syria crossings now open. Houthis claimed attacks on Yannis (Red Sea), Essex (Med), MSC Alexandra (Arabian Sea) — CENTCOM confirmed two anti-ship ballistic missiles fired with no damage.</p>
-  </div>
+  <h3><span class="pill sci">Sensing</span>Sub-zeptojoule sensor — quantum-grade thermometry</h3>
+  <p>Researchers built an <strong>ultra-sensitive sensor capable of detecting below one zeptojoule</strong> of energy (10⁻²¹ J), relying on fragile superconducting materials that react to the slightest temperature change. Applications: dark-matter search, single-photon detection at telecom wavelengths.</p>
 
-  <h2 class="sci" id="sci">6 · Critical Science</h2>
+  <div class="takeaway"><strong>Bottom line:</strong> Mid-2026 may be remembered as the quarter the quantum-computing timeline officially compressed. Every modality (photonic / neutral-atom / trapped-ion / superconducting) has now posted a 2026 headline result. Watchlist: Lukin lab's next logical-qubit paper, Jiuzhang 4.1 spec, ETH gate-fidelity follow-on, and Fujitsu × Sci-Tokyo's first published HPC-quantum benchmark.</div>
+</section>
 
-  <div class="card flag">
-    <h3>IDOL — first post-amyloid Alzheimer's target with strong mechanistic case</h3>
-    <p>Indiana University team in <em>Alzheimer's &amp; Dementia</em> (published mid-May): deleting IDOL in neurons cuts amyloid plaques substantially <em>and</em> lowers APOE (APOE4 is the strongest late-onset risk allele). Two-mechanism hit on the same target.</p>
-  </div>
+<section class="topic" id="virus">
+  <h2>4 · New spreading virus</h2>
+  <p class="from-request">From request.md: "New Spreading Virus"</p>
 
-  <div class="card">
-    <h3>Aalto zeptojoule calorimetry — single-microwave-photon counting</h3>
-    <p>Mikko Möttönen (Aalto, with IQM + VTT), <em>Nature Electronics</em> May 12: superconductor-normal-superconductor calorimeter at <strong>&lt;0.95 ± 0.02 zJ FWHM energy resolution</strong> — single-microwave-photon counting. Direct relevance to dark-matter direct detection, the quantum measurement floor, and brain-computer interfaces.</p>
-  </div>
+  <h3><span class="pill alert">Ebola Bundibugyo · PHEIC</span>DRC: 121 confirmed, 1,077 suspected</h3>
+  <p>The WHO declared the <strong>Ebola Bundibugyo</strong> outbreak in DRC and Uganda a <strong>Public Health Emergency of International Concern (PHEIC)</strong> on May 17. As of May 26: DRC Ministry of Health reports <strong>121 confirmed cases (17 deaths) + 1,077 suspected cases (238 suspected deaths)</strong> across Ituri, North Kivu and South Kivu provinces. <strong>Uganda</strong>: 7 confirmed cases with 1 death — three are travel-linked from DRC. The CDC has activated enhanced airport screening at five US international ports; <strong>IAH Houston was added effective Tuesday May 26</strong>. <strong>There is no approved vaccine or therapeutic for the Bundibugyo strain</strong>; historical case-fatality 25-40%. Dr Peter Stafford (American Christian-missionary physician working with Serge in DRC) remains in Berlin's Charité BSL-4; "cautiously optimistic." The WHO IHR Emergency Committee first met Friday May 22.</p>
 
-  <div class="card">
-    <h3>White hydrogen in the Canadian Shield (PNAS May 21)</h3>
-    <p>University of Toronto + Ottawa: white H₂ in billion-year-old Canadian Shield rocks. Timmins boreholes discharge <strong>~8 kg H₂/yr each</strong>, ~140 t/yr across the mine's 15,000 boreholes; new economic-viability framework.</p>
-  </div>
+  <h3><span class="pill alert">Hantavirus / Andes virus</span>Multi-country cruise-ship cluster</h3>
+  <p>The other live outbreak: an <strong>Andes-virus (hantavirus)</strong> cluster linked to an Argentina-departure expedition cruise (Ushuaia → Antarctica → South Georgia → Tristan da Cunha → St Helena → Ascension). 147 passengers and crew from 23 countries. As of WHO May 12: <strong>11 cases (9 confirmed, 2 suspected), 3 deaths</strong>. The cruise ship MV Hondius docked Rotterdam under supervised disinfection; phased quarantine disembarkation. Andes virus can sometimes spread person-to-person via close contact — that's the key distinction from typical rodent-borne hantavirus. <strong>42-day surveillance window for repatriated passengers</strong> is open through mid-June. US risk "extremely low" per CDC; 41 Americans being monitored.</p>
 
-  <div class="card">
-    <h3>Mayo senolytic aptamers; Pilea Voronoi venation</h3>
-    <p><strong>Mayo Clinic</strong> (L. James Maher III, <em>Aging Cell</em> May 15): synthetic DNA aptamers from a 100-trillion-sequence screen selectively tag senescent "zombie" cells in mouse tissue — opens precision senolytics for Alzheimer's and arthritis.</p>
-    <p><strong>Pilea peperomioides Voronoi venation</strong> (Navlakha, Prusinkiewicz et al., <em>Nature Communications</em> May 12): first demonstration of Voronoi diagrams in plant venation patterns (hydathodes as centers) — alternative to the canalization hypothesis.</p>
-  </div>
+  <h3><span class="pill alert">H5N1 / avian influenza</span>13 human zoonotic cases in Q1</h3>
+  <p>WHO Q1 2026 zoonotic-flu tally: 13 human avian-and-swine influenza cases, including a previously unreported <strong>fatal H5N1 case in a child in Bangladesh</strong>. None of the close contacts of any of the 13 patients have fallen ill — general-population risk still "low." US dairy-cattle outbreak: 5 Idaho dairies April 13 still propagating; commercial-poultry detections ≥20 this month (CO, NC, WI, PA — 8.7M YTD).</p>
 
-  <div class="card">
-    <h3>OpenAI Erdős, Colossal artificial egg, Nature Astronomy biosignature</h3>
-    <p><strong>OpenAI's reasoning model</strong> produced a deep algebraic-number-theory argument disproving Erdős's 1946 planar-unit-distance / square-grid conjecture (verified by Gowers, Alon, Shankar, Tsimerman). <strong>Colossal Biosciences</strong> (May 19, MIT Tech Review): live chicks hatched from a fully artificial 3D-printed-lattice egg with bioengineered silicone membrane; no peer-reviewed paper planned. <strong>Nature Astronomy molecular-diversity biosignature</strong> (May 11): amino-acid distributions in living systems more diverse / more evenly distributed than abiotic; testable on ~100 existing datasets and deployable on the ExoMars chirality instrument with no new hardware. <strong>Nature May 20</strong> (Diana Kwon): neurons fire much more erratically than thought — questioning core assumptions of neural coding.</p>
-  </div>
+  <h3><span class="pill alert">Travel/Exposure</span>Practical screening picture</h3>
+  <ul>
+    <li>CDC-enhanced Ebola airport screening at: <strong>JFK, IAD, ATL, ORD, EWR, IAH</strong> (Houston added May 26). Symptom: fever, fatigue, hemorrhage 2–21 days post-exposure.</li>
+    <li>Andes hantavirus: incubation 7–39 days; pulmonary phase rapid; fatal in 35–40% historically. Cruise-passenger surveillance window mid-June.</li>
+    <li>H5N1 dairy/poultry exposure: still occupationally concentrated; consumer pasteurized-milk pathway considered safe.</li>
+  </ul>
 
-  <div class="card">
-    <h3>JWST, Roman, CERN, ITER</h3>
-    <p><strong>JWST hits:</strong> TOI-199b — Saturn-sized planet with methane and Earth-like temperatures (May 21 ScienceDaily); non-rotating massive galaxy &lt;2 Gyr after Big Bang (Nature Astronomy May 4); COSMOS-Web cosmic-web map from 164,000 galaxies. <strong>Roman Space Telescope launch pulled forward to early September 2026</strong> — 8 months ahead of schedule, on budget; 300.8 MP WFI, transferring to Kennedy. <strong>CERN:</strong> LHC Run 3 proton physics ended <strong>6 a.m. May 19</strong>; LS3 begins July; HiLumi return 2030. New Ξcc⁺ particle (two charm + one down) + B-meson rare-decay anomaly hints at beyond-Standard-Model physics. <strong>ITER:</strong> central solenoid delivery complete; vacuum vessel sector #6 landed on gravity support; European sector #3 arrived (4th from F4E, 8th overall).</p>
-  </div>
+  <div class="takeaway"><strong>Bottom line:</strong> Two genuine outbreaks are <em>currently</em> live (Ebola Bundibugyo PHEIC; Andes hantavirus cluster), with H5N1 simmering in livestock. First US-soil Bundibugyo detection remains the binary catalyst; the Andes-virus cluster appears to be stabilising as the cruise-passenger surveillance window passes the midpoint. None of these has pandemic potential <em>at this writing</em>, but Bundibugyo's combination of no-approved-vaccine + 25-40% CFR + Kampala spread is what the WHO PHEIC declaration is responding to.</div>
+</section>
 
-  <div class="disclaimer">
-    <strong>Disclaimer.</strong> Specialty deep-dive synthesised from public technical, financial and news sources (~80 queries). Pre-print and secondary-market figures move fast — Forge marks, financing terms and case counts may shift hour to hour. Single-sourced items have been flagged inline. Not investment, medical or policy advice. Generated 2026-05-24 by the news-check scheduled task.
-  </div>
+<section class="topic" id="mideast">
+  <h2>5 · Middle East tensions</h2>
+  <p class="from-request">From request.md: "Middle East Tensions"</p>
 
-  <footer>
-    Specific-Topics deep dive for Sunday, 2026-05-24 · Sourced from the same ~120-source sweep as the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Topics list maintained in local <code>request.md</code>.
-  </footer>
+  <h3><span class="pill alert">Iran-US</span>"Negotiating on fumes" — MOU signing slips twice</h3>
+  <p>President Trump told yesterday's Cabinet that the US is <strong>"negotiating on fumes" with Iran</strong> and will give it "a few more days." The draft MOU framework remains:</p>
+  <ul>
+    <li><strong>60-day ceasefire</strong>, extendable by mutual consent.</li>
+    <li><strong>Phased Strait of Hormuz reopening</strong> — Iran clears its mine field; no Iranian tolls on transit; freedom of navigation restored.</li>
+    <li><strong>Lifting of US naval blockade</strong> over the 60-day window.</li>
+    <li><strong>Release of frozen Iranian funds</strong> in stages tied to verification.</li>
+    <li><strong>30-60 day window</strong> to negotiate verifiable uranium-stockpile removal and enrichment suspension.</li>
+    <li>Iranian commitment to <strong>never pursue nuclear weapons</strong>.</li>
+  </ul>
+  <p>Three live sticking points: (1) sequencing of Hormuz reopen vs frozen-funds release; (2) Tehran wants a permanent end to the war <em>before</em> nuclear negotiations begin, Washington wants the nuclear renunciation up front; (3) the highly-enriched-uranium stockpile destination — Khamenei's directive that all enriched uranium stay in Iran is still operative.</p>
+
+  <h3><span class="pill alert">Israel-Lebanon</span>IDF deepens ground operation past the "yellow line"</h3>
+  <p>Tuesday's <strong>120+ IDF airstrikes</strong> hit 100+ Hezbollah sites across south Lebanon and the eastern Bekaa Valley — <strong>≥31 killed, 40 wounded</strong> per Lebanese Ministry of Public Health. Wednesday the IDF expanded the ground operation past the so-called "yellow line"; advance displacement orders north of the Zahrani River around Tyre. Hezbollah claimed 32 counter-operations Tuesday. <strong>April-16 ceasefire is frayed but not formally broken</strong>; Netanyahu signalled "deepening" operations. Iran FM Araghchi to Hezbollah's Naim Qassem: Tehran "will not give up its support." Cumulative Lebanese deaths since the March-2 fighting resumption now past <strong>3,070</strong>; more than 1 million displaced.</p>
+
+  <h3><span class="pill alert">Gaza</span>IDF Wednesday strike package; aid throughput &lt;60%</h3>
+  <p>IDF executed a strike package in Gaza Wednesday alongside the Lebanon operation. Humanitarian access remains constrained; cargo throughput at Kerem Shalom is still below 60% of pre-March-2 levels. Hostage-deal track has not made meaningful progress since early May; Egypt-Qatar-US trilateral on standby.</p>
+
+  <h3><span class="pill alert">Wider region</span>Saudi-UAE-Qatar mediation; Iraq base; Tomahawk pause</h3>
+  <p>The three-Gulf-state mediation (MBS / Sheikh Tamim / MBZ) that twice delayed Trump's planned strikes in May remains the only credible diplomatic channel. NYT and Iraqi officials still report <strong>Israel holding a covert Iraqi base for staging</strong>. The US <strong>indefinitely suspended Tomahawk deliveries to Japan</strong> early-May (400-missile order may slip up to two years) — quietly reallocated to forward-deployed forces in the Gulf. The Quad communiqué Tuesday explicitly called for "safe navigation through the Strait of Hormuz."</p>
+
+  <div class="takeaway"><strong>Bottom line:</strong> The Iran-US track is at its most fragile of the May cycle — second consecutive MOU signing slip, fresh Iran "grave violation" framing, Brent breaking down to $88. The Lebanon front is the most likely place a single bad night unravels the MOU window. Watch: (a) any official MOU text release this week, (b) IDF posture north of the Zahrani River, (c) Iraqi-base staging activity.</div>
+</section>
+
+<section class="topic" id="science">
+  <h2>6 · New in science (critical)</h2>
+  <p class="from-request">From request.md: "Any new thing in science world (critical)"</p>
+
+  <h3><span class="pill sci">Neuroregeneration</span>Vitamin K compounds for lost neurons</h3>
+  <p>Scientists in Japan have created <strong>vitamin K-based compounds that may help the brain regenerate lost neurons</strong> — a result with direct relevance to Alzheimer's and Parkinson's. This is in the same family as work the Institute of Science Tokyo (Shichita group) published mid-May on a protein target that suppresses the brake on post-stroke neuro-recovery. Two compatible regeneration vectors in a single calendar quarter — the field has not had this density of result since the 2014 iPS-cell wave.</p>
+
+  <h3><span class="pill sci">Alzheimer's APOE4</span>USC anti-inflammatory candidates</h3>
+  <p>USC researchers identified potential new drug compounds that <strong>may reduce the brain inflammation linked to Alzheimer's disease</strong>, especially in people carrying the high-risk <strong>APOE4 gene</strong>. APOE4 carriers have substantially elevated lifetime Alzheimer's risk; an inflammation-route therapeutic targeted to this genotype would be the first APOE-aware drug program.</p>
+
+  <h3><span class="pill sci">Energy metabolism</span>Leucine "supercharges" mitochondria</h3>
+  <p>Researchers discovered that <strong>leucine</strong> — the branched-chain amino acid abundant in protein-rich foods — can <strong>supercharge mitochondria</strong> by protecting crucial energy-producing proteins inside cells. The mechanism is direct stabilization of inner-membrane respiratory proteins; the result is healthier cellular ATP output. Implications: muscle preservation, metabolic disease, aging research.</p>
+
+  <h3><span class="pill sci">Chemistry</span>Light-driven "housane" synthesis</h3>
+  <p>Researchers developed a <strong>light-driven method for creating tiny, high-energy "housane" molecules</strong>, scaffolds prized for drug development and materials science. Housanes (bicyclo[2.1.0]pentanes) have been notoriously difficult to make cleanly; photochemical routes drop reaction step count significantly.</p>
+
+  <h3><span class="pill sci">Biology / Taxonomy</span>The Himalayan pit viper is multiple species</h3>
+  <p>The so-called "Himalayan pit viper," long catalogued as a single species, <strong>has been resolved into multiple distinct species</strong> based on genetic and morphological analysis. Antivenom and conservation implications: species-specific neutralisation profiles are now required.</p>
+
+  <h3><span class="pill sci">Quantum sensing</span>Sub-zeptojoule sensor</h3>
+  <p>An ultra-sensitive sensor built on fragile superconducting materials can now <strong>detect below one zeptojoule (10⁻²¹ J) of energy</strong> — the smallest unit of energy any laboratory instrument has been able to resolve. Direct relevance to dark-matter searches, single-photon telecom detection, gravitational-wave detector upgrades.</p>
+
+  <div class="takeaway"><strong>Bottom line:</strong> The "critical" science thread in May 2026 is <em>neuroscience plus quantum sensing</em>: vitamin K neuroregeneration + APOE4-aware Alzheimer therapeutics + leucine mitochondrial stabilisation on one side; sub-zeptojoule sensing + W-state photonic detection on the other. Each is a candidate "decade story" if it replicates.</div>
+</section>
+
+<footer>
+  Specific Topics built automatically by the news-check scheduled task from your local <code>request.md</code>. <a href="daily-briefing.html">Daily Briefing</a> · <a href="weekly-report.html">Weekly Report</a> · <a href="index.html">Index</a>. Last refreshed Thursday, 2026-05-28 (morning).
+</footer>
+
 </div>
 <script src="./tts.js" defer></script>
 </body>
