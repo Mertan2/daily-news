@@ -1,269 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Daily Briefing — Thursday, May 28, 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily News Briefing — Friday, May 29, 2026</title>
 <style>
   :root {
-    --bg: #0f1419;
-    --panel: #1a2028;
-    --panel-2: #232b36;
-    --line: #2a3441;
+    --bg: #0d1117;
+    --panel: #161b22;
+    --panel-2: #1c232c;
+    --border: #2a3441;
     --text: #e6edf3;
     --muted: #8b949e;
     --accent: #58a6ff;
+    --warn: #ff7b72;
     --good: #7ee787;
-    --warn: #f0883e;
-    --alert: #ff7b72;
+    --highlight: #f0883e;
     --purple: #d2a8ff;
+    --us: #58a6ff;
+    --eu: #d2a8ff;
+    --tr: #ff7b72;
+    --cn: #f0883e;
+    --jp: #7ee787;
   }
   @media (prefers-color-scheme: light) {
     :root {
-      --bg: #f6f7f9;
+      --bg: #fbfaf6;
       --panel: #ffffff;
-      --panel-2: #f0f2f6;
-      --line: #dde1e8;
-      --text: #1a1d23;
-      --muted: #5b6573;
+      --panel-2: #f5f3eb;
+      --border: #d8d4c5;
+      --text: #1f2328;
+      --muted: #57606a;
       --accent: #0969da;
+      --warn: #cf222e;
       --good: #1a7f37;
-      --warn: #9a6700;
-      --alert: #cf222e;
+      --highlight: #9a6700;
       --purple: #6f42c1;
+      --us: #0969da;
+      --eu: #6f42c1;
+      --tr: #cf222e;
+      --cn: #9a6700;
+      --jp: #1a7f37;
     }
   }
   * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 32px 22px 80px; }
-  header { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 24px; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.62; }
+  .container { max-width: 920px; margin: 0 auto; padding: 28px 22px 60px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 22px; }
   .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
-  h1 { margin: 6px 0 4px; font-size: 28px; letter-spacing: -0.01em; }
-  .sub { color: var(--muted); font-size: 14px; font-style: italic; }
-  h2 {
-    margin: 32px 0 10px;
-    font-size: 19px;
-    letter-spacing: -0.01em;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 6px;
-  }
-  h3 { font-size: 15.5px; margin: 14px 0 4px; }
-  .region {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin: 12px 0;
-  }
-  .top {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-left: 4px solid var(--accent);
-    border-radius: 10px;
-    padding: 14px 18px;
-    margin: 14px 0;
-  }
-  .badge {
-    display: inline-block;
-    font-size: 10.5px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 2px 7px;
-    border-radius: 4px;
-    background: var(--panel-2);
-    color: var(--muted);
-    border: 1px solid var(--line);
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .badge.alert { color: var(--alert); border-color: rgba(255, 123, 114, 0.35); }
-  .badge.market { color: var(--good); border-color: rgba(126, 231, 135, 0.3); }
-  .badge.tech { color: var(--accent); border-color: rgba(88, 166, 255, 0.3); }
-  .badge.sci { color: var(--purple); border-color: rgba(210, 168, 255, 0.3); }
-  .badge.sport { color: var(--warn); border-color: rgba(240, 136, 62, 0.3); }
-  ul { padding-left: 20px; margin: 6px 0 8px; }
-  li { margin: 5px 0; }
+  h1 { font-size: 32px; margin: 6px 0 4px; line-height: 1.2; }
+  .date { color: var(--muted); font-size: 14px; }
+  .lede { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin: 16px 0 0; font-size: 14.5px; color: var(--text); }
+  .lede strong { color: var(--highlight); }
+  h2 { font-size: 21px; margin: 30px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 10px; }
+  h2 .flag { font-size: 22px; }
+  h3 { font-size: 15px; margin: 16px 0 4px; color: var(--accent); }
+  .region { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px 18px; margin: 8px 0 18px; }
+  .region.us { border-left: 4px solid var(--us); }
+  .region.eu { border-left: 4px solid var(--eu); }
+  .region.tr { border-left: 4px solid var(--tr); }
+  .region.cn { border-left: 4px solid var(--cn); }
+  .region.jp { border-left: 4px solid var(--jp); }
+  .story { margin: 10px 0 14px; }
+  .story .head { font-weight: 600; color: var(--text); margin: 0 0 4px; font-size: 15px; }
+  .story p { margin: 4px 0 0; font-size: 14px; }
+  ul { padding-left: 20px; margin: 6px 0 10px; }
+  li { margin: 5px 0; font-size: 14px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  strong { color: var(--text); }
-  .disclaimer {
-    background: rgba(240, 136, 62, 0.08);
-    border: 1px solid rgba(240, 136, 62, 0.25);
-    border-radius: 10px;
-    padding: 12px 14px;
-    color: var(--muted);
-    font-size: 12.5px;
-    margin: 0 0 14px;
+  .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
+  .tag.alert { background: rgba(255,123,114,0.15); color: var(--warn); }
+  .tag.market { background: rgba(126,231,135,0.15); color: var(--good); }
+  .tag.tech { background: rgba(210,168,255,0.15); color: var(--purple); }
+  .tag.sci { background: rgba(240,136,62,0.15); color: var(--highlight); }
+  @media (prefers-color-scheme: light) {
+    .tag { background: #e3edff; }
+    .tag.alert { background: #ffe5e5; }
+    .tag.market { background: #e3f4e8; }
+    .tag.tech { background: #efe3ff; }
+    .tag.sci { background: #f7ebd4; }
   }
-  footer { margin-top: 36px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
-  .meta { color: var(--muted); font-size: 12px; }
-  .nav { margin: 14px 0 4px; font-size: 13px; }
-  .nav a { margin-right: 12px; }
+  .markets-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 13px; }
+  .markets-table th, .markets-table td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+  .markets-table th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+  .up { color: var(--good); }
+  .down { color: var(--warn); }
+  .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
+  footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+  .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
+  .nav a:hover { border-color: var(--accent); text-decoration: none; }
+  @media (max-width: 600px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 19px; }
+    .container { padding: 22px 16px 48px; }
+    .region { padding: 12px 14px 16px; }
+  }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
+  <header>
+    <div class="eyebrow">Daily News Briefing</div>
+    <h1>Friday, May 29, 2026</h1>
+    <div class="date">Compiled Friday morning · ~120 sources across US · Europe · Türkiye · China · Japan/Asia</div>
+    <div class="lede">
+      <strong>Top of the morning.</strong> Anthropic's <strong>$65B Series H at $965B post-money</strong> closed Thursday — eclipsing OpenAI's $852B March mark and reigniting an AI rally that pushed the <strong>S&amp;P (7,563.63) and Nasdaq (26,917.47) to fresh records</strong> on a 36.5% Snowflake rip. OpenAI confidentially filed its S-1 this week (Q4 listing target). The <strong>Iran 60-day MOU sits unsigned at Trump's desk</strong> as CENTCOM downed four Iranian drones near Hormuz and intercepted a missile toward Kuwait; Brent is set for its biggest monthly drop since 2020. <strong>IDF expanded ground operations past the "yellow line" in south Lebanon</strong> — displacement orders cover ~14% of Lebanese territory including Tyre's 200,000; Netanyahu pushes Gaza control to 70%. <strong>Ebola Bundibugyo PHEIC</strong>: DRC 121 confirmed (17 deaths) + 1,077 suspected (238 deaths); Uganda 7 confirmed (1 death); JFK added to US screening last night. <strong>Türkiye:</strong> CHP standoff Day 9 — Kılıçdaroğlu postpones Party Council indefinitely, Özel declares "Parliament is our new HQ," Yargıtay records updated to list Kılıçdaroğlu as chair. <strong>UCL Final tomorrow</strong>: PSG–Arsenal, Budapest Puskás Aréna, 18:00 CET. <strong>NBA WCF Game 7 Saturday night in OKC</strong> after Spurs hammered Thunder 118-91 in San Antonio (Wembanyama 28/10). Hungary's Magyar signs RRF political accord with von der Leyen today; National Plan due Saturday.
+    </div>
+    <div class="nav">
+      <a href="#us">🇺🇸 US</a>
+      <a href="#eu">🇪🇺 Europe</a>
+      <a href="#tr">🇹🇷 Türkiye</a>
+      <a href="#cn">🇨🇳 China</a>
+      <a href="#jp">🇯🇵 Japan / Asia</a>
+      <a href="#markets">📈 Markets</a>
+      <a href="#sci">🔬 Science &amp; Health</a>
+      <a href="#sport">🏆 Sports</a>
+      <a href="./weekly-report.html">📰 Weekly</a>
+      <a href="./specific-topics.html">🎯 Specific Topics</a>
+    </div>
+  </header>
 
-<header>
-  <div class="eyebrow">Daily Briefing</div>
-  <h1>Thursday, May 28, 2026</h1>
-  <div class="sub">A cross-region news sweep — US, Europe, Türkiye, China, Japan and wider Asia. Refreshed today.</div>
-</header>
+  <section id="us">
+    <h2><span class="flag">🇺🇸</span> United States</h2>
+    <div class="region us">
+      <h3>White House — Gabbard exit, Iran "fumes," mail-in voting EO survives</h3>
+      <div class="story">
+        <p class="head"><span class="tag alert">DNI succession</span>Trump weighs Stefanik, Nunes, Lukas after Gabbard</p>
+        <p>DNI Tulsi Gabbard's resignation is effective June 30 after her husband's bone-cancer diagnosis. Trump tapped Principal Deputy <strong>Aaron Lukas</strong> as acting head. Sen. Jim Banks publicly floated <strong>Rep. Elise Stefanik</strong>; prediction markets price Lukas ~29%, <strong>Devin Nunes ~17%</strong>, Stefanik ~13%. Fourth Cabinet-level departure of the second Trump term.</p>
+      </div>
+      <div class="story">
+        <p class="head"><span class="tag">Court</span>Mail-in voting EO survives first test</p>
+        <p>Late Thursday, US District Judge <strong>Carl Nichols</strong> (a Trump nominee) declined to block Trump's executive order restricting mail-in voting. The Postal Service has yet to issue the rulemaking notice Trump demanded by late May.</p>
+      </div>
+      <div class="story">
+        <p class="head"><span class="tag alert">Immigration</span>Green-card "apply abroad" rule now active</p>
+        <p>A May 21 USCIS memo requires most green-card applicants in the US to leave and apply at consulates abroad — affecting hundreds of thousands. Paired with the May 20 EO <em>"Restoring Integrity to America's Financial System,"</em> which forces banks to weigh immigration status in risk evaluations.</p>
+      </div>
+      <div class="story">
+        <p class="head"><span class="tag">Cabinet</span>12th Cabinet meeting moved to WH from Camp David on East Coast storms</p>
+        <p>Trump publicly called Iran "negotiating on fumes." VP Vance's <strong>Fraud Task Force</strong> claimed it stopped "tens of billions" in two months. AG Bondi was added to PCAST AI advisory committee.</p>
+      </div>
+    </div>
 
-<div class="disclaimer">
-  Automated summary built from public news sources as of the morning of May 28, 2026. Stories evolve fast — verify with the original outlet before acting on anything time-sensitive.
-</div>
+    <div class="region us">
+      <h3>Congress &amp; Courts</h3>
+      <ul>
+        <li><span class="tag alert">Texas runoff</span><strong>AG Ken Paxton 63.8% over Sen. John Cornyn 36.2%</strong> in Tuesday's GOP runoff (1.38M votes) — Cornyn is the first sitting Texas Republican senator ever denied renomination. Democrats nominated state Rep. <strong>James Talarico</strong>, who beat Rep. Jasmine Crockett. In Houston, Rep. Al Green lost a member-vs-member race to Rep. Christian Menefee.</li>
+        <li><span class="tag alert">Alabama redistricting at SCOTUS</span>After the May 11 Callais-driven remand, a 3-judge panel re-blocked Alabama's map for intentional discrimination. Alabama AG filed an emergency stay; <strong>Justice Thomas ordered plaintiffs to respond by Monday afternoon</strong>.</li>
+        <li><span class="tag">Fed</span><strong>Kevin Warsh</strong> was sworn in May 22 (Justice Thomas administered the oath) after the most divisive Fed confirmation in history (54-45). First FOMC meeting <strong>June 16-17</strong>; Trump is openly expecting cuts.</li>
+        <li><span class="tag">SCOTUS</span>Thursday opinions in <strong>Rutherford v. US, Pitchford v. Cain, Flowers Foods v. Brock, Fernandez v. US</strong> — no blockbuster term-defining ruling.</li>
+      </ul>
+    </div>
 
-<nav class="nav">
-  <a href="#top">Top of day</a>
-  <a href="#us">United States</a>
-  <a href="#europe">Europe</a>
-  <a href="#turkey">Türkiye</a>
-  <a href="#china">China</a>
-  <a href="#japan">Japan &amp; Asia</a>
-  <a href="#mideast">Middle East</a>
-  <a href="#markets">Markets</a>
-  <a href="#health">Health &amp; Science</a>
-  <a href="#sport">Sport &amp; Culture</a>
-</nav>
+    <div class="region us">
+      <h3>Iran / Middle East policy</h3>
+      <ul>
+        <li><span class="tag alert">MOU unsigned</span>The 60-day draft — Strait of Hormuz reopened and de-mined, Iran pledges no nukes, talks on enrichment suspension and HEU stockpile removal — sits awaiting Trump's signature. Iran disputes US framing on troop withdrawal and port-blockade language. Treasury threatened to <strong>sanction Oman</strong> if it imposes Hormuz tolls.</li>
+        <li><span class="tag alert">Hot kinetic</span>CENTCOM Wednesday <strong>downed four Iranian one-way attack drones</strong> near Hormuz and struck a ground-control station at <strong>Bandar Abbas</strong>. At 10:17 p.m. ET May 27, Iran fired a ballistic missile toward Kuwait; Kuwaiti forces intercepted it.</li>
+        <li><span class="tag">Pentagon talks</span>Fourth round of Pentagon-hosted talks (Lebanese, Israeli, US military delegations) is taking place <strong>today, May 29</strong>, focused on Hezbollah disarmament.</li>
+      </ul>
+    </div>
 
-<h2 id="top">Top of the day</h2>
+    <div class="region us">
+      <h3>Domestic — Longview WA mill, weather</h3>
+      <ul>
+        <li><span class="tag alert">Longview, WA</span>Recovery at the Nippon Dynawave mill: <strong>8 confirmed dead</strong> as 6 of 9 missing have been recovered; 3 remain unaccounted for and are presumed dead. Gov. Ferguson called it potentially the state's deadliest workplace tragedy in 96 years. Columbia River pH contamination confirmed; dilution operations running from the Cowlitz River and hydrants.</li>
+        <li><span class="tag">Weather</span>SPC issued severe-weather and tornado outlooks May 28; no major outbreak. May has been a notably quiet tornado month (only May 6 and May 17-18 outbreaks).</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="top">
-  <h3><span class="badge alert">Iran · Talks fraying</span>"Negotiating on fumes"</h3>
-  <p>President Trump told yesterday's televised Cabinet meeting that the US is "negotiating on fumes" with Iran and "will give it a few more days," insisting the November midterms "will not impact" his war strategy. Iran's foreign ministry accused Washington of a "grave violation" of the April-16 ceasefire after a fresh exchange of fire in southern Lebanon and reported overflights near Bandar Abbas. Secretary of State Rubio said a deal "is still possible" — the draft 60-day MOU (phased Hormuz reopen, frozen-funds release, 30-60 day nuclear-curb negotiating window) remains on the table but the White House signing event that had been trailed for Sunday May 24 has now slipped twice. Brent settled <strong>$88.68 / -5.5%</strong> Wednesday on the cooling tone, off more than $20 from the early-month spike.</p>
-</div>
+  <section id="eu">
+    <h2><span class="flag">🇪🇺</span> Europe</h2>
+    <div class="region eu">
+      <h3>Brussels — Magyar signs RRF accord, Albania closure phase, 20th sanctions live</h3>
+      <ul>
+        <li><span class="tag">EU · Hungary</span>Hungarian PM <strong>Péter Magyar (Tisza)</strong> meets Commission President <strong>von der Leyen today</strong> to sign the political agreement that begins unfreezing roughly <strong>€17bn in blocked Hungarian funds</strong>. The accord sets the outline; Budapest must satisfy <strong>27 "super milestones"</strong> on judicial independence, anti-corruption and financial transparency before the late-August deadline (full €10.4bn RRF envelope at risk). Updated National Recovery Plan submission due <strong>Saturday May 30</strong> — priorities flagged: railway projects, energy infrastructure, rental housing.</li>
+        <li><span class="tag">Enlargement</span>After Tuesday's eighth Intergovernmental Conference, <strong>Albania has formally entered the closing phase</strong> of EU accession negotiations — only the second Western Balkan candidate after Montenegro. Enlargement Commissioner Marta Kos says Tirana could conclude talks by 2029; PM Rama still pushing for 2027-2028.</li>
+        <li><span class="tag alert">Sanctions</span><strong>20th Russia sanctions package</strong> fully in force this week: managed security services ban (25 May), crypto-asset transactions ban (24 May). The package adds 20 banks (total 70), lists 632 shadow-fleet vessels, and activates the EU's anti-circumvention tool for the first time.</li>
+        <li><span class="tag">Council prep</span>General Affairs Council reviewed the annotated draft for the <strong>18-19 June summit</strong>: MFF 2028-2034, Schengen, legal status of displaced Ukrainians, EU-UK relations.</li>
+      </ul>
+    </div>
 
-<div class="top">
-  <h3><span class="badge alert">Washington State · Industrial disaster</span>Longview mill: deadliest in modern WA history</h3>
-  <p>Two confirmed dead and <strong>nine workers still presumed lost</strong> after Tuesday morning's 900,000-gallon white-liquor tank implosion at the Nippon Dynawave Packaging pulp/paper mill in Longview. Up to 570,000 gallons of caustic sodium hydroxide/sulphide solution released; rescue formally shifted to recovery Wednesday. Gov. Bob Ferguson: "we're bracing ourselves for this being the deadliest industrial tragedy in modern Washington state history." The Chemical Safety Board has opened a federal investigation; first victim identified as Gilbert Bernal.</p>
-</div>
+    <div class="region eu">
+      <h3>UK — Starmer pressure, Makerfield byelection, BoE</h3>
+      <ul>
+        <li><span class="tag alert">Labour</span>Over <strong>95 Labour MPs have publicly called for Starmer to set a departure timetable</strong>; Catherine West wants a leadership election by September. Health Secretary Wes Streeting and four junior ministers (incl. Jess Phillips) have resigned. A counter-letter signed by 110+ backbenchers urges no challenge. Starmer insists he'll fight any contest.</li>
+        <li><span class="tag">Burnham Makerfield</span>Andy Burnham confirmed Labour candidate (May 19). Survation polling (18-22 May): <strong>Burnham 43% vs Reform's Robert Kenyon 40%</strong>. Vote 18 June.</li>
+        <li><span class="tag market">BoE</span>Bank Rate held at <strong>3.75%</strong> (8-1, one voting for a hike) on 29 April; next meeting 18 June. UK CPI fell to 2.8% in April. GfK consumer confidence edged up to -23 in May. Q1 GDP +0.6%.</li>
+      </ul>
+    </div>
 
-<div class="top">
-  <h3><span class="badge">US Politics · Texas runoff</span>Paxton 63.8% — Cornyn felled</h3>
-  <p>Attorney General <strong>Ken Paxton crushed John Cornyn 63.8% to 36.2%</strong> in Tuesday's Texas GOP Senate runoff (1.38M votes cast). Cornyn becomes the first sitting Texas Republican senator ever to lose a primary while seeking re-election — Trump's late endorsement of Paxton as a "true MAGA warrior" was decisive. November opponent: Democratic state Rep. <strong>James Talarico</strong>, who has been polling unusually competitively in early head-to-heads given Paxton's open securities-fraud case and prior House impeachment.</p>
-</div>
+    <div class="region eu">
+      <h3>France · Germany · Spain · Italy</h3>
+      <ul>
+        <li><span class="tag">France</span><strong>Lecornu reappointed</strong> after a 14.5-hour PM tenure — orders to assemble a budget. The 2026 social-security budget (already adopted Dec 2025) suspends Macron's pension reform until January 2028. OAT/Bund spread around 69bp on 22 May.</li>
+        <li><span class="tag alert">Germany</span>Only <strong>11% satisfaction with the CDU-SPD coalition</strong> (87% dissatisfied), down from 38% last July. <strong>AfD leads polling at 27-29% vs CDU/CSU on 23%</strong>. Pistorius tops popularity rankings; Merz comes last among 20 politicians in the INSA survey. Germany's 2026 defence budget: <strong>€108.2bn</strong>.</li>
+        <li><span class="tag alert">Spain</span>Ex-PM <strong>Zapatero summoned for 2 June</strong> before the Audiencia Nacional — first time a Spanish ex-premier has been placed under formal investigation. Sánchez, from Rome after meeting Pope Leo XIV: "no reason" to withdraw support. PSOE HQ raid in Madrid Wednesday over the Leire Díez probe.</li>
+        <li><span class="tag">Italy</span>Meloni, in Mediaset interview Thursday evening, called on the EU to extend defence-budget flexibility to <strong>energy support for households and businesses</strong> hit by Iran-war price shocks: "We cannot tell citizens there is only money for defence."</li>
+      </ul>
+    </div>
 
-<h2 id="us">United States</h2>
+    <div class="region eu">
+      <h3>Russia–Ukraine</h3>
+      <ul>
+        <li><span class="tag alert">Strikes overnight</span>Russian drones damaged a residential building and infrastructure in Odesa Oblast overnight 27-28 May. Ukrainian drones struck an <strong>oil refinery in Volgograd</strong> overnight 28-29 May; a stray drone reportedly hit a residential building in <strong>Galați, Romania</strong>. All-Ukraine air alerts.</li>
+        <li><span class="tag">Front</span>Ukrainian General Staff logged <strong>189 combat clashes on 28 May</strong>, heaviest on the Pokrovsk and Huliaipole axes. Russian losses tallied at ~1.36M personnel since Feb 2022.</li>
+        <li><span class="tag">Diplomacy</span>The 20-point Trump-Zelenskyy framework remains ~90% agreed per Kyiv, with Donbas territorial questions the unresolved core. Talks rotating through Abu Dhabi and Geneva; security guarantees and an $800bn post-war financing fund are sticking points.</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="region">
-  <ul>
-    <li><span class="badge">White House</span><strong>DNI Tulsi Gabbard resigning</strong> effective June 30 — letter posted to X Friday cites husband Abraham Williams's rare bone-cancer diagnosis. Principal Deputy <strong>Aaron Lukas</strong> takes over in an acting capacity per Trump's Truth Social post. Fourth Cabinet-level departure of the second Trump term. Speculation that Gabbard, Hegseth and Patel were the three names on a shortlist for the next firing has been cooled by the family framing.</li>
-    <li><span class="badge">Fed</span><strong>Kevin Warsh sworn in as Federal Reserve chair</strong> in an East Room ceremony — Justice Clarence Thomas officiating — after his <strong>54–45 May-13 confirmation</strong> (most divisive in Fed history; only Fetterman crossed lines). Powell's term ran out May 15. Warsh has flagged "room to lower rates" while pledging independence from the White House; inflation has now run above 2% for over five years, tariff- and oil-pressured.</li>
-    <li><span class="badge alert">Courts</span><strong>Federal three-judge panel blocks Alabama's mid-cycle congressional remap</strong> Wednesday — the plan would have helped Republicans claw back Rep. Shomari Figures's seat. Same panel found 2023 Alabama map intentionally discriminatory against Black voters. State may appeal to SCOTUS; the ruling is a setback for the broader Trump-led mid-decade redistricting push aimed at holding the slim House majority in November.</li>
-    <li><span class="badge alert">Immigration</span><strong>Foreigners in the US must now apply for green cards from their home country</strong> "except in extraordinary circumstances" per a Friday administration directive — sharp curtailment of adjustment-of-status processing inside the United States.</li>
-    <li><span class="badge alert">DOJ / Anti-weaponization fund</span>Sen. Ted Cruz: Senate Republicans were "screaming" at acting AG Todd Blanche in a closed-door briefing on the "anti-weaponization compensation fund" — "one of the roughest meetings I've seen in my entire time in the Senate." Trump publicly defending the fund on Truth Social Wednesday.</li>
-    <li><span class="badge">Texas House</span>House Democrat who repeatedly tried to impeach Trump <strong>toppled in Texas runoff</strong> alongside the Cornyn loss; full delegation reshuffles likely heading into November.</li>
-    <li><span class="badge">Biden litigation</span>Former President Biden sued DOJ Wednesday to <strong>block release of Robert Hur classified-documents audio</strong>; Trump on Truth Social: Biden is "suing DOJ to hide interview audio files."</li>
-  </ul>
-</div>
+  <section id="tr">
+    <h2><span class="flag">🇹🇷</span> Türkiye</h2>
+    <div class="region tr">
+      <h3>CHP standoff — Day 9 of the "mutlak butlan" crisis</h3>
+      <div class="story">
+        <p>The deadlock between court-installed chair Kılıçdaroğlu and ousted-but-defiant Özgür Özel hardened Thursday and into Friday. <strong>Kılıçdaroğlu postponed indefinitely the Party Council meeting</strong> he had announced for June 1, citing the fact that PM members had not yet been formally notified by state institutions. He also told CHP MPs in writing that the TBMM <strong>CHP Group Assembly will not convene without his authorization</strong>. Özel fired back the same day: Kılıçdaroğlu cannot chair the group "because he is not an MP," the YSK has not stripped Özel of his mandate, and "<strong>Yeni Genel Merkezimiz Meclis'tir</strong>" — "our new headquarters is Parliament."</p>
+        <p>Two parallel Eid greeting ceremonies were held: the Kılıçdaroğlu camp at Söğütözü HQ (first contact with AKP since the March 19 İmamoğlu arrest), the Özel camp at the TBMM. The <strong>Yargıtay Chief Prosecutor's records were updated to list Kılıçdaroğlu as CHP chair</strong>. Özel's team has filed counter-petitions and is preparing notarized delegate signatures from June 1 to force an extraordinary congress (one-fifth of ~1,323 delegates required, congress within 15 days). Selvi (Hürriyet) reports CHP financial accounts will be examined.</p>
+      </div>
+    </div>
 
-<h2 id="europe">Europe</h2>
+    <div class="region tr">
+      <h3>Bilgi University — closure decree reversed; Can Holding probe rolls on</h3>
+      <div class="story">
+        <p>Erdoğan's May 25 decree <strong>reversed the May 22 closure of Istanbul Bilgi University</strong>, with the Resmi Gazete annulling the YÖK operating-license withdrawal — a rare political retreat after four days of student occupations at Santralistanbul, biber-gazlı police intervention on May 24, and faculty/alumni outcry. Bilgi (~25,000 students) was Turkey's largest private campus; the closure had threatened automatic transfer to <strong>Mimar Sinan Güzel Sanatlar Üniversitesi</strong>. The criminal probe into <strong>Can Holding</strong> (launched September 2025 by the Küçükçekmece Başsavcılığı for alleged "criminal organization, money laundering, tax evasion") continues; holding assets seized eight months ago.</p>
+      </div>
+    </div>
 
-<div class="region">
-  <ul>
-    <li><span class="badge alert">Spain · Corruption</span><strong>Guardia Civil UCO raids PSOE headquarters</strong> in Madrid Wednesday — court order seeking material tied to former PSOE official <strong>Leire Diez</strong> ("the Plumber"), arrested in December on criminal-organisation, embezzlement and influence-peddling charges. <strong>Ex-PM José Luis Rodríguez Zapatero</strong> formally under investigation for leading an alleged influence-peddling and money-laundering network around the 2021 Plus Ultra bailout; summoned to testify next month. PM Sánchez Wednesday from the Vatican: "no reason" to withdraw support from Zapatero; vowing to serve out his term.</li>
-    <li><span class="badge">Hungary · EU</span>PM <strong>Péter Magyar signs political agreement with Commission President von der Leyen TODAY (May 28)</strong> on the unfreeze of the <strong>€10.4B Recovery and Resilience Facility tranche</strong> ahead of the August 31 lapse. To unblock the wider €17B, Magyar's Tisza government must clear 27 "super-milestones" on judicial independence, anti-corruption and academic/press freedom. Hungary's first national plan submission due May 30.</li>
-    <li><span class="badge alert">Lebanon · IDF escalation</span>Tuesday's <strong>120+ Israeli airstrikes</strong> hit more than 100 Hezbollah sites across the south and eastern Bekaa; <strong>≥31 killed, 40 wounded</strong> per Lebanese Ministry of Public Health. Wednesday's package deepened the ground operation past the "yellow line"; IDF issued advance displacement orders north of the Zahrani River around Tyre. Hezbollah claimed 32 counter-operations; April-16 ceasefire frayed but not formally broken.</li>
-    <li><span class="badge alert">Ukraine · Odesa</span>Russian daytime drone strike on Odesa Wednesday <strong>injured 11 incl. several children</strong>; ~50 firefighters battled blazes across a Nova Poshta branch, a grocery, pet and liquor shops; three of the injured in serious condition. Ukraine net-loss vs. ISW data for the four-week window through May 26: Russia <strong>−100 sq mi</strong> (DeepState alt-tally: +21 sq mi). Energy-grid attacks now estimated to have shaved <strong>2.5 pp from Ukraine's 2026 GDP growth</strong> per Economist Intelligence Unit.</li>
-    <li><span class="badge">EU Council</span>Brussels press briefing 14:30 today ahead of next week's Council. Eighth Albania Accession Conference confirms Tirana has met all interim benchmarks; closing benchmarks set for Cluster 1 (Fundamentals). Competitiveness Council convenes (internal market, industry, research, space).</li>
-    <li><span class="badge">Heat</span>Ireland recorded <strong>30 °C</strong> Wednesday; Portugal nearing <strong>37 °C</strong> in May. Iberian Peninsula and parts of France running 5–8 °C above climatology for late May.</li>
-    <li><span class="badge alert">UK / Politics</span><strong>97 Labour MPs</strong> now demand a public Starmer-exit timetable per LabourList tracker; Burnham Makerfield byelection June 18 a true Lab–Reform marginal.</li>
-  </ul>
-</div>
+    <div class="region tr">
+      <h3>Economy &amp; markets</h3>
+      <ul>
+        <li><span class="tag market">FX</span>USD/TRY closed Thursday around <strong>45.90</strong> (range 45.88–45.96), down ~1.75% on the month and ~17.4% YoY. CBRT May market-survey 12-month USD expectation rose 0.41 TL to <strong>52.53 TL</strong>.</li>
+        <li><span class="tag">CBRT</span>Policy rate held at <strong>37%</strong> (O/N lending 40%, borrowing 35.5%). Şimşek reiterated the 19% year-end CPI target and a 5% medium-term inflation target.</li>
+        <li><span class="tag">Beklentiler</span>May survey: 12-month CPI expectation among market participants <strong>+0.43 pt to 23.82%</strong>; households -2.1 pt; real sector -0.6 pt. 10-year sovereign yield <strong>32.94%</strong>.</li>
+      </ul>
+    </div>
 
-<h2 id="turkey">Türkiye</h2>
+    <div class="region tr">
+      <h3>Erdoğan / Fetih 573 · foreign policy · courts</h3>
+      <ul>
+        <li><span class="tag">Fetih 573</span>Erdoğan attends Friday prayers and the AKP-organized "Bayramlaşma ve Fetih Kutlama" at Haliç Kongre Merkezi (Azerin concert, mehter). Vali Davut Gül's city-wide programme: 11:00 Beyazıt-to-Ayasofya mehter march, 21:00 drone show, fireworks.</li>
+        <li><span class="tag">Diplomacy</span>EU Customs Union update remains the active file post-Erdoğan/von der Leyen call (May 19). Cyprus accession-to-NATO debate continues to rile Ankara. Iraq: 1973 pipeline accord ends <strong>July 27, 2026</strong>; new Basra-Haditha-Silopi route in planning. Israel relations remain frozen since October 2023.</li>
+        <li><span class="tag alert">İmamoğlu</span>Remains in Silivri. Political-espionage case (15-20 years sought) had first hearing May 11; pretrial detention extended May 13; next hearing <strong>July 6</strong>. Çağlayan Başsavcılığı opened an investigation into the May 24 CHP HQ clashes.</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="region">
-  <ul>
-    <li><span class="badge alert">CHP · Day 8</span>Eight days after the <strong>May 21 Ankara court ruling</strong> voiding the 2023 CHP primary and reinstating Kılıçdaroğlu, ousted leader <strong>Özgür Özel rules out founding a new party</strong>, calling on members to "stay and fight." He demands the chair be elected by all 2M members and a congress called 15 days after Eid. Riot police battered into CHP HQ Sunday firing tear gas; <strong>Tuesday's İzmir rally was met with water cannon</strong> before Özel could address the crowd. Pravda Turkey reports procedural steps could see Özel <strong>stripped of parliamentary immunity and his seat</strong>. TIME headline: "Türkiye's deepening democratic crisis."</li>
-    <li><span class="badge alert">Higher Ed · Bilgi</span><strong>Bilgi University closure decree (May 22) was rescinded by a second Official Gazette decree May 25</strong> — but operations and student transfers to <strong>Mimar Sinan Güzel Sanatlar Üniversitesi</strong> as guarantor are proceeding. Underlying Can Holding organised-crime/money-laundering probe (and the arrest of former rector Mehmet Remzi Sanver) continues. YÖK transfer mechanics still in flux; thousands of students in administrative limbo.</li>
-    <li><span class="badge">Foreign Policy</span>Ankara watching the Quad statement closely after Tuesday's New Delhi meeting; Türkiye sits outside but the "safe Hormuz navigation" language is read as alignment with the US-led MOU framework.</li>
-    <li><span class="badge market">Markets</span>BIST 100 holding gains after last week's +4.89% recovery; TL volatility easing as Brent retraces. Watching MSCI quarterly review and any official MOU language for the next leg.</li>
-  </ul>
-</div>
+  <section id="cn">
+    <h2><span class="flag">🇨🇳</span> China</h2>
+    <div class="region cn">
+      <h3>Xi diplomacy — Pyongyang trip in final prep; Vučić wrapped</h3>
+      <ul>
+        <li><span class="tag">Pyongyang</span>Chinese security and protocol staff are in Pyongyang. MFA spokesperson Guo Jiakun (May 21) had "no specific information to share." Yonhap and Foreign Policy peg the visit for late May or early June — Xi's <strong>first to North Korea since June 2019</strong>. Beijing-Pyongyang passenger train (resumed March 12) and Air China flights (resumed March 30) have set the stage.</li>
+        <li><span class="tag">Belgrade</span>President <strong>Vučić wrapped his May 24-28 state visit</strong>. Xi awarded him the Friendship Medal May 25; two sides signed <strong>23 cooperation documents plus 10 additional</strong>; China pledged <strong>~€953M ($1.11bn) in Serbian investment</strong>. Joint statements on a "China-Serbia community with a shared future" and on the four global initiatives. Security track: "deepen cooperation in counterterrorism, preventing colour revolutions and tightening security for major events and BRI projects."</li>
+        <li><span class="tag">Other</span>Lao top leader Thongloun visits China <strong>June 2-6</strong>. China and Myanmar signed a 2026 Lancang-Mekong Special Fund agreement. MFA called US Forces Korea commander's "dagger in the heart of Asia" comment "hostile and aggressive."</li>
+      </ul>
+    </div>
 
-<h2 id="china">China</h2>
+    <div class="region cn">
+      <h3>Shenzhou-23 — Lai Ka-ying in orbit, yearlong residency, Pakistani astronaut next</h3>
+      <div class="story">
+        <p>Shenzhou-23 docked Tianhe at <strong>2:45 a.m. Beijing time May 25</strong> (3.5-hour automated rendezvous). Crew: commander <strong>Zhu Yangzhu, Zhang Zhiyuan, and Lai Ka-ying</strong> (Mandarin: Li Jiaying) — Hong Kong's first astronaut, a computer-forensics PhD and former HK Police superintendent. One Shenzhou-23 member will stay a <strong>full year</strong> — a first for China's program. <strong>Shenzhou-24</strong> is slated for late 2026 and will carry a Pakistani astronaut (SUPARCO finalists narrowed to two) for a short-duration visit.</p>
+      </div>
+    </div>
 
-<div class="region">
-  <ul>
-    <li><span class="badge sci">Space</span><strong>Shenzhou-23 docked Tiangong on May 25</strong> after Sunday-night Jiuquan launch — Cmdr Zhu Yangzhu, Zhang Zhiyuan, and <strong>Lai Ka-ying, Hong Kong's first astronaut</strong> and China's first female payload specialist (formerly a HK Police superintendent, PhD in computer forensics). First <strong>one-year orbital residency</strong> for a Chinese astronaut.</li>
-    <li><span class="badge alert">Pyongyang trip</span>South Korean media (Yonhap) report Chinese protocol and security teams have arrived in Pyongyang to prepare a <strong>Xi state visit "in late May or early June"</strong> — his first since June 2019. Framed as Xi reasserting influence as Pyongyang tilts closer to Moscow; possible Trump-Kim mediator role on denuclearization.</li>
-    <li><span class="badge">Diplomacy</span>Serbian President <strong>Aleksandar Vučić</strong> began a five-day Beijing state visit at Xi's invitation Sunday.</li>
-    <li><span class="badge alert">Shanxi · Coal</span>Death toll from the Friday May 22 Liushenyu / Qinyuan gas explosion at Shanxi Tongzhou Coal &amp; Coke holds at <strong>82 — worst Chinese mining accident in over a decade</strong>. Xi has ordered "all-out" rescue and "thorough investigation." Site had been on 2024 National Mine Safety Administration's high-gas watch-list.</li>
-    <li><span class="badge tech">AI · Pricing</span>Domestic Chinese AI labs continuing to price tokens at a fraction of US frontier labs; CNBC/Investing.com analysts call this an "AI token pricing crisis" pressuring the Anthropic/OpenAI IPO multiples ahead of summer prospectuses.</li>
-  </ul>
-</div>
+    <div class="region cn">
+      <h3>Markets, tech &amp; AI</h3>
+      <ul>
+        <li><span class="tag market">Equities</span>Hang Seng Thursday close <strong>-1.27% to 25,006.16</strong> on fresh US-Iran risk. Shanghai Composite +0.10% to ~4,098. PBOC midpoint May 27 at 6.8288/USD, <strong>466 pips firmer than survey</strong>.</li>
+        <li><span class="tag market">Data</span>April CPI <strong>+1.2% y/y</strong> (vs 0.8% expected); PPI <strong>+2.8%</strong> — ending a 41-month producer-price deflation streak. April exports <strong>+14.1% to a record $359.4bn</strong>; trade surplus $84.8bn; US-bound shipments rebounded +11.3% after March's -26.5% plunge.</li>
+        <li><span class="tag tech">DeepSeek V4-Pro</span><strong>1.6T parameters, 1M-token context</strong>; output <strong>$3.48/M tokens</strong> vs $30 OpenAI / $25 Anthropic. Now <strong>running natively on Huawei Ascend 950 silicon</strong>. Alibaba Qwen has cut up to 97%; Baidu Ernie-Lite is free.</li>
+        <li><span class="tag tech">BYD</span>May 28: unveiled the <strong>Xuanji A3, China's first 4nm smart-driving chip</strong>, already in mass production with L3/L4 support; also launched the Song Ultra DM-i. <strong>CATL held 47% share</strong> of April power-battery market with 28,694 MWh installed (+30.2% y/y).</li>
+        <li><span class="tag alert">Shanxi mine</span>Liushenyu coal-mine disaster (Qinyuan County): death toll <strong>82 — worst in 16+ years</strong>. Executives detained; probe uncovered <strong>hidden tunnels and fake doors</strong> allegedly used to evade regulators.</li>
+      </ul>
+    </div>
+  </section>
 
-<h2 id="japan">Japan &amp; Asia</h2>
+  <section id="jp">
+    <h2><span class="flag">🇯🇵</span> Japan / Asia</h2>
+    <div class="region jp">
+      <h3>Japan — Takaichi's ¥3T+ supplementary, BOJ June hike pricing firms</h3>
+      <ul>
+        <li><span class="tag">Diet</span>PM <strong>Sanae Takaichi</strong> confirmed the FY2026 supplementary budget will exceed <strong>¥3 trillion (~$19B)</strong>, submitted next week. <strong>¥500B from reserves</strong> to subsidize household utility bills July-September; rest financed by additional deficit bonds (total new issuance unchanged thanks to higher tax revenue). LDP-Ishin coalition holds 352/465 seats. <strong>Cabinet approval 59.4%</strong> (Jiji, +0.3pt MoM).</li>
+        <li><span class="tag market">Markets</span>Nikkei 225 Thursday <strong>-414pts (-0.64%) to 64,585</strong>; Friday opened higher and pushed back through 66,000 (intraday high ~66,036) on <strong>Samsung HBM4E</strong> ripple. 10y JGB ~<strong>2.70%</strong> (multi-decade-high regime, +23bp MoM, +118bp YoY). Tokyo May CPI: headline +1.6%, core +1.5% (4-yr low), core-core +1.9%.</li>
+        <li><span class="tag alert">Tomahawk</span>US has indefinitely delayed Japan's <strong>400 RGM-109 Tomahawks</strong> (~$2.35B program). Hegseth told Defense Minister Koizumi delivery slips could run up to <strong>two years</strong>. Tokyo accelerating talks on indigenous long-range strike (Type 12 SSM upgrade).</li>
+      </ul>
+    </div>
 
-<div class="region">
-  <ul>
-    <li><span class="badge">Quad</span><strong>Quad foreign ministers in New Delhi Tuesday May 26</strong> — Motegi/Rubio/Wong/Jaishankar launched new <strong>critical-minerals supply-chain framework</strong> and an <strong>energy-security framework</strong>. Joint statement opposed "unilateral attempts to change the status quo by force" (clearly aimed at Beijing) and pushed for "safe navigation through the Strait of Hormuz." First FM-level Quad since July 2025.</li>
-    <li><span class="badge market">Markets · Tokyo</span>Nikkei 225 opens <strong>-0.3% (-197 pts)</strong> Thursday; USD/JPY around <strong>¥159.5</strong> in early Tokyo trading. 10-yr JGB yield still hovering near a 30-year high; BOJ June 16-17 hike pricing softening after April core CPI +1.4% (lowest since March 2022).</li>
-    <li><span class="badge">Defence</span>Japan continuing to absorb the <strong>indefinite US suspension of Tomahawk deliveries</strong> (Hegseth-Koizumi call early May) — 400-missile order due by 2028 may slip up to two years. PM Takaichi readying ~¥3T supplementary on Hormuz LNG/electricity pressure.</li>
-    <li><span class="badge sport">Pakistan-Bangladesh</span>Bangladesh and Pakistan are reportedly close to a <strong>Mutual Defence Agreement</strong> (military cooperation + intelligence sharing + joint training); 27% rise in bilateral trade reported for Aug–Dec 2024. India recalibrating to Dhaka — Dinesh Trivedi tapped as next envoy.</li>
-  </ul>
-</div>
+    <div class="region jp">
+      <h3>Korea peninsula · India · Pakistan-Bangladesh</h3>
+      <ul>
+        <li><span class="tag">ROK-Japan</span>Lee Jae-myung and Takaichi met May 19 in Andong; agreed joint LNG/crude stockpiling and reinstated "shuttle diplomacy." DPRK readying for Xi visit late-May/early-June.</li>
+        <li><span class="tag tech">Samsung HBM4E</span>Samsung shipped <strong>industry-first 12-layer HBM4E samples Friday</strong> — 16 Gbps/pin (>20% faster than HBM4), 48GB capacity. Shares jumped <strong>up to +6.5%</strong>. SK Hynix HBM4E mass production not until 2027.</li>
+        <li><span class="tag">India</span>Nifty 50 closed essentially flat at <strong>23,649.95 (+0.03%)</strong>. Quad foreign-ministers' meeting (New Delhi) launched the <strong>Indo-Pacific Maritime Surveillance Cooperation Initiative</strong>; Rubio handed Modi a Trump invitation to Washington later in 2026.</li>
+        <li><span class="tag alert">Pakistan-Bangladesh</span>Interior-ministry MoU signed in Dhaka May 9 (Mohsin Naqvi/Salahuddin Ahmed) — anti-narcotics on paper, intelligence-sharing/joint investigations/counter-terrorism in practice. Separate <strong>broader defence framework</strong> in draft after Bangladesh's elections. India's countermove: <strong>Dinesh Trivedi</strong> (ex-Trinamool Railway Minister) appointed High Commissioner to Dhaka.</li>
+      </ul>
+    </div>
 
-<h2 id="mideast">Middle East</h2>
+    <div class="region jp">
+      <h3>SE Asia · Australia/NZ</h3>
+      <ul>
+        <li><span class="tag">Vietnam-Thailand</span><strong>To Lam wrapped first Thailand visit Thursday</strong>, signing agreements with PM Anutin Charnvirakul on security, defense, tech, green energy (50th anniversary of diplomatic ties).</li>
+        <li><span class="tag alert">Indonesia</span>Prabowo rattling investors — government taking control of <strong>palm oil, thermal coal and nickel exports</strong> via Danantara-appointed exporter; ride-hailing commission cap slashed to 8%. China Chamber of Commerce warned of "abrupt policy shifts."</li>
+        <li><span class="tag">Philippines</span>SC voted <strong>9-5-1 to deny Sen. Bato dela Rosa's TRO against an ICC arrest warrant</strong>. Marcos Jr. publicly stressed Japan ties.</li>
+        <li><span class="tag market">Australia</span><strong>RBA delivered a third consecutive hike to 4.35%</strong>, wiping out 2025's three cuts. Westpac sees two more hikes in 2026.</li>
+        <li><span class="tag market">NZ</span>Luxon government delivered an austere election-year budget; <strong>RBNZ held OCR at 2.25%</strong> in a tight vote but flagged hikes "imminent."</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="region">
-  <ul>
-    <li><span class="badge alert">Iran-US MOU</span>Draft remains: 60-day ceasefire extendable by mutual consent; phased Strait of Hormuz reopening with Iran clearing mines; lifting of US blockade; release of frozen Iranian funds; 30-60 day window for verifiable uranium-stockpile and enrichment-suspension talks. Tehran demands a permanent end to the war <em>before</em> nuclear negotiations begin; Washington wants the renunciation up front. Iran calls fresh US overflights and southern-Lebanon strikes a "grave violation."</li>
-    <li><span class="badge alert">Israel-Lebanon</span>Cumulative Lebanese deaths since March 2 resumption now past <strong>3,070</strong>; over 1 million displaced. Tyre, Nabatieh, Bekaa Valley remain the most active fronts.</li>
-    <li><span class="badge">Gaza</span>IDF strike package in Gaza Wednesday alongside Lebanon operation — humanitarian access still constrained; cargo throughput at Kerem Shalom below 60% of pre-March-2 levels.</li>
-  </ul>
-</div>
+  <section id="markets">
+    <h2>📈 Markets — Thursday close + Friday open</h2>
+    <div class="region">
+      <table class="markets-table">
+        <thead><tr><th>Index / Asset</th><th>Last</th><th>Change</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>S&amp;P 500</td><td>7,563.63</td><td class="up">+0.58%</td><td>Record close (Snowflake +36.5%)</td></tr>
+          <tr><td>Nasdaq Composite</td><td>26,917.47</td><td class="up">+0.91%</td><td>Record close</td></tr>
+          <tr><td>Dow Jones</td><td>50,668.97</td><td class="up">+0.05%</td><td>Fractional gain</td></tr>
+          <tr><td>S&amp;P futures (Fri pre-bell)</td><td>~7,589.25</td><td class="up">+0.10%</td><td>Light data calendar</td></tr>
+          <tr><td>Stoxx 600</td><td>—</td><td class="down">-0.5%</td><td>Thursday close</td></tr>
+          <tr><td>FTSE 100</td><td>10,425.96</td><td class="down">-0.75%</td><td>Thursday close</td></tr>
+          <tr><td>DAX</td><td>25,092</td><td class="down">-0.34%</td><td>Friday open ~+0.28%</td></tr>
+          <tr><td>CAC 40</td><td>8,188.87</td><td class="down">-0.23%</td><td>Friday open ~+0.22%</td></tr>
+          <tr><td>FTSE MIB</td><td>—</td><td class="up">+0.5%</td><td>Only major bourse higher Thursday</td></tr>
+          <tr><td>Nikkei 225</td><td>~66,036 (Fri intraday)</td><td class="up">recovering</td><td>Thursday -414 pts; Samsung HBM4E lift</td></tr>
+          <tr><td>Hang Seng</td><td>25,006.16</td><td class="down">-1.27%</td><td>Iran strike risk</td></tr>
+          <tr><td>Shanghai Composite</td><td>~4,098</td><td class="up">+0.10%</td><td>Friday rebound seen near 4,110</td></tr>
+          <tr><td>Nifty 50</td><td>23,649.95</td><td class="up">+0.03%</td><td>Flat — record-low rupee, high Brent</td></tr>
+          <tr><td>Brent crude</td><td>$93.71</td><td class="down">-58¢ Thu</td><td>On pace for largest monthly drop since 2020 if MOU signs</td></tr>
+          <tr><td>10-yr UST</td><td>~4.50% area</td><td>—</td><td>Eased from mid-May highs (~4.55% / 30y 5.12%)</td></tr>
+          <tr><td>USD/TRY</td><td>~45.90</td><td>—</td><td>CBRT 12-mo USD expectation 52.53 TL</td></tr>
+          <tr><td>BTC</td><td>~$80k</td><td>—</td><td>Below 200-day SMA</td></tr>
+          <tr><td>USD/JPY</td><td>~¥159 area</td><td>—</td><td>BOJ June 16-17 hike pricing firming</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size: 13px; color: var(--muted); margin-top: 8px;"><strong>AI capital markets headline:</strong> Anthropic closed <strong>$65B Series H at $965B post-money</strong> Thursday (Altimeter, Dragoneer, Greenoaks, Sequoia leading; $5B from Amazon; revenue run-rate $47B). <strong>OpenAI filed confidential S-1 May 22</strong> (Goldman/Morgan Stanley), targeting Q4 2026 listing at $852B–$1T. The April PCE print actually landed Thursday (not Friday): headline <strong>+0.4% m/m, +3.8% y/y</strong> (highest since May 2023); core <strong>+0.2% m/m, +3.3% y/y</strong> (highest since Oct 2023).</p>
+    </div>
+  </section>
 
-<h2 id="markets">Markets</h2>
+  <section id="sci">
+    <h2>🔬 Science, Tech &amp; Health</h2>
+    <div class="region">
+      <h3>AI &amp; chips</h3>
+      <ul>
+        <li><span class="tag tech">Anthropic</span>$65B Series H at $965B post-money — exceeds OpenAI's $852B March mark. Revenue run-rate $47B.</li>
+        <li><span class="tag tech">NVIDIA Q1</span>Revenue <strong>$81.6B (+85% YoY)</strong>, net income $58.3B, data-center $75.2B (+92%), Q2 guide $91B; dividend 25x to $0.25; $80B buyback.</li>
+        <li><span class="tag tech">Neuralink</span>R1 robot now places threads in "virtually any" brain region (Parkinson's, epilepsy, depression in scope). Patient Noland Arbaugh demoed <strong>28-month BCI chess</strong> at Boston Robotics Summit. Phase 3 expected late 2026.</li>
+        <li><span class="tag tech">Quantum</span>Japan team demonstrated <strong>instant detection of 3-photon W-states</strong>. Q-CTRL/IBM achieved 3,000x speedup on 120-qubit Fermi-Hubbard simulation. Google launched <strong>$10M REPLIQA</strong> quantum-bio program. NSF launched <strong>$1.5B X-Labs</strong> decade-long initiative.</li>
+        <li><span class="tag sci">Science</span><strong>ESMFold2</strong> generated an atlas of <strong>>1 billion predicted protein structures</strong>. A May 29 paper integrated AI-optimized epidural stimulation for spinal-cord injury.</li>
+      </ul>
+      <h3>Health — Ebola, Andes hantavirus, H5N1, Verve gene-editing</h3>
+      <ul>
+        <li><span class="tag alert">Ebola Bundibugyo</span>PHEIC since May 17. <strong>DRC: 121 confirmed (17 deaths) + 1,077 suspected (238 deaths)</strong> (May 26). <strong>Uganda: 7 confirmed, 1 death</strong>; 3 travel-linked. CDC added <strong>JFK to airport-screening</strong> Thursday 11:59 PM EDT (now three designated airports for travelers from DRC/Uganda/South Sudan within 21 days). State Dept issued Worldwide Caution dated May 28.</li>
+        <li><span class="tag alert">Andes hantavirus</span>WHO total (May 15): <strong>10 cases (8 confirmed), 3 deaths</strong>. <strong>18 US passengers</strong> repatriated to UNMC Nebraska Quarantine Unit (42-day monitoring). No US cases.</li>
+        <li><span class="tag">H5N1</span>180M+ poultry culled in US; 1,000+ dairy herds affected; <strong>71 confirmed US human cases, 2 deaths</strong>; $1.19B federal indemnity. CDC public-health risk assessment "low."</li>
+        <li><span class="tag sci">VERVE-102</span>Phase 1b Heart-2 (Verve/Lilly): single dose cut <strong>LDL up to 62%, PCSK9 up to 88%</strong>, durable to 18 months — published in NEJM.</li>
+      </ul>
+    </div>
+  </section>
 
-<div class="region">
-  <ul>
-    <li><span class="badge market">Wall St · Wednesday close</span><strong>Dow record 50,644.28 (+0.36% / +182.60)</strong>; S&amp;P 500 record 7,520.36 (+0.02%); Nasdaq 26,674.73 (+0.07%). Chips heavy — <strong>Qualcomm −9.7%, AMD −2.8%, Nvidia −2.6%</strong> on pricing-pressure concerns and a clipped chip-export readout. Oil-led inflation worry easing.</li>
-    <li><span class="badge market">Commodities</span><strong>Brent settled $88.68 / −5.55%</strong> Wednesday — five-week low; WTI tracked lower. <strong>Gas at the pump $4.49/gal</strong>, beginning to back off the Memorial-Day weekend $4.56 four-year-high. Gold and silver lower on the Iran-deal tone; <strong>Bitcoin retreated to ~$75k</strong>.</li>
-    <li><span class="badge market">Rates / FX</span>10-yr UST around 4.50%; DXY 99.2; USD/JPY ¥159.5. 30-year mortgage 6.49% per MBA weekly.</li>
-    <li><span class="badge tech">AI · Anthropic</span><strong>Anthropic's $30B+ primary round at $900B+ post-money expected to close this week</strong> — co-led by Sequoia, Dragoneer, Altimeter, Greenoaks (each ~$2B); Founders Fund and General Catalyst participating. Q1 revenue $4.8B; <strong>Q2 tracking ~$10.9B with first-ever $559M operating profit</strong>. Annualised run-rate ~$45B vs OpenAI's ~$25B (Feb). OpenAI prepping confidential IPO draft as soon as Friday.</li>
-    <li><span class="badge market">Asia</span>Tokyo soft open; Shanghai Composite finished Wednesday flat after PBoC kept MLF unchanged. Hang Seng +0.4% on Lai Ka-ying buzz and HK-listed mainland AI names.</li>
-  </ul>
-</div>
+  <section id="sport">
+    <h2>🏆 Sports</h2>
+    <div class="region">
+      <ul>
+        <li><span class="tag alert">NBA WCF G6</span><strong>Spurs 118, Thunder 91</strong> in San Antonio. Wembanyama <strong>28 pts / 10 reb</strong>, three first-quarter 3s; Spurs' third-quarter 32-13 run included a 7:30 OKC scoreless stretch and 13 missed FGs. <strong>Series tied 3-3; Game 7 Saturday night in OKC.</strong></li>
+        <li><span class="tag">NHL ECF</span>Hurricanes lead Canadiens <strong>3-1</strong>; Game 5 tonight 8 p.m. ET in Carolina. Vegas already swept Colorado for Western Final berth.</li>
+        <li><span class="tag">Roland-Garros</span>Day 6: headline <strong>Djokovic vs João Fonseca</strong> R3; Swiatek-Linette, Andreeva-Bouzkova, Zverev-Halys night session. Notable upsets earlier in the week: <strong>Sinner upset by Cerundolo</strong> after a controversial cramping timeout; <strong>Medvedev knocked out R1</strong> by wildcard Walton.</li>
+        <li><span class="tag alert">UCL Final Saturday</span><strong>PSG (holders) vs Arsenal</strong>, Budapest Puskás Aréna, <strong>18:00 CEST</strong>. Arsenal's first final in 20 years (last 2006 vs Barça); PSG seek back-to-back. Arsenal won all eight league-phase games (Champions League record), conceding just four. PSG's route: 11th in league phase → Monaco 5-4 → Chelsea 8-2 → Liverpool 4-0 → Bayern 6-5. <strong>Dembélé (calf)</strong> confident of starting; <strong>Hakimi</strong> looks bench-bound. <strong>Ødegaard</strong> returned vs Atlético; <strong>Saka's Achilles</strong> the live concern. Kvaratskhelia leads PSG scoring (10G/6A, 7 in knockouts).</li>
+      </ul>
+    </div>
+  </section>
 
-<h2 id="health">Health &amp; Science</h2>
+  <div class="disclaimer">
+    <strong>Disclaimer.</strong> This automated briefing is a synthesis of ~120 sources across US, Europe, Türkiye, China and Japan/Asia. Figures and quotes are best-effort accurate as of the Friday morning compilation window — markets, casualty tallies and political situations move quickly; consult primary sources for live decisions. Nothing here is investment, medical or legal advice.
+  </div>
 
-<div class="region">
-  <ul>
-    <li><span class="badge alert">Ebola Bundibugyo · PHEIC</span>WHO declared the outbreak a Public Health Emergency of International Concern May 17. DRC: <strong>121 confirmed (17 deaths) + 1,077 suspected (238 suspected deaths)</strong> across Ituri, North Kivu, South Kivu (May 26 figures). Uganda: <strong>7 confirmed (1 death)</strong> — three travel-linked from DRC. Enhanced CDC airport screening live at five US ports; <strong>IAH Houston added effective today (May 26)</strong>. No approved Bundibugyo-strain vaccine/therapeutic.</li>
-    <li><span class="badge alert">Hantavirus · Cruise cluster</span>Andes-virus cluster on the Ushuaia-departure expedition vessel: <strong>11 cases (9 confirmed, 2 suspected), 3 deaths</strong> per WHO May 12 numbers; cruise visited Antarctica, South Georgia, Tristan da Cunha, St Helena, Ascension. 42-day surveillance window for repatriated passengers open through mid-June. US risk "extremely low."</li>
-    <li><span class="badge alert">H5N1</span>WHO Q1 zoonotic-flu tally: 13 human cases including a previously unreported fatal H5N1 in a Bangladeshi child. None of the close contacts of the 13 patients have fallen ill; general-population risk "low."</li>
-    <li><span class="badge sci">Quantum</span><strong>Harvard / Lukin lab fault-tolerance advance</strong> pulled timelines for "some form" of fault-tolerant quantum computing to <em>end of this decade</em> from end of next. <strong>Jülich Supercomputing Centre + NVIDIA</strong> have fully simulated a 50-qubit universal quantum computer on JUPITER — beats the 2019 48-qubit record. <strong>Kyoto + Hiroshima photonic team</strong> built a circuit that instantly detects 3-photon "W states" — a milestone for quantum teleportation and communication.</li>
-    <li><span class="badge sci">Neuro / BCI</span>Tsinghua published the first two-way adaptive BCI using a memristor-based neuromorphic decoder (Nature Electronics). Yale's <strong>NeuroScale</strong> replaces global clock sync with local-cluster sync to scale neuromorphic chips. Neuralink begins high-volume BCI production this year per Musk; market sized ~$3.32B in 2026.</li>
-    <li><span class="badge sci">Biomed</span>Leucine shown to "supercharge" mitochondrial energy proteins (cell-energy implications). Japanese team publishes <strong>vitamin K-based compounds that may regenerate lost neurons</strong> — Alzheimer's/Parkinson's relevance. USC identifies anti-inflammatory drug candidates targeting APOE4 brain inflammation. Ultra-sensitive <strong>sub-zeptojoule sensor</strong> built on superconducting materials.</li>
-  </ul>
-</div>
-
-<h2 id="sport">Sport &amp; Culture</h2>
-
-<div class="region">
-  <ul>
-    <li><span class="badge sport">NBA · WCF G6 TONIGHT</span><strong>Thunder at Spurs, 8:30 p.m. ET on NBC/Peacock — OKC leads 3-2.</strong> Wembanyama scored 33 to level the series Monday in G4 (San Antonio 116-103). Knicks already swept Cleveland in the East and await June 3 NBA Finals tip.</li>
-    <li><span class="badge sport">NHL · ECF</span>Hurricanes-Canadiens tied 2-2 after Wednesday's G4 in Montreal. G5 Friday May 29 at PNC Arena.</li>
-    <li><span class="badge sport">UCL Final · Saturday</span><strong>PSG vs Arsenal — Budapest Puskás Aréna, 18:00 CET Saturday May 30.</strong> Defending champions PSG looking to be the second side to defend the rebranded UCL (after Real Madrid). Arsenal's first final since 2006.</li>
-    <li><span class="badge sport">Roland-Garros</span><strong>Sinner 6-1, 6-3, 6-4 over Tabur</strong> Tuesday on Court Philippe-Chatrier — extends winning streak to 30 (5th-longest of the Open Era). <strong>Alcaraz absent (wrist)</strong>; Zverev top of bottom half. Sinner needs Roland-Garros and Wimbledon for the career Slam.</li>
-    <li><span class="badge sport">Cricket / IPL</span>India tour-of-England build-up; IPL playoff window underway with Eliminator and Qualifiers slated for the weekend.</li>
-    <li><span class="badge">Culture</span>Cannes wrap (Mungiu's <em>Fjord</em> Palme d'Or) still resonating; Neon's seventh in a row. Festival opens limited theatrical run of the Grand-Prix-winning Zvyagintsev's <em>Minotaur</em>.</li>
-  </ul>
-</div>
-
-<footer>
-  Daily briefing built automatically by the news-check scheduled task. <a href="weekly-report.html">Weekly Report</a> · <a href="specific-topics.html">Specific Topics</a> · <a href="index.html">Index</a>. Sources sampled across regions: NPR, Reuters, AP, Al Jazeera, CNN, NBC News, CBS News, BBC, Euronews, FT, Bloomberg, CNBC, The Japan Times, NHK, SCMP, Global Times, Xinhua, Hürriyet, Cumhuriyet, T24, BirGün, Anadolu, Le Monde, Süddeutsche Zeitung, El País, La Stampa, Politico Europe, Yonhap, Kyiv Independent, Reuters TR, Times of India, Hindustan Times, Dawn, Yomiuri Shimbun, Asahi, Mainichi, Nikkei Asia, MOFA, MOFCOM, ECDC, WHO, CDC, Nature, Science, ScienceDaily, Axios, The Hill, Foreign Policy, AP Sports, ESPN, UEFA, ATP, NHL, NBA. <span class="meta">Last refreshed Thursday, 2026-05-28 (morning).</span>
-</footer>
-
+  <footer>
+    Generated by the news-check scheduled task · Friday, May 29, 2026 · Companion documents: <a href="./weekly-report.html">Weekly Report</a> · <a href="./specific-topics.html">Specific Topics</a> · <a href="./index.html">Index</a>
+  </footer>
 </div>
 <script src="./tts.js" defer></script>
 </body>
