@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Sunday, June 7, 2026</title>
+<title>Specific Topics Deep Dive — Thursday, June 11, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -58,120 +58,113 @@
   .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
   .tag.alert { background: rgba(255,123,114,0.15); color: var(--warn); }
   .tag.good { background: rgba(126,231,135,0.15); color: var(--good); }
-  .tag.flag { background: rgba(240,136,62,0.15); color: var(--highlight); }
+  .tag.hot { background: rgba(240,136,62,0.15); color: var(--highlight); }
   @media (prefers-color-scheme: light) {
     .tag { background: #e3edff; }
     .tag.alert { background: #ffe5e5; }
     .tag.good { background: #e3f4e8; }
-    .tag.flag { background: #f7ebd4; }
+    .tag.hot { background: #f7ebd4; }
   }
+  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 18px 0; font-size: 13px; color: var(--muted); }
+  .kpi { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+  .kpi div { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-size: 13px; }
+  .kpi b { display: block; font-size: 18px; color: var(--highlight); }
   .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
   footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
   .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
   .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
   .nav a:hover { border-color: var(--accent); text-decoration: none; }
+  @media (max-width: 600px) {
+    h1 { font-size: 25px; }
+    .container { padding: 22px 16px 48px; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
-    <div class="eyebrow">Specific Topics Deep Dive</div>
-    <h1>Sunday, June 7, 2026</h1>
-    <div class="date">Companion to the daily briefing · topics drawn from <code>request.md</code></div>
-    <p class="intro">
-      Standing deep-dive topics: <strong>AI Market · Neurological Computers / BCI · Quantum Computing · New Spreading Virus · Middle East Tensions · Critical Science</strong>. No fresh <code>request.md</code> was present locally this run, so the established interest list is carried forward and refreshed. Figures are best-effort accurate as of the Sunday-morning compile (US markets closed for the weekend).
-    </p>
+    <div class="eyebrow">Specific Topics · Deep Dive</div>
+    <h1>Deep Dive — Thursday, June 11, 2026</h1>
+    <div class="date">Companion to the daily briefing · longer reads on the week's biggest running threads</div>
+    <div class="intro">
+      <strong>No specific request this run.</strong> No <code>request.md</code> topics were submitted for today, so this page is a set of editor's-pick deep dives on the threads with the most second-order consequences right now: the <strong>Hormuz energy shock and the stagflation question</strong>, the <strong>AI IPO wave</strong> (Anthropic's confidential filing), the <strong>Bundibugyo-Ebola outbreak</strong>, and <strong>what the Xi–Kim summit's silence on denuclearization signals</strong>. Drop topics into <code>request.md</code> (and learning goals into <code>learngoals.md</code>) to steer this page.
+    </div>
     <div class="nav">
-      <a href="#ai">🤖 AI Market</a>
-      <a href="#neuro">🧠 Neuro Computers</a>
-      <a href="#quantum">⚛️ Quantum</a>
-      <a href="#virus">🦠 New Viruses</a>
-      <a href="#me">🛢️ Middle East</a>
-      <a href="#sci">🔬 Critical Science</a>
+      <a href="#hormuz">🛢️ Hormuz &amp; stagflation</a>
+      <a href="#ai">🤖 AI IPO wave</a>
+      <a href="#ebola">🦠 Ebola Bundibugyo</a>
+      <a href="#xikim">🇨🇳 Xi–Kim signal</a>
       <a href="./daily-briefing.html">📰 Daily</a>
-      <a href="./weekly-report.html">📅 Weekly</a>
+      <a href="./weekly-report.html">🗓️ Weekly</a>
     </div>
   </header>
 
-  <section id="ai">
-    <h2>🤖 AI Market</h2>
-    <div class="card ai">
-      <ul>
-        <li><span class="tag alert">The rout</span><strong>The AI-trade rotation became a full sell-off on Friday.</strong> A violent semiconductor slide wiped <strong>~$1 trillion</strong> off US equities — the <strong>Nasdaq fell 4.2%</strong> (worst day since the April-2025 tariff turmoil), erasing Tuesday's Dow record. It extended the post-Broadcom unwind and was compounded by a hot jobs print (+172K) that pushed the 10-yr yield to ~4.54%.</li>
-        <li><span class="tag">Broadcom pivot</span>Broadcom posted <strong>Q2 FY26 revenue of $22.19B (+48% YoY)</strong> with AI semis at $10.8B (+143%) — but its <strong>softer next-quarter AI guide (~$16B)</strong> lit the fuse. CEO Hock Tan said it will <strong>sell custom chips only to select customers, stepping back from full integrated systems</strong>, naming six core custom-silicon clients including <strong>Anthropic, OpenAI, Google and Meta</strong>. FY26 AI target $56B, FY27 &gt;$100B.</li>
-        <li><span class="tag good">Custom silicon ascendant</span>Frontier labs increasingly design their own accelerators: <strong>Anthropic placed a ~$10B custom-silicon order with Broadcom in December</strong> (~1GW of TPU capacity in 2026, ~3GW in 2027). Trackers now project <strong>custom-ASIC shipments +44.6% YoY in 2026 vs +16.1% for merchant GPUs</strong> — the first year ASIC growth outpaces GPUs.</li>
-        <li><span class="tag">Nvidia</span>Still the most valuable company at <strong>~$5.2T</strong>, with &gt;$40B in AI equity bets in 2026; at COMPUTEX (June 1) Huang confirmed <strong>Vera Rubin in manufacturing</strong>, first systems shipping H2 2026. Wells Fargo called Friday's chip rout "positioning rather than fundamentals."</li>
-        <li><span class="tag">IPO backdrop</span><strong>Anthropic filed a confidential S-1 on June 1</strong> on a ~$47B revenue run-rate (up from ~$10B a year ago), eyeing a fall listing; <strong>OpenAI is preparing to file in coming weeks</strong>, targeting a fall debut and a possible $1T+ valuation (Nvidia's planned stake trimmed from a ~$100B LOI to ~$30B). <span class="tag flag">flag</span>Specific valuation targets are unverified/speculative. Friday's rout and "cheap AI" margin worries are the clearest threats to that IPO window.</li>
-      </ul>
+  <h2 id="hormuz">🛢️ The Hormuz shock — how a strait moved US inflation</h2>
+  <div class="card me">
+    <p>The single most consequential chain of the week runs from a waterway to your gas pump to the Fed's June meeting. When the April Iran ceasefire collapsed and the <strong>Strait of Hormuz stayed largely closed to shipping</strong> — roughly a fifth of the world's seaborne oil normally passes through it — the supply premium showed up almost immediately in prices.</p>
+    <div class="kpi">
+      <div><b>4.2%</b>US CPI, May (3-yr high)</div>
+      <div><b>+40.5%</b>gasoline y/y</div>
+      <div><b>~$95</b>Brent crude</div>
+      <div><b>60%+</b>energy's share of the CPI rise</div>
     </div>
-  </section>
-
-  <section id="neuro">
-    <h2>🧠 Neurological Computers / Brain-Computer Interfaces</h2>
-    <div class="card neuro">
-      <ul>
-        <li><span class="tag">Neuralink</span>Trial expanded past a dozen participants; Musk says the company will begin "high-volume production" of implants and move toward "almost entirely automated" surgery in 2026, with a second-gen device said to address earlier thread-retraction issues.</li>
-        <li><span class="tag good">Synchron</span>Its <strong>$200M Series D</strong> (Double Point Ventures-led) funds a 2026 pivotal trial of the catheter-delivered <strong>Stentrode</strong> (16 electrodes, no open-brain surgery), which has shown stability for over two years across US/Australia patients — aiming at a potential first FDA-approved permanent BCI.</li>
-        <li><span class="tag">Neuralink raise</span>Neuralink raised a <strong>$650M Series E in April 2026</strong> (~$1.85B total); Musk says the company will move toward "high-volume" implant production and largely automated surgery this year.</li>
-        <li><span class="tag">Precision Neuroscience</span>Its <strong>Layer 7</strong> cortical array (1,024 electrodes via a minimally invasive slit craniotomy) filed what may be the first BCI PMA submission.</li>
-        <li><span class="tag flag">Reality check</span>No BCI is yet commercially available; realistic commercial timelines cited remain <strong>2028–2030</strong>. No new BCI catalyst surfaced over the weekend — funding/trial context carried forward.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="quantum">
-    <h2>⚛️ Quantum Computing</h2>
-    <div class="card quantum">
-      <ul>
-        <li><span class="tag good">Recent milestone</span>On <strong>June 3</strong>, <strong>Atom Computing</strong> reported the first <strong>toric-code</strong> quantum error correction on a <strong>neutral-atom</strong> system — logical error rates fell as qubits were added across many sustained rounds, making it one of only two firms to show sustained multi-round QEC (and the first with neutral atoms). It also signed a <strong>$100M Dept. of Commerce LOI</strong> (May 21).</li>
-        <li><span class="tag">Landscape</span>Recent logical-qubit demos: Google Willow, Quantinuum Helios (48 logical qubits), QuEra (96), Atom Computing (24 via Microsoft), plus Alice &amp; Bob cat qubits with ~1-hour bit-flip lifetimes.</li>
-        <li><span class="tag good">Funding</span>The <strong>US Dept. of Commerce</strong> announced (May 21) letters of intent for <strong>~$2B across 9 quantum companies</strong> in exchange for non-controlling stakes. PsiQuantum signed a $100M CHIPS-Act LOI; IonQ opened a Boulder R&amp;D lab. <span class="tag flag">flag</span>No new quantum headline today — carried forward.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="virus">
-    <h2>🦠 New Spreading Virus / Outbreaks</h2>
-    <div class="card virus">
-      <ul>
-        <li><span class="tag alert">Ebola (Bundibugyo)</span><strong>PHEIC since May 16; still worsening.</strong> Latest (June 3-5, DRC MoH / WHO / ECDC): DRC <strong>381 confirmed / 64 deaths</strong>, 233 hospitalized in isolation; <strong>Ituri worst with 359 confirmed across 17 health zones</strong>, plus 19 in North Kivu and 3 in South Kivu. <strong>Uganda: 19 confirmed / 2 deaths</strong> — and notably <strong>eight of those cases are in the capital, Kampala</strong> (one in neighboring Wakiso), an urban-spread red flag. These supersede the 363/62 and 15/1 figures from June 5.</li>
-        <li><span class="tag good">Vaccine push (new)</span><strong>CEPI committed ~$62M on June 1 to fast-track three Bundibugyo-specific candidates</strong> — <strong>Moderna ($50M, mRNA), Oxford ($8.6M, ChAdOx1) and IAVI ($3.2M)</strong>. Still, none is yet approved and trials remain months away.</li>
-        <li><span class="tag alert">Treatment gap</span>Unlike the Ebola-Zaire strains, there are <strong>no approved Bundibugyo-specific therapeutics or vaccines</strong>. WHO judged Ervebo (Zaire-strain) cross-protection "insufficient" for programmatic use, though animal data suggest ~70–80% cross-protection. Ring vaccination + contact tracing (still below the >90% needed) are the current tools.</li>
-        <li><span class="tag">Other</span><strong>H5N1 bird flu</strong>: WHO tracked 13 zoonotic avian/swine-flu human cases in Q1 2026 (incl. a fatal child case in Bangladesh) with <strong>no sustained human-to-human transmission</strong>; risk rated low. Mpox clade II is globally established; clade I rising in central Africa.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="me">
-    <h2>🛢️ Middle East Tensions</h2>
-    <div class="card me">
-      <ul>
-        <li><span class="tag alert">Iran MOU — still unsigned</span>The tentative <strong>60-day MOU</strong> (extend the ceasefire, launch nuclear talks; reported terms include an unrestricted Strait of Hormuz, free oil sales, sanctions-relief discussions and HEU disposition first) <strong>remains UNSIGNED</strong>. Trump speaks of a deal being "close," but an adviser to Iran's supreme leader told CNN talks are at a <strong>"deadlock,"</strong> urging release of frozen Iranian assets as a confidence step. <span class="tag flag">flag</span>No confirmed signature at compile time.</li>
-        <li><span class="tag alert">Weekend flare-up (developing)</span>Several US outlets reported <strong>fresh military exchanges</strong> over June 6–7 — CENTCOM downing Iranian drones near Hormuz, US strikes on Iranian coastal radar sites, and reported Iranian missile fire toward Gulf states; Tehran called it a violation of the April 8 ceasefire. <span class="tag flag">flag</span>Scope and sequencing differ markedly between sources — read as unconfirmed and developing.</li>
-        <li><span class="tag alert">Israel · Lebanon</span>The <strong>US-brokered ceasefire (announced June 4)</strong> — conditioned on Hezbollah pulling south of the Litani, with LAF-controlled "pilot zones" in exchange for IDF withdrawal — <strong>stays rejected by Hezbollah</strong>. Leader Naim Kassem called the withdrawal-under-fire demand "surrender." Israel resumed strikes; the <strong>next round of talks slipped to the week of June 22</strong>.</li>
-        <li><span class="tag">Oil</span><strong>Brent ~$93/bbl</strong> (off mid-week levels) — the cleanest gauge of how the MOU, the weekend flare-up and the Lebanon track resolve, and the <strong>key variable for Monday's market open</strong>. Any Hormuz escalation is the main upside risk to crude. <span class="tag flag">flag</span>Spot moves over the weekend.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="sci">
-    <h2>🔬 Critical Science This Week</h2>
-    <div class="card sci">
-      <ul>
-        <li><span class="tag good">Pancreatic cancer</span>At ASCO 2026, the RAS(ON) inhibitor <strong>daraxonrasib roughly doubled overall and progression-free survival</strong> vs chemo in previously-treated metastatic PDAC (RASolute 302, published in <strong>NEJM</strong>; ~13.2 vs 6.7 months median OS). FDA granted expanded access.</li>
-        <li><span class="tag good">Prostate · Lung · Breast</span>PROTEUS: adding apalutamide raised the 5-year distant-metastasis-free rate to 78.2% vs 73.5%. Bispecific <strong>ivonescimab</strong> (PD-1 + VEGF) beat PD-1+chemo in squamous NSCLC (HARMONI-6). A genomic test could spare ~two-thirds of high-risk breast patients from chemo.</li>
-        <li><span class="tag">Space</span>Machine-learning analysis of NASA's <strong>TESS</strong> data surfaced <strong>10,091 new candidate exoplanets</strong>.</li>
-        <li><span class="tag">Energy/physics</span>Reports of a single photonic chip that generates, steers and reads light-based information, and a perovskite catalyst for lower-temperature hydrogen production. <span class="tag flag">flag</span>Aggregator-sourced; primary-journal confirmation pending.</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="disclaimer">
-    <strong>Disclaimer.</strong> Best-effort synthesis as of the Sunday-morning compilation window; figures and quotes move quickly — consult primary sources before acting. Items marked <span class="tag flag">flag</span> are unverified or rest on secondary aggregators. Nothing here is investment, medical or legal advice.
+    <h3>Why it matters</h3>
+    <ul>
+      <li><span class="tag hot">mechanism</span>Energy is a near-universal input. A jump in crude flows through to gasoline, airfares, freight and, with a lag, almost every physical good — which is why a single geopolitical chokepoint can lift a whole inflation index. The BLS said energy alone drove 60%+ of May's increase.</li>
+      <li><span class="tag">the split</span><strong>Headline 4.2% vs. core 2.9%.</strong> Core (ex-food/energy) rose just 0.2% on the month. That gap is the whole debate: an energy shock is, in theory, a one-off level shift the Fed can "look through" — unless it bleeds into wages and expectations and becomes self-sustaining.</li>
+      <li><span class="tag alert">the trap</span><strong>Stagflation risk.</strong> An oil shock both raises prices (argues for hikes) and dents growth (argues for cuts). With the labor market still firm, markets have started pricing the tail risk that the Fed's <em>next</em> move is a hike — even as it is expected to <strong>hold at the June 16–17 meeting</strong> while it waits to see if the spike sticks.</li>
+    </ul>
+    <h3>The tell to watch</h3>
+    <p>Brent is the cleanest real-time gauge. A reopening of Hormuz would unwind much of the inflation and market damage within weeks; continued closure entrenches it — the EIA's closure scenario points to a <strong>~$105 June–July average</strong>. Trump's "total victory in two weeks, oil prices come tumbling down" is, in effect, a bet on the former.</p>
+    <p class="note">Plain-English glossary — <strong>CPI</strong>: the consumer price index, the headline measure of how fast prices rise. <strong>Core CPI</strong>: the same, minus volatile food and energy, used to read the underlying trend. <strong>Stagflation</strong>: high inflation plus stagnant growth — the worst case for a central bank, because the two problems call for opposite medicine.</p>
   </div>
 
+  <h2 id="ai">🤖 The AI IPO wave — Anthropic files, Nvidia sells "Vera"</h2>
+  <div class="card ai">
+    <p>Even amid a macro shock, the AI complex remains the market's swing factor — and this month it took a defining step toward the public markets.</p>
+    <ul>
+      <li><span class="tag good">filing</span><strong>Anthropic filed confidentially for an IPO (June 1)</strong> at a reported <strong>~$965B valuation</strong>, with its revenue run-rate jumping from roughly <strong>$10B to ~$47B in about a year</strong> — one of the steepest revenue ramps the software industry has seen. A confidential filing lets a company start the SEC review privately before committing to a public timetable.</li>
+      <li><span class="tag">silicon</span><strong>Nvidia named Anthropic, OpenAI and SpaceX as first users of its new "Vera" CPU</strong> (full production in Q3) — a push to pair its GPUs with its own general-purpose processors and capture more of the data-center stack.</li>
+      <li><span class="tag alert">counter-current</span>At the same time, the big AI buyers are <strong>exploring custom in-house chips</strong> to control compute cost and supply — a long-term challenge to Nvidia's share even as overall demand grows. The early-June semiconductor rout (Nasdaq's worst day since April 2025) was the market chewing on exactly this tension.</li>
+    </ul>
+    <h3>Why it matters</h3>
+    <p>An Anthropic listing at this scale would be a landmark test of how public investors value frontier-AI economics — enormous revenue growth against enormous compute spend. It also concentrates index risk: a handful of AI names now drive a large share of US market moves, which is why an AI wobble and a Middle East oil shock can hit the tape on the same day.</p>
+    <p class="note"><strong>Run-rate</strong>: annualizing recent revenue (e.g. last month × 12) to express current scale — useful for fast-growing firms, but it flatters a company still accelerating. <strong>Confidential filing</strong>: an SEC process (allowed for many issuers) to begin review privately and only go public with the prospectus closer to the offering.</p>
+  </div>
+
+  <h2 id="ebola">🦠 Bundibugyo-Ebola — why this outbreak is hard to stop</h2>
+  <div class="card virus">
+    <p>The DRC–Uganda outbreak keeps climbing, and the reason it is unusually stubborn is specific: the pathogen is <strong>Bundibugyo virus</strong>, one of the rarer Ebola species — and the licensed Ebola vaccine (Ervebo) targets the <em>Zaire</em> species, so its cross-protection here is judged insufficient.</p>
+    <div class="kpi">
+      <div><b>598</b>DRC confirmed (Jun 8)</div>
+      <div><b>115</b>DRC deaths</div>
+      <div><b>19 / 2</b>Uganda cases / deaths</div>
+      <div><b>$518M</b>continental response ask</div>
+    </div>
+    <ul>
+      <li><span class="tag alert">no matched vaccine</span>There is <strong>no approved Bundibugyo-specific vaccine or therapeutic</strong>. CEPI has put ~$62M behind three candidates (Moderna mRNA, Oxford ChAdOx1, IAVI), but trials are months away — so the front line is still classic outbreak control: case isolation, contact tracing and safe burials.</li>
+      <li><span class="tag">geography</span>Ituri province is the epicenter (563 of the DRC's confirmed cases across 17 health zones), with spread into North and South Kivu and cross-border transmission into Uganda among contacts and health workers — a dense, mobile, conflict-affected region that makes tracing hard.</li>
+      <li><span class="tag good">response</span>WHO declared a <strong>PHEIC on May 16–17</strong>; on <strong>June 5 Africa CDC and WHO launched a joint continental plan seeking US$518M</strong>. The metric that matters most is contact-tracing completeness — it needs to climb well above 90% to bend the curve.</li>
+    </ul>
+    <p class="note"><strong>PHEIC</strong> (Public Health Emergency of International Concern): the WHO's highest alarm level, which unlocks coordinated international response. <strong>Cross-protection</strong>: when a vaccine made for one strain partly works against a related one — here judged too weak to rely on.</p>
+  </div>
+
+  <h2 id="xikim">🇨🇳 The Xi–Kim summit — read the silence</h2>
+  <div class="card me">
+    <p>Xi Jinping's June 8–9 state visit to Pyongyang — his first trip abroad in 2026 — produced warm language about "powerful momentum" and a friendship that "will not change." But the most telling detail was an <strong>omission</strong>: the official Xinhua readout made <strong>no mention of denuclearization</strong>.</p>
+    <ul>
+      <li><span class="tag">the signal</span>For years, China's stated line included Korean-peninsula denuclearization. Dropping it from a flagship readout — days after North Korea unveiled a <strong>third uranium-enrichment plant</strong> — reads as Beijing implicitly accepting the North as a nuclear state, and prioritizing the relationship over the old non-proliferation framing.</li>
+      <li><span class="tag hot">the strategy</span>Analysts frame the visit as Xi keeping Pyongyang anchored to <strong>China</strong> rather than letting it drift fully into <strong>Russia's</strong> orbit (the two leaders met May 19–20). It's a three-body problem — Beijing, Moscow and Pyongyang — in which China wants to remain the indispensable partner.</li>
+      <li><span class="tag alert">the leverage play</span>In parallel, Xi is pressing Trump to <strong>curb US arms sales to Taiwan</strong>, and Beijing has stayed conspicuously quiet on Taiwan — restraint that analysts read as avoiding anything that would galvanize US support. The Korea and Taiwan files are being played as one board.</li>
+    </ul>
+    <p>Watch the US and South Korean responses, any North Korean weapons tests, and whether the no-denuclearization framing hardens into open policy. If it does, it marks a real shift in how the region's nuclear question is even discussed.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>About this page.</strong> Editor's-pick deep dives compiled Thursday, June 11, 2026 by the news-check agent — generated because no <code>request.md</code> topics were submitted this run. AI-generated synthesis from the cited reporting, not original journalism; figures are as-of the dates noted and may move. Nothing here is financial, medical or legal advice.
+  </div>
   <footer>
-    Generated by the news-check scheduled task · Sunday, June 7, 2026 · <a href="./daily-briefing.html">Daily Briefing</a> · <a href="./weekly-report.html">Weekly Report</a> · <a href="./index.html">Index</a>
+    Specific-topics deep dive · 2026-06-11 · paired with the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Add lines to <code>request.md</code> to drive tomorrow's edition.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
