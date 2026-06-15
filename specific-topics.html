@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Saturday, June 13, 2026</title>
+<title>Specific Topics Deep Dive — Monday, June 15, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -58,127 +58,90 @@
   .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
   .tag.alert { background: rgba(255,123,114,0.15); color: var(--warn); }
   .tag.good { background: rgba(126,231,135,0.15); color: var(--good); }
-  .tag.hot { background: rgba(240,136,62,0.15); color: var(--highlight); }
   @media (prefers-color-scheme: light) {
     .tag { background: #e3edff; }
     .tag.alert { background: #ffe5e5; }
     .tag.good { background: #e3f4e8; }
-    .tag.hot { background: #f7ebd4; }
   }
-  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 18px 0; font-size: 13px; color: var(--muted); }
-  .kpi { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
-  .kpi div { background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; font-size: 13px; }
-  .kpi b { display: block; font-size: 18px; color: var(--highlight); }
+  p { font-size: 14px; }
+  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 8px 0 0; font-size: 13px; color: var(--muted); }
   .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
   footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
   .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
   .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
   .nav a:hover { border-color: var(--accent); text-decoration: none; }
-  @media (max-width: 600px) {
-    h1 { font-size: 25px; }
-    .container { padding: 22px 16px 48px; }
-  }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dive — Saturday, June 13, 2026</h1>
-    <div class="date">Companion to the daily briefing · longer reads on the week's biggest running threads</div>
+    <h1>Deep Dives — Monday, June 15, 2026</h1>
+    <div class="date">Editor's-choice features · compiled June 15, 2026</div>
     <div class="intro">
-      <strong>No specific request this run.</strong> No <code>request.md</code> topics were submitted for today, so this page is a set of editor's-pick deep dives on the threads with the most second-order consequences right now: <strong>why a "deal" Trump now disowns still moved oil</strong>, the <strong>AI IPO supercycle</strong> that SpaceX just kicked open, the <strong>central-bank week — and a BOJ meeting with no governor in the room</strong>, and the <strong>law behind Türkiye's "absolute nullity" crisis</strong>. Drop topics into <code>request.md</code> (and learning goals into <code>learngoals.md</code>) to steer this page.
+      <strong>No <code>request.md</code> was supplied for today's run</strong>, so this edition is editor's choice: three longer-form features on the threads doing the most work beneath the headlines — <strong>the anatomy of the US–Iran deal</strong>, <strong>the AI IPO supercycle</strong>, and <strong>the Ebola Bundibugyo emergency</strong>. To steer these, drop a topic into <code>request.md</code> in the project folder and the next run will build a tailored deep dive.
     </div>
     <div class="nav">
-      <a href="#deal">🕊️ The disowned deal</a>
-      <a href="#ipo">🚀 The AI IPO wave</a>
-      <a href="#banks">🏦 Central-bank week</a>
-      <a href="#chp">🇹🇷 "Absolute nullity"</a>
+      <a href="#iran">🛢️ The Iran deal</a>
+      <a href="#ai">🤖 AI IPO wave</a>
+      <a href="#ebola">🦠 Ebola Bundibugyo</a>
       <a href="./daily-briefing.html">📰 Daily</a>
       <a href="./weekly-report.html">🗓️ Weekly</a>
     </div>
   </header>
 
-  <h2 id="deal">🕊️ The disowned deal — why oil moved on a framework even Trump is now contradicting</h2>
+  <h2 id="iran">🛢️ Anatomy of the US–Iran deal</h2>
   <div class="card me">
-    <p>Thursday's reversal looked like the end of the war; by Saturday it looks like the start of a negotiation <em>about</em> the negotiation. Trump spent Friday <strong>publicly rejecting the 14-point terms</strong> that Iran's Mehr News Agency had published, insisting they had "NOTHING to do with the terms that were agreed to, in writing." Tehran says nothing is final. Israel says it isn't even in the room. And yet Brent fell to a near two-month low. How can a contradicted, unsigned framework move a global commodity?</p>
-    <div class="kpi">
-      <div><b>~$87</b>Brent (from ~$95)</div>
-      <div><b>30 days</b>to reopen Hormuz</div>
-      <div><b>60 days</b>proposed ceasefire</div>
-      <div><b>0</b>signatures so far</div>
-    </div>
-    <h3>Why it matters</h3>
+    <p><span class="tag alert">what just happened</span>After two days of US strikes (June 9–10), a closed Strait of Hormuz and a spike in global oil, the war ended on paper this weekend. Trump declared the agreement <strong>"now complete,"</strong> ordered the <strong>US naval blockade lifted</strong> and <strong>authorized a toll-free reopening of Hormuz</strong>. The mediation was run by <strong>Pakistan's PM Shehbaz Sharif</strong>, who announced an <strong>"immediate and permanent termination of military operations on all fronts, including Lebanon."</strong></p>
+    <h3>The reported terms</h3>
     <ul>
-      <li><span class="tag hot">price = probability × supply</span>An oil price is not a verdict on whether a deal is <em>signed</em> — it's the market's running estimate of <em>how much crude will flow, and when</em>. The shift from "a second day of US strikes" to "a signing this weekend" lowered the odds of a prolonged Hormuz closure. Even discounted for the chance it falls apart, that expected-value change is enough to drag crude lower immediately. The market is front-running barrels, not certifying a treaty.</li>
-      <li><span class="tag alert">the disagreement is the signal</span>The fact that Washington and Tehran are <strong>fighting over the text in public</strong> tells you the gap is now about <em>terms</em> (frozen funds, blockade sequencing, sanctions wording) rather than <em>whether to talk at all</em>. That's a narrower, more tractable fight than active war — which is why traders treated Trump's denial as noise around a still-improving baseline, not a collapse.</li>
-      <li><span class="tag">the three things still left to clear</span>The draft would extend the ceasefire (incl. Lebanon), reopen Hormuz toll-free in 30 days, lift the blockade, waive oil sanctions, and <strong>defer the nuclear file</strong>. Iran wants <strong>(1)</strong> ~half its frozen assets released and <strong>(2)</strong> the blockade ended before final talks; the US wants the mine-clearing and a no-weapon pledge locked first. <strong>(3)</strong> Israel, outside the deal, can still reignite the war by striking Hezbollah — the exact trigger that broke the April ceasefire.</li>
+      <li><strong>Hormuz reopens immediately, toll-free</strong>, with the US blockade lifted in parallel.</li>
+      <li><strong>~$25 billion of Iran's frozen assets released</strong>, some via direct cash transfers.</li>
+      <li><strong>Oil sanctions waived</strong>; no new sanctions until a final, comprehensive deal.</li>
+      <li>Iran <strong>reaffirms it will not produce nuclear weapons</strong> — but the full nuclear file (enrichment, stockpiles) is <strong>deferred to a second stage.</strong></li>
+      <li>A formal <strong>signing ceremony is set for June 19 in Switzerland.</strong></li>
     </ul>
-    <h3>The tell to watch</h3>
-    <p>Three signals, in order: an <strong>actual signature</strong> (Geneva is the floated venue, with Vance attending), the start of <strong>mine-clearing and a measurable rise in Hormuz transits</strong>, and <strong>Brent itself</strong>. If crude keeps grinding toward the $70s, the market believes it; a snap-back above $95 means a veto point fired. The week's inflation math (4.2% CPI, 6.5% PPI) only reverses if the oil decline sticks for weeks, not days.</p>
-    <p class="note">Plain-English glossary — <strong>MOU</strong> (memorandum of understanding): a written statement of intent that frames a deal but isn't necessarily binding until formalized. <strong>Sanctions waiver</strong>: a temporary government exemption letting otherwise-blocked transactions (here, Iranian oil sales) proceed. <strong>"Pricing in"</strong>: when asset prices move on the <em>expectation</em> of an event before it happens — and unwind if it doesn't.</p>
+    <h3>Why it could still break</h3>
+    <p>Three veto points remain live. <strong>Israel</strong> insists it is "not a party" and kept up <strong>strikes in Lebanon over the weekend</strong> that directly threaten the truce. <strong>Iran's final sign-off</strong> isn't locked until June 19. And any physical incident in Hormuz — a mine, a drone — could unravel the choreography. The market's read is optimistic for now: <strong>Brent fell ~5% to ~$81</strong>, an eight-week low.</p>
+    <div class="note">Why it matters beyond the Gulf: the energy shock drove the recent US inflation spike (CPI 4.2%, PPI 6.5%). A durable reopening of Hormuz is the single biggest disinflationary lever heading into the Fed's June 16–17 meeting — which is exactly why oil, not the communiqués, is the signal to watch.</div>
   </div>
 
-  <h2 id="ipo">🚀 The AI IPO wave — what SpaceX just opened the door to</h2>
+  <h2 id="ai">🤖 The AI IPO supercycle</h2>
   <div class="card ai">
-    <p>SpaceX's Friday debut wasn't just a record — it was a starting gun. <strong>SPCX closed up 19% at $160.95</strong> on its first day, after raising <strong>~$75B</strong> at a $135 offer price and briefly topping a <strong>$2 trillion</strong> valuation. The clean reception — big gains, low volatility, heavy retail demand — re-opens a public market that had been wary of mega-listings, and a queue of AI-era giants is lined up behind it.</p>
-    <div class="kpi">
-      <div><b>$160.95</b>SPCX close (+19%)</div>
-      <div><b>~$75B</b>raised (largest ever)</div>
-      <div><b>~$965B</b>Anthropic post-money</div>
-      <div><b>~$47B</b>Anthropic revenue run-rate</div>
-    </div>
-    <h3>Why it matters</h3>
+    <p><span class="tag good">the pipeline</span>Last week's <strong>record-shattering SpaceX IPO</strong> (SPCX +19% to $160.95 on debut, ~$75bn raised) flung open a window the AI giants are now climbing through.</p>
+    <h3>Anthropic leads the filers</h3>
     <ul>
-      <li><span class="tag good">the queue</span><strong>Anthropic filed a confidential draft S-1 on June 1</strong> — revenue run-rate ~$47B (roughly 5× year-on-year), valued near $965B after a $65B Series H, with a trillion-dollar debut now the analyst base case. <strong>OpenAI is expected to file as well</strong>, teeing up the two largest AI listings of 2026 to compete for the same institutional money.</li>
-      <li><span class="tag">demand is the constraint, not appetite</span>The risk in back-to-back trillion-dollar IPOs isn't whether investors <em>want</em> in — it's whether one institutional pool can absorb SpaceX, Anthropic and OpenAI in quick succession without crowding out. SpaceX's heavy retail allocation (~30%) is partly a release valve for exactly that pressure.</li>
-      <li><span class="tag hot">the picks-and-shovels read</span>Nvidia naming <strong>Anthropic, OpenAI and SpaceX as anchor customers for its "Vera" CPU</strong> ties the listings together: the same names raising public capital are also the demand base underwriting Nvidia's next data-center cycle. When the buyers of compute go public, the compute supplier's order book becomes a lot more legible — and more cyclical.</li>
+      <li><strong>Confidential draft S-1 filed June 1</strong> with the SEC.</li>
+      <li>Valuation pushed to <strong>~$965 billion</strong> by a $65bn Series H just before filing — <strong>surpassing OpenAI.</strong></li>
+      <li>Reported <strong>~$47 billion revenue run-rate</strong> in May 2026, up from ~$10bn a year earlier — roughly 5× annual growth.</li>
     </ul>
-    <h3>The tell to watch</h3>
-    <p>Watch whether SPCX <em>holds</em> its first-day gains into next week (debut pops often fade), and whether Anthropic's S-1 moves from confidential to a public prospectus — the first time outside investors will see audited AI-lab economics at scale. The gap between a $47B run-rate and a ~$965B valuation is the entire bull/bear debate in one ratio.</p>
-    <p class="note">Plain-English glossary — <strong>S-1</strong>: the registration document a US company files with the SEC before going public; a <em>confidential</em> S-1 lets the SEC review it before the financials become public. <strong>Run-rate</strong>: a recent period's revenue annualized (e.g., May × 12) — a forward snapshot, not audited full-year results. <strong>Post-money valuation</strong>: a company's implied worth right after a funding round, including the new cash.</p>
+    <h3>The rest of the field</h3>
+    <ul>
+      <li><strong>OpenAI</strong> shipped <strong>GPT-5.5</strong> (gains in agentic coding, computer use, scientific research) and launched a consulting subsidiary, DeployCo; an IPO filing is widely expected to follow.</li>
+      <li><strong>Nvidia</strong> is pushing AI off the cloud and onto the desktop with <strong>"RTX Spark"</strong> (Arm CPU + Blackwell GPU, 128GB unified memory); Anthropic, OpenAI and SpaceX are named early users of its upcoming <strong>"Vera"</strong> microprocessor.</li>
+    </ul>
+    <div class="note">The throughline: compute demand (Nvidia), the capital to buy it (mega-IPOs), and the models that justify both (GPT-5.5) are now reinforcing each other. <strong>AI governance is formally on the G7 agenda in Évian</strong> this week — the first time the listing wave and the regulatory conversation are colliding in the same news cycle.</div>
   </div>
 
-  <h2 id="banks">🏦 Central-bank week — and a BOJ meeting with an empty chair</h2>
-  <div class="card quantum">
-    <p>Next week stacks two of the world's most important rate decisions back-to-back — the <strong>BOJ on June 15–16</strong> and the <strong>Fed on June 16–17</strong> — both reading the same Hormuz energy shock from opposite starting points. And Tokyo's meeting carries an unusual wrinkle: <strong>Governor Kazuo Ueda is hospitalized and will miss it</strong>, the first time a sitting BOJ governor has skipped a policy decision since 1998.</p>
-    <div class="kpi">
-      <div><b>1.0%</b>BOJ target (from 0.75%)</div>
-      <div><b>~¥160</b>USD/JPY</div>
-      <div><b>6.5%</b>US May PPI</div>
-      <div><b>2.25%</b>ECB (just hiked)</div>
-    </div>
-    <h3>Why it matters</h3>
-    <ul>
-      <li><span class="tag">two banks, one shock, opposite moves</span>The Fed is expected to <strong>hold</strong> while signaling a possible <strong>bias shift from easing toward neutral or tightening</strong> — an awkward posture with inflation surging (4.2% CPI / 6.5% PPI) but the labor market still healthy. The BOJ is leaning the other way, toward its <strong>first hike to 1.0% in nearly 30 years</strong>, to fight imported inflation. Same energy shock, mirror-image responses.</li>
-      <li><span class="tag alert">the carry-trade trip-wire</span>A hawkish BOJ into a weak yen (~¥160) is the classic setup for an <strong>unwind of the yen carry trade</strong> — investors who borrowed cheap yen to buy higher-yielding assets get squeezed when Japanese rates rise and the yen strengthens. That's the cross-asset risk to watch if Tokyo surprises, especially with markets already jumpy from the oil round-trip.</li>
-      <li><span class="tag hot">a politics-vs-mandate collision</span>PM <strong>Takaichi's entire economic strategy rests on a weak yen</strong> — which depends on the BOJ <em>not</em> hiking. A rate increase cuts directly against the government's bet, turning a technical decision into a political one. Ueda's absence means a hawkish move (or a dovish hold) lands without the governor's voice to frame it.</li>
-    </ul>
-    <h3>The tell to watch</h3>
-    <p>Watch <strong>USD/JPY</strong> around the BOJ decision (a sharp move below ¥155 signals a carry unwind), the Fed's updated <strong>dot plot</strong> Wednesday for whether "tightening" enters the conversation, and the <strong>10-year Treasury</strong> (~4.5%) as the bond market's verdict on whether the oil-driven inflation spike is peaking or persisting.</p>
-    <p class="note">Plain-English glossary — <strong>carry trade</strong>: borrowing in a low-rate currency (yen) to invest in higher-yielding assets; profitable until the funding currency rises. <strong>Dot plot</strong>: the chart of individual Fed officials' rate forecasts, released quarterly. <strong>Policy bias</strong>: whether a central bank is leaning toward cutting (easing), holding (neutral), or raising (tightening) rates next.</p>
-  </div>
-
-  <h2 id="chp">🇹🇷 "Absolute nullity" — the law behind Türkiye's opposition crisis</h2>
+  <h2 id="ebola">🦠 The Ebola Bundibugyo emergency</h2>
   <div class="card virus">
-    <p>Türkiye's main opposition party, the <strong>CHP</strong>, is paralyzed by a legal doctrine most people had never heard of a month ago: <em>mutlak butlan</em>, or <strong>"absolute nullity."</strong> On <strong>May 21, the Ankara Regional Court of Appeals annulled the CHP's 38th Ordinary Convention</strong> (held Nov 2023) — the very gathering at which <strong>Özgür Özel defeated longtime leader Kemal Kılıçdaroğlu</strong>. The ruling didn't just void a vote; it potentially rewinds the party's leadership by two and a half years.</p>
-    <h3>Why it matters</h3>
+    <p><span class="tag alert">where it stands</span>The Central Africa outbreak caused by the <strong>Bundibugyo strain of Ebola</strong> keeps climbing. As of <strong>June 10, the DRC reported 676 confirmed cases and 136 deaths</strong>, with <strong>Ituri province the epicentre (629 cases across 19 health zones)</strong> and a smaller cluster in Uganda. The <strong>WHO declared a Public Health Emergency of International Concern on May 17.</strong></p>
+    <h3>Why this one is hard</h3>
     <ul>
-      <li><span class="tag">what "absolute nullity" means</span>In Turkish civil law, <em>mutlak butlan</em> treats an act as <strong>void from the start — as if it never legally happened</strong> — rather than merely voidable going forward. Applied to a party convention, the theory is that procedural defects (here, alleged irregularities/vote-buying claims) make Özel's election a legal non-event, which is why the court could <strong>reinstate Kılıçdaroğlu</strong> rather than simply order a re-run.</li>
-      <li><span class="tag alert">two readings of "what next"</span>The doctrine creates a standoff. <strong>Kılıçdaroğlu's camp</strong> argues the nullity reinstates him and that <strong>no new convention can be held until a definitive higher-court ruling</strong> settles the question. <strong>Özel's camp</strong> argues the only legitimate fix is an <strong>extraordinary convention "as a matter of urgency"</strong> to re-establish a mandate from the membership. This week that produced <strong>rival parliamentary group meetings, two podiums, and a scuffle outside the Assembly</strong> — a party visibly operating as two parties.</li>
-      <li><span class="tag hot">the stakes beyond the CHP</span>This is unfolding while <strong>İmamoğlu — the opposition's strongest 2028 presidential prospect — is in detention</strong> and backing Özel, and amid a broader protest movement. Whoever controls the CHP machinery controls candidate selection and the party's mandate heading into 2028. The currency (lira ~46/$) and the TCMB's hold at 37% are the macro backdrop the fight plays out against.</li>
+      <li><strong>No approved vaccine or treatment exists for the Bundibugyo strain specifically</strong> — the licensed Ebola vaccines target the Zaire species, leaving responders without their usual frontline tool.</li>
+      <li>Rapid early-June growth (from ~378 cases on June 2 to 676 by June 10) points to active community transmission that contact tracing hasn't yet contained.</li>
+      <li>Ituri's security and access challenges complicate case-finding and burials, the classic drivers of Ebola spread.</li>
     </ul>
-    <h3>The tell to watch</h3>
-    <p>The legal track is decisive: watch for a ruling from the <strong>Court of Cassation</strong> (Türkiye's top civil court) that either confirms or overturns the nullity, any move to actually <strong>schedule an extraordinary convention</strong>, and how <strong>İmamoğlu</strong> messages from detention. The lira is the real-time gauge of whether markets read the crisis as contained or spreading.</p>
-    <p class="note">Plain-English glossary — <strong>mutlak butlan / absolute nullity</strong>: a legal act so flawed it's treated as never having existed, not just cancelled forward. <strong>Extraordinary convention</strong>: an unscheduled party congress called to resolve a crisis (vs. a routine "ordinary" one). <strong>Court of Cassation</strong>: Türkiye's highest court of appeal for civil and criminal cases.</p>
+    <h3>The international picture</h3>
+    <p>The US CDC has assessed the <strong>risk to the US population as low</strong>, and a continental response plan is underway. The key metrics to watch this week: whether the daily case curve in Ituri bends, the funding behind the response, and any first case outside the DRC/Uganda corridor.</p>
   </div>
 
   <div class="disclaimer">
-    ⚠️ <strong>Disclaimer:</strong> Editorial deep dives compiled from public reporting at generation time (Saturday, June 13, 2026). These are explanatory analyses of fast-moving stories — figures and framings may shift. Glossary definitions are simplified for general readers. Verify with primary sources before acting on anything financial or legal.
+    ⚠️ <strong>Disclaimer:</strong> AI-compiled deep dives aggregated from public reporting as of June 15, 2026. Case counts, valuations and deal terms are as-reported and approximate; fast-moving stories may have changed. Not financial, medical or legal advice — verify with primary sources.
   </div>
 
   <footer>
-    Specific Topics · Deep Dive · generated by the news-check scheduled task. No <code>request.md</code> this run — these are editor's picks. See the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>.
+    Specific Topics Deep Dive · June 15, 2026 · Auto-generated by the news-check task. Add a topic to <code>request.md</code> to tailor the next edition. See the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
