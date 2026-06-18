@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Wednesday, June 17, 2026</title>
+<title>Specific Topics Deep Dive — Thursday, June 18, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -51,6 +51,7 @@
   .card.virus { border-left: 4px solid var(--warn); }
   .card.me { border-left: 4px solid var(--highlight); }
   .card.sci { border-left: 4px solid var(--good); }
+  .card.fx { border-left: 4px solid var(--accent); }
   ul { padding-left: 20px; margin: 6px 0 10px; }
   li { margin: 6px 0; font-size: 14px; }
   a { color: var(--accent); text-decoration: none; }
@@ -76,74 +77,78 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dives — Wednesday, June 17, 2026</h1>
-    <div class="date">Editor's-choice features · compiled June 17, 2026</div>
+    <h1>Deep Dives — Thursday, June 18, 2026</h1>
+    <div class="date">Editor's-choice features · compiled June 18, 2026</div>
     <div class="intro">
-      <strong>No <code>request.md</code> was supplied for today's run</strong>, so this edition is editor's choice: three longer-form features on the threads doing the most work beneath the headlines — <strong>the central-bank divergence</strong> that defined the week, <strong>the Iran deal at signing eve</strong>, and <strong>the worsening Ebola Bundibugyo emergency</strong>. To steer these, drop a topic into <code>request.md</code> in the project folder and the next run will build a tailored deep dive.
+      <strong>No <code>request.md</code> was supplied for today's run</strong>, so this edition is editor's choice: three longer-form features on the day's most load-bearing threads — <strong>the yen's crack to a 23-month low</strong> and the carry-trade machinery behind it, <strong>the $24bn question buried in the Iran deal</strong>, and <strong>the Anthropic-vs-OpenAI race to the first near-trillion-dollar AI IPO</strong>. To steer these, drop a topic into <code>request.md</code> in the project folder and the next run will build a tailored deep dive.
     </div>
     <div class="nav">
-      <a href="#banks">🏦 Central-bank split</a>
-      <a href="#iran">🛢️ Iran at signing eve</a>
-      <a href="#ebola">🦠 Ebola Bundibugyo</a>
+      <a href="#yen">💴 The yen paradox</a>
+      <a href="#money">🛢️ The $24bn question</a>
+      <a href="#ipo">🤖 The AI IPO race</a>
       <a href="./daily-briefing.html">📰 Daily</a>
       <a href="./weekly-report.html">🗓️ Weekly</a>
     </div>
   </header>
 
-  <h2 id="banks">🏦 Three central banks, three directions, three days</h2>
-  <div class="card ai">
-    <p><span class="tag">the setup</span>It is rare for the Fed, the BOJ and the ECB to all decide inside a 48-hour window — and rarer still for them to move three different ways. This week they did, each reacting to the <strong>same Middle East energy shock</strong> from a different starting point.</p>
-    <h3>The Fed — held, but hawkish (June 16–17)</h3>
+  <h2 id="yen">💴 The yen paradox: a rate hike, and a 23-month low</h2>
+  <div class="card fx">
+    <p><span class="tag alert">the setup</span>Textbook says raising rates strengthens a currency. This week Japan did the opposite of what the textbook predicts: the <strong>BOJ hiked to 1.0%</strong> on Monday, and by Thursday the <strong>yen had fallen to ¥160.79 — its weakest in about 23 months</strong>, past the record set in April. Understanding why is the cleanest window into the whole global rate picture.</p>
+    <h3>It's the gap, not the level</h3>
     <ul>
-      <li><strong>Rate held at 3.50–3.75%</strong> — a fourth straight hold, and the first decision under new chair <strong>Kevin Warsh.</strong></li>
-      <li>The jolt was in the projections: the dot plot <strong>dropped the last 2026 cut</strong>, with some members now sketching a hike, after <strong>May CPI hit 4.2%.</strong></li>
-      <li>Warsh, a longstanding dot-plot skeptic, leaned toward <strong>less detailed forward guidance</strong> — a structural shift markets read as repricing risk for long-duration tech and AI equities.</li>
+      <li>Currencies trade on <strong>rate differentials</strong>, not absolute rates. Japan moving to 1.0% matters only relative to where everyone else sits — and the US sits at <strong>3.50–3.75% with a Fed now leaning toward a hike.</strong></li>
+      <li>So even after the BOJ tightened, the <strong>US–Japan gap stayed near ~2.75 points and looks set to widen</strong>, not narrow. Capital keeps flowing to the higher-yielding dollar.</li>
+      <li>The hike was also <strong>~90% priced in</strong> before it happened, so it delivered no surprise to buy the yen on — while the BOJ's "no rush" guidance signaled the gap won't close fast.</li>
     </ul>
-    <h3>The BOJ — hiked to a 30-year high (June 16)</h3>
+    <h3>The carry trade, reignited</h3>
     <ul>
-      <li><strong>Policy rate raised 25bp to 1.00%</strong> — its highest since 1995 — on a <strong>7–1 vote</strong>, with Toichiro Asada dissenting for a hold.</li>
-      <li>The meeting ran <strong>without Governor Ueda, who was hospitalized</strong>; deputies chaired and fronted the press conference, signaling no rush on the next move.</li>
-      <li>The yen barely firmed (near 160) because the hike was ~90% priced — but the <strong>Nikkei breached 70,000</strong> for the first time.</li>
+      <li>The mechanism is the <strong>yen carry trade</strong>: borrow cheaply in yen, convert to dollars, earn the spread. Every turn of it <strong>sells yen</strong> — and a hawkish Warsh Fed just made the spread more attractive.</li>
+      <li>That is why a tightening BOJ and a falling yen coexist: <strong>monetary policy and FX flows are pulling in opposite directions.</strong></li>
+      <li>The same weak yen lit up exporters — the <strong>Nikkei broke 71,000</strong> for the first time — so Tokyo faces the awkward mix of record equities and an uncomfortably weak currency.</li>
     </ul>
-    <h3>The ECB — its first hike since 2023, live today (June 17)</h3>
-    <ul>
-      <li><strong>Deposit rate to 2.25%</strong>, reversing eight straight cuts, as May eurozone inflation hit 3.2% on war-driven energy costs.</li>
-    </ul>
-    <div class="note">Why it matters: the common shock — the Iran war's oil spike — is now <strong>reversing</strong> as Brent falls below $80. The puzzle for all three banks is whether to keep fighting an inflation pulse that the de-escalation may itself unwind. Watch the BOJ for carry-trade ripples, and whether Warsh's lighter-guidance Fed actually tilts toward a hike or quietly waits for oil to do the work.</div>
+    <div class="note">Why it matters: ¥161 is the zone where Japan has intervened before, and Chief Cabinet Secretary <strong>Kihara already warned of "appropriate action…at any time."</strong> Watch for actual MOF intervention, any verbal escalation from the BOJ toward a faster path, and the risk that a sudden carry-trade unwind — if the Fed ever does pivot — snaps the move back violently, as it did in 2024.</div>
   </div>
 
-  <h2 id="iran">🛢️ The Iran deal at signing eve</h2>
+  <h2 id="money">🛢️ The $24bn question inside the Iran deal</h2>
   <div class="card me">
-    <p><span class="tag alert">where it stands</span>Two days from the scheduled <strong>June 19 signing in Switzerland</strong>, the choreography is holding where it can be measured: the US naval blockade is lifted and <strong>the first oil tankers have moved back through the Strait of Hormuz.</strong> The memorandum — brokered by Pakistan's PM Shehbaz Sharif — opens a <strong>60-day window</strong> to negotiate the nuclear file and sanctions relief.</p>
-    <h3>What is confirmed vs. what is deferred</h3>
+    <p><span class="tag">where it stands</span>With the <strong>14-point "Islamabad memorandum" now official</strong> and the ceremony set for <strong>Friday at the Bürgenstock resort</strong>, the most revealing detail wasn't the diplomacy — it was Trump's blunt admission about the money. The deal releases <strong>~$24bn in frozen Iranian assets</strong> over the 60-day nuclear-talks window, and the president framed returning it not as a concession but as a <strong>necessity for the dollar.</strong></p>
+    <h3>Why "we have to give it back"</h3>
     <ul>
-      <li><strong>Confirmed in practice:</strong> Hormuz reopening, the blockade lifted, oil sanctions waived, a signing date and delegation (VP Vance, Witkoff, Kushner reported for the US).</li>
-      <li><strong>Deferred to talks:</strong> the actual nuclear file (enrichment, stockpiles), the comprehensive sanctions architecture, and any reconstruction financing — all pushed into the 60-day track.</li>
+      <li>Trump said the US had taken "a lot" of Iran's money and <strong>"we're going to have to give it back,"</strong> tying repayment explicitly to <strong>maintaining global confidence in the dollar.</strong></li>
+      <li>The logic: if Washington is seen seizing and keeping sovereign reserves at will, other states accelerate <strong>diversifying away from dollar assets</strong> — the long-run cost of weaponized finance.</li>
+      <li>It is a striking reversal of posture, and a tell that the administration sees the <strong>reserve-currency franchise as a strategic asset</strong> worth more than the cash itself.</li>
     </ul>
-    <h3>The one joint that could still snap</h3>
-    <p>The fault line is the Levant. <strong>Iran is demanding Israel withdraw from Lebanon</strong>; Israel has refused, vowing to hold a roughly 25-mile "security zone" and insisting it is "not a party" to the MOU. Trump publicly told Netanyahu he "has to be more responsible," calling a recent Israeli strike on Beirut "too much." Domestically, the US Senate <strong>again rejected an Iran war-powers resolution (47–48)</strong> while lawmakers still cannot see the text.</p>
-    <div class="note">The cleanest live gauge remains oil, not communiqués: <strong>Brent below $80</strong> (an early-March low) says the market believes the guns are quiet — but a single incident in Hormuz, or a Friday no-show over Lebanon, could reprice it in minutes. Watch the signing itself, and whether the asset and sanctions mechanics actually move.</div>
+    <h3>What's locked vs. what's still open</h3>
+    <ul>
+      <li><strong>Locked in practice:</strong> end of hostilities "on all fronts including Lebanon," blockade lifted within 30 days, Hormuz reopened, oil-sanctions suspension, the asset release schedule.</li>
+      <li><strong>Still open:</strong> the actual nuclear file (enrichment, stockpiles), the comprehensive sanctions architecture, and the disputed <strong>Lebanon clause</strong> — all pushed into the 60-day track. Hamas's reported <strong>"broad consensus" on Gaza ceasefire phase two</strong> and a fresh UN child-protection listing of Israeli forces keep the Levant volatile.</li>
+    </ul>
+    <div class="note">The cleanest live gauge is still oil, not communiqués: <strong>Brent toward $78</strong> says markets believe the guns are quiet. Watch whether the asset tranches actually move on schedule, whether the Lebanon language survives Israeli operations, and the quieter signal — whether sovereign reserve managers read the repayment as a genuine guardrail on US financial coercion.</div>
   </div>
 
-  <h2 id="ebola">🦠 The Ebola Bundibugyo emergency</h2>
-  <div class="card virus">
-    <p><span class="tag alert">where it stands</span>The Central Africa outbreak caused by the <strong>Bundibugyo strain of Ebola</strong> is still accelerating. As of <strong>June 15 the DRC reported 808 confirmed cases and 192 deaths</strong> (363 hospitalized in isolation) — up sharply from ~676/136 in mid-May — with <strong>Ituri the epicenter (738 cases).</strong> Uganda has reported 19 cases and 2 deaths. The <strong>WHO declared a PHEIC on May 17.</strong></p>
-    <h3>Why this strain is so hard</h3>
+  <h2 id="ipo">🤖 The race to the first near-trillion-dollar AI IPO</h2>
+  <div class="card ai">
+    <p><span class="tag good">the setup</span>SpaceX's record listing cracked the IPO window open; now the two frontier AI labs are sprinting through it. Both filed confidential S-1s within a week of each other, both are chasing <strong>near-$1 trillion valuations</strong>, and the order they price in could reset the AI pecking order.</p>
+    <h3>The two filers</h3>
     <ul>
-      <li><strong>No approved vaccine or treatment exists for Bundibugyo specifically</strong> — the licensed Ebola tools target the Zaire species, leaving responders without their usual frontline defense.</li>
-      <li>The curve is still bending the wrong way: roughly <strong>+130 confirmed cases and +56 deaths since mid-May</strong>, evidence of active community transmission contact-tracing hasn't contained.</li>
-      <li>Ituri's security and access problems complicate case-finding and safe burials — the classic accelerants of Ebola spread.</li>
+      <li><strong>Anthropic</strong> — filed first, <strong>June 1</strong>. Valued around <strong>$965bn</strong> after a late-May raise, on a reported <strong>~$47bn annualized run-rate</strong> from Claude. Widely placed on the <strong>faster track, with pricing possible as early as October.</strong></li>
+      <li><strong>OpenAI</strong> — confirmed <strong>June 8</strong> it had also submitted a confidential S-1, with annualized recurring revenue reported above <strong>$20bn.</strong> Larger mindshare, but seen a step behind on the listing calendar.</li>
     </ul>
-    <h3>The international picture</h3>
-    <p>The <strong>G7 in Évian formally called for a coordinated response</strong>, and the US has pledged $220M. The metrics to watch: whether Ituri's daily case curve bends, whether the funding actually lands, and — the thing that would change the threat assessment — any first confirmed case outside the DRC/Uganda corridor.</p>
+    <h3>Why the sequence matters</h3>
+    <ul>
+      <li>At ~$1tn, the first to price would <strong>vault straight into the top tier of the S&P 500</strong>, alongside a handful of mega-caps — an index event, not just an IPO.</li>
+      <li>Going first sets the <strong>valuation comp</strong> the other is measured against, and captures the scarce pool of investors wanting concentrated AI exposure.</li>
+      <li>The listings monetize the <strong>compute-and-capital flywheel</strong>: Nvidia's "Vera" CPUs and "RTX Spark" chips name both labs as early adopters, so IPO proceeds largely recycle back into the silicon that powers them.</li>
+    </ul>
+    <div class="note">Why it matters: a successful near-trillion-dollar AI listing would be the clearest market verdict yet on whether frontier-model revenue justifies frontier-model valuations — and it lands precisely as a hawkish Fed reprices long-duration tech. Watch the pricing window (the autumn slot Anthropic is reportedly targeting), the first disclosed full financials, and whether a wobble in either book cools the broader AI-IPO supercycle.</div>
   </div>
 
   <div class="disclaimer">
-    ⚠️ <strong>Disclaimer:</strong> AI-compiled deep dives aggregated from public reporting as of June 17, 2026. Case counts, valuations, rate decisions and deal terms are as-reported and approximate; fast-moving stories may have changed. Not financial, medical or legal advice — verify with primary sources.
+    ⚠️ <strong>Disclaimer:</strong> AI-compiled deep dives aggregated from public reporting as of June 18, 2026. Valuations, FX levels, rate decisions and deal terms are as-reported and approximate (the frozen-asset figure is cited as $24–25bn across sources); fast-moving stories may have changed. Not financial, medical or legal advice — verify with primary sources.
   </div>
 
   <footer>
-    Specific Topics Deep Dive · June 17, 2026 · Auto-generated by the news-check task. Add a topic to <code>request.md</code> to tailor the next edition. See the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>.
+    Specific Topics Deep Dive · June 18, 2026 · Auto-generated by the news-check task. Add a topic to <code>request.md</code> to tailor the next edition. See the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
