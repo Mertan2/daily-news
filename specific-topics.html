@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Thursday, June 25, 2026</title>
+<title>Specific Topics Deep Dive — Saturday, June 27, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -48,117 +48,126 @@
   .card.ai { border-left: 4px solid var(--good); }
   .card.neuro { border-left: 4px solid var(--purple); }
   .card.quantum { border-left: 4px solid var(--accent); }
-  .card.virus { border-left: 4px solid var(--warn); }
-  .card.me { border-left: 4px solid var(--highlight); }
-  .card.sci { border-left: 4px solid var(--good); }
-  .card.fx { border-left: 4px solid var(--accent); }
-  .card.nato { border-left: 4px solid var(--purple); }
-  .card.tr { border-left: 4px solid var(--warn); }
-  .card.uk { border-left: 4px solid var(--accent); }
-  .card.fed { border-left: 4px solid var(--good); }
+  .card.markets { border-left: 4px solid var(--highlight); }
+  .card.risk { border-left: 4px solid var(--warn); }
+  p { font-size: 14px; }
   ul { padding-left: 20px; margin: 6px 0 10px; }
   li { margin: 6px 0; font-size: 14px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
-  .tag.alert { background: rgba(255,123,114,0.15); color: var(--warn); }
   .tag.good { background: rgba(126,231,135,0.15); color: var(--good); }
+  .tag.warn { background: rgba(255,123,114,0.15); color: var(--warn); }
+  .tag.tech { background: rgba(210,168,255,0.15); color: var(--purple); }
+  .tag.sci { background: rgba(240,136,62,0.15); color: var(--highlight); }
   @media (prefers-color-scheme: light) {
     .tag { background: #e3edff; }
-    .tag.alert { background: #ffe5e5; }
     .tag.good { background: #e3f4e8; }
+    .tag.warn { background: #ffe5e5; }
+    .tag.tech { background: #efe3ff; }
+    .tag.sci { background: #f7ebd4; }
   }
-  p { font-size: 14px; }
-  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+  th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 12px 16px; margin: 18px 0; font-size: 13px; color: var(--muted); }
   .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
   footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
   .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
   .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
   .nav a:hover { border-color: var(--accent); text-decoration: none; }
+  @media (max-width: 600px) {
+    h1 { font-size: 25px; }
+    .container { padding: 22px 16px 48px; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dives — Thursday, June 25, 2026</h1>
-    <div class="date">Editor's-choice features · compiled June 25, 2026</div>
-    <div class="intro">
-      <strong>No <code>request.md</code> was supplied for today's run</strong>, so this edition is editor's choice: three longer-form features on the threads doing the most work midweek — <strong>"the party of Zohran"</strong>, how a socialist sweep just rewired New York's Democrats; <strong>the HBM supercycle on trial</strong>, why Micron's earnings are the whole AI trade's stress test; and <strong>the oil market as ceasefire scorecard</strong>, why Brent at a pre-war low is the most honest read on the Iran roadmap. To steer these, drop a topic into <code>request.md</code> in the project folder and the next run will build a tailored deep dive.
+    <h1>The AI Capital Supercycle — and Its First Wobble</h1>
+    <div class="date">Saturday, June 27, 2026 · Editor's pick</div>
+    <div class="note">
+      <strong>No <code>request.md</code> was found this run</strong>, so there were no reader-specified topics to expand on. In its place, this page takes the day's single most cross-cutting thread — the AI investment boom that ties together Friday's hot inflation print, the Micron blowout, the IPO pipeline and the global stock washout — and unpacks it. Drop a <code>request.md</code> in the project folder (it stays local and gitignored) to steer this page toward your own interests next time.
     </div>
     <div class="nav">
-      <a href="#nyc">🗽 The party of Zohran</a>
-      <a href="#hbm">🤖 The HBM supercycle on trial</a>
-      <a href="#oil">🛢️ Oil as ceasefire scorecard</a>
+      <a href="#why">Why it matters today</a>
+      <a href="#money">The money</a>
+      <a href="#silicon">The silicon</a>
+      <a href="#wobble">Friday's wobble</a>
+      <a href="#watch">What to watch</a>
       <a href="./daily-briefing.html">📰 Daily</a>
       <a href="./weekly-report.html">🗓️ Weekly</a>
     </div>
   </header>
 
-  <h2 id="nyc">🗽 "The party of Zohran": a socialist sweep rewires New York's Democrats</h2>
-  <div class="card quantum">
-    <p>Tuesday's New York primaries weren't a normal off-year tune-up. Candidates endorsed by Mayor <strong>Zohran Mamdani</strong> and the NYC chapter of the Democratic Socialists of America delivered a near-clean sweep, knocking out sitting members of Congress and reshaping the city's delegation from the left. The shorthand in the post-mortems — "the party of Zohran" — captures the shift: less than a year into his mayoralty, Mamdani has become the most consequential <strong>kingmaker</strong> in New York Democratic politics.</p>
-
-    <h3>Who won, who lost</h3>
-    <ul>
-      <li>Former City Comptroller <strong>Brad Lander</strong> and Assemblymember <strong>Claire Valdez</strong> won House primaries outright.</li>
-      <li>Community organizer <strong>Darializa Avila Chevalier</strong> edged out incumbent Rep. <strong>Adriano Espaillat</strong> in a tight race — the kind of result that ends careers.</li>
-      <li>Rep. <strong>Dan Goldman</strong>, an establishment fixture, also fell to a Mamdani-backed challenger.</li>
-      <li>Beyond Congress, <strong>a dozen-plus NYC-DSA candidates</strong> won state legislative races (including Brian Romero in the 34th Assembly District and Aber Kawas in the 12th Senate District in Queens).</li>
-    </ul>
-
-    <h3>Why it matters beyond New York</h3>
-    <p>Three things make this bigger than a local story. First, it's a <strong>proof of concept</strong>: endorsements from a sitting socialist mayor translated into wins against entrenched incumbents, which national progressives will try to replicate. Second, it reopens the Democratic Party's <strong>moderate-vs-left civil war</strong> at the worst possible moment — months from November's midterms, with the leadership still arguing over how to run against Trump. Third, it hands Republicans a ready-made <strong>"socialist" frame</strong> for the general election; one Mamdani-backed winner already drew fire over old social-media posts.</p>
-
-    <div class="note">Watch next: whether national figures court or distance themselves from the Mamdani brand, how the defeated incumbents' wings regroup, and whether the sweep nationalizes — or stays a New York phenomenon — heading into the fall.</div>
+  <div class="intro">
+    <strong>The thesis in one line:</strong> a once-in-a-generation wave of capital is being poured into AI — into the chips that train models, the data centers that house them, and the companies racing to monetize them — and on Friday that wave met its first real test of nerve, as doubts about <em>when</em> the profits arrive collided with a hotter-than-expected inflation print and a more hawkish Federal Reserve.
   </div>
 
-  <h2 id="hbm">🤖 The HBM supercycle on trial: Micron as the AI trade's single best tell</h2>
+  <h2 id="why">Why this is the story to read today</h2>
   <div class="card ai">
-    <p>For one evening this week, a memory-chip earnings report became the most important number in global markets. <strong>Micron</strong> reported fiscal-Q3 results after Wednesday's close, and the read-through extends far past its own share price: it is the cleanest available test of whether 2026's AI-hardware boom is a <strong>durable, structural shift</strong> or just another memory cycle dressed up in AI language.</p>
-
-    <h3>Why Micron specifically</h3>
-    <p>Micron is the <strong>only US-headquartered manufacturer of high-bandwidth memory (HBM)</strong> — the stacked-DRAM architecture that sits beside every serious AI accelerator in production, from Nvidia's Blackwell to the new <strong>Vera Rubin</strong> platform. Without HBM, the GPUs starve. That makes Micron a rare pure-play proxy for AI <em>infrastructure</em> demand, not just chip design. Demand for HBM has outrun supply for over a year, and that scarcity has shown up as record margins.</p>
-
-    <h3>The numbers in play</h3>
+    <p>Four of Friday's biggest headlines are really one story wearing different hats:</p>
     <ul>
-      <li><strong>Consensus:</strong> ~$35bn revenue and ~$20 adjusted EPS — but with an unusually wide analyst range ($33.7bn–$40.9bn) that tells you how uncertain the Street is.</li>
-      <li><strong>Company guidance:</strong> ~$33.5bn revenue (±$750m), non-GAAP EPS near $19.15, and a striking <strong>~81% gross margin.</strong></li>
-      <li><strong>Sentiment:</strong> Deutsche Bank and TD Cowen pushed price targets toward <strong>~$1,500</strong>, citing demand outrunning supply into 2028; the stock had already run ~70% in 2026.</li>
+      <li><span class="tag good">memory</span><strong>Micron</strong> posted a blowout quarter — <strong>$41.46bn revenue</strong>, <strong>~84.9% gross margin</strong>, and guided next quarter to <strong>$50bn ±$1bn</strong> — almost entirely on AI-memory (HBM) demand.</li>
+      <li><span class="tag tech">listings</span>A report that <strong>OpenAI may push its IPO to 2027</strong> (it filed confidentially in early June, eyeing ~$852bn, while guiding to a ~$14bn loss this year) rattled sentiment.</li>
+      <li><span class="tag warn">markets</span>A <strong>global AI-stock sell-off</strong> tripped a <strong>circuit breaker in Seoul</strong> (Kospi −8% intraday) and gave back Tokyo's record run.</li>
+      <li><span class="tag sci">macro</span><strong>Hot May PCE</strong> (core ~3.4% y/y) hardened the <strong>Warsh Fed's</strong> tilt toward rate <em>hikes</em> — raising the discount rate on every far-off AI profit.</li>
     </ul>
-
-    <h3>The asymmetry</h3>
-    <p>The market set up a simple matrix. The <strong>bullish combination</strong> — a beat-and-raise, with that ~81% margin holding and a healthy next-quarter outlook — would cement HBM as a durable franchise and steady the whole AI complex. The <strong>danger combination</strong> — cautious guidance on margins or HBM4 timing — would feed exactly the "is the AI trade cresting?" anxiety that's been simmering since the mega-cap rotation earlier in the week. Layer in Thursday's PCE the morning after, and the next 24 hours carry outsized weight for risk assets.</p>
-
-    <div class="note">Why you should care even if you don't own chips: HBM scarcity is becoming an "AI memory tax" that shows up in the price of ordinary PCs and data-center capacity. Micron's margin is, in effect, a meter on how expensive the AI build-out is for everyone downstream.</div>
+    <p>Put together: the demand side of AI has never looked stronger (Micron), but the market is suddenly asking the hard questions — <em>how long until the spending pays off, and what is it worth if money stays expensive?</em></p>
   </div>
 
-  <h2 id="oil">🛢️ Oil as ceasefire scorecard: why Brent's pre-war low is the most honest read on the Iran deal</h2>
-  <div class="card me">
-    <p>Diplomats and officials can spin a roadmap; the oil market can't. While Washington and Tehran openly disagree over what was actually agreed — inspectors, asset releases, the wording on Hormuz — the price of Brent crude has quietly delivered its own verdict. On Wednesday it fell <strong>~4.3% to settle near $73.74</strong>, the <strong>lowest level since before the February US–Israel strikes on Iran.</strong> That is the market saying, with real money, that it believes the war is over.</p>
+  <h2 id="money">The money: an IPO supercycle priced for perfection</h2>
+  <div class="card markets">
+    <p>2026 has become the year the private AI giants test the public markets. The valuations are staggering and, crucially, mostly <strong>pre-profit</strong>:</p>
+    <table>
+      <tr><th>Company</th><th>Reported valuation</th><th>Status</th><th>Note</th></tr>
+      <tr><td>SpaceX</td><td>~$2.1tn (post-IPO rally)</td><td>Listed June 12</td><td>Largest IPO in history (~$75bn raised)</td></tr>
+      <tr><td>Anthropic</td><td>~$965bn</td><td>Confidential filing (June 1)</td><td>~$47bn revenue run-rate</td></tr>
+      <tr><td>OpenAI</td><td>~$852bn</td><td>Filing reported; listing may slip to 2027</td><td>Guiding to ~$14bn loss in 2026</td></tr>
+    </table>
+    <p>The bull case is that these are the railroads and power utilities of the AI era — infrastructure whose returns compound for decades. The bear case is simpler: a lot of this is <strong>capital being spent today against revenue that is promised tomorrow</strong>, and any crack in the "tomorrow" timeline — like an IPO delay — forces a repricing.</p>
+  </div>
 
-    <h3>What the price is pricing</h3>
+  <h2 id="silicon">The silicon: why Micron is the supercycle's cleanest gauge</h2>
+  <div class="card ai">
+    <p>If you want one number that tells you whether the AI build-out is real or hype, watch <strong>high-bandwidth memory (HBM)</strong>. Every AI accelerator (Nvidia, AMD, custom silicon) needs stacks of it, and supply is tight. Micron is one of only three makers, so its order book is a near-real-time read on data-center demand.</p>
     <ul>
-      <li><strong>Hormuz is reopening in practice.</strong> Iran told the US it will charge <strong>no transit tolls or other fees</strong> — walking back the earlier "the strait will never be the same" hint at future tolls — and the choke-point premium is draining out of the price.</li>
-      <li><strong>The Gulf is physically emptying.</strong> Reports that <strong>11,000+ seafarers stranded during the war</strong> are set to sail out is the most concrete signal that traffic is normalizing.</li>
-      <li><strong>More barrels are coming.</strong> The US eased Iranian oil and petrochemical sanctions through <strong>Aug 21</strong>, letting Iran sell at market price during the talks window — added supply on top of easing fear.</li>
+      <li><strong>The signal:</strong> guidance to <strong>$50bn</strong> next quarter and ~85% gross margins says hyperscalers are still buying everything that can be made — the physical build-out has not slowed.</li>
+      <li><strong>The catch:</strong> memory is famously cyclical. Today's scarcity-driven margins invite tomorrow's capacity glut. The supercycle's skeptics watch HBM pricing the way oil traders watch rig counts.</li>
+      <li><strong>The geopolitics:</strong> the same week, Beijing tightened <strong>rare-earth export controls</strong> on US firms and Washington reaffirmed that <strong>AI-chip license rules reach overseas subsidiaries</strong> — a reminder that the supply chain underneath all of this is a contested border, not a free market.</li>
     </ul>
+  </div>
 
-    <h3>The catch the price hides</h3>
-    <p>A falling oil price is a clean ceasefire scorecard, but it isn't a peace treaty. The roadmap is a <strong>60-day process</strong> (full-deal target ~Aug 22), and the riskiest variable — <strong>Lebanon</strong> — is still live: an Israeli drone strike killed two in the south even as the fifth round of Israel–Lebanon talks ran in Washington, with Israel's defense minister vowing troops will "under no circumstances" withdraw. IAEA chief Grossi's careful "inspections will happen, at some point" papers over a genuine US–Iran split. If any of those threads snaps, the premium the market just removed comes back fast.</p>
+  <h2 id="wobble">Friday's wobble: when "priced for perfection" meets a hawkish Fed</h2>
+  <div class="card risk">
+    <p>Here is the mechanism, step by step:</p>
+    <ul>
+      <li><strong>1. Rates repriced up.</strong> May PCE ran hot (headline ~4.1%, core ~3.4% y/y), and the Warsh Fed has already signaled <em>hikes</em>, not cuts, for 2026. Higher rates lower the present value of distant cash flows — and AI valuations are almost entirely distant cash flows.</li>
+      <li><strong>2. A timeline crack.</strong> The OpenAI-delay report suggested the profit payoff is <em>further away</em> than hoped, just as the discount rate rose.</li>
+      <li><strong>3. Leverage unwound.</strong> Across Asia, leveraged AI bets were cut fast — <strong>Korea's Kospi hit a circuit breaker</strong>, <strong>Taiwan's Taiex fell ~3.6%</strong>, <strong>Hong Kong had its worst week since April 2025</strong>, and <strong>Tokyo gave back a record</strong>. US indexes ended roughly flat, cushioned by Micron's strength.</li>
+    </ul>
+    <p>None of this breaks the long-term thesis. But it is the first time this cycle that the market has demanded <strong>evidence of profitability</strong> rather than taking it on faith — and that shift in posture is itself the news.</p>
+  </div>
 
-    <h3>The second-order effect</h3>
-    <p>Cheaper crude is the quiet good-news story under the geopolitics: it pulls down headline inflation just as the hawkish Warsh Fed is fretting about prices. That makes <strong>Thursday's PCE print</strong> doubly interesting — the energy tailwind from the ceasefire is exactly the kind of relief that could keep a 2026 Fed <em>hike</em> at bay, even with core services still sticky.</p>
-
-    <div class="note">Bottom line: when officials contradict each other, watch the tape. Brent at a pre-war low is the most credible signal yet that the Iran war is genuinely winding down — but it's a market bet on the roadmap holding, not proof that it will.</div>
+  <h2 id="watch">What to watch from here</h2>
+  <div class="card quantum">
+    <ul>
+      <li><span class="tag tech">IPOs</span>Whether Anthropic prices on schedule and whether OpenAI's delay is confirmed — the pipeline's credibility rides on the first few prints.</li>
+      <li><span class="tag good">demand</span>HBM pricing and the next round of hyperscaler capex guidance — the real-economy test of whether spending is still accelerating.</li>
+      <li><span class="tag warn">rates</span>The Warsh Fed's next moves; every additional hike compresses what far-off AI earnings are worth today.</li>
+      <li><span class="tag sci">supply chain</span>US–China chip and rare-earth measures — the geopolitical tax on the whole build-out.</li>
+      <li><span class="tag">contagion</span>Whether Friday's Asia-led sell-off stays a sentiment wobble or becomes a broader de-rating of richly valued tech.</li>
+    </ul>
   </div>
 
   <div class="disclaimer">
-    ⚠️ <strong>Disclaimer:</strong> Editor's-choice analysis compiled from public reporting as of Thursday, June 25, 2026 — no <code>request.md</code> topic was supplied this run. Figures (market levels, Micron guidance/consensus, primary results, casualty counts) are as-reported and approximate; the US-vs-Iran accounts and Micron's exact print remain genuinely contested. Analysis and interpretation, not financial, political or investment advice — verify with primary sources.
+    <strong>Disclaimer.</strong> This is an editor-selected explainer, not reader-requested analysis (no <code>request.md</code> was present on June 27, 2026). It synthesizes public reporting and is <em>not</em> investment advice. Valuations and revenue run-rates are reported/unaudited figures; the OpenAI IPO delay is reported, not confirmed. Verify with primary sources before acting.
   </div>
 
   <footer>
-    Specific Topics Deep Dive · Thursday, June 25, 2026 · Auto-generated by the news-check task. Back to the <a href="./daily-briefing.html">daily briefing</a> or the <a href="./weekly-report.html">weekly report</a>.
+    Generated by the news-check scheduled task · Saturday, 2026-06-27. To steer this page, add a local <code>request.md</code> with the topics you want followed.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
