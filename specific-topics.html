@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Saturday, June 27, 2026</title>
+<title>Specific Topics Deep Dive — Monday, June 29, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -86,16 +86,16 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>The AI Capital Supercycle — and Its First Wobble</h1>
-    <div class="date">Saturday, June 27, 2026 · Editor's pick</div>
+    <h1>How a Paper Truce Broke Back Into a Shooting War</h1>
+    <div class="date">Monday, June 29, 2026 · Editor's pick</div>
     <div class="note">
-      <strong>No <code>request.md</code> was found this run</strong>, so there were no reader-specified topics to expand on. In its place, this page takes the day's single most cross-cutting thread — the AI investment boom that ties together Friday's hot inflation print, the Micron blowout, the IPO pipeline and the global stock washout — and unpacks it. Drop a <code>request.md</code> in the project folder (it stays local and gitignored) to steer this page toward your own interests next time.
+      <strong>No <code>request.md</code> was found this run</strong>, so there were no reader-specified topics. In its place, this page takes the day's most consequential thread — the collapse of the US–Iran interim truce into a direct exchange of strikes over the weekend — and walks through what happened, why it matters, and what to watch. Drop a <code>request.md</code> in the project folder (it stays local and gitignored) to steer this page toward your own interests next time.
     </div>
     <div class="nav">
-      <a href="#why">Why it matters today</a>
-      <a href="#money">The money</a>
-      <a href="#silicon">The silicon</a>
-      <a href="#wobble">Friday's wobble</a>
+      <a href="#what">What happened</a>
+      <a href="#why-broke">Why it broke</a>
+      <a href="#hormuz">The Hormuz lever</a>
+      <a href="#oil">Why your wallet cares</a>
       <a href="#watch">What to watch</a>
       <a href="./daily-briefing.html">📰 Daily</a>
       <a href="./weekly-report.html">🗓️ Weekly</a>
@@ -103,71 +103,72 @@
   </header>
 
   <div class="intro">
-    <strong>The thesis in one line:</strong> a once-in-a-generation wave of capital is being poured into AI — into the chips that train models, the data centers that house them, and the companies racing to monetize them — and on Friday that wave met its first real test of nerve, as doubts about <em>when</em> the profits arrive collided with a hotter-than-expected inflation print and a more hawkish Federal Reserve.
+    <strong>The thread in one line:</strong> the "Islamabad memorandum" that paused the June US–Iran war was never a peace treaty — it was a 60-day ceasefire built on a single, fragile bargain about who controls the Strait of Hormuz. Over the weekend that bargain failed: the US struck Iran, Iran struck back at US bases in the Gulf, and a deal that looked done a week ago is now a live war again.
   </div>
 
-  <h2 id="why">Why this is the story to read today</h2>
-  <div class="card ai">
-    <p>Four of Friday's biggest headlines are really one story wearing different hats:</p>
-    <ul>
-      <li><span class="tag good">memory</span><strong>Micron</strong> posted a blowout quarter — <strong>$41.46bn revenue</strong>, <strong>~84.9% gross margin</strong>, and guided next quarter to <strong>$50bn ±$1bn</strong> — almost entirely on AI-memory (HBM) demand.</li>
-      <li><span class="tag tech">listings</span>A report that <strong>OpenAI may push its IPO to 2027</strong> (it filed confidentially in early June, eyeing ~$852bn, while guiding to a ~$14bn loss this year) rattled sentiment.</li>
-      <li><span class="tag warn">markets</span>A <strong>global AI-stock sell-off</strong> tripped a <strong>circuit breaker in Seoul</strong> (Kospi −8% intraday) and gave back Tokyo's record run.</li>
-      <li><span class="tag sci">macro</span><strong>Hot May PCE</strong> (core ~3.4% y/y) hardened the <strong>Warsh Fed's</strong> tilt toward rate <em>hikes</em> — raising the discount rate on every far-off AI profit.</li>
-    </ul>
-    <p>Put together: the demand side of AI has never looked stronger (Micron), but the market is suddenly asking the hard questions — <em>how long until the spending pays off, and what is it worth if money stays expensive?</em></p>
-  </div>
-
-  <h2 id="money">The money: an IPO supercycle priced for perfection</h2>
-  <div class="card markets">
-    <p>2026 has become the year the private AI giants test the public markets. The valuations are staggering and, crucially, mostly <strong>pre-profit</strong>:</p>
-    <table>
-      <tr><th>Company</th><th>Reported valuation</th><th>Status</th><th>Note</th></tr>
-      <tr><td>SpaceX</td><td>~$2.1tn (post-IPO rally)</td><td>Listed June 12</td><td>Largest IPO in history (~$75bn raised)</td></tr>
-      <tr><td>Anthropic</td><td>~$965bn</td><td>Confidential filing (June 1)</td><td>~$47bn revenue run-rate</td></tr>
-      <tr><td>OpenAI</td><td>~$852bn</td><td>Filing reported; listing may slip to 2027</td><td>Guiding to ~$14bn loss in 2026</td></tr>
-    </table>
-    <p>The bull case is that these are the railroads and power utilities of the AI era — infrastructure whose returns compound for decades. The bear case is simpler: a lot of this is <strong>capital being spent today against revenue that is promised tomorrow</strong>, and any crack in the "tomorrow" timeline — like an IPO delay — forces a repricing.</p>
-  </div>
-
-  <h2 id="silicon">The silicon: why Micron is the supercycle's cleanest gauge</h2>
-  <div class="card ai">
-    <p>If you want one number that tells you whether the AI build-out is real or hype, watch <strong>high-bandwidth memory (HBM)</strong>. Every AI accelerator (Nvidia, AMD, custom silicon) needs stacks of it, and supply is tight. Micron is one of only three makers, so its order book is a near-real-time read on data-center demand.</p>
-    <ul>
-      <li><strong>The signal:</strong> guidance to <strong>$50bn</strong> next quarter and ~85% gross margins says hyperscalers are still buying everything that can be made — the physical build-out has not slowed.</li>
-      <li><strong>The catch:</strong> memory is famously cyclical. Today's scarcity-driven margins invite tomorrow's capacity glut. The supercycle's skeptics watch HBM pricing the way oil traders watch rig counts.</li>
-      <li><strong>The geopolitics:</strong> the same week, Beijing tightened <strong>rare-earth export controls</strong> on US firms and Washington reaffirmed that <strong>AI-chip license rules reach overseas subsidiaries</strong> — a reminder that the supply chain underneath all of this is a contested border, not a free market.</li>
-    </ul>
-  </div>
-
-  <h2 id="wobble">Friday's wobble: when "priced for perfection" meets a hawkish Fed</h2>
+  <h2 id="what">What actually happened this weekend</h2>
   <div class="card risk">
-    <p>Here is the mechanism, step by step:</p>
+    <p>The sequence, as reported across NPR, CNN, CBS, PBS, NBC and Al Jazeera (still developing — treat exact details as provisional):</p>
     <ul>
-      <li><strong>1. Rates repriced up.</strong> May PCE ran hot (headline ~4.1%, core ~3.4% y/y), and the Warsh Fed has already signaled <em>hikes</em>, not cuts, for 2026. Higher rates lower the present value of distant cash flows — and AI valuations are almost entirely distant cash flows.</li>
-      <li><strong>2. A timeline crack.</strong> The OpenAI-delay report suggested the profit payoff is <em>further away</em> than hoped, just as the discount rate rose.</li>
-      <li><strong>3. Leverage unwound.</strong> Across Asia, leveraged AI bets were cut fast — <strong>Korea's Kospi hit a circuit breaker</strong>, <strong>Taiwan's Taiex fell ~3.6%</strong>, <strong>Hong Kong had its worst week since April 2025</strong>, and <strong>Tokyo gave back a record</strong>. US indexes ended roughly flat, cushioned by Micron's strength.</li>
+      <li><span class="tag warn">Sat Jun 27</span><strong>US strikes inside Iran.</strong> American aircraft hit multiple targets at Trump's direction, citing "continued Iranian aggression against commercial shipping."</li>
+      <li><span class="tag warn">Sun Jun 28</span><strong>Iran retaliates against US bases.</strong> The Revolutionary Guard fired ballistic missiles and drones at the <strong>Ali Al Salem airbase in Kuwait</strong> and the <strong>US Fifth Fleet at Port Salman in Bahrain</strong> — the first direct strikes on US facilities this cycle.</li>
+      <li><span class="tag warn">Sun–Mon</span><strong>Diplomacy on the brink.</strong> Tehran threatened a "complete halt" to talks; a US official insisted negotiations "will resume"; Trump warned Iran "will no longer exist" if attacks continue.</li>
     </ul>
-    <p>None of this breaks the long-term thesis. But it is the first time this cycle that the market has demanded <strong>evidence of profitability</strong> rather than taking it on faith — and that shift in posture is itself the news.</p>
+    <p>The key point: this is no longer "will the truce hold?" It is "can a ceasefire be rebuilt after both sides have traded blows on each other's forces?" — a much harder question.</p>
+  </div>
+
+  <h2 id="why-broke">Why a signed deal fell apart so fast</h2>
+  <div class="card markets">
+    <p>The June accord ended open conflict but deferred every hard question to a 60-day "roadmap" (full-deal target ~Aug 22). Three unresolved seams did the damage:</p>
+    <ul>
+      <li><strong>Inspections.</strong> The US said Iran agreed to readmit IAEA inspectors "soon"; Iran said only after a final deal. IAEA chief Grossi called the timing "not essential" — language that let each side claim victory and settle nothing.</li>
+      <li><strong>Sequencing &amp; money.</strong> Disputes over whether sanctions relief and ~$12–24bn in frozen assets come up front or "pay-for-performance" left the bargain perpetually contestable.</li>
+      <li><strong>Hormuz behavior.</strong> The truce hinged on free commercial passage. Iranian drone harassment of shipping is exactly the trigger that the US said it struck over — the seam that finally tore (see below).</li>
+    </ul>
+    <p>A ceasefire with no agreed verification, no agreed sequencing and a contested chokepoint is a ceasefire that runs on goodwill. Goodwill ran out.</p>
+  </div>
+
+  <h2 id="hormuz">The Hormuz lever: why one strait keeps detonating the whole thing</h2>
+  <div class="card quantum">
+    <p>The <strong>Strait of Hormuz</strong> is the 21-mile-wide neck between Iran and Oman through which roughly a fifth of the world's seaborne oil — and much of its LNG — passes. That geography is the entire game:</p>
+    <ul>
+      <li><strong>For Iran</strong> it is the one form of leverage that reaches every capital at once: even the <em>threat</em> of closure moves global energy prices and insurance rates.</li>
+      <li><strong>For the US and Gulf states</strong> keeping it open is non-negotiable — which is why drone attacks on tankers draw a military response rather than a diplomatic one.</li>
+      <li><strong>The paradox:</strong> Iran gains most by threatening Hormuz but loses most by actually closing it (it exports its own crude through the same water, largely to China). So the strait lives in a permanent gray zone of harassment-but-not-closure — and every incident in that gray zone can be read as a violation.</li>
+    </ul>
+    <p>That is why a deal "about" nuclear enrichment keeps living or dying on tanker incidents hundreds of miles away.</p>
+  </div>
+
+  <h2 id="oil">Why this reaches your wallet even far from the Gulf</h2>
+  <div class="card markets">
+    <p>Oil spent last week <em>falling</em> on hopes the strait would reopen — Brent settled near <strong>$71.99</strong> and WTI near <strong>$69.23</strong> on Friday as tankers exited Hormuz. The weekend strikes flip that logic:</p>
+    <table>
+      <tr><th>Channel</th><th>Mechanism</th><th>Who feels it</th></tr>
+      <tr><td>Crude price</td><td>War premium returns; a closure scare can spike Brent fast</td><td>Drivers, airlines, anyone buying fuel</td></tr>
+      <tr><td>Shipping &amp; insurance</td><td>War-risk premiums on Gulf transits jump</td><td>Importers, then retail prices</td></tr>
+      <tr><td>Inflation &amp; rates</td><td>Energy shock feeds CPI — already pushing Türkiye's CPI to 32.6% and a hawkish Warsh Fed</td><td>Borrowers worldwide</td></tr>
+      <tr><td>Risk appetite</td><td>Gulf war + AI-stock washout = double hit to sentiment</td><td>Anyone with a pension or 401(k)</td></tr>
+    </table>
+    <p>This is the under-appreciated link: the same week's <strong>AI-stock sell-off</strong> (SoftBank −12.5%, Nikkei −4.15%) and the Gulf flare-up are not separate stories to a portfolio — they stack into one risk-off tape, and a hawkish Fed means there's less cushion underneath.</p>
   </div>
 
   <h2 id="watch">What to watch from here</h2>
-  <div class="card quantum">
+  <div class="card ai">
     <ul>
-      <li><span class="tag tech">IPOs</span>Whether Anthropic prices on schedule and whether OpenAI's delay is confirmed — the pipeline's credibility rides on the first few prints.</li>
-      <li><span class="tag good">demand</span>HBM pricing and the next round of hyperscaler capex guidance — the real-economy test of whether spending is still accelerating.</li>
-      <li><span class="tag warn">rates</span>The Warsh Fed's next moves; every additional hike compresses what far-off AI earnings are worth today.</li>
-      <li><span class="tag sci">supply chain</span>US–China chip and rare-earth measures — the geopolitical tax on the whole build-out.</li>
-      <li><span class="tag">contagion</span>Whether Friday's Asia-led sell-off stays a sentiment wobble or becomes a broader de-rating of richly valued tech.</li>
+      <li><span class="tag warn">escalation</span>Whether Sunday's base strikes were a one-off "face-saving" volley (as Iran has done before) or the start of a sustained campaign — the casualty count and any US re-strike are the tells.</li>
+      <li><span class="tag">diplomacy</span>Whether talks genuinely "resume" or Tehran follows through on a "complete halt." Watch the mediators (Pakistan, Qatar) and the Geneva verification track.</li>
+      <li><span class="tag sci">Hormuz</span>Tanker traffic counts and Gulf war-risk insurance rates — the real-time gauge of whether commerce is actually flowing.</li>
+      <li><span class="tag good">oil</span>The next market open: a sharp Brent move either way will tell you how seriously traders take a closure risk.</li>
+      <li><span class="tag tech">spillover</span>Whether the energy shock plus the AI washout hardens the Warsh Fed's hawkish tilt — compounding the squeeze on risk assets worldwide.</li>
     </ul>
   </div>
 
   <div class="disclaimer">
-    <strong>Disclaimer.</strong> This is an editor-selected explainer, not reader-requested analysis (no <code>request.md</code> was present on June 27, 2026). It synthesizes public reporting and is <em>not</em> investment advice. Valuations and revenue run-rates are reported/unaudited figures; the OpenAI IPO delay is reported, not confirmed. Verify with primary sources before acting.
+    <strong>Disclaimer.</strong> This is an editor-selected explainer, not reader-requested analysis (no <code>request.md</code> was present on June 29, 2026). It synthesizes fast-moving public reporting; the weekend US–Iran exchange was actively developing as this was written, so specific details (targets, casualties, the status of talks) may be revised. Oil levels are Friday's close. Nothing here is investment, legal or safety advice — verify with primary sources before acting.
   </div>
 
   <footer>
-    Generated by the news-check scheduled task · Saturday, 2026-06-27. To steer this page, add a local <code>request.md</code> with the topics you want followed.
+    Generated by the news-check scheduled task · Monday, 2026-06-29. To steer this page, add a local <code>request.md</code> with the topics you want followed.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
