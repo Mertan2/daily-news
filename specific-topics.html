@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Tuesday, June 30, 2026</title>
+<title>Specific Topics Deep Dive — Wednesday, July 1, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -68,14 +68,11 @@
     .tag.sci { background: #f7ebd4; }
   }
   table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
-  th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+  th, td { padding: 6px 9px; text-align: left; border-bottom: 1px solid var(--border); }
   th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 12px 16px; margin: 18px 0; font-size: 13px; color: var(--muted); }
-  .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
+  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 22px 0 0; font-size: 12.5px; color: var(--muted); }
   footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
-  .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
-  .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
-  .nav a:hover { border-color: var(--accent); text-decoration: none; }
+  .takeaway { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 8px; border-top: 1px dotted var(--border); padding-top: 8px; }
   @media (max-width: 600px) {
     h1 { font-size: 25px; }
     .container { padding: 22px 16px 48px; }
@@ -86,90 +83,74 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>The Court Just Rewired the Federal Government</h1>
-    <div class="date">Tuesday, June 30, 2026 · Editor's pick</div>
-    <div class="note">
-      <strong>No <code>request.md</code> was found this run</strong>, so there were no reader-specified topics. In its place, this page takes the day's most structurally consequential story — the Supreme Court's 6–3 decision burying <em>Humphrey's Executor</em>, the 91-year-old precedent that kept "independent" agencies independent — and walks through what changed, why a 1935 case mattered so much, and the one big exception the Court carved out. Drop a <code>request.md</code> in the project folder (it stays local and gitignored) to steer this page toward your own interests next time.
-    </div>
-    <div class="nav">
-      <a href="#what">What the Court did</a>
-      <a href="#1935">Why a 1935 case mattered</a>
-      <a href="#fed">The Fed exception</a>
-      <a href="#stakes">Why it touches you</a>
-      <a href="#watch">What to watch</a>
-      <a href="./daily-briefing.html">📰 Daily</a>
-      <a href="./weekly-report.html">🗓️ Weekly</a>
+    <h1>Deep Dives — Wednesday, July 1, 2026</h1>
+    <div class="date">Longer-form context on the week's biggest threads · companion to the <a href="./daily-briefing.html">daily briefing</a></div>
+    <div class="intro">
+      <strong>No custom topic list was supplied for this run, so today's deep dives track the three storylines that have dominated the week's headlines</strong> — and are likely to shape the rest of 2026. First, a US Supreme Court term that both <em>expanded</em> and <em>fenced in</em> presidential power in the same fortnight. Second, the AI capital-spending supercycle and the hardening US–China split over who gets to build the compute. Third, the strange new architecture of the Gulf ceasefire — a war paused not at a table but through a relay of mediators. Each section closes with a plain-English "so what."
+      <br><br><em>Want a specific subject here instead? Drop it in <code>request.md</code> (kept local, never published) and the next run will build this page around it.</em>
     </div>
   </header>
 
-  <div class="intro">
-    <strong>The thread in one line:</strong> for 91 years, a president could not fire the people who run agencies like the FTC, FCC and NLRB just for disagreeing with them — that was the whole point of calling them "independent." On June 29 the Supreme Court ended that, 6–3. The president can now remove most of them at will. The one place the Court drew a line was the Federal Reserve.
-  </div>
-
-  <h2 id="what">What the Court actually did</h2>
+  <h2>1 · The Supreme Court term that redrew presidential power — in both directions</h2>
   <div class="card risk">
-    <p>In a 6–3 decision, the justices <strong>overturned <em>Humphrey's Executor v. United States</em> (1935)</strong>, the precedent that let Congress create agencies whose leaders could only be fired "for cause" — inefficiency, neglect or malfeasance — rather than at the president's pleasure. The holding, in plain terms:</p>
-    <ul>
-      <li><span class="tag warn">before</span>A president who disliked the direction of, say, the Federal Trade Commission had to wait out the commissioners' fixed terms. Removing one required a real, documentable cause.</li>
-      <li><span class="tag good">after</span>The president may now <strong>remove the heads of most independent agencies at will</strong> — the same way a cabinet secretary serves "at the pleasure of the president."</li>
-      <li><span class="tag">why</span>The majority's logic is the "unitary executive" theory: Article II vests <em>all</em> executive power in the president, so anyone exercising that power must ultimately answer to — and be removable by — the president.</li>
-    </ul>
-    <p>This lands on the same day the Court is <strong>closing its term</strong>, with the birthright-citizenship case still outstanding. It is one of the broadest rulings on the shape of the executive branch in living memory.</p>
-  </div>
-
-  <h2 id="1935">Why a 1935 case was holding up the modern state</h2>
-  <div class="card markets">
-    <p><em>Humphrey's Executor</em> arose when FDR tried to fire an FTC commissioner he disagreed with. The Court said no — and in doing so, it made the modern "independent agency" constitutionally possible. That single idea quietly underwrites a huge slice of how the US is governed:</p>
-    <ul>
-      <li><strong>Markets &amp; competition</strong> — the FTC and SEC police monopolies, fraud and disclosure, insulated (in theory) from election-cycle pressure.</li>
-      <li><strong>Labor</strong> — the NLRB referees union elections and unfair-labor-practice disputes.</li>
-      <li><strong>Communications &amp; airwaves</strong> — the FCC sets the rules for broadcast, broadband and spectrum.</li>
-      <li><strong>Consumer finance &amp; more</strong> — a long list of multi-member boards built on the assumption that "for-cause" protection would survive.</li>
-    </ul>
-    <p>The case for independence was that some decisions — interest rates, antitrust enforcement, who wins a contested union vote — work better when they're <em>not</em> a direct extension of whoever just won the White House. The case against it, which the majority adopted, is that unelected officials wielding real power with no accountability to the elected president is itself a democratic problem. Tuesday's ruling resolves a tension that's been latent since 1935 — decisively, in favor of presidential control.</p>
-  </div>
-
-  <h2 id="fed">The one carve-out: the Federal Reserve survives, 5–4</h2>
-  <div class="card quantum">
-    <p>Here's the twist that keeps this from being a clean sweep. In a <strong>separate 5–4 ruling, the Court refused to let the president immediately remove Fed Governor Lisa Cook</strong>, holding she can stay in her seat until the underlying litigation plays out in the lower courts.</p>
-    <ul>
-      <li><strong>Why the Fed is different.</strong> The majority signaled that the central bank — which sets interest rates and is uniquely sensitive to political interference — sits in a special constitutional category, distinct from ordinary regulatory agencies.</li>
-      <li><strong>Why it's narrow.</strong> A 5–4 split (versus the 6–3 on the main ruling) means the Fed's protection rests on a thinner margin — and the Court resolved it procedurally (Cook stays "for now") rather than with an airtight doctrinal shield.</li>
-      <li><strong>Why markets cared.</strong> A president able to fire Fed governors at will is the nightmare scenario for bond and currency markets, because it threatens the credibility of inflation-fighting. Monday's strong rally — Dow above 52,000 for the first time — partly reflects relief that the Fed line held.</li>
-    </ul>
-    <p>So the picture is: <strong>maximal presidential control over most of the administrative state, with the central bank fenced off — for now, by one vote.</strong></p>
-  </div>
-
-  <h2 id="stakes">Why this reaches past Washington</h2>
-  <div class="card markets">
-    <p>This sounds like an inside-the-Beltway doctrine fight. It isn't. The agencies in question make decisions that hit prices, paychecks and portfolios:</p>
+    <h3>What happened</h3>
+    <p>In the space of two sitting days (June 29–30) the Court handed down a cluster of rulings that, taken together, are the most consequential redefinition of executive authority in a generation — and they did <em>not</em> all point the same way.</p>
     <table>
-      <tr><th>Agency</th><th>What it controls</th><th>Who feels a change of direction</th></tr>
-      <tr><td>FTC / SEC</td><td>Antitrust, mergers, market fraud</td><td>Consumers, investors, anyone in a concentrating industry</td></tr>
-      <tr><td>NLRB</td><td>Union elections, labor disputes</td><td>Workers and employers</td></tr>
-      <tr><td>FCC</td><td>Broadband, broadcast, spectrum</td><td>Internet users, media, telecoms</td></tr>
-      <tr><td>Federal Reserve</td><td>Interest rates, bank supervision</td><td>Borrowers, savers, every market — <em>shielded, 5–4</em></td></tr>
+      <tr><th>Ruling</th><th>Vote</th><th>Effect</th></tr>
+      <tr><td><em>Humphrey's Executor</em> overturned</td><td>6–3</td><td>President can fire independent-agency heads (FTC, EEOC, MSPB) at will — power <em>expanded</em></td></tr>
+      <tr><td>Fed Gov. Lisa Cook carve-out</td><td>5–4</td><td>Fed explicitly exempted; Cook stays pending litigation — power <em>checked</em></td></tr>
+      <tr><td>Birthright citizenship (<em>Trump v. Barbara</em>)</td><td>6–3</td><td>Day-One executive order struck down; 14th Amendment upheld — power <em>checked</em></td></tr>
+      <tr><td>Transgender-athlete bans (WV, ID)</td><td>6–3</td><td>State bans upheld; no Equal Protection or Title IX violation</td></tr>
+      <tr><td>Party–candidate coordinated spending</td><td>—</td><td>Watergate-era cap struck down — campaign-finance deregulation</td></tr>
     </table>
-    <p>The deeper shift is about <strong>volatility</strong>. Independent agencies were designed to change slowly and survive elections. If their leadership can now turn over with each administration, regulatory policy in finance, labor and tech could swing much harder from term to term — raising the political risk premium baked into long-horizon business decisions.</p>
-  </div>
-
-  <h2 id="watch">What to watch from here</h2>
-  <div class="card ai">
+    <h3>Why it matters</h3>
+    <p>The headline is not "the Court sided with Trump" or "against" him — it's that a 6–3 conservative majority drew a deliberate line. It <strong>maximized</strong> the president's control over the executive bureaucracy (removing a 90-year-old limit that let agencies act independently) while <strong>refusing</strong> to let that logic swallow either the Federal Reserve or the plain text of the 14th Amendment. Chief Justice Roberts wrote both the <em>Humphrey's</em> reversal and the birthright majority — a signal that this Court is building doctrine, not just picking winners.</p>
+    <h3>The threads to watch</h3>
     <ul>
-      <li><span class="tag warn">first moves</span>Whether the administration acts immediately on its new authority — and which agency head is the first test case.</li>
-      <li><span class="tag">birthright</span>The term's final outstanding blockbuster: the <strong>birthright-citizenship</strong> decision, expected as the Court closes today.</li>
-      <li><span class="tag tech">the Fed line</span>Whether Cook's reprieve survives the lower courts — and whether a future case gives the Fed a firmer shield than a 5–4 "for now."</li>
-      <li><span class="tag good">markets</span>How bond and currency markets price central-bank independence going forward; Monday's rally suggests relief, but the margin was thin.</li>
-      <li><span class="tag sci">spillover</span>Whether Congress responds — by restructuring agencies, adding statutory protections the Court might still respect, or simply letting presidential control stand.</li>
+      <li><strong>Does the Fed's reprieve hold?</strong> The 5–4 Cook carve-out is narrow and rests on litigation still moving through lower courts. If it frays, central-bank independence — the single thing markets care about most here — is back in play.</li>
+      <li><strong>How aggressively is the removal power used?</strong> At-will control over the FTC, NLRB and EEOC could reshape antitrust, labor and workplace enforcement fast, without new legislation.</li>
+      <li><strong>Midterm money.</strong> Loosening coordinated-spending caps changes how much parties can pour directly into 2026 races — an under-covered ruling with large downstream effects.</li>
     </ul>
+    <p class="takeaway">So what: the presidency got structurally stronger over the bureaucracy, but the Court kept two firewalls — the Fed and birthright citizenship — standing. Watch whether those firewalls survive the follow-on cases.</p>
   </div>
 
-  <div class="disclaimer">
-    <strong>Disclaimer.</strong> This is an editor-selected explainer, not reader-requested analysis (no <code>request.md</code> was present on June 30, 2026). It synthesizes public reporting on the June 29 rulings; legal details and the exact reasoning of the opinions may be refined as the full texts are parsed, and the term's final-day decisions were still landing as this was written. Nothing here is legal, investment or political advice — read the opinions and primary reporting before drawing conclusions.
+  <h2>2 · The AI capex supercycle — and the US–China compute split</h2>
+  <div class="card ai">
+    <h3>The number that frames everything: ~$650 billion</h3>
+    <p>That's the aggregate 2026 AI capital spending now projected across the hyperscalers — a figure large enough that a single scare (last week's report that OpenAI might delay its IPO to 2027) briefly knocked ~12% off SoftBank and rattled chip names across Asia. Yet by June 30 that fear had fully reversed: Wall Street closed its <strong>best quarter since 2020</strong> (S&amp;P +14%, Nasdaq +20% for Q2), Tokyo climbed back above 70,500, and Korea's June semiconductor exports <strong>nearly tripled</strong> to a record $44.82B. The trade is intact — but it is now priced for near-perfect execution.</p>
+    <h3>Two systems, two supply chains</h3>
+    <p>The week made the decoupling concrete on both ends:</p>
+    <ul>
+      <li><span class="tag tech">Beijing</span>China is drafting a five-year, <strong>~$295B national computing grid</strong> that mandates ≥80% domestic technology — including AI accelerators — effectively excluding Nvidia and AMD. Despite a February US license to ship H200s, Nvidia has booked <em>zero</em> China revenue as Beijing steers buyers to Huawei, Alibaba, Biren and Moore Threads.</li>
+      <li><span class="tag good">Washington/Redmond</span>Nvidia and Microsoft unveiled the <strong>RTX Spark</strong> superchip to push AI onto the Windows PC itself ("personal agents"), with machines this fall; Nvidia's <strong>Rubin</strong> generation enters full production in H2; Intel is readying a year-end datacenter GPU ("Crescent Island"). OpenAI shipped its <strong>GPT-5.6</strong> frontier family.</li>
+    </ul>
+    <h3>The open question</h3>
+    <p>Everyone is spending as if inference demand will scale to meet the buildout. The bear case isn't that AI is fake — it's timing: <strong>does $650B/year of capex earn its return on the schedule that today's valuations assume?</strong> The tells to watch are HBM memory pricing (a real-time demand gauge), whether frontier-model gains keep justifying the compute, and whether China's domestic stack matures fast enough to make the export controls moot.</p>
+    <p class="takeaway">So what: the AI rally survived its first genuine wobble and set record quarterly highs — but it's now a two-track world (a US/allied stack and a walled Chinese one), and the whole edifice rests on capex paying off faster than skeptics think.</p>
+  </div>
+
+  <h2>3 · The Gulf ceasefire's strange new architecture</h2>
+  <div class="card markets">
+    <h3>A war paused without a table</h3>
+    <p>The most striking feature of this week's US–Iran de-escalation is <em>how</em> it's being run. After the sharpest exchange of the cycle — US strikes on Iranian missile/radar sites, then Iranian fire on US positions in <strong>Kuwait and Bahrain</strong> — the two sides did not sit down. Instead, US envoys <strong>Steve Witkoff and Jared Kushner</strong> met Qatar's prime minister in Doha, and Qatar and Pakistan now <strong>shuttle between separate US and Iranian technical delegations</strong>, implementing a 14-point June memorandum. Oman, meanwhile, tabled a proposal on the future of the Strait of Hormuz.</p>
+    <h3>Why indirect talks, and why they can still work</h3>
+    <p>Neither government can be seen negotiating directly with the other, so a lattice of trusted intermediaries — Qatar, Oman, Pakistan — carries the message traffic and, crucially, lets each side deny it's "talking." The upside: it lowers the political cost of concessions. The downside: it's slow, brittle, and easy to collapse if any mediator's channel breaks.</p>
+    <h3>The three knots</h3>
+    <ul>
+      <li><span class="tag warn">Uranium</span>Iran's enriched-uranium stockpile is the hardest unresolved issue — the piece most likely to sink a durable deal.</li>
+      <li><span class="tag">Frozen funds</span>Tehran is sending a delegation specifically to pursue <strong>unfreezing Iranian assets</strong>, its top near-term ask.</li>
+      <li><span class="tag warn">Lebanon linkage</span>A parallel US-brokered framework would pull the IDF out of southern Lebanon with the Lebanese army overseeing Hezbollah's disarmament — a war that has already killed 4,000+ and displaced over a fifth of Lebanon's population. The two tracks are entangled.</li>
+    </ul>
+    <p>The market's verdict so far is calm: Brent has held steady near <strong>$73.50</strong>, signaling traders read the mediation as more likely to hold than break. That's the number to watch — a sudden spike would mean the relay has snapped.</p>
+    <p class="takeaway">So what: the ceasefire is real but load-bearing on intermediaries, not on trust. Its survival probably shows up first in the oil price and in whether Doha yields anything concrete on Hormuz and frozen funds.</p>
+  </div>
+
+  <div class="note">
+    <strong>About this page.</strong> These deep dives are auto-generated context pieces, not original reporting — they synthesize the week's most-covered stories from public sources (see the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a> for attribution). Analysis and forward-looking "so what" lines are interpretive and may not age well; treat forecasts as scenarios, not predictions. Verify anything you plan to act on against a primary source.
   </div>
 
   <footer>
-    Generated by the news-check scheduled task · Tuesday, 2026-06-30. To steer this page, add a local <code>request.md</code> with the topics you want followed.
+    Specific Topics Deep Dive · Wednesday, July 1, 2026 · auto-generated by the news-check scheduled task. To steer these dives, add a topic to the local <code>request.md</code>.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
