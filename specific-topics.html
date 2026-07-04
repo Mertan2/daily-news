@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Friday, July 3, 2026</title>
+<title>Specific Topics Deep Dive — Saturday, July 4, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -83,81 +83,75 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dives — Friday, July 3, 2026</h1>
+    <h1>Deep Dives — Saturday, July 4, 2026</h1>
     <div class="date">Longer-form context on the week's biggest threads · companion to the <a href="./daily-briefing.html">daily briefing</a></div>
     <div class="intro">
-      <strong>No custom topic list was supplied for this run, so today's deep dives follow the three storylines that turned a corner on July 1–3.</strong> First, the AI-chip map is quietly being redrawn — Nvidia conceding China, Japan and Korea scrambling to build sovereign capacity. Second, the "One Big Beautiful Bill" — the single largest piece of US legislation of the term — cleared Congress and gets signed on the Fourth. Third, the arithmetic behind Russia's deadliest strike on Kyiv in months, and what 570 incoming weapons in one night says about the air war. Each section closes with a plain-English "so what."
+      <strong>No custom topic list was supplied for this run, so today's deep dives follow the three storylines that turned a corner on July 3–4.</strong> First, the AI-efficiency shock: a single report that OpenAI can run models with roughly half the compute detonated the chip trade across Asia — and calls the whole "buy every GPU" thesis into question. Second, America at 250 — a semiquincentennial staged inside a record-breaking heat dome, where the celebration and the climate story collided in real time. Third, the endgame of June's Gulf war, as Iran buries the Supreme Leader it lost and Tehran faces a succession no one has rehearsed. Each section closes with a plain-English "so what."
       <br><br><em>Want a specific subject here instead? Drop it in <code>request.md</code> (kept local, never published) and the next run will build this page around it.</em>
     </div>
   </header>
 
-  <h2>1 · The AI-chip map is being redrawn — and not in Silicon Valley's favor</h2>
+  <h2>1 · The AI-efficiency shock — when "cheaper" became bearish</h2>
   <div class="card ai">
-    <h3>The concession that mattered</h3>
-    <p>The single most consequential tech line this week came from Nvidia CEO Jensen Huang, who said the company has <strong>"largely lost" China's AI-chip market</strong>. The numbers behind it are stark: Nvidia's share of Chinese AI accelerators is now seen falling to roughly <strong>8% in 2026</strong>, while Huawei's climbs toward <strong>~50%</strong>. Two years of tightening US export controls were meant to slow China down; instead they handed Huawei a captive domestic market and a reason to build at scale.</p>
+    <h3>The report that moved a continent</h3>
+    <p>The biggest market event of the day started as good news for one company. A report circulated that <strong>OpenAI has engineered software cutting AI inference compute by roughly 50%</strong> — meaning the same models could run on about half the hardware. For OpenAI, that is a margin and a moat. For the companies that <em>sell</em> the hardware, it read as a demand warning, and Asia's chip-heavy indices took the hit within hours.</p>
     <table>
-      <tr><th>Player</th><th>2026 move</th><th>What it signals</th></tr>
-      <tr><td>Huawei</td><td>Ascend 950 · Atlas 950 SuperPoD (8,192 chips, ~8 exaflops FP8)</td><td>Domestic Nvidia replacement at rack scale</td></tr>
-      <tr><td>Japan (Noetra)</td><td>Sovereign foundation-model consortium: SoftBank, Sony, NEC, Honda + AIST</td><td>National-security framing of AI</td></tr>
-      <tr><td>Rapidus (Japan)</td><td>Verified a 2nm-class prototype transistor (Hokkaido)</td><td>Bid to re-enter leading-edge logic by 2027</td></tr>
-      <tr><td>SK Hynix (Korea)</td><td>Overtook Samsung as Korea's most valuable firm — first time in 26 years</td><td>HBM is now the choke point, not logic</td></tr>
-      <tr><td>BYD (China)</td><td>Xuanji A3 — China's first 4nm smart-driving chip (2027 debut)</td><td>Vertical integration into automotive silicon</td></tr>
+      <tr><th>Market</th><th>July 3 move</th><th>Driver</th></tr>
+      <tr><td>KOSPI (Korea)</td><td>−7.9% → ~7,648</td><td>SK Hynix −14.6%, Samsung −9.1%</td></tr>
+      <tr><td>Nikkei 225 (Japan)</td><td>−2.5% → ~68,733</td><td>Chip &amp; equipment names</td></tr>
+      <tr><td>USD / JPY</td><td>~¥162.6 (40-yr low area)</td><td>Intervention watch layered on top</td></tr>
     </table>
-    <h3>Three shifts hiding inside one story</h3>
+    <h3>Why the reaction was so violent</h3>
+    <p>The AI trade of the last two years rested on a simple assumption: demand for accelerators and high-bandwidth memory (HBM) would compound as models scaled. Korea's market is unusually exposed to that bet — <strong>Samsung and SK Hynix dominate the index</strong> to the point that Goldman Sachs estimates each one-percentage-point shift in their combined weight can trigger <strong>~$2 billion of foreign selling</strong>. So an efficiency story that questions unit demand doesn't just ding two stocks; it moves the whole tape.</p>
+    <h3>The counter-argument: Jevons, not doom</h3>
+    <p>Efficiency has historically <em>increased</em> total consumption of a resource, not shrunk it — the Jevons paradox. Cheaper inference could unlock far more AI usage (agents, always-on assistants, real-time video), soaking up any freed capacity and then some. The same week also delivered the <strong>OpenAI–Nvidia 10-gigawatt partnership</strong> (Nvidia investing up to $100B, first GW on the Vera Rubin platform in H2 2026) — hardly the behavior of a company expecting to need fewer chips. And OpenAI's own custom inference chip, <strong>"Jalapeño"</strong> (built with Broadcom, pitched on performance-per-watt), suggests the constraint it's optimizing is cost-at-scale, not scarcity.</p>
+    <h3>What to verify before trusting the move</h3>
     <ul>
-      <li><span class="tag good">Self-sufficiency compounds</span>Export controls are a one-time tax on the target, but a permanent subsidy to its domestic champions. Huawei didn't get better because it out-innovated Nvidia; it got better because it was the only option left in a market of that size.</li>
-      <li><span class="tag tech">Memory &gt; logic</span>SK Hynix passing Samsung is the tell that the scarcest input in AI right now is <strong>high-bandwidth memory (HBM)</strong>, not the GPU die itself. Whoever controls HBM supply controls the pace of the buildout — and that leverage now sits in Korea.</li>
-      <li><span class="tag">Sovereignty as strategy</span>Japan's Noetra and Rapidus, Korea's ~$518B fab plan, and China's domestic-compute grid are all versions of the same bet: that AI capacity is now infrastructure a serious country builds at home rather than rents from abroad.</li>
+      <li><span class="tag warn">Sourcing</span>The "~50%" figure is a <strong>reported</strong> claim, not a published, peer-reviewed benchmark. A one-day 8% index crash on a single unverified number is itself a signal of how crowded the trade had become.</li>
+      <li><span class="tag">HBM pricing</span>Watch spot and contract HBM prices in the coming weeks — the cleanest read on whether real demand is softening or traders are just de-risking.</li>
+      <li><span class="tag tech">Capex guidance</span>~$650B of 2026 hyperscaler capex is the number under the whole edifice. If any major buyer trims guidance citing efficiency, the selloff was early, not wrong.</li>
     </ul>
-    <p class="takeaway">So what: the AI trade is usually told as a Nvidia-and-hyperscalers story. This week reframed it as a <em>geography</em> story — capacity fragmenting into national blocs, with Chinese self-sufficiency accelerating precisely because it was walled off, and the real bottleneck (HBM) sitting in Korea rather than California.</p>
+    <p class="takeaway">So what: For two years "more compute" was the only trade. The market just got its first serious scare that the equation could flip — and discovered how few names it was really leaning on. Whether this is a top or a headfake hinges on one thing: does cheaper AI get used more, or just built less?</p>
   </div>
 
-  <h2>2 · The "One Big Beautiful Bill" — what actually passed</h2>
+  <h2>2 · America at 250 — a birthday inside a heat dome</h2>
   <div class="card risk">
-    <h3>The vote</h3>
-    <p>On July 3 the House gave final approval to <strong>H.R.1 by 218–214</strong>, with only two Republicans — <strong>Thomas Massie (KY)</strong> and <strong>Brian Fitzpatrick (PA)</strong> — joining every Democrat against it. The Senate had cleared it two days earlier <strong>51–50</strong>, with Vice-President <strong>JD Vance</strong> breaking the tie and three Republicans (Paul, Tillis, Collins) voting no. Trump is expected to sign it at a July 4 event — making it the defining domestic law of the term.</p>
-    <h3>What's in it</h3>
-    <ul>
-      <li><span class="tag">Taxes</span>Makes the <strong>2017 tax cuts permanent</strong> and adds a temporary <strong>"no tax on tips"</strong> provision (2025–2028).</li>
-      <li><span class="tag warn">Health</span>CBO scores roughly <strong>$930B in Medicaid cuts</strong> and estimates <strong>~11.8M more people uninsured by 2034</strong> — the most contested piece of the package.</li>
-      <li><span class="tag warn">Deficit</span>Making the cuts permanent removes the revenue the 2017 law's sunsets were supposed to recover, so the long-run deficit path widens.</li>
-    </ul>
-    <h3>Why the timing cuts against it</h3>
-    <p>The bill lands in the same 48 hours as a labor market that just missed badly — <strong>+57K June payrolls</strong> versus ~115K expected, with prior months revised down 74K. A permanent tax cut is a bet on growth; a cooling jobs market and a Fed that has <em>stopped</em> talking about rate cuts (and lifted its 2026 core-inflation projection to ~3.3%) is exactly the backdrop in which a deficit-widening law draws the most scrutiny from bond markets.</p>
-    <ul>
-      <li><span class="tag warn">The coverage cliff</span>Medicaid changes phase in over years, so the political pain (and the ~11.8M figure) arrives on a delay — much of it after the 2026 midterms but during the campaign for them.</li>
-      <li><span class="tag">Near-party-line</span>Passing 218–214 with two GOP defectors means there's no bipartisan cover; every consequence, good or bad, now belongs to one party.</li>
-    </ul>
-    <p class="takeaway">So what: H.R.1 is genuinely big — permanent tax cuts, a large Medicaid rollback, a wider deficit — and it passed with almost no margin and no crossover votes. Its fate as policy and as politics will be decided by two things it can't control: whether growth holds up as the labor market cools, and how voters feel the coverage losses as they phase in.</p>
+    <h3>The collision</h3>
+    <p>July 4, 2026 was supposed to be a set-piece: the United States' <strong>semiquincentennial</strong>, 250 years since 1776, anchored by a Trump-aligned "Salute to America 250" on the National Mall with a <strong>~850,000-shell fireworks display across 10 sites</strong> — an explicit bid for the Guinness record for the largest show in history. Instead, the defining image of the day may be the weather map. More than <strong>110 million</strong> people sat under extreme-heat risk and <strong>150 million+</strong> under heat alerts stretching from Kansas to Maine.</p>
+    <table>
+      <tr><th>City</th><th>July 4 forecast</th><th>Context</th></tr>
+      <tr><td>Philadelphia</td><td>~103°F</td><td>Just shy of its 104°F July record</td></tr>
+      <tr><td>New York (Central Park)</td><td>~102°F</td><td>First 100°F+ since 2012</td></tr>
+      <tr><td>Washington, D.C.</td><td>Extreme-heat advisory</td><td>All-day 250th festivities adjusted</td></tr>
+    </table>
+    <h3>What the heat actually did</h3>
+    <p>This was not a backdrop; it rewrote the schedule. <strong>Philadelphia canceled its "Salute to Independence" Semiquincentennial parade</strong> — a signature event built around 250 elements representing all 50 states — and shortened the Wawa Welcome America route. Newsweek tracked a running list of America-250 events canceled or replanned nationwide. D.C.'s organizers shifted timings and Mayor Bowser issued shade-and-hydration guidance. Even the broadcast fractured: <strong>PBS declined to air the National Mall fireworks for the first time in decades</strong>, opting for Colonial Williamsburg instead — a small but telling split over how the anniversary is being staged.</p>
+    <h3>The quieter subtext</h3>
+    <p>CNN's pre-holiday coverage caught a national mood it called "the big birthday blahs" — a 250th landing in a politically raw moment, days after the Supreme Court openly split over the words of the Declaration itself in the birthright-citizenship fight. A milestone designed to project unity arrived amid record heat, contested pageantry, and a country arguing about what the founding documents mean. The fireworks will still be spectacular; the framing is doing a lot of work.</p>
+    <p class="takeaway">So what: The semiquincentennial is a genuine milestone — but 2026 delivered it as a split-screen. On one side, the largest fireworks show ever attempted; on the other, cities telling residents to stay indoors on the nation's birthday. Both are true, and the tension between them is arguably the most 2026 thing about it.</p>
   </div>
 
-  <h2>3 · The arithmetic of Kyiv's deadliest night</h2>
-  <div class="card quantum">
-    <h3>What happened overnight July 1–2</h3>
-    <p>Russia launched roughly <strong>570 aerial weapons</strong> at Ukraine in a single night — about <strong>74 missiles</strong> (including Zircon and Iskander ballistic types) and <strong>~496 Shahed-type drones</strong>. Ukraine says it downed 524 of them. But the ~9% that got through was enough: part of a nine-storey residential building in Kyiv's Darnytskyi district collapsed, and the <strong>death toll rose to 30 by July 3</strong>, with more than 100 injured. Early counts ran 22–27 before climbing — a reminder to treat first-night tolls as provisional.</p>
-    <table>
-      <tr><th>Metric</th><th>Figure</th><th>Why it matters</th></tr>
-      <tr><td>Total weapons launched</td><td>~570</td><td>Among the largest single-night barrages of the war</td></tr>
-      <tr><td>Missiles / drones</td><td>~74 / ~496</td><td>Drones swarm defenses; missiles do the damage</td></tr>
-      <tr><td>Intercepted</td><td>524 (~92%)</td><td>High rate — yet the leak-through still kills</td></tr>
-      <tr><td>Deaths (as of July 3)</td><td>30+</td><td>Rising count; treat as preliminary</td></tr>
-    </table>
-    <h3>The defender's math problem</h3>
-    <p>A 92% interception rate sounds like a win, and tactically it is. But air defense is an <em>economics</em> problem, not just a physics one. A Shahed drone costs tens of thousands of dollars; the interceptors that reliably stop ballistic missiles cost orders of magnitude more. When the attacker sends 570 objects in one wave, the goal isn't to get most of them through — it's to <strong>saturate the defense</strong>, force it to expend scarce high-end interceptors on cheap drones, and let the handful of leak-throughs do the work. The 8% that got past is the whole point of the 100%.</p>
+  <h2>3 · The Gulf war's endgame — Iran buries a Supreme Leader</h2>
+  <div class="card markets">
+    <h3>Where the June war landed</h3>
+    <p>All week the running thread was whether the fragile post-war ceasefire between the US and Iran would hold. July 3–4 gave the starkest possible answer to a different question — <em>who runs Iran now</em> — as the country opened <strong>days-long funeral rites for Supreme Leader Ayatollah Ali Khamenei</strong>, killed in the June conflict, at Tehran's Grand Mosalla. His coffin was placed in the main prayer hall for a public farewell expected to run roughly <strong>July 4–9</strong>.</p>
+    <h3>The immediate diplomatic effect</h3>
     <ul>
-      <li><span class="tag warn">Saturation logic</span>Mass matters more than accuracy. Cheap drones exist to soak up interceptors so the expensive missiles arrive against a depleted defense.</li>
-      <li><span class="tag">Grid pressure</span>Ukraine reimposed nationwide rolling blackouts July 1 as extreme heat pushed demand up 25%+ — energy infrastructure is a parallel target to the cities themselves.</li>
-      <li><span class="tag warn">The interceptor question</span>The strategic worry for Kyiv and its backers isn't any one night; it's whether the supply of high-end interceptors can keep pace with barrages this size, sustained.</li>
+      <li><span class="tag warn">Pause</span>The US agreed to <strong>halt denuclearization talks for a week</strong> during the mourning period — a deliberate freeze, not a breakdown. The unresolved knots (uranium stockpiles, frozen Iranian funds, the Lebanon linkage) simply wait.</li>
+      <li><span class="tag">Optics</span>Dignitaries from <strong>China, India and Pakistan</strong> attended, a reminder of who Tehran counts as partners as it regroups.</li>
+      <li><span class="tag good">Oil</span>The war premium has <strong>fully drained</strong>: WTI sits near <strong>$68</strong>, down roughly 20% in two weeks — markets are pricing peace, or at least exhaustion, not escalation.</li>
     </ul>
-    <p class="takeaway">So what: "524 of 570 shot down" reads like a defensive triumph, but the barrage is designed so that even a 92% success rate leaves a lethal remainder. The real contest isn't interception rate — it's the cost-exchange ratio and whether interceptor stockpiles can outlast the drone assembly lines.</p>
+    <h3>The question no one has rehearsed</h3>
+    <p>Khamenei led Iran for over three decades. A succession forced by war, rather than managed in advance, is uncharted: the Assembly of Experts must name a successor while the security establishment, the IRGC and rival clerical factions all have stakes in the outcome. The ceasefire that ended the fighting was built around <em>his</em> Iran; whether it survives contact with a new leadership — and whether that leadership wants the nuclear talks to resume at all — is now the single most important variable in the region.</p>
+    <p class="takeaway">So what: The June war didn't just pause over a document; it removed the man who had defined Iranian strategy for a generation. The week's ceasefire question is settled for now. The harder one — what kind of Iran emerges from this funeral — is just beginning, and every barrel of oil and every stalled negotiation hangs on it.</p>
   </div>
 
   <div class="note">
-    <strong>Method &amp; caveats.</strong> These deep dives synthesize the July 1–3 reporting sweep behind today's <a href="./daily-briefing.html">daily briefing</a>, drawing on Nvidia/Huawei coverage (CNBC, Tom's Hardware), congressional reporting (CBS, NBC, PBS, Ballotpedia, CBO), and Ukraine strike reporting (Ukrainska Pravda, Kyiv Independent, CNN, Al Jazeera). Casualty tolls and market/FX figures are fast-moving and may be revised. State-media framing is labeled where relevant. Analysis is contextual, not investment, legal, or safety advice.
+    <strong>Method &amp; caveats.</strong> These deep dives were auto-compiled July 4, 2026 from a cross-section of public reporting. The OpenAI inference-efficiency figure (~50%) is a reported claim and not independently verified here; treat the market read as directional. Casualty, market, and funeral-timeline details are fast-moving and may be revised. Where outlets conflicted, the most widely corroborated figure was used. This is context, not investment or policy advice — verify against primary sources before acting.
   </div>
 
   <footer>
-    Specific Topics Deep Dive · Friday, July 3, 2026 · auto-generated by the news-check scheduled task. Back to the <a href="./daily-briefing.html">daily briefing</a> · <a href="./weekly-report.html">weekly report</a>.
+    Deep Dives · Saturday, July 4, 2026 · companion to the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Auto-generated by the news-check scheduled task.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
