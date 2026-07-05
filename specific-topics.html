@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Saturday, July 4, 2026</title>
+<title>Specific Topics Deep Dive — Monday, July 6, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -83,75 +83,71 @@
 <div class="container">
   <header>
     <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dives — Saturday, July 4, 2026</h1>
+    <h1>Deep Dives — Monday, July 6, 2026</h1>
     <div class="date">Longer-form context on the week's biggest threads · companion to the <a href="./daily-briefing.html">daily briefing</a></div>
     <div class="intro">
-      <strong>No custom topic list was supplied for this run, so today's deep dives follow the three storylines that turned a corner on July 3–4.</strong> First, the AI-efficiency shock: a single report that OpenAI can run models with roughly half the compute detonated the chip trade across Asia — and calls the whole "buy every GPU" thesis into question. Second, America at 250 — a semiquincentennial staged inside a record-breaking heat dome, where the celebration and the climate story collided in real time. Third, the endgame of June's Gulf war, as Iran buries the Supreme Leader it lost and Tehran faces a succession no one has rehearsed. Each section closes with a plain-English "so what."
+      <strong>No custom topic list was supplied for this run, so today's deep dives follow the three threads with the most road ahead this week.</strong> First, the AI-chip whipsaw — Thursday's efficiency-scare crash, Friday's V-shaped rebound, and the custom-silicon scramble (Anthropic–Samsung, Broadcom's stalled "Jalapeño") that is quietly the real story underneath the index moves. Second, the NATO summit landing in Ankara tomorrow — what allies actually decide, and why the venue matters as much as the agenda. Third, the succession no one rehearsed, as Iran buries Khamenei with his heir still unseen. Each section closes with a plain-English "so what."
       <br><br><em>Want a specific subject here instead? Drop it in <code>request.md</code> (kept local, never published) and the next run will build this page around it.</em>
     </div>
   </header>
 
-  <h2>1 · The AI-efficiency shock — when "cheaper" became bearish</h2>
+  <h2>1 · The AI-chip whipsaw — a crash, a rebound, and a silicon scramble</h2>
   <div class="card ai">
-    <h3>The report that moved a continent</h3>
-    <p>The biggest market event of the day started as good news for one company. A report circulated that <strong>OpenAI has engineered software cutting AI inference compute by roughly 50%</strong> — meaning the same models could run on about half the hardware. For OpenAI, that is a margin and a moat. For the companies that <em>sell</em> the hardware, it read as a demand warning, and Asia's chip-heavy indices took the hit within hours.</p>
+    <h3>Two days that flipped the trade twice</h3>
+    <p>Last week the AI-chip trade got its first real scare and its first real relief in the span of 48 hours. On <strong>Thursday</strong>, a report that <strong>OpenAI had engineered a way to cut AI inference compute by ~50%</strong> — reportedly shrinking the GPUs needed to serve ChatGPT from tens of thousands to hundreds — read as a demand warning and gutted Asia's chip-heavy indices. On <strong>Friday</strong>, the same names roared back on a different report: that <strong>Anthropic is in talks with Samsung</strong> for a custom AI chip. Same stocks, opposite direction, one day apart.</p>
     <table>
-      <tr><th>Market</th><th>July 3 move</th><th>Driver</th></tr>
-      <tr><td>KOSPI (Korea)</td><td>−7.9% → ~7,648</td><td>SK Hynix −14.6%, Samsung −9.1%</td></tr>
-      <tr><td>Nikkei 225 (Japan)</td><td>−2.5% → ~68,733</td><td>Chip &amp; equipment names</td></tr>
-      <tr><td>USD / JPY</td><td>~¥162.6 (40-yr low area)</td><td>Intervention watch layered on top</td></tr>
+      <tr><th>Market</th><th>Thu (scare)</th><th>Fri (rebound)</th></tr>
+      <tr><td>KOSPI (Korea)</td><td>−7.9%</td><td>+5.76% → 8,088</td></tr>
+      <tr><td>SK Hynix</td><td>−14.6%</td><td>+10.9%</td></tr>
+      <tr><td>Samsung Elec.</td><td>−9.1%</td><td>+8.2%</td></tr>
+      <tr><td>Nikkei 225 (Japan)</td><td>−2.5%</td><td>~+1.5%</td></tr>
     </table>
-    <h3>Why the reaction was so violent</h3>
-    <p>The AI trade of the last two years rested on a simple assumption: demand for accelerators and high-bandwidth memory (HBM) would compound as models scaled. Korea's market is unusually exposed to that bet — <strong>Samsung and SK Hynix dominate the index</strong> to the point that Goldman Sachs estimates each one-percentage-point shift in their combined weight can trigger <strong>~$2 billion of foreign selling</strong>. So an efficiency story that questions unit demand doesn't just ding two stocks; it moves the whole tape.</p>
-    <h3>The counter-argument: Jevons, not doom</h3>
-    <p>Efficiency has historically <em>increased</em> total consumption of a resource, not shrunk it — the Jevons paradox. Cheaper inference could unlock far more AI usage (agents, always-on assistants, real-time video), soaking up any freed capacity and then some. The same week also delivered the <strong>OpenAI–Nvidia 10-gigawatt partnership</strong> (Nvidia investing up to $100B, first GW on the Vera Rubin platform in H2 2026) — hardly the behavior of a company expecting to need fewer chips. And OpenAI's own custom inference chip, <strong>"Jalapeño"</strong> (built with Broadcom, pitched on performance-per-watt), suggests the constraint it's optimizing is cost-at-scale, not scarcity.</p>
-    <h3>What to verify before trusting the move</h3>
+    <h3>Why the moves were so violent</h3>
+    <p>Korea's market is unusually exposed to the AI-hardware bet: <strong>Samsung and SK Hynix dominate the index</strong> to the point that Goldman Sachs estimates each one-percentage-point shift in their combined weight can trigger <strong>~$2 billion of foreign flow</strong>. So a story that questions unit demand for memory and GPUs doesn't just move two stocks — it moves the whole tape, in both directions. The buy-side rebound was strong enough to trip a <strong>"sidecar" trading halt</strong> in Seoul.</p>
+    <h3>The real story: everyone wants their own chip</h3>
+    <p>Underneath the index noise is a structural shift — the biggest AI labs are trying to <em>escape</em> dependence on merchant GPUs by designing custom silicon:</p>
     <ul>
-      <li><span class="tag warn">Sourcing</span>The "~50%" figure is a <strong>reported</strong> claim, not a published, peer-reviewed benchmark. A one-day 8% index crash on a single unverified number is itself a signal of how crowded the trade had become.</li>
-      <li><span class="tag">HBM pricing</span>Watch spot and contract HBM prices in the coming weeks — the cleanest read on whether real demand is softening or traders are just de-risking.</li>
-      <li><span class="tag tech">Capex guidance</span>~$650B of 2026 hyperscaler capex is the number under the whole edifice. If any major buyer trims guidance citing efficiency, the selloff was early, not wrong.</li>
+      <li><span class="tag tech">Anthropic</span>In talks with <strong>Samsung</strong> (2nm process, advanced packaging) for its first custom chip; Samsung was a strategic investor in Anthropic's ~$65B raise, and Anthropic hired ex-OpenAI silicon engineer Clive Chan. <em>(TechCrunch, The Information)</em></li>
+      <li><span class="tag tech">OpenAI</span>Its Broadcom-built inference ASIC <strong>"Jalapeño"</strong> — a reticle-sized chip built in ~9 months — just hit an <strong>$18B financing snag</strong>: Broadcom will fund only the first 1.3GW phase if <strong>Microsoft commits to buying ~40% of output</strong>, and Microsoft hasn't signed amid data-center design disputes. Broadcom fell ~4% (−26% from its high). <em>(The Information, Tom's Hardware)</em></li>
+      <li><span class="tag tech">The stack</span>OpenAI is separately committed to ~10GW of Nvidia systems, ~6GW from AMD, and ~$300B with Oracle — a targeted ~$600B of capacity that the efficiency report implicitly questions.</li>
     </ul>
-    <p class="takeaway">So what: For two years "more compute" was the only trade. The market just got its first serious scare that the equation could flip — and discovered how few names it was really leaning on. Whether this is a top or a headfake hinges on one thing: does cheaper AI get used more, or just built less?</p>
+    <h3>The counter-argument: Jevons, not doom</h3>
+    <p>Efficiency has historically <em>increased</em> total consumption of a resource — the Jevons paradox. Cheaper inference could unlock far more AI usage (agents, always-on assistants, real-time video), soaking up freed capacity and then some. A company that truly expected to need fewer chips would not be simultaneously locking in gigawatts of compute and designing its own ASIC. The "~50%" figure is also a <strong>reported</strong> claim, not a published benchmark — an 8% index crash on one unverified number says more about how crowded the trade was than about proven demand destruction.</p>
+    <p class="takeaway">So what: The index whipsaw is theatre; the custom-silicon scramble is the plot. Every major lab is trying to own its own chip pipeline — which is bullish for foundries like Samsung and bearish for the assumption that Nvidia captures all the value. Watch HBM pricing and whether Microsoft signs the Jalapeño offtake; those tell you more than any single day's KOSPI print.</p>
   </div>
 
-  <h2>2 · America at 250 — a birthday inside a heat dome</h2>
-  <div class="card risk">
-    <h3>The collision</h3>
-    <p>July 4, 2026 was supposed to be a set-piece: the United States' <strong>semiquincentennial</strong>, 250 years since 1776, anchored by a Trump-aligned "Salute to America 250" on the National Mall with a <strong>~850,000-shell fireworks display across 10 sites</strong> — an explicit bid for the Guinness record for the largest show in history. Instead, the defining image of the day may be the weather map. More than <strong>110 million</strong> people sat under extreme-heat risk and <strong>150 million+</strong> under heat alerts stretching from Kansas to Maine.</p>
-    <table>
-      <tr><th>City</th><th>July 4 forecast</th><th>Context</th></tr>
-      <tr><td>Philadelphia</td><td>~103°F</td><td>Just shy of its 104°F July record</td></tr>
-      <tr><td>New York (Central Park)</td><td>~102°F</td><td>First 100°F+ since 2012</td></tr>
-      <tr><td>Washington, D.C.</td><td>Extreme-heat advisory</td><td>All-day 250th festivities adjusted</td></tr>
-    </table>
-    <h3>What the heat actually did</h3>
-    <p>This was not a backdrop; it rewrote the schedule. <strong>Philadelphia canceled its "Salute to Independence" Semiquincentennial parade</strong> — a signature event built around 250 elements representing all 50 states — and shortened the Wawa Welcome America route. Newsweek tracked a running list of America-250 events canceled or replanned nationwide. D.C.'s organizers shifted timings and Mayor Bowser issued shade-and-hydration guidance. Even the broadcast fractured: <strong>PBS declined to air the National Mall fireworks for the first time in decades</strong>, opting for Colonial Williamsburg instead — a small but telling split over how the anniversary is being staged.</p>
-    <h3>The quieter subtext</h3>
-    <p>CNN's pre-holiday coverage caught a national mood it called "the big birthday blahs" — a 250th landing in a politically raw moment, days after the Supreme Court openly split over the words of the Declaration itself in the birthright-citizenship fight. A milestone designed to project unity arrived amid record heat, contested pageantry, and a country arguing about what the founding documents mean. The fireworks will still be spectacular; the framing is doing a lot of work.</p>
-    <p class="takeaway">So what: The semiquincentennial is a genuine milestone — but 2026 delivered it as a split-screen. On one side, the largest fireworks show ever attempted; on the other, cities telling residents to stay indoors on the nation's birthday. Both are true, and the tension between them is arguably the most 2026 thing about it.</p>
-  </div>
-
-  <h2>3 · The Gulf war's endgame — Iran buries a Supreme Leader</h2>
+  <h2>2 · NATO in Ankara — why the venue matters as much as the agenda</h2>
   <div class="card markets">
+    <h3>The set-piece</h3>
+    <p>Tomorrow the alliance's <strong>32 leaders — including Trump — convene at Erdoğan's Presidential Complex</strong> for the 36th NATO summit (July 7–8), only the <strong>second Türkiye has ever hosted</strong> (after Istanbul 2004). On paper the agenda is defense economics: reaffirming an "ironclad" Article 5, finalizing the Hague-set <strong>5%-of-GDP target</strong> (3.5% core defense + 1.5% related, by 2035), ramping defense-industrial production, and pledging roughly <strong>€70bn to Ukraine for 2026</strong>.</p>
+    <h3>Why the location is the story</h3>
+    <p>Hosting a summit is a legitimacy engine, and Erdoğan is using it at a pointed moment. Ankara has been locked down with <strong>~70,000 personnel</strong>, air defenses on alert, and a gathering ban running June 28–July 10. A pre-summit security sweep <strong>detained 209 people</strong> — including alleged ISIS and DHKP-C members, but also lawyers, an academic and a journalist — which HRW called "a crackdown ahead of the NATO summit." The optics of a warm Trump welcome, analysts note (CFR, Washington Post), lend cover just as the domestic <strong>CHP leadership crisis</strong> heads to a rival July 12 congress and Istanbul's mayor sits in jail.</p>
+    <h3>The bilateral to watch: F-35s</h3>
+    <p>The most consequential meeting may be the <strong>Trump–Erdoğan bilateral on Tuesday</strong>. Trump has dangled movement on jet engines and <strong>Türkiye's return to the F-35 program</strong> — from which Ankara was expelled after buying Russia's S-400 air-defense system. The obstacles are real: the S-400s are still in the country, and bipartisan Capitol Hill opposition persists. Erdoğan also meets Zelensky and Syria's al-Sharaa on Wednesday, positioning Türkiye as a hinge between Washington, Kyiv and post-war Damascus.</p>
+    <p class="takeaway">So what: The communiqué will be about money and Ukraine, but the summit's deeper function is leverage. Türkiye converts NATO's need for a pivotal member into cover at home and a shot at the F-35 abroad. Watch whether the F-35 carrot becomes anything concrete, or stays a carrot — and how much the detention wave shadows the leaders' photos.</p>
+  </div>
+
+  <h2>3 · Iran buries Khamenei — the succession no one rehearsed</h2>
+  <div class="card risk">
     <h3>Where the June war landed</h3>
-    <p>All week the running thread was whether the fragile post-war ceasefire between the US and Iran would hold. July 3–4 gave the starkest possible answer to a different question — <em>who runs Iran now</em> — as the country opened <strong>days-long funeral rites for Supreme Leader Ayatollah Ali Khamenei</strong>, killed in the June conflict, at Tehran's Grand Mosalla. His coffin was placed in the main prayer hall for a public farewell expected to run roughly <strong>July 4–9</strong>.</p>
+    <p>The starkest legacy of June's US–Iran war is not a document but an absence. Iran is holding <strong>days-long state funeral rites (roughly July 4–9)</strong> for Supreme Leader Ayatollah <strong>Ali Khamenei</strong>, killed by a US–Israeli strike on the war's first day. Tens of thousands packed Tehran on July 5, and his body is slated to travel within Iran and to Iraq. Khamenei led the country for more than three decades; a succession forced by war, rather than managed in advance, is genuinely uncharted territory.</p>
     <h3>The immediate diplomatic effect</h3>
     <ul>
-      <li><span class="tag warn">Pause</span>The US agreed to <strong>halt denuclearization talks for a week</strong> during the mourning period — a deliberate freeze, not a breakdown. The unresolved knots (uranium stockpiles, frozen Iranian funds, the Lebanon linkage) simply wait.</li>
-      <li><span class="tag">Optics</span>Dignitaries from <strong>China, India and Pakistan</strong> attended, a reminder of who Tehran counts as partners as it regroups.</li>
-      <li><span class="tag good">Oil</span>The war premium has <strong>fully drained</strong>: WTI sits near <strong>$68</strong>, down roughly 20% in two weeks — markets are pricing peace, or at least exhaustion, not escalation.</li>
+      <li><span class="tag warn">Pause</span>The US agreed to <strong>halt denuclearization talks about a week</strong> during mourning — a deliberate freeze, not a breakdown. The unresolved knots (uranium stockpiles, frozen funds, the Lebanon linkage) simply wait. The ceasefire rests on a <strong>June 17 MOU</strong> that reopened the Strait of Hormuz for at least 60 days.</li>
+      <li><span class="tag warn">The unseen heir</span>The presumed successor, Khamenei's son <strong>Mojtaba Khamenei</strong>, had <strong>not appeared or spoken publicly</strong> as of July 5 — despite posters across Tehran and the funeral's projection of strength. A silent heir at his father's funeral is its own signal about how settled (or not) the transition really is.</li>
+      <li><span class="tag good">Oil</span>The war premium has <strong>fully drained</strong> — markets are pricing exhaustion, not escalation.</li>
     </ul>
-    <h3>The question no one has rehearsed</h3>
-    <p>Khamenei led Iran for over three decades. A succession forced by war, rather than managed in advance, is uncharted: the Assembly of Experts must name a successor while the security establishment, the IRGC and rival clerical factions all have stakes in the outcome. The ceasefire that ended the fighting was built around <em>his</em> Iran; whether it survives contact with a new leadership — and whether that leadership wants the nuclear talks to resume at all — is now the single most important variable in the region.</p>
-    <p class="takeaway">So what: The June war didn't just pause over a document; it removed the man who had defined Iranian strategy for a generation. The week's ceasefire question is settled for now. The harder one — what kind of Iran emerges from this funeral — is just beginning, and every barrel of oil and every stalled negotiation hangs on it.</p>
+    <h3>The question that decides the region</h3>
+    <p>The Assembly of Experts must now name a successor while the IRGC, rival clerical factions and a bruised security establishment all have stakes in the outcome. The ceasefire that ended the fighting was built around <em>Khamenei's</em> Iran; whether it survives contact with a new leadership — and whether that leadership even wants the nuclear talks to resume — is the single most important variable in the Middle East right now. Every stalled negotiation and every barrel of oil hangs on it.</p>
+    <p class="takeaway">So what: The war's ceasefire question is settled for the moment. The harder one — what kind of Iran emerges from this funeral, and who actually holds power when the mourning ends — is just beginning. Watch for the Assembly of Experts' timeline and the first public appearance of whoever inherits the office.</p>
   </div>
 
   <div class="note">
-    <strong>Method &amp; caveats.</strong> These deep dives were auto-compiled July 4, 2026 from a cross-section of public reporting. The OpenAI inference-efficiency figure (~50%) is a reported claim and not independently verified here; treat the market read as directional. Casualty, market, and funeral-timeline details are fast-moving and may be revised. Where outlets conflicted, the most widely corroborated figure was used. This is context, not investment or policy advice — verify against primary sources before acting.
+    <strong>Method &amp; caveats.</strong> These deep dives were auto-compiled July 6, 2026 from a cross-section of public reporting. The OpenAI inference-efficiency figure (~50%) is a reported claim and not independently verified here; treat the market read as directional. Summit outcomes (the final communiqué was still in draft), casualty and funeral-timeline details, and market/FX levels are fast-moving and may be revised. Where outlets conflicted, the most widely corroborated figure was used; state-media framing is labeled where relevant. This is context, not investment or policy advice — verify against primary sources before acting.
   </div>
 
   <footer>
-    Deep Dives · Saturday, July 4, 2026 · companion to the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Auto-generated by the news-check scheduled task.
+    Deep Dives · Monday, July 6, 2026 · companion to the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Auto-generated by the news-check scheduled task.
   </footer>
 </div>
 <script src="./tts.js" defer></script>
