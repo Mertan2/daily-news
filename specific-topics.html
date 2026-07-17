@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Monday, July 6, 2026</title>
+<title>Specific Topics Deep Dive — Friday, July 17, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -40,6 +40,8 @@
   .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
   h1 { font-size: 30px; margin: 6px 0 4px; line-height: 1.2; }
   .date { color: var(--muted); font-size: 14px; }
+  .nav { margin-top: 12px; font-size: 13px; }
+  .nav a { margin-right: 14px; }
   .intro { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin: 16px 0 0; font-size: 14px; }
   .intro strong { color: var(--highlight); }
   h2 { font-size: 22px; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
@@ -58,97 +60,196 @@
   .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
   .tag.good { background: rgba(126,231,135,0.15); color: var(--good); }
   .tag.warn { background: rgba(255,123,114,0.15); color: var(--warn); }
-  .tag.tech { background: rgba(210,168,255,0.15); color: var(--purple); }
-  .tag.sci { background: rgba(240,136,62,0.15); color: var(--highlight); }
-  @media (prefers-color-scheme: light) {
-    .tag { background: #e3edff; }
-    .tag.good { background: #e3f4e8; }
-    .tag.warn { background: #ffe5e5; }
-    .tag.tech { background: #efe3ff; }
-    .tag.sci { background: #f7ebd4; }
+  .tag.purple { background: rgba(210,168,255,0.15); color: var(--purple); }
+  .pull {
+    border-left: 3px solid var(--highlight);
+    background: var(--panel-2);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    margin: 14px 0;
+    font-size: 14px;
   }
-  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
-  th, td { padding: 6px 9px; text-align: left; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-  .note { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 22px 0 0; font-size: 12.5px; color: var(--muted); }
-  footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
-  .takeaway { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 8px; border-top: 1px dotted var(--border); padding-top: 8px; }
-  @media (max-width: 600px) {
-    h1 { font-size: 25px; }
-    .container { padding: 22px 16px 48px; }
+  .caution {
+    background: rgba(255, 123, 114, 0.07);
+    border: 1px solid rgba(255, 123, 114, 0.3);
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 12px 0;
   }
+  .caution strong { color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .tablewrap { overflow-x: auto; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
+  td.dn { color: var(--warn); }
+  td.up { color: var(--good); }
+  .src { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="container">
   <header>
-    <div class="eyebrow">Specific Topics · Deep Dive</div>
-    <h1>Deep Dives — Monday, July 6, 2026</h1>
-    <div class="date">Longer-form context on the week's biggest threads · companion to the <a href="./daily-briefing.html">daily briefing</a></div>
+    <div class="eyebrow">Deep Dives</div>
+    <h1>Specific Topics — Friday, July 17, 2026</h1>
+    <div class="date">Three threads worth more than a headline, followed across the week.</div>
+    <div class="nav">
+      <a href="index.html">← All reports</a>
+      <a href="daily-briefing.html">Daily briefing</a>
+      <a href="weekly-report.html">Weekly report</a>
+    </div>
     <div class="intro">
-      <strong>No custom topic list was supplied for this run, so today's deep dives follow the three threads with the most road ahead this week.</strong> First, the AI-chip whipsaw — Thursday's efficiency-scare crash, Friday's V-shaped rebound, and the custom-silicon scramble (Anthropic–Samsung, Broadcom's stalled "Jalapeño") that is quietly the real story underneath the index moves. Second, the NATO summit landing in Ankara tomorrow — what allies actually decide, and why the venue matters as much as the agenda. Third, the succession no one rehearsed, as Iran buries Khamenei with his heir still unseen. Each section closes with a plain-English "so what."
-      <br><br><em>Want a specific subject here instead? Drop it in <code>request.md</code> (kept local, never published) and the next run will build this page around it.</em>
+      <strong>No <code>request.md</code> was present for this run</strong>, so no topics were specified. Rather than invent interests, this edition continues the standing threads from the last deep-dive edition (July 6) that actually moved — <strong>the AI-chip trade</strong> and <strong>Iran</strong> — and adds the thread that dominated today's sweep: <strong>the splitting of AI governance into blocs</strong>. The July 6 NATO-in-Ankara dive is retired; that summit concluded on July 8 with the Ankara Declaration. Drop topics into <code>request.md</code> to steer this page.
     </div>
   </header>
 
-  <h2>1 · The AI-chip whipsaw — a crash, a rebound, and a silicon scramble</h2>
-  <div class="card ai">
-    <h3>Two days that flipped the trade twice</h3>
-    <p>Last week the AI-chip trade got its first real scare and its first real relief in the span of 48 hours. On <strong>Thursday</strong>, a report that <strong>OpenAI had engineered a way to cut AI inference compute by ~50%</strong> — reportedly shrinking the GPUs needed to serve ChatGPT from tens of thousands to hundreds — read as a demand warning and gutted Asia's chip-heavy indices. On <strong>Friday</strong>, the same names roared back on a different report: that <strong>Anthropic is in talks with Samsung</strong> for a custom AI chip. Same stocks, opposite direction, one day apart.</p>
-    <table>
-      <tr><th>Market</th><th>Thu (scare)</th><th>Fri (rebound)</th></tr>
-      <tr><td>KOSPI (Korea)</td><td>−7.9%</td><td>+5.76% → 8,088</td></tr>
-      <tr><td>SK Hynix</td><td>−14.6%</td><td>+10.9%</td></tr>
-      <tr><td>Samsung Elec.</td><td>−9.1%</td><td>+8.2%</td></tr>
-      <tr><td>Nikkei 225 (Japan)</td><td>−2.5%</td><td>~+1.5%</td></tr>
-    </table>
-    <h3>Why the moves were so violent</h3>
-    <p>Korea's market is unusually exposed to the AI-hardware bet: <strong>Samsung and SK Hynix dominate the index</strong> to the point that Goldman Sachs estimates each one-percentage-point shift in their combined weight can trigger <strong>~$2 billion of foreign flow</strong>. So a story that questions unit demand for memory and GPUs doesn't just move two stocks — it moves the whole tape, in both directions. The buy-side rebound was strong enough to trip a <strong>"sidecar" trading halt</strong> in Seoul.</p>
-    <h3>The real story: everyone wants their own chip</h3>
-    <p>Underneath the index noise is a structural shift — the biggest AI labs are trying to <em>escape</em> dependence on merchant GPUs by designing custom silicon:</p>
-    <ul>
-      <li><span class="tag tech">Anthropic</span>In talks with <strong>Samsung</strong> (2nm process, advanced packaging) for its first custom chip; Samsung was a strategic investor in Anthropic's ~$65B raise, and Anthropic hired ex-OpenAI silicon engineer Clive Chan. <em>(TechCrunch, The Information)</em></li>
-      <li><span class="tag tech">OpenAI</span>Its Broadcom-built inference ASIC <strong>"Jalapeño"</strong> — a reticle-sized chip built in ~9 months — just hit an <strong>$18B financing snag</strong>: Broadcom will fund only the first 1.3GW phase if <strong>Microsoft commits to buying ~40% of output</strong>, and Microsoft hasn't signed amid data-center design disputes. Broadcom fell ~4% (−26% from its high). <em>(The Information, Tom's Hardware)</em></li>
-      <li><span class="tag tech">The stack</span>OpenAI is separately committed to ~10GW of Nvidia systems, ~6GW from AMD, and ~$300B with Oracle — a targeted ~$600B of capacity that the efficiency report implicitly questions.</li>
-    </ul>
-    <h3>The counter-argument: Jevons, not doom</h3>
-    <p>Efficiency has historically <em>increased</em> total consumption of a resource — the Jevons paradox. Cheaper inference could unlock far more AI usage (agents, always-on assistants, real-time video), soaking up freed capacity and then some. A company that truly expected to need fewer chips would not be simultaneously locking in gigawatts of compute and designing its own ASIC. The "~50%" figure is also a <strong>reported</strong> claim, not a published benchmark — an 8% index crash on one unverified number says more about how crowded the trade was than about proven demand destruction.</p>
-    <p><strong>Update — Monday, July 6:</strong> the rebound held and broadened. The <strong>KOSPI added another 2.71%</strong> and the <strong>Nikkei +0.73%</strong>, with strategists saying the move now looks like a genuine recovery rather than a technical bounce — new "floors" are cited near 8,000 (KOSPI) and 70,000 (Nikkei), and buyers are front-running SpaceX's July 7 Nasdaq-100 inclusion. Wall Street reopened firmer (Dow +1.14% to 52,900). Two sessions of gains don't retire the bear case, but they blunt the "unverified ~50% number = demand cliff" read.</p>
-    <p class="takeaway">So what: The index whipsaw is theatre; the custom-silicon scramble is the plot. Every major lab is trying to own its own chip pipeline — which is bullish for foundries like Samsung and bearish for the assumption that Nvidia captures all the value. Watch HBM pricing and whether Microsoft signs the Jalapeño offtake; those tell you more than any single day's KOSPI print.</p>
-  </div>
+  <!-- ===================== 1 ===================== -->
+  <h2>1 · The AI trade breaks on good news</h2>
 
-  <h2>2 · NATO in Ankara — why the venue matters as much as the agenda</h2>
   <div class="card markets">
-    <h3>The set-piece</h3>
-    <p>Tomorrow the alliance's <strong>32 leaders — including Trump — convene at Erdoğan's Presidential Complex</strong> for the 36th NATO summit (July 7–8), only the <strong>second Türkiye has ever hosted</strong> (after Istanbul 2004). On paper the agenda is defense economics: reaffirming an "ironclad" Article 5, finalizing the Hague-set <strong>5%-of-GDP target</strong> (3.5% core defense + 1.5% related, by 2035), ramping defense-industrial production, and pledging roughly <strong>€70bn to Ukraine for 2026</strong>.</p>
-    <h3>Why the location is the story</h3>
-    <p>Hosting a summit is a legitimacy engine, and Erdoğan is using it at a pointed moment. Ankara has been locked down with <strong>~70,000 personnel</strong>, air defenses on alert, and a gathering ban running June 28–July 10. A pre-summit security sweep <strong>detained 209 people</strong> — including alleged ISIS and DHKP-C members, but also lawyers, an academic and a journalist — which HRW called "a crackdown ahead of the NATO summit." The optics of a warm Trump welcome, analysts note (CFR, Washington Post), lend cover just as the domestic <strong>CHP leadership crisis</strong> heads to a rival July 12 congress and Istanbul's mayor sits in jail.</p>
-    <h3>The bilateral to watch: F-35s</h3>
-    <p>The most consequential meeting may be the <strong>Trump–Erdoğan bilateral on Tuesday</strong>. Trump has dangled movement on jet engines and <strong>Türkiye's return to the F-35 program</strong> — from which Ankara was expelled after buying Russia's S-400 air-defense system. The obstacles are real: the S-400s are still in the country, and bipartisan Capitol Hill opposition persists. Erdoğan also meets Zelensky and Syria's al-Sharaa on Wednesday, positioning Türkiye as a hinge between Washington, Kyiv and post-war Damascus.</p>
-    <p class="takeaway">So what: The communiqué will be about money and Ukraine, but the summit's deeper function is leverage. Türkiye converts NATO's need for a pivotal member into cover at home and a shot at the F-35 abroad. Watch whether the F-35 carrot becomes anything concrete, or stays a carrot — and how much the detention wave shadows the leaders' photos.</p>
-  </div>
+    <h3>What changed this week</h3>
+    <p>For two weeks the AI selloff had a narrative. In early July it was an OpenAI inference-efficiency report; on July 7 it was a Reuters scoop that <strong>DeepSeek is building its own inference chip</strong>, which sent the KOSPI down 7.6% into a circuit-breaker. Both were stories about the <em>moat</em> — about whether Nvidia and the HBM makers could keep charging what they charge.</p>
+    <p>This week the narrative stopped being necessary. On July 16, <strong>TSMC reported the best quarter in its history</strong>:</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Metric</th><th>Q2 2026</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>Net income</td><td>NT$706.56bn (~$22bn)</td><td class="up">+77.4% y/y — 5th straight record</td></tr>
+          <tr><td>Revenue</td><td>NT$1.27tn (US$40.20bn)</td><td class="up">+36% y/y</td></tr>
+          <tr><td>2026 capex guidance</td><td>$60–64bn</td><td class="up">raised from $52–56bn</td></tr>
+          <tr><td>Full-year revenue growth</td><td>"slightly above 40%"</td><td class="up">guidance raised</td></tr>
+          <tr><td>US commitment</td><td>$265bn total</td><td class="up">+$100bn for Arizona</td></tr>
+          <tr><td><strong>Share price reaction</strong></td><td><strong>−4%+</strong></td><td class="dn">the tell</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>CEO C.C. Wei said AI demand stays strong through 2030 and put another $100bn behind that claim. The market sold it anyway, and the selling propagated everywhere semiconductors trade.</p>
 
-  <h2>3 · Iran buries Khamenei — the succession no one rehearsed</h2>
-  <div class="card risk">
-    <h3>Where the June war landed</h3>
-    <p>The starkest legacy of June's US–Iran war is not a document but an absence. Iran is holding <strong>days-long state funeral rites (roughly July 4–9)</strong> for Supreme Leader Ayatollah <strong>Ali Khamenei</strong>, killed by a US–Israeli strike on the war's first day. Tens of thousands packed Tehran on July 5, and his body is slated to travel within Iran and to Iraq. Khamenei led the country for more than three decades; a succession forced by war, rather than managed in advance, is genuinely uncharted territory.</p>
-    <h3>The immediate diplomatic effect</h3>
+    <h3>The damage, in one day</h3>
     <ul>
-      <li><span class="tag warn">Pause</span>The US agreed to <strong>halt denuclearization talks about a week</strong> during mourning — a deliberate freeze, not a breakdown. The unresolved knots (uranium stockpiles, frozen funds, the Lebanon linkage) simply wait. The ceasefire rests on a <strong>June 17 MOU</strong> that reopened the Strait of Hormuz for at least 60 days.</li>
-      <li><span class="tag warn">The unseen heir</span>The presumed successor, Khamenei's son <strong>Mojtaba Khamenei</strong>, had <strong>not appeared or spoken publicly</strong> as of July 5 — despite posters across Tehran and the funeral's projection of strength. A silent heir at his father's funeral is its own signal about how settled (or not) the transition really is.</li>
-      <li><span class="tag good">Oil</span>The war premium has <strong>fully drained</strong> — markets are pricing exhaustion, not escalation.</li>
+      <li><span class="tag warn">Tokyo</span><strong>Nikkei −4.03%</strong> to 64,140 — briefly down 4,100+ points intraday, worst level in a month, <strong>−6.4% on the week</strong>. Tokyo Electron −8.2%, Advantest −7.2%, SoftBank −9%, Taiyo Yuden −11.9%.</li>
+      <li><span class="tag warn">Kioxia</span>Down as much as 16% Friday, now <strong>−52% from its June peak</strong> — at least <strong>¥30tn (~$185bn)</strong> erased. This is a stock that rose <strong>600%</strong> from the start of 2026 and briefly passed Toyota as Japan's most valuable company in mid-June. It is now fourth. A Texas jury separately ordered it to pay Viasat <strong>$229m</strong> over a memory patent.</li>
+      <li><span class="tag warn">Mainland China</span>Shanghai Composite −1.85% to 3,882.4 and Shenzhen −1.97% to 14,488.7 — <strong>both three-month lows</strong>. Cambricon −5.06%, NAURA −5.37%, SMIC −1.2%. Hong Kong diverged, Hang Seng +1.4%.</li>
+      <li><span class="tag warn">US</span>Nasdaq and S&amp;P fell as tech turned negative; Micron and the SMH ETF led semis lower.</li>
+      <li><span class="tag">Korea</span>The <strong>BOK's surprise 25bp hike to 2.75%</strong> — its first in 3.5 years — pressured Samsung and SK Hynix and exported the selling into Japanese names.</li>
     </ul>
-    <h3>The question that decides the region</h3>
-    <p>The Assembly of Experts must now name a successor while the IRGC, rival clerical factions and a bruised security establishment all have stakes in the outcome. The ceasefire that ended the fighting was built around <em>Khamenei's</em> Iran; whether it survives contact with a new leadership — and whether that leadership even wants the nuclear talks to resume — is the single most important variable in the Middle East right now. Every stalled negotiation and every barrel of oil hangs on it.</p>
-    <p class="takeaway">So what: The war's ceasefire question is settled for the moment. The harder one — what kind of Iran emerges from this funeral, and who actually holds power when the mourning ends — is just beginning. Watch for the Assembly of Experts' timeline and the first public appearance of whoever inherits the office.</p>
+
+    <div class="pull">
+      <strong>Why this is a different animal.</strong> A moat story is falsifiable: if DeepSeek's chip underdelivers, the trade recovers. What happened this week is <em>multiple compression</em> — the market lowering what it will pay per dollar of AI earnings, while conceding the earnings are real and growing 77%. There is no scoop to disprove, no product to benchmark. That makes it much harder to call a bottom, because nothing has to be wrong for it to continue.
+    </div>
+
+    <h3>The counterweight: governments are buying the dip at national scale</h3>
+    <p>The same week markets punished AI, <strong>Japan committed up to ¥1 trillion (~$6.1bn) over five years</strong> to it. Nvidia and <strong>Noetra</strong> — founded by SoftBank Corp., Sony, NEC and Honda, with 44 investing companies — will build a <strong>140MW AI factory with 27,500 Rubin GPUs and 13,750 Vera CPUs</strong>, the compute base for METI's <strong>FRONTia</strong> physical-AI program (¥387.3bn in year one, via a June 30 NEDO tender with AIST). Japan's AI Robotics Strategy targets <strong>30%+ of the global AI robotics market by 2040</strong>, a $133bn prize.</p>
+    <p>Two readings, and this page does not know which is right:</p>
+    <ul>
+      <li><strong>Prescient.</strong> State capital is patient in a way public markets are not. If physical AI and robotics are a 2030s market, a five-year program does not care about a July drawdown — and buys compute cheaper for it.</li>
+      <li><strong>Badly timed.</strong> Japan is levering into AI at 30-year-high bond yields (10-year JGB at 2.87–2.90%) against a ¥370tn investment strategy the bond market is already disciplining. If AI capex is what compresses, the state bought the top with borrowed money.</li>
+    </ul>
+    <p>Rapidus adds a third data point: President Atsuyoshi Koike said on July 9 it will price 2nm chips <strong>at or below TSMC's</strong> (benchmarked to ~¥3–3.5m/wafer) ahead of 2027 mass production in Chitose. Everyone is still building.</p>
+
+    <h3>What would settle it</h3>
+    <ul>
+      <li><strong>Monday's Asian open.</strong> Does Tokyo follow through on −4%, or was Friday a liquidity event?</li>
+      <li><strong>HBM pricing and hyperscaler capex guidance.</strong> The cleanest read on whether demand or the multiple is moving.</li>
+      <li><strong>Whether TSMC's guidance survives contact.</strong> "Slightly above 40%" growth and $60–64bn capex is a falsifiable claim with a date on it.</li>
+      <li><strong>DeepSeek's raise.</strong> Reportedly seeking ≥RMB 480bn (~$71bn) pre-money with an IPO possibly filing this year. If a company can raise at $71bn while the trade sells off, private and public markets have decoupled on AI.</li>
+    </ul>
+    <div class="caution"><strong>Sourcing note:</strong> The DeepSeek valuation and IPO timeline are attributed to unnamed people familiar; DeepSeek has not confirmed. US index percentages for July 16 come from search-index summaries rather than fully retrieved articles. The Nikkei close is reported as both 64,140.12 and 64,141.12, with the intraday drop given variously as "4.4%" and "more than 5%."</div>
+    <div class="src">Sources: <a href="https://finance.yahoo.com/markets/stocks/articles/tsmc-q2-2026-earnings-record-112109987.html">TSMC Q2 via Yahoo Finance</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-17/chipmaker-kioxia-s-market-value-halves-from-peak-on-ai-selloff">Bloomberg (Kioxia)</a> · <a href="https://www.japantimes.co.jp/business/2026/07/17/markets/nikkei-index-drop-july/">Japan Times</a> · <a href="https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure">NVIDIA</a> · <a href="https://www.brecorder.com/news/amp/40430209">Business Recorder</a> · <a href="https://www.cnbc.com/2026/07/16/bok-interest-rate-monetary-policy-markets-kospi-skhynix.html">CNBC (BOK)</a></div>
   </div>
 
-  <div class="note">
-    <strong>Method &amp; caveats.</strong> These deep dives were auto-compiled July 6, 2026 from a cross-section of public reporting. The OpenAI inference-efficiency figure (~50%) is a reported claim and not independently verified here; treat the market read as directional. Summit outcomes (the final communiqué was still in draft), casualty and funeral-timeline details, and market/FX levels are fast-moving and may be revised. Where outlets conflicted, the most widely corroborated figure was used; state-media framing is labeled where relevant. This is context, not investment or policy advice — verify against primary sources before acting.
+  <!-- ===================== 2 ===================== -->
+  <h2>2 · Iran — from a shredded ceasefire to a named red line</h2>
+
+  <div class="card risk">
+    <h3>Where this thread stood</h3>
+    <p>The July 6 edition of this page asked one question about Iran: who succeeds Khamenei, killed at the war's outset on February 28, whose seven-day state funeral (July 3–9) ended with presumed successor <strong>Mojtaba Khamenei still not appearing in public</strong>. That question is still open — and the war has moved on without answering it.</p>
+
+    <h3>The escalation ladder, two weeks</h3>
+    <ul>
+      <li><span class="tag">Jul 7</span>Iran's IRGC <strong>fired missiles at commercial ships in the Strait of Hormuz</strong>, including the Qatari LNG tanker <em>Al-Rekayyat</em> — significant damage, no casualties. The US revoked the license authorizing Iranian oil sales; Brent spiked toward $76.</li>
+      <li><span class="tag">Jul 8</span><strong>US Central Command struck 80+ targets</strong> — air defenses, C2, coastal radar, anti-ship missiles and <strong>60+ IRGC boats</strong> in and near the strait. Declared complete.</li>
+      <li><span class="tag warn">Jul 15</span>Turkish reporting says the ceasefire — the "Ilamabad Accord" — <strong>collapsed before its term expired</strong>. CENTCOM announced the latest wave of strikes concluded at 21:00.</li>
+      <li><span class="tag warn">Jul 16</span>The US <strong>expanded strikes northward toward Tehran</strong> and fired on a ship said to be breaching the naval blockade. Iran reported <strong>35+ killed, 300+ wounded</strong>. Targets: missile production and space facilities in Semnan, Greater Tunb Island, bridges and a railway junction near Bandar Abbas, a barracks in Sistan and Baluchestan. Iran retaliated against US allies in the region. Trump said a peace deal remained possible.</li>
+    </ul>
+
+    <div class="pull">
+      IRGC spokesman Col. Ebrahim Zolfaghari, on the Strait of Hormuz: <strong>"This is Iran's invincible red line."</strong> Iran has already fired on shipping there once this month. The question is whether a stated red line is a threat or a description of what it has decided to do.
+    </div>
+
+    <h3>The strange part: oil is not panicking</h3>
+    <p>On July 16, as strikes reached toward Tehran, <strong>WTI slipped 0.21% to $79.43 and Brent fell 0.49% to $84.53</strong>. Elevated, near recent highs — but falling, on the day the campaign escalated. Either the market believes the strait stays open, or it believes the blockade is doing its work, or it is not pricing the tail. Whichever it is, this is the cheapest available signal that the consensus expects containment, and it is the first thing that would break if that's wrong.</p>
+
+    <h3>Turkey is the exposed NATO member</h3>
+    <p>Hürriyet Daily News led with "US strikes Iran as Tehran warns of Mideast reprisals" and "US-Israel rift widens as Vance steps up criticism." Ankara's position is uncomfortable by geography: a NATO member bordering the war, hosting a COP presidency and a Cyprus process, with a currency at 47.05/$ and 32.11% inflation that an oil shock would worsen directly.</p>
+    <div class="caution"><strong>Unconfirmed:</strong> Reporting that Turkey's MFA re-summoned Iran's ambassador Mohammad Hasan Habibollahzadeh, and that Fidan warned Iran to direct no further missiles at Turkey, reached this page via aggregator summaries — not a primary MFA statement. The strikes and ceasefire collapse are corroborated by Hürriyet Daily News and Türkiye Gazetesi; the Turkey-specific diplomatic detail is <strong>not treated as established</strong>. A separate claim that Türkiye will take the naval component of Ukraine security guarantees appeared only on a Russian-linked aggregator and is likewise unconfirmed.</div>
+
+    <h3>What decides the next two weeks</h3>
+    <ul>
+      <li><strong>Hormuz.</strong> Does Iran act on the red line? A single successful strike on a tanker reprices global energy and, through it, every central bank decision on this site's calendar.</li>
+      <li><strong>Succession.</strong> Mojtaba's continued absence is now five months old. A regime that cannot show its leader may not be able to make a durable deal — or to climb down.</li>
+      <li><strong>Whether "a deal is possible" means anything.</strong> Trump says so while the campaign expands. Nuclear talks have been paused since early July.</li>
+      <li><strong>The US–Israel rift.</strong> Flagged by Turkish front pages as widening, with Vance escalating criticism. An underreported variable in Western coverage.</li>
+    </ul>
+    <div class="src">Sources: <a href="https://www.pbs.org/newshour/world/u-s-expands-attacks-on-iran-which-calls-strait-of-hormuz-a-red-line-as-it-strikes-back">PBS NewsHour</a> · <a href="https://www.hurriyetdailynews.com/">Hürriyet Daily News</a> · <a href="https://www.turkiyegazetesi.com.tr/dunya/abd-vurdu-iran-misillemeye-gecti-mutabakat-ortadan-kalkti-1803327">Türkiye Gazetesi</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-16-2026">TheStreet (oil)</a></div>
+  </div>
+
+  <!-- ===================== 3 ===================== -->
+  <h2>3 · AI governance splits into blocs — in 24 hours</h2>
+
+  <div class="card ai">
+    <h3>Two announcements, one day apart, pointing opposite ways</h3>
+    <p>This is new to these pages, and it earned its place: on July 16 and 17 the world produced two incompatible institutional answers to "who governs AI," neither of which acknowledges the other.</p>
+
+    <h3><span class="tag purple">Shanghai</span>The World AI Cooperation Organization</h3>
+    <p>On <strong>July 16, 29 countries signed the founding agreement</strong> for WAICO — a genuine intergovernmental body, headquartered in Shanghai. Signatories include Russia, Belarus, Serbia, Cuba, Brazil and Venezuela, plus <strong>10 African and 12 Asian states</strong>. Absent: <strong>the United States and every major EU economy</strong>.</p>
+    <p>On <strong>July 17, Xi gave his first-ever keynote</strong> at the World AI Conference. The content is worth reading precisely:</p>
+    <ul>
+      <li>China would "encourage <strong>open source, openness, collaboration and sharing</strong>."</li>
+      <li>Governance should be "people-centered" and stay <strong>"secure and controllable."</strong></li>
+      <li>A warning against any country putting <strong>its own security above others'</strong>.</li>
+      <li><strong>5,000 AI training and seminar places</strong> for developing countries over five years; cooperation frameworks with ASEAN and the League of Arab States.</li>
+    </ul>
+    <p>The offer is coherent and, to a middle-income country, attractive: open weights, training, no lectures, a seat at a table that exists. "Secure and controllable" is the load-bearing phrase — it is simultaneously a safety claim and a sovereignty claim, and it is doing a lot of work.</p>
+
+    <h3><span class="tag">Brussels</span>The DMA turns on Google</h3>
+    <p>On <strong>July 16 the Commission issued two binding DMA specification decisions</strong> requiring Google to:</p>
+    <ul>
+      <li>Give <strong>third-party AI assistants the same Android access Gemini enjoys</strong> — including voice activation and in-app actions like booking a taxi.</li>
+      <li><strong>Share anonymised ranking, query, click and view data from Google Search</strong> with rival search engines and AI chatbots, <strong>beginning by January 2027</strong>, with a formula set for pricing that data.</li>
+    </ul>
+    <p>Google's objection — that this "risks undermining vital privacy and security guardrails for millions of Europeans" — is the mirror image of Beijing's "secure and controllable": both invoke safety as grounds for control. Europe's theory is that competition is the safeguard and incumbency the risk. It is the most consequential DMA enforcement yet and a template for regulating AI <em>distribution</em> rather than AI models.</p>
+
+    <div class="pull">
+      <strong>The asymmetry.</strong> China is building an institution and inviting members. Europe is writing rules and enforcing them on a company. The US is doing neither this week — it is <a href="daily-briefing.html">capping Chinese journalists' visas at 90 days</a> and alleging election theft. One of these is a strategy for the countries that haven't chosen yet.
+    </div>
+
+    <h3>The evidence that this isn't abstract</h3>
+    <p>A <strong>Meta Oversight Board study</strong> released July 16 tested 10 commercial LLMs from Meta, Anthropic, OpenAI and others, and found them <strong>significantly more likely to refuse generating political criticism of restrictive leaders</strong> — Thailand's king, Saudi Arabia's crown prince, China's leader — than of permissive governments.</p>
+    <ul>
+      <li><strong>Claude</strong> declined to criticize Thailand's king and Saudi Arabia's crown prince, but complied for Trump and King Charles III.</li>
+      <li><strong>ChatGPT</strong> gave different answers about Chinese democracy depending on whether it was prompted in English or Chinese.</li>
+    </ul>
+    <p>The Board's warning: developers risk building "AI infrastructure that... has the effect of <strong>extending illegitimate restrictions on freedom of expression globally</strong>." No treaty required — the models already encode a geography of what can be said. Whoever sets the defaults sets the speech norms, which is exactly what both WAICO and the DMA are arguing about.</p>
+
+    <h3>The adjacent fact that makes it concrete</h3>
+    <p>On July 15 the <strong>Cyberspace Administration of China cleared seven on-device AI models</strong> for the first time — Apple Intelligence, Samsung Galaxy AI, Huawei, Xiaomi, Oppo, Vivo, ZTE's Nubia. To ship in China, <strong>Apple Intelligence runs on Alibaba's Tongyi Qwen</strong>, not OpenAI or Google. The partnership was disclosed in February 2025 and only now cleared. That is what jurisdictional AI looks like in practice: the same phone, a different mind, depending on the border.</p>
+
+    <h3>What to watch</h3>
+    <ul>
+      <li><strong>Which middle powers join WAICO.</strong> The founding 29 are largely aligned already. The signal is the 30th through 50th — an India, an Indonesia, a Brazil-adjacent swing state.</li>
+      <li><strong>Whether Google litigates</strong> or complies by the January 2027 data-sharing deadline. Compliance sets a template; litigation sets a timeline.</li>
+      <li><strong>Whether the US builds any counter-forum</strong> — or continues to treat AI diplomacy as a trade-restriction question.</li>
+      <li><strong>Pew's finding as backdrop:</strong> China now polls more favorably than the US in <strong>25 of 36</strong> countries, with median confidence in Xi <strong>10 points</strong> above Trump. WAICO is being offered into that.</li>
+    </ul>
+    <div class="caution"><strong>Attribution:</strong> WAICO's framing as broad global buy-in is Chinese state-media emphasis; the 29-member list is independently confirmed by Reuters. Western outlets frame WAICO explicitly as a counter-bloc. The Pew data is independent, though Chinese state media amplified it heavily — treat the framing, not the numbers, as the state-media layer.</div>
+    <div class="src">Sources: <a href="https://www.npr.org/2026/07/17/nx-s1-5897285/chinas-xi-calls-for-step-up-of-global-effort-in-ai-as-us-curbs-squeeze-chinas-tech-access">NPR</a> · <a href="https://www.scmp.com/tech/tech-war/article/3360870/top-takeaways-xi-jinpings-opening-address-world-ai-conference-shanghai">SCMP</a> · <a href="https://www.usnews.com/news/world/articles/2026-07-16/twenty-nine-countries-sign-agreement-to-establish-global-ai-cooperation-body">Reuters via US News</a> · <a href="https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en">European Commission</a> · <a href="https://www.pbs.org/newshour/world/ai-chatbots-at-risk-of-fueling-government-restrictions-on-online-speech-new-study-says">PBS NewsHour (Oversight Board)</a> · <a href="https://www.caixinglobal.com/2026-07-16/china-clears-mobile-based-ai-models-opening-path-for-apple-intelligence-in-china-102464642.html">Caixin Global</a> · <a href="https://www.pewresearch.org/global/2026/07/15/people-in-many-countries-now-view-china-more-positively-than-the-u-s/">Pew Research Center</a></div>
   </div>
 
   <footer>
-    Deep Dives · Monday, July 6, 2026 · companion to the <a href="./daily-briefing.html">daily briefing</a> and <a href="./weekly-report.html">weekly report</a>. Auto-generated by the news-check scheduled task.
+    Compiled Friday, July 17, 2026 by the news-check scheduled task. Topics were not specified — no <code>request.md</code> was present — so these continue the standing threads from the July 6 edition that developed, plus the dominant thread of today's sweep. Add topics to <code>request.md</code> (local and gitignored) to direct this page. Unverified claims are flagged rather than dropped; see the <a href="./daily-briefing.html">daily briefing</a> for the full source list.
   </footer>
 </div>
 <script src="./tts.js" defer></script>

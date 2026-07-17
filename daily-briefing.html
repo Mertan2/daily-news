@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily News Briefing — Monday, July 6, 2026</title>
+<title>Daily News Briefing — Friday, July 17, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -44,272 +44,729 @@
     }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.62; }
-  .container { max-width: 920px; margin: 0 auto; padding: 28px 22px 60px; }
-  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 22px; }
-  .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
-  h1 { font-size: 32px; margin: 6px 0 4px; line-height: 1.2; }
-  .date { color: var(--muted); font-size: 14px; }
-  .lede { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin: 16px 0 0; font-size: 14.5px; color: var(--text); }
-  .lede strong { color: var(--highlight); }
-  h2 { font-size: 21px; margin: 30px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 10px; }
-  h2 .flag { font-size: 22px; }
-  h3 { font-size: 15px; margin: 16px 0 4px; color: var(--accent); }
-  .region { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px 18px; margin: 8px 0 18px; }
-  .region.us { border-left: 4px solid var(--us); }
-  .region.eu { border-left: 4px solid var(--eu); }
-  .region.tr { border-left: 4px solid var(--tr); }
-  .region.cn { border-left: 4px solid var(--cn); }
-  .region.jp { border-left: 4px solid var(--jp); }
-  .story { margin: 10px 0 14px; }
-  .story .head { font-weight: 600; color: var(--text); margin: 0 0 4px; font-size: 15px; }
-  .story p { margin: 4px 0 0; font-size: 14px; }
-  ul { padding-left: 20px; margin: 6px 0 10px; }
-  li { margin: 5px 0; font-size: 14px; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
-  .tag.alert { background: rgba(255,123,114,0.15); color: var(--warn); }
-  .tag.market { background: rgba(126,231,135,0.15); color: var(--good); }
-  .tag.tech { background: rgba(210,168,255,0.15); color: var(--purple); }
-  .tag.sci { background: rgba(240,136,62,0.15); color: var(--highlight); }
-  @media (prefers-color-scheme: light) {
-    .tag { background: #e3edff; }
-    .tag.alert { background: #ffe5e5; }
-    .tag.market { background: #e3f4e8; }
-    .tag.tech { background: #efe3ff; }
-    .tag.sci { background: #f7ebd4; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
   }
-  .markets-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 13px; }
-  .markets-table th, .markets-table td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--border); }
-  .markets-table th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-  .up { color: var(--good); }
-  .down { color: var(--warn); }
-  .disclaimer { background: var(--panel-2); border: 1px dashed var(--border); border-radius: 8px; padding: 10px 14px; margin: 26px 0 0; font-size: 12.5px; color: var(--muted); }
-  footer { margin-top: 22px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
-  .nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
-  .nav a { background: var(--panel-2); border: 1px solid var(--border); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; color: var(--text); }
-  .nav a:hover { border-color: var(--accent); text-decoration: none; }
-  @media (max-width: 600px) {
-    h1 { font-size: 26px; }
-    h2 { font-size: 19px; }
-    .container { padding: 22px 16px 48px; }
-    .region { padding: 12px 14px 16px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 32px 20px 90px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 24px; }
+  .eyebrow { color: var(--muted); font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; }
+  h1 { margin: 8px 0 6px; font-size: 32px; letter-spacing: -0.02em; line-height: 1.2; }
+  .sub { color: var(--muted); font-size: 14px; }
+  .nav { margin-top: 14px; font-size: 13px; }
+  .nav a { color: var(--accent); text-decoration: none; margin-right: 14px; }
+  .nav a:hover { text-decoration: underline; }
+
+  .disclaimer {
+    background: rgba(240, 136, 62, 0.08);
+    border: 1px solid rgba(240, 136, 62, 0.28);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-bottom: 26px;
   }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+  }
+  h2 .flag { margin-right: 8px; }
+
+  .lede {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+  }
+  .lede h3 { margin: 0 0 10px; font-size: 17px; }
+  .lede p { margin: 0 0 10px; font-size: 14.5px; }
+  .lede p:last-child { margin-bottom: 0; }
+
+  .story {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .story.lead { border-left: 3px solid var(--highlight); }
+  .story h3 { margin: 0 0 8px; font-size: 16.5px; line-height: 1.35; }
+  .story p { margin: 0 0 10px; font-size: 14px; }
+  .story p:last-of-type { margin-bottom: 8px; }
+
+  .meta { font-size: 11.5px; color: var(--muted); }
+  .meta a { color: var(--accent); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .sep { opacity: 0.5; margin: 0 6px; }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .tag.us { color: var(--us); }
+  .tag.eu { color: var(--eu); }
+  .tag.tr { color: var(--tr); }
+  .tag.cn { color: var(--cn); }
+  .tag.jp { color: var(--jp); }
+
+  .caution {
+    background: rgba(255, 123, 114, 0.07);
+    border: 1px solid rgba(255, 123, 114, 0.3);
+    border-radius: 6px;
+    padding: 8px 11px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 10px 0;
+  }
+  .caution strong { color: var(--warn); }
+
+  .framing {
+    background: var(--panel-2);
+    border-left: 2px solid var(--purple);
+    border-radius: 0 6px 6px 0;
+    padding: 8px 11px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin: 10px 0;
+  }
+  .framing strong { color: var(--purple); }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 18px 0 26px;
+  }
+  @media (min-width: 620px) { .numbers { grid-template-columns: repeat(4, 1fr); } }
+  .num {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 13px;
+  }
+  .num .v { font-size: 19px; font-weight: 650; letter-spacing: -0.02em; }
+  .num .k { font-size: 11px; color: var(--muted); margin-top: 2px; line-height: 1.35; }
+  .num .v.dn { color: var(--warn); }
+  .num .v.up { color: var(--good); }
+
+  ul.threads { padding-left: 18px; margin: 0; }
+  ul.threads li { font-size: 14px; margin-bottom: 8px; }
+
+  footer {
+    margin-top: 48px;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <div class="eyebrow">Daily News Briefing</div>
-    <h1>Monday, July 6, 2026</h1>
-    <div class="date">Compiled Monday (updated PM) · ~120 sources across US · Europe · Türkiye · China · Japan/Asia</div>
-    <div class="lede">
-      <strong>A deadly holiday heat dome and storms leave 22+ dead across the US East, Asia's chip stocks stage a violent V-shaped rebound, Trump works the phones with Putin and Zelensky, and Ankara locks down for the NATO summit that opens tomorrow.</strong> A historic <strong>heat dome over 200M+ Americans</strong> is blamed for <strong>at least 22 deaths</strong> (19 in New Jersey) as records fell (Atlantic City <strong>106°F</strong>, D.C. 103°F); follow-on storms knocked out power to <strong>900,000+</strong> and forced an evacuation of the National Mall, delaying Trump's combative <strong>Semiquincentennial</strong> address to nearly midnight. July 4 also brought <strong>≥5 killed in scattered shootings</strong>, including a Coney Island barbecue attack that wounded 8. Overseas, Asian semiconductors <strong>roared back Friday</strong> — Korea's <strong>KOSPI jumped 5.76% to 8,088</strong> (SK Hynix +10.9%, Samsung +8.2%) — after a report that <strong>Anthropic is in talks with Samsung</strong> on a custom chip reversed the prior day's OpenAI-efficiency rout. Trump held a ~90-minute call with <strong>Putin</strong> and a "best-ever" call with <strong>Zelensky</strong> (weighing more Patriots) — yet at dawn Monday a fresh <strong>Russian ballistic-and-drone barrage on Kyiv killed at least 17</strong> (14 in the city, none of the ballistic missiles intercepted), on the eve of the <strong>NATO summit in Ankara (July 7–8)</strong>, where allies will lock in the 5%-of-GDP target under a 70,000-strong Turkish security cordon. In Tehran, Iran's <strong>state funeral</strong> for Khamenei (July 3–9, months after his Feb 28 death) moved to processions with US–Iran talks paused a week — his successor still unseen. And the <strong>World Cup quarterfinal bracket</strong> is forming — Haaland's brace dumped <strong>Brazil out</strong> and <strong>England edged Mexico 3–2</strong> at a raucous Azteca.
-    </div>
-    <div class="nav">
-      <a href="#us">🇺🇸 US</a>
-      <a href="#eu">🇪🇺 Europe</a>
-      <a href="#tr">🇹🇷 Türkiye</a>
-      <a href="#cn">🇨🇳 China</a>
-      <a href="#jp">🇯🇵 Japan / Asia</a>
-      <a href="#mideast">🕊️ Mid-East</a>
-      <a href="#markets">📈 Markets</a>
-      <a href="#tech">🤖 Tech &amp; AI</a>
-      <a href="#sci">🔬 Science</a>
-      <a href="#sport">🏆 Sports</a>
-    </div>
-  </header>
+<div class="wrap">
 
-  <h2 id="us"><span class="flag">🇺🇸</span> United States</h2>
-  <div class="region us">
-    <div class="story">
-      <p class="head"><span class="tag alert">Weather</span>Holiday heat dome and storms kill 22+; 900,000 lose power</p>
-      <p>A historic heat dome over <strong>200M+ Americans</strong> is suspected in at least <strong>22 deaths</strong> from the Deep South to the East Coast — <strong>19 in New Jersey alone</strong>. July 4 records fell, including <strong>Atlantic City 106°F</strong>, Washington D.C. 103°F and Baltimore 102°F. Follow-on severe storms (damaging winds, golf-ball hail) then cut power to <strong>900,000+ customers</strong>; by Sunday afternoon Michigan still had 305,000+ out, New Jersey 124,000+ and Connecticut 60,800+. <em>(ABC News, NBC New York, Fox Weather, WFSB)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">America 250</span>Storms delay a combative Trump Semiquincentennial speech to near-midnight</p>
-      <p>Thunderstorms forced an evacuation of the National Mall around <strong>7 p.m. July 4</strong>, pushing Trump's <strong>250th-anniversary address to after 11 p.m.</strong>, followed by a ~40-minute record-attempt fireworks show. Breaking from the traditional unifying July 4 tone, Trump praised the founders while railing against "communists," touting his June Iran war, pushing the <strong>SAVE Act</strong> (proof-of-citizenship voting) and vowing to restrict mail-in ballots. <em>(NPR, CNN, Al Jazeera, The Hill)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Gun violence</span>Fourth-of-July shootings leave at least 5 dead nationwide</p>
-      <p>Mass shootings marred holiday gatherings in several cities. In <strong>Coney Island, Brooklyn</strong>, a masked gunman fired into a barbecue, wounding <strong>8 including 4 children</strong> (a TEC-9-style weapon recovered). A "teen takeover" in <strong>Pensacola, FL</strong> left a 19-year-old dead and 6 hurt; <strong>San Antonio</strong> saw an 18-year-old killed and 5 wounded; <strong>Compton, CA</strong> had 2 killed; Chicago tallied 2 dead and 7 hurt over the weekend. <em>(CNN, NBC News, KSAT, Chicago Sun-Times)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Memphis</span>National Guard troops fatally shoot an armed man</p>
-      <p>Memphis police say <strong>National Guard troops opened fire early July 5</strong>, killing a man who was armed with a handgun — the first reported Guard shooting since the federal deployment to the city. The TBI is investigating. Separately, thunderstorms and high winds hampered crews battling a <strong>large wildfire in southern Colorado</strong> over the weekend. <em>(AP, NPR)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">Policy</span>The megabill turns one — dueling messaging on coverage losses</p>
-      <p>This weekend marked the <strong>one-year anniversary</strong> of the "One Big Beautiful Bill" (H.R.1), <strong>signed July 4, 2025</strong>. Republicans touted its tax breaks (a $6,000 senior deduction, $1,000 "Trump Account" seeds for newborns); Democrats hammered safety-net cuts. Reported effects: ACA enrollment fell <strong>22.1M → 19.2M</strong>, <strong>3.5M+ lost SNAP</strong>, and ~500,000 New Yorkers were dropped from insurance July 1 — part of an expected 5M losing coverage by year-end. <em>(Washington Times, Forbes, CBS News, The Hill)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">Economy</span>Weak June jobs print reshapes a hike-vs-hold Fed debate</p>
-      <p>June payrolls (reported July 2, pre-holiday) rose just <strong>+57,000</strong> vs ~115K expected, with prior months revised down sharply. Unemployment <em>fell</em> to <strong>4.2%</strong> — but mainly on a labor-force participation drop to <strong>61.5%</strong>, the lowest since 2021. Unusually, the 2026 Fed conversation has been about potential <strong>rate hikes</strong>; after the soft report, traders scrapped a September hike but CME FedWatch still pointed to a possible October move. <em>(CNBC, Yahoo Finance, St. Louis Fed)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Trade</span>USMCA lapses; a July 24 tariff cliff looms</p>
-      <p>The <strong>USMCA renewal deadline passed July 1 without extension</strong>; the administration is pursuing renegotiation instead. A bigger pressure point is <strong>July 24</strong>, when Trump's temporary 10% global tariff — imposed under Trade Act Section 122 after the Supreme Court struck his IEEPA tariffs in February — expires, even as Washington rebuilds levies via Sections 301/232. <em>(Washington Post, Tax Foundation, The Hill)</em></p>
-    </div>
+<header>
+  <div class="eyebrow">Daily Briefing</div>
+  <h1>Friday, July 17, 2026</h1>
+  <div class="sub">Swept roughly 145 sources across the United States, Europe, Turkey, China and Japan. Window: July 15–17.</div>
+  <div class="nav">
+    <a href="index.html">← All reports</a>
+    <a href="weekly-report.html">Weekly report</a>
+    <a href="specific-topics.html">Specific topics</a>
   </div>
+</header>
 
-  <h2 id="eu"><span class="flag">🇪🇺</span> Europe</h2>
-  <div class="region eu">
-    <div class="story">
-      <p class="head"><span class="tag alert">Ukraine</span>Deadly dawn strike hammers Kyiv on the eve of the NATO summit</p>
-      <p>Hours before Trump departs for Ankara, a <strong>Russian ballistic-and-drone barrage struck Kyiv early Monday</strong>, killing <strong>at least 14 in the city and 3 in the surrounding region</strong>, with an entire family pulled from the rubble; four districts were hit, Podilsky hardest. Ukraine's air force said <strong>none of the ballistic missiles were shot down</strong> — Zelensky blamed an "insufficient supply of interceptor missiles." It follows Trump's July 4 <strong>~90-minute "businesslike" call with Putin</strong> and a "best-ever" call with Zelensky (weighing more <strong>Patriot PAC-3</strong> interceptors); Russia claimed it downed 519 Ukrainian drones overnight. <em>(CNN, Al Jazeera, TASS, Kyiv Independent)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">NATO</span>Ankara summit opens tomorrow with spending and Trump friction in focus</p>
-      <p>Leaders gather at Erdoğan's Presidential Complex July 7–8. Secretary General <strong>Mark Rutte's</strong> priorities: lifting allied defense investment (building on the Hague <strong>5%-of-GDP-by-2035</strong> pledge), boosting defense-industrial output, and sustaining Ukraine support (a ~€70bn 2026 pledge is expected). Managing tensions over Trump's alliance criticism is a subtext. <em>(NATO, Turkish Minute, CEPA)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">UK</span>Labour leadership race: nominations open July 9, Burnham the front-runner</p>
-      <p>Nominations open <strong>July 9</strong> and close July 16 (Starmer resigned June 22). <strong>Andy Burnham</strong> — who re-entered Parliament via a 9,000+ majority in the June 18 Makerfield by-election — is so far the only declared candidate and widely seen as the likely successor. Wes Streeting has ruled himself out; Angela Rayner, cleared by HMRC, is a potential entrant. <em>(CNN, Commons Library)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">Germany</span>Merz unveils a sweeping economic-reform package</p>
-      <p>Chancellor <strong>Friedrich Merz's</strong> CDU/CSU–SPD coalition agreed 34 measures to revive stagnant growth: ~<strong>€10bn/yr</strong> in income-tax relief, a pension overhaul (retirement age rising with life expectancy), tougher sick-leave rules and doubled fixed-term contracts. Berlin expects just <strong>0.5% growth in 2026</strong>, dragged by the Iran-war fallout, Chinese competition and US tariffs. <em>(Al Jazeera, Euronews)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Germany · AfD</span>Weidel and Chrupalla re-elected in Erfurt amid mass protests</p>
-      <p>At the July 4–5 congress, AfD co-leaders <strong>Alice Weidel (81%)</strong> and <strong>Tino Chrupalla (70%)</strong> were re-elected unopposed on hardline anti-immigration messaging. Roughly <strong>31,000 protesters</strong> demonstrated Saturday, some clashing with police; critics noted the venue coincided with a Nazi-history anniversary. <em>(PBS NewsHour, CSMonitor)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag sci">Climate</span>Southern Europe burns as an early wildfire season begins</p>
-      <p>Wildfires scorched <strong>19,000+ hectares</strong> across Portugal, Spain, France and Greece; Portugal put most of its mainland districts under red heat warnings. Spain attributed <strong>1,000+ excess deaths</strong> to heat in its second-hottest June on record, with up to ~44°C forecast. Officials warned the fire season began about a month early. <em>(Euronews, CGTN, Wikipedia)</em></p>
-    </div>
-  </div>
+<div class="disclaimer">
+  Automated summary compiled from public news reporting on July 17, 2026. Every story links its source — verify with the original outlet before acting on anything. Claims that could not be independently confirmed are flagged in red rather than dropped silently; where pro-government and opposition outlets describe the same event differently, that contrast is marked in purple rather than resolved.
+</div>
 
-  <h2 id="tr"><span class="flag">🇹🇷</span> Türkiye</h2>
-  <div class="region tr">
-    <div class="story">
-      <p class="head"><span class="tag alert">NATO</span>Ankara locks down 70,000 personnel for the July 7–8 summit</p>
-      <p>The alliance's 32 leaders — including Trump — convene at Erdoğan's Presidential Complex tomorrow, the <strong>second NATO summit Türkiye has hosted</strong> (after Istanbul 2004). Ankara deployed ~<strong>70,000 personnel</strong>, put air defenses on alert and banned gatherings June 28–July 10. Leaders are set to reaffirm an "ironclad" Article 5, finalize the <strong>5%-of-GDP</strong> target (3.5% core + 1.5% related, by 2035) and pledge ~€70bn for Ukraine. <em>(Anadolu Agency, NATO, Reuters)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Rights</span>Pre-summit sweep: 209 detained, 4,000+ wanted arrested over three months</p>
-      <p>Ankara prosecutors ordered detentions for 241 suspects; <strong>209 were taken into custody</strong> — including 56 alleged ISIS and 35 DHKP-C members, but also lawyers, an academic and journalist <strong>Yıldız Tar</strong>, drawing HRW's charge of a "crackdown ahead of the NATO summit." Police say they checked 1.5M+ people from April 4 to July 1, apprehending 4,000+ wanted individuals. <em>(Turkish Minute, HRW; note AA frames the sweep as routine security)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">Diplomacy</span>Trump–Erdoğan bilateral and the F-35 carrot dominate the run-up</p>
-      <p>Trump meets Erdoğan <strong>Tuesday (July 7)</strong>, then Zelensky and Syria's al-Sharaa on Wednesday. Trump has dangled possible movement on jet engines and <strong>Türkiye's return to the F-35 program</strong> — from which Ankara was expelled over its Russian S-400s — though Capitol Hill opposition persists while the S-400s remain. Analysts note the summit lends Erdoğan legitimacy amid the domestic crackdown. <em>(CNBC, Washington Times, CFR)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">Politics</span>CHP leadership crisis: rival congress set for July 12</p>
-      <p>After a May appeals court annulled the CHP's 2023 congress and reinstated <strong>Kemal Kılıçdaroğlu</strong>, 111 CHP lawmakers including ousted chair <strong>Özgür Özel</strong> called an extraordinary congress for <strong>July 12</strong> to reconfirm leadership before a legal deadline. Jailed Istanbul Mayor <strong>Ekrem İmamoğlu</strong> remains in Silivri; Özel insists he stays the party's presidential candidate "even in prison." <em>(Turkish Minute, Cumhuriyet, Daily Sabah)</em></p>
-    </div>
-  </div>
+<div class="lede">
+  <h3>The through-line today</h3>
+  <p><strong>The AI trade cracked, everywhere at once.</strong> TSMC posted the best quarter in its history — net profit up 77% to a record NT$706.6bn, full-year guidance raised above 40% growth — and its stock fell more than 4% anyway. That refusal to reward good news propagated through every market that trades semiconductors: the Nikkei dropped 4.03%, Kioxia has now lost roughly half its value from its June peak (about $185bn), and Shanghai and Shenzhen closed at three-month lows. Nothing broke operationally. What moved was the willingness to keep paying for AI earnings.</p>
+  <p><strong>Meanwhile, the governance of AI split into blocs.</strong> Xi Jinping gave his first-ever keynote at the World AI Conference in Shanghai the same week 29 countries signed the founding agreement for a Shanghai-headquartered World AI Cooperation Organization — with the US and major EU economies absent. Brussels answered in its own register, ordering Google to open Android to rival AI assistants and share Search data by January 2027. Two very different theories of who should hold the reins, announced within 24 hours.</p>
+  <p><strong>And the US–Iran war escalated toward Tehran.</strong> An interim ceasefire collapsed, strikes expanded north, and Iran called the Strait of Hormuz an "invincible red line." Oil is near recent highs and Turkey summoned Iran's ambassador. This is the story most likely to reprice everything above.</p>
+</div>
 
-  <h2 id="cn"><span class="flag">🇨🇳</span> China</h2>
-  <div class="region cn">
-    <div class="story">
-      <p class="head"><span class="tag tech">Tech</span>Alibaba bans Claude Code over an alleged China-detection "backdoor"</p>
-      <p>Alibaba added Anthropic's <strong>Claude Code to a "high-risk software" list</strong> and told staff to stop using it by <strong>July 10</strong>, migrating to its in-house Qoder. The trigger: a reverse-engineer flagged obfuscated code (present since v2.1.91) allegedly detecting China-based users and encoding that back to Anthropic. An Anthropic engineer called it a March anti-abuse "experiment" whose removal PR merged July 1; the backdrop is Anthropic's claim that Qwen-linked operators ran <strong>~25,000 fraudulent accounts / 28.8M interactions</strong>. <em>(Tom's Hardware, SCMP, The Information — no formal Anthropic corporate statement yet)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Human rights</span>New "ethnic unity" law in force; Beijing rejects criticism as "falsehoods"</p>
-      <p>The Law on Promoting Ethnic Unity and Progress <strong>took effect July 1</strong>, codifying Xi's sinicization drive — mandating Mandarin as the primary language in schools and government. Foreign Ministry spokesperson <strong>Guo Jiakun</strong> urged countries to "stop spreading falsehoods," rejecting US/EU concerns; state media cast it as boosting "cohesion." Critics (the UN High Commissioner, Amnesty, Tibetan/Uyghur groups) warn it entrenches forced assimilation and transnational repression. <em>(HKFP, CNN, Amnesty; Xinhua/Global Times framing labeled)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">Economy</span>Stocks close the week higher; factory activity beats</p>
-      <p>The <strong>Shanghai Composite rose ~1.16% Friday to ~4,073</strong> (+0.41% on the week), though the Shenzhen Component slipped 1.17% and Hong Kong's Hang Seng closed near <strong>23,055</strong>. June official manufacturing <strong>PMI edged up to 50.3</strong>, back above expansion on high-tech output tied to the AI boom, underpinning the 2026 growth target of <strong>4.5–5.0%</strong>. <em>(Trading Economics, Caixin, CNBC; index levels approximate)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag alert">Taiwan</span>Pressure shifts to eastern waters even as air sorties ease</p>
-      <p>China's Coast Guard has kept at least <strong>two ships continuously patrolling Taiwan's claimed eastern EEZ since June 1</strong>, plus intrusive Pratas-area patrols — consistent with normalizing a presence east of Taiwan. Notably, <strong>air pressure eased</strong>: Taipei reported 12 days in June with no median-line ADIZ incursions, suggesting a shift from air sorties toward maritime coercion. <em>(AEI, The Diplomat)</em></p>
-    </div>
-  </div>
+<div class="numbers">
+  <div class="num"><div class="v dn">−4.03%</div><div class="k">Nikkei 225, to 64,140 — worst in a month</div></div>
+  <div class="num"><div class="v up">+77%</div><div class="k">TSMC Q2 net profit y/y — a record; stock fell anyway</div></div>
+  <div class="num"><div class="v dn">4.3%</div><div class="k">China Q2 GDP — first target miss since Covid</div></div>
+  <div class="num"><div class="v">47.05</div><div class="k">Turkish lira per dollar; June CPI 32.11% y/y</div></div>
+</div>
 
-  <h2 id="jp"><span class="flag">🇯🇵</span> Japan &amp; Asia-Pacific</h2>
-  <div class="region jp">
-    <div class="story">
-      <p class="head"><span class="tag market">Markets</span>Chip rebound broadens into Monday — KOSPI +2.71%</p>
-      <p>Friday's V-shaped bounce <strong>carried into Monday</strong>: the <strong>KOSPI added 2.71%</strong> and Tokyo's <strong>Nikkei 225 rose 0.73%</strong>, with analysts saying the move looks less like a technical bounce and more like a broader recovery. <strong>Samsung jumped ~4%</strong> (intraday ₩322,500), SK Hynix +1.8%, Kioxia +1%; strategists flagged new "floors" near <strong>8,000 (KOSPI) and 70,000 (Nikkei)</strong>, with buyers front-running SpaceX's <strong>July 7 Nasdaq-100 inclusion</strong>. It extends the reversal of the OpenAI inference-efficiency scare. <em>(TradingKey, Korea Times, KED Global)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag tech">Catalyst</span>Anthropic–Samsung custom-chip talks reverse the mood</p>
-      <p>The decisive trigger was a report that <strong>Anthropic is in talks with Samsung</strong> to develop a custom AI chip — with Samsung also a potential foundry-order winner — plus SK Hynix capacity-expansion news and Kioxia next-gen NAND shipments. It flipped sentiment barely a day after the OpenAI inference-efficiency scare had gutted the same names. <em>(KED Global, Seoul Economic Daily)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">FX</span>Yen pinned near a 40-year low; only verbal warnings so far</p>
-      <p>The yen sat around <strong>¥162.3–162.8/USD</strong>, near post-1985 Plaza-Accord levels. Tokyo has so far offered only verbal warnings (Vice Finance Minister <strong>Mimura</strong> targeting speculators); <strong>no confirmed weekend intervention</strong>. April–May's record ¥11.73tn (~$74B) intervention was fully retraced within six weeks — analysts stress the driver is the Fed–BOJ rate gap. <em>(CNBC, Reuters, Japan Times)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag market">Korea</span>June inflation hits a 30-month high on oil</p>
-      <p>South Korea's June CPI rose <strong>3.2% y/y</strong> — the fastest since December 2023 — driven by oil products <strong>up 24.7%</strong> on Middle East-war-fueled crude. The print complicates the Bank of Korea's path even as equities rally; the won closed at <strong>1,525.6/USD</strong> Friday. <em>(Seoul Economic Daily, Trading Economics)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">India</span>Modi marks the US 250th; markets steady, trade deal pending</p>
-      <p>PM <strong>Modi</strong> and EAM Jaishankar sent warm July 4 messages on America's 250th, with a bilateral <strong>trade deal described as "upcoming."</strong> Friday's Sensex closed +262 to ~<strong>77,764</strong> and the Nifty above 24,270; Gift Nifty pointed to a marginally soft Monday open. <em>(Times of India, The Tribune)</em></p>
-    </div>
-  </div>
+<!-- ============ UNITED STATES ============ -->
+<h2><span class="flag">🇺🇸</span> United States</h2>
 
-  <h2 id="mideast"><span class="flag">🕊️</span> Middle East</h2>
-  <div class="region">
-    <div class="story">
-      <p class="head"><span class="tag alert">Iran</span>Khamenei state funeral moves to Qom; talks paused, successor unseen</p>
-      <p>Iran's <strong>seven-day state funeral (July 3–9)</strong> for Supreme Leader Ayatollah <strong>Khamenei</strong> — killed by a US–Israeli strike at the war's outset on <strong>Feb 28</strong>, with rites delayed nearly four months — moved on July 6 to <strong>processions bound for Qom</strong> after two days of mass mourning in Tehran. His <strong>three sons appeared July 5, but not his presumed successor Mojtaba Khamenei</strong>, who has not been seen publicly since acceding. The US <strong>paused denuclearization talks about a week</strong>; the fragile ceasefire rests on a June 17 MOU that reopened the Strait of Hormuz for 60 days. <em>(CNN, CNBC, TIME, NPR)</em></p>
-    </div>
-    <div class="story">
-      <p class="head"><span class="tag">Israel fronts</span>Hamas eyes handoff of Gaza governance; Lebanon truce holds uneasily</p>
-      <p>Hamas is reportedly moving toward <strong>dissolving its Gaza governing body</strong> in favor of a US-overseen technocratic committee — not yet deployed amid a disarmament standoff — while the Israel–Lebanon ceasefire holds uneasily; IDF chief Lt. Gen. Eyal Zamir was seen at Beaufort Castle in south Lebanon on July 5. <em>(Times of Israel, Al Jazeera)</em></p>
-    </div>
-  </div>
+<div class="story lead">
+  <h3>US expands strikes on Iran toward Tehran; Iran calls the Strait of Hormuz a "red line"</h3>
+  <p>The US intensified strikes on July 16, expanding targets northward toward Tehran and firing on a ship said to be attempting to breach the American naval blockade, after an interim ceasefire collapsed. Iranian officials reported more than 35 killed and over 300 wounded. Targets included missile production and space facilities in Semnan province, Greater Tunb Island, bridges and a railway junction near Bandar Abbas, and a barracks in Sistan and Baluchestan.</p>
+  <p>Iranian military spokesperson Col. Ebrahim Zolfaghari said of the strait: "This is Iran's invincible red line." Iran retaliated against US allies in the region. Trump suggested a peace deal remained possible.</p>
+  <div class="meta"><span class="tag us">Security</span> <a href="https://www.pbs.org/newshour/world/u-s-expands-attacks-on-iran-which-calls-strait-of-hormuz-a-red-line-as-it-strikes-back">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
 
-  <h2 id="markets"><span class="flag">📈</span> Markets Snapshot</h2>
-  <div class="region">
-    <table class="markets-table">
-      <tr><th>Index / Asset</th><th>Level</th><th>Move</th><th>Note</th></tr>
-      <tr><td>Dow Jones</td><td>52,900</td><td class="up">+1.14%</td><td>Monday July 6</td></tr>
-      <tr><td>KOSPI (Seoul)</td><td>~8,088</td><td class="up">+2.71%</td><td>Rebound broadens; Samsung +4%</td></tr>
-      <tr><td>Nikkei 225</td><td>—</td><td class="up">+0.73%</td><td>Monday; chip names lead</td></tr>
-      <tr><td>Shanghai Comp.</td><td>~4,073</td><td class="up">+1.16%</td><td>Fri; PMI beat (50.3)</td></tr>
-      <tr><td>Brent crude</td><td>~$71.9</td><td class="down">−0.3%</td><td>War premium bled off</td></tr>
-      <tr><td>Bitcoin</td><td>~$62.7k</td><td class="up">+0.3%</td><td>Monday</td></tr>
-      <tr><td>USD / JPY</td><td>~162.6</td><td class="down">40-yr low</td><td>Verbal-warning watch</td></tr>
-      <tr><td>USD / TRY</td><td>~46+</td><td class="down">record area</td><td>CPI 32.1%, CBRT 37%</td></tr>
-      <tr><td>USD / KRW</td><td>~1,525</td><td class="down">—</td><td>Korea CPI 3.2%</td></tr>
-    </table>
-    <p style="font-size:12px;color:var(--muted);margin-top:4px;">Levels are approximate. US equity markets reopened Monday, July 6 after the July 3 Independence Day holiday. This snapshot reflects Monday's session (Dow +1.14% to 52,900; Asian chips extended their rebound — KOSPI +2.71%, Nikkei +0.73% — with new "floors" cited near 8,000/70,000 ahead of SpaceX's July 7 Nasdaq-100 inclusion). Intraday figures may be revised.</p>
-  </div>
+<div class="story lead">
+  <h3>Trump alleges Chinese election meddling in primetime speech; three networks decline to air it</h3>
+  <p>In a Thursday night address from the White House East Room, Trump claimed China "carried out what is believed to be the largest compromise of election data in history," alleging access to 220 million US voter files starting in 2020, and said a "deep state" covered it up. He pushed the SAVE Act and called for abolishing the filibuster.</p>
+  <p>The claims are contested by the government's own record: a 2021 intelligence community assessment concluded with high confidence that China did not attempt to influence the election's outcome, and found no indication any foreign actor tried to alter voter registrations, ballots or vote counts. CNN reported the documents Trump promised to release "have been known for years." ABC, NBC and CNN declined to carry the speech on their primary channels. Rep. Joseph Morelle (D-N.Y.) called it "the rantings of a pathetic, unserious person." China's embassy responded that it "has never and will never interfere in the presidential elections of the US."</p>
+  <div class="meta"><span class="tag us">Politics</span> <a href="https://www.forbes.com/sites/saradorn/2026/07/16/trump-accuses-china-of-meddling-in-elections-as-he-rehashes-old-concerns-about-2020/">Forbes</a><span class="sep">·</span><a href="https://www.npr.org/2026/07/16/nx-s1-5896448/trump-election-address">NPR</a><span class="sep">·</span><a href="https://api.politifact.com/article/2026/jul/16/fact-check-trump-address-china-2020-election/">PolitiFact</a><span class="sep">·</span>July 16</div>
+</div>
 
-  <h2 id="tech"><span class="flag">🤖</span> Tech &amp; AI</h2>
-  <div class="region">
-    <ul>
-      <li><span class="tag tech">Compute</span>The story still moving markets: <strong>OpenAI's inference optimization cuts costs 50%+</strong>, reportedly slashing the GPUs needed to serve ChatGPT from tens of thousands to hundreds — feeding a multi-day chip selloff (Nvidia −~1.5%) before Friday's rebound. See the <a href="./specific-topics.html">deep dive</a>.</li>
-      <li><span class="tag tech">Chips</span>OpenAI's Broadcom <strong>"Jalapeño" inference chip hit an $18B financing snag</strong>: Broadcom will fund only the first 1.3GW phase if <strong>Microsoft commits to ~40% of output</strong> — and Microsoft hasn't signed. Broadcom fell ~4% (−26% from its high). <em>(The Information, Tom's Hardware)</em></li>
-      <li><span class="tag tech">Anthropic</span><strong>Anthropic is in talks with Samsung</strong> for its first custom AI chip (Samsung's 2nm process), the catalyst behind Friday's Asian chip rebound. Samsung was a strategic investor in Anthropic's recent $65B raise. <em>(TechCrunch)</em></li>
-      <li><span class="tag tech">China</span><strong>Alibaba banned Claude Code</strong> internally over an alleged China-detection backdoor, migrating to its Qoder tool — the freshest thread in the Anthropic–Qwen feud. <em>(SCMP)</em></li>
-    </ul>
-  </div>
+<div class="story">
+  <h3>New York Times moves to quash grand jury subpoenas of its journalists over Air Force One reporting</h3>
+  <p>The Times filed under seal in the Southern District of New York to block DOJ subpoenas served on journalists who reported that the Secret Service urged the switch to the Qatari-gifted presidential jet, and that the newer plane lacked some advanced security features including antimissile capabilities. The administration spent $400 million retrofitting the aircraft.</p>
+  <p>The Times expected five journalists to be subpoenaed; three were served. Deputy general counsel David McCraw accused the government of acting in "bad faith to punish The Times for its coverage." DOJ said "reporters are not the targets, those leaking classified information are."</p>
+  <div class="meta"><span class="tag us">Legal</span> <a href="https://www.nbcnews.com/politics/justice-department/new-york-files-motion-quash-subpoenas-served-journalists-air-force-one-rcna587769">NBC News</a><span class="sep">·</span><a href="https://www.pbs.org/newshour/politics/new-york-times-files-motion-to-quash-subpoenas-served-on-journalists-over-air-force-one-coverage">PBS</a><span class="sep">·</span>July 15–16</div>
+</div>
 
-  <h2 id="sci"><span class="flag">🔬</span> Science &amp; Space</h2>
-  <div class="region">
-    <ul>
-      <li><span class="tag sci">Astronomy</span>Webb analysis dates interstellar comet <strong>3I/ATLAS to ~10–12 billion years old</strong> — from "cosmic noon" — with the first direct methane detection on an interstellar object and anomalously high CO₂-to-water output. <em>(NASA Science, Live Science)</em></li>
-      <li><span class="tag sci">NASA</span>To mark the US 250th, NASA released four red/white/blue <strong>Chandra X-ray composites</strong> plus a new Webb image of infant stars ("cosmic fireworks"). <em>(NASA)</em></li>
-      <li><span class="tag sci">Exoplanets</span><strong>TESS spotted a Jupiter-like exoplanet via gravitational microlensing</strong>, an Einstein-relativity technique the survey rarely uses. <em>(ScienceDaily, Space.com)</em></li>
-      <li><span class="tag sci">Launch</span>SpaceX lofted <strong>24 Starlink satellites</strong> from Vandenberg (July 1) and completed a six-engine <strong>Starship static fire</strong> at Starbase. <em>(Spaceflight Now)</em></li>
-    </ul>
-  </div>
+<div class="story">
+  <h3>Todd Blanche grilled at attorney general confirmation hearing over Epstein files and IRS settlement</h3>
+  <p>Trump's acting AG and former personal defense lawyer faced the Senate Judiciary Committee on July 15. Blanche said he didn't discuss Trump's $10 billion IRS settlement with the president until "when it was dead," and refused to say whether he advised against creating the $1.8 billion "anti-weaponization fund," insisting "I'm under oath today and I've said it's dead repeatedly." He acknowledged redaction mistakes in the Epstein files release — roughly 1% required fixes — and wavered when Sen. Dick Durbin pressed him to meet 10 Epstein victims within 30 days.</p>
+  <p>His confirmation is not assured. Sen. Lindsey Graham's death on July 11 leaves committee Republicans one vote to spare; Gov. Henry McMaster appointed Graham's sister Darline on July 13 at Trump's and Majority Leader John Thune's public urging.</p>
+  <div class="meta"><span class="tag us">Politics</span> <a href="https://www.pbs.org/newshour/politics/what-blanche-said-about-trump-epstein-files-during-confirmation-hearing">PBS NewsHour</a><span class="sep">·</span>July 15</div>
+</div>
 
-  <h2 id="sport"><span class="flag">🏆</span> Sports &amp; Culture</h2>
-  <div class="region">
-    <ul>
-      <li><span class="tag">World Cup</span><strong>Mexico 2–3 England</strong> (July 5): a <strong>Jude Bellingham brace</strong> (two goals in 98 seconds) and a <strong>Harry Kane penalty</strong> saw 10-man England — down to ten after a Quansah red card — survive a raucous Azteca, ESPN's "best away win in their history." It sets a <strong>July 11 quarterfinal vs Norway</strong>, who reached the last eight via a <strong>Haaland brace in Norway 2–1 Brazil</strong>. On July 4, <strong>Morocco 2–0 Canada</strong> and France beat Paraguay. <em>(ESPN, CBS Sports, NBC Sports, Al Jazeera)</em></li>
-      <li><span class="tag">Tour de France</span>Grand Départ in Barcelona: <strong>Visma–Lease a Bike won the Stage 1 team time trial</strong> (21:47.87), putting <strong>Vingegaard in yellow</strong> — Ganna +8s, Pogačar +12s. <em>(Cyclingnews)</em></li>
-      <li><span class="tag">Culture</span>Off the field, <strong>Taylor Swift and Travis Kelce married</strong> in New York over the holiday weekend (reportedly officiated by Adam Sandler). <em>(CBS)</em></li>
-    </ul>
-  </div>
+<div class="story">
+  <h3>DNI nominee Jay Clayton repeatedly refuses to say Biden won the 2020 election</h3>
+  <p>At his Senate Intelligence Committee hearing on July 15, the SDNY US attorney declined on multiple occasions during the roughly two-hour hearing to say who won in 2020, offering instead: "I am not an election denier. Joe Biden was certified," and "I believe he had the most electoral votes." Sen. Jon Ossoff called the answers "disqualifying." The responses cost Clayton Democratic support, setting up a party-line committee vote expected next week.</p>
+  <div class="meta"><span class="tag us">Politics</span> <a href="https://www.cnbc.com/2026/07/15/trump-dni-jay-clayton-senate-2020-election.html">CNBC</a><span class="sep">·</span>July 15</div>
+</div>
 
-  <div class="disclaimer">
-    <strong>Disclaimer.</strong> This briefing was auto-compiled on July 6, 2026 (with a later same-day refresh reflecting Monday's market closes, the dawn Kyiv strike, the Mexico–England result and the Khamenei procession) from a wide sweep of ~120 public news sources across the US, Europe, Türkiye, China and Japan/Asia. Fast-moving items — heat/storm death and outage tolls, market levels and FX, the chip rebound, the Kyiv casualty count, and the funeral timeline — may be preliminary or revised. Note a corrected fact carried over from earlier runs: H.R.1 ("One Big Beautiful Bill") was <strong>signed July 4, 2025</strong>, so this weekend was its one-year anniversary, not a new signing. Figures were cross-checked across outlets; where sources conflicted, the most widely corroborated value is shown and flagged. State-media framing (Xinhua/CGTN, AA/TRT, IRNA) is labeled where relevant. Not investment, legal or safety advice; verify anything you plan to act on against a primary source.
-  </div>
+<div class="story">
+  <h3>Half of voting House Democrats back Massie amendment to zero out $3.3B in Israel security aid</h3>
+  <p>The amendment to the FY2027 National Security-State appropriations bill failed 104–314 on July 15, but exposed a deep Democratic split: 103 Democrats in favor, 98 against, 10 present. Rep. Thomas Massie (R-Ky.) was the only Republican voting yes. Former Speaker Nancy Pelosi and Democratic Whip Katherine Clark voted for it, breaking with Minority Leader Hakeem Jeffries and Caucus Chair Pete Aguilar, who opposed.</p>
+  <div class="meta"><span class="tag us">Politics</span> <a href="https://thehill.com/homenews/house/5970608-pelosi-clark-massie-israel-amendment/">The Hill</a><span class="sep">·</span><a href="https://rollcall.com/2026/07/15/dems-split-on-massie-effort-to-zero-out-israel-security-aid/">Roll Call</a><span class="sep">·</span>July 15</div>
+</div>
 
-  <footer>
-    Daily News Briefing · Monday, July 6, 2026 · auto-generated by the news-check scheduled task. See the <a href="./weekly-report.html">weekly report</a> for the running week-in-context and <a href="./specific-topics.html">deep dives</a> for longer-form themes.
-  </footer>
+<div class="story">
+  <h3>June retail sales rise just 0.2%, below expectations</h3>
+  <p>Advance estimates put June retail and food services sales at $768.6 billion, up 0.2% month-over-month against a 0.3% consensus, and up 6.7% year-over-year — a fifth straight monthly increase. Online retailers (+1.9%, boosted by Prime Day) and car dealerships (+1.9%) led gains, while gas stations fell 5.3% and health and personal care stores fell 0.8%. The control-group measure rose 0.5%, above the 0.4% expected. Morgan Stanley Wealth Management: "consumers are still spending and the labor market shows no signs of cracking."</p>
+  <div class="meta"><span class="tag us">Economy</span> <a href="https://www.census.gov/retail/marts/www/marts_current.pdf">US Census Bureau</a><span class="sep">·</span><a href="https://www.cnn.com/2026/07/16/economy/us-retail-sales-june">CNN Business</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Markets slip as the semiconductor slide outruns blowout TSMC earnings</h3>
+  <p>Stocks were mixed to lower on July 16, with the Nasdaq and S&amp;P 500 falling as tech turned negative. TSMC reported a 77% year-over-year jump in Q2 net profit to a record NT$706.6 billion (about $22 billion), revenue up 34% to $40.2 billion, and guided to full-year revenue growth above 40% — yet shares fell more than 4%, dragging other semiconductors down with them. Oil eased slightly even as strikes on Iran intensified: WTI slipped 0.21% to $79.43 and Brent fell 0.49% to $84.53, both near recent highs. Treasury yields rose.</p>
+  <div class="caution"><strong>Verification note:</strong> index percentages here come from search-index summaries rather than a fully retrieved article — treat the exact figures as approximate.</div>
+  <div class="meta"><span class="tag us">Economy</span> <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-16-2026">TheStreet</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Flash floods kill at least 2 in Texas Hill Country, one year after the catastrophic 2025 floods</h3>
+  <p>Up to 28 inches of rain fell in Uvalde County over three days, and the Guadalupe River rose more than 30 feet in some spots within hours. Victims include John Mark Steward, 65, of Kerrville, and one person swept away near Uvalde while driving on a flooded road. Over 200 people were rescued and more than 2,000 first responders deployed across Kerr and Uvalde counties. Levels stayed below the 2025 records, when floods killed more than 100 people including 24 at Camp Mystic.</p>
+  <div class="meta"><span class="tag us">Weather</span> <a href="https://www.pbs.org/newshour/nation/texas-flash-floods-leave-at-least-2-people-dead-in-hill-country-region-devastated-a-year-ago">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Canadian wildfire smoke pushes air quality to hazardous from the Midwest to the East Coast</h3>
+  <p>Smoke from over 1,000 Canadian fires plus fires in northern Minnesota drove air quality to "unhealthy to hazardous" across Michigan, Minnesota, Illinois, New York and Pennsylvania. Detroit saw visibility cut to half a mile — NWS meteorologist Steven Freitag said "it's really pretty extreme levels" — while Chicago ranged from very unhealthy to hazardous. Between 6,000 and 10,000 people were in the Boundary Waters when it closed; the Royal Canadian Air Force evacuated 11 Minnesota teenagers and 4 staff. Roughly 100 million people were under air quality alerts, with another 100 million under heat advisories.</p>
+  <div class="meta"><span class="tag us">Health</span> <a href="https://www.pbs.org/newshour/health/as-wildfire-smoke-makes-air-unhealthy-from-midwest-to-east-coast-officials-say-stay-inside">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>CDC and FDA link Taco Bell shredded lettuce from Taylor Farms to a large cyclospora outbreak</h3>
+  <p>Federal officials named Taylor Farms as supplier of the shredded iceberg lettuce tied to a five-state outbreak across Indiana, Kentucky, Michigan, Ohio and West Virginia, with Michigan accounting for more than half of cases. Roughly 1,645 confirmed infections are linked to Taco Bell, with nearly 7,000 potentially sickened nationwide and more than 5,100 cases still under investigation; 94 hospitalizations and no deaths. Illnesses began between May 13 and July 13. Taco Bell agreed to stop using lettuce from the identified supplier. KFF noted CDC's FoodNet surveillance capacity has been reduced by budget cuts.</p>
+  <div class="meta"><span class="tag us">Health</span> <a href="https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html">CDC</a><span class="sep">·</span><a href="https://www.cnn.com/2026/07/16/health/cyclospora-outbreak-shredded-lettuce">CNN</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Measles cases near a 30-year high, approaching last year's full-year total</h3>
+  <p>The US reported 2,231 measles cases as of July 9 — just 58 shy of the 2,289 reported for all of 2025 — the highest count in over 30 years, threatening the country's elimination status. Separately, CDC director nominee Dr. Erica Schwartz told senators "I will never betray the science" at her confirmation hearing.</p>
+  <div class="meta"><span class="tag us">Health</span> <a href="https://kffhealthnews.org/morning-briefing/thursday-july-16-2026/">KFF Health News</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>US designates the Juárez Cartel and Los Viagras as foreign terrorist organizations</h3>
+  <p>Secretary of State Marco Rubio announced the designations, bringing the total of designated Mexican criminal organizations to eight alongside the Sinaloa and Jalisco New Generation cartels. Rubio said both groups "either have committed terrorist acts or pose a serious risk of committing acts that threaten the security of US nationals or the national security." A Juárez Cartel faction was responsible for nine American deaths in 2019, including six children. Los Viagras, led by Nicolás Sierra Santana (indicted in D.C.), controls Michoacán territory through extortion of avocado and produce exports.</p>
+  <div class="meta"><span class="tag us">Security</span> <a href="https://www.pbs.org/newshour/world/u-s-designates-2-more-mexican-cartels-as-foreign-terrorist-organizations">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>SpaceX aborts second Starship V3 launch after engine ignition failure</h3>
+  <p>SpaceX aborted the launch moments after ignition at its South Texas facility on Thursday. Elon Musk said "[s]ome of the engines didn't start, triggering an automatic launch abort"; graphics indicated four Raptor engines failed to fire. Two engines will be replaced before another attempt, with the next window next week. This was SpaceX's first test flight since going public on June 12, 2026, in an offering that raised over $85 billion — the stock dropped more than 4% in after-hours trading.</p>
+  <div class="meta"><span class="tag us">Tech</span> <a href="https://techcrunch.com/2026/07/16/spacex-suddenly-aborts-second-starship-v3-launch-after-ignition/">TechCrunch</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Meta Oversight Board study finds AI chatbots more likely to refuse criticism of authoritarian leaders</h3>
+  <p>The study tested 10 commercial large language models from companies including Meta, Anthropic and OpenAI, finding models significantly more likely to refuse generating political criticism of restrictive leaders — Thailand's king, Saudi Arabia's crown prince, China's leader — than of permissive governments. Claude declined to criticize Thailand's king and Saudi Arabia's crown prince but complied for Trump and King Charles III. ChatGPT gave different answers about Chinese democracy depending on whether it was prompted in English or Chinese. The report warned developers risk building "AI infrastructure that... has the effect of extending illegitimate restrictions on freedom of expression globally."</p>
+  <div class="meta"><span class="tag us">Tech</span> <a href="https://www.pbs.org/newshour/world/ai-chatbots-at-risk-of-fueling-government-restrictions-on-online-speech-new-study-says">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>San Francisco mayor pushes statewide robotaxi rules after July 4 Waymo gridlock</h3>
+  <p>Dozens of Waymo robotaxis ran out of power and became immobile during heavy traffic near the Golden Gate Bridge fireworks event on July 4, which drew 100,000 spectators, blocking key streets and creating citywide gridlock. Mayor Daniel Lurie asked California's DOT to require AV companies to immediately remove disabled robotaxis from travel lanes, adapt routes in real time, share real-time operational data with local agencies, and demonstrate they can handle large crowd influxes. Roughly 1,000 Waymo robotaxis operate in the Bay Area; Waymo completes over 500,000 paid rides weekly across 11 cities. Lurie noted a December power outage also stranded dozens of vehicles.</p>
+  <div class="meta"><span class="tag us">Tech</span> <a href="https://techcrunch.com/2026/07/16/san-francisco-mayor-pushes-for-tougher-rules-after-the-waymo-traffic-fiasco/">TechCrunch</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Venezuelan man dies in ICE custody in Georgia — at least the 22nd death this year</h3>
+  <p>Jesús Manuel Arenas-Silva, 45, was found unresponsive at about 7:46 a.m. on July 13 aboard a bus transferring him from Irwin County Detention Center in Ocilla to the Folkston ICE Processing Center; he was pronounced dead at Irwin County Hospital at 8:31 a.m. Suspected cause is cardiac arrest, pending examination. ICE arrested him July 9 in Dallas, Georgia, on an outstanding removal warrant after an Atlanta immigration judge ordered him removed to Venezuela on April 27, 2026. His family alleges he was denied medication for a preexisting condition.</p>
+  <div class="meta"><span class="tag us">Legal</span> <a href="https://www.ice.gov/news/releases/venezuelan-detainee-dies-ice-custody-during-transfer-georgia">ICE</a><span class="sep">·</span><a href="https://www.walb.com/2026/07/14/venezuelan-man-immigration-hold-dies-transport-bus-irwin-county/">WALB</a><span class="sep">·</span>July 13–16</div>
+</div>
+
+<div class="story">
+  <h3>Sam Neill died of pneumonia, agent says</h3>
+  <p>The "Jurassic Park" and "The Piano" star died July 13 in Sydney at 78. His agent confirmed on July 16 that the cause was pneumonia. Neill had battled a rare, aggressive blood cancer but revealed in April he was cancer free; the family called the loss sudden and unexpected. Tributes came from Steven Spielberg and Taika Waititi.</p>
+  <div class="meta"><span class="tag us">Culture</span> <a href="https://www.pbs.org/newshour/arts/jurassic-park-star-sam-neill-died-from-pneumonia-agent-says">PBS NewsHour</a><span class="sep">·</span>July 16</div>
+</div>
+
+<!-- ============ EUROPE ============ -->
+<h2><span class="flag">🇪🇺</span> Europe</h2>
+
+<div class="story lead">
+  <h3>Andy Burnham becomes Labour leader, set to be UK prime minister on Monday</h3>
+  <p>Burnham was confirmed as Labour leader at a special conference on Friday July 17, running unopposed after securing 379 nominations from Labour MPs — over 80% of the parliamentary party — which made rival nominations mathematically impossible as of July 13. He succeeds Keir Starmer, who resigned last month after poor May local election results, and is expected to take office on Monday July 20 as the UK's seventh prime minister in a decade.</p>
+  <p>Burnham, who won the Makerfield by-election in June 2026, pledged to be "unashamedly Labour." Conservative leader Kemi Badenoch accused Labour of "running scared" of scrutiny.</p>
+  <div class="caution"><strong>Date discrepancy:</strong> Euronews gives the timeline as leader July 19 and PM July 22; NBC, US News and Wikipedia agree on July 17 and July 20. The majority reading is used here.</div>
+  <div class="meta"><span class="tag eu">UK · Politics</span> <a href="https://www.nbcnews.com/world/united-kingdom/andy-burnham-made-uk-labour-leader-way-becoming-prime-minister-rcna587960">NBC News</a><span class="sep">·</span><a href="https://www.euronews.com/2026/07/17/andy-burnham-set-to-become-labour-leader-before-taking-over-as-uk-pm">Euronews</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story lead">
+  <h3>EU orders Google to share Search data and open Android to rival AI assistants</h3>
+  <p>The European Commission on July 16 issued two binding DMA specification decisions requiring Google to give third-party AI assistants the same Android access Gemini enjoys — including voice activation and in-app actions such as booking a taxi — and to share anonymised ranking, query, click and view data from Google Search with rival search engines and AI chatbots.</p>
+  <p>Data sharing must begin by January 2027, with a formula set for pricing the shared data. Google objected that the decisions "risk undermining vital privacy and security guardrails for millions of Europeans." It is the most consequential DMA enforcement action yet, and a template for how Europe intends to regulate AI distribution.</p>
+  <div class="meta"><span class="tag eu">EU · Tech regulation</span> <a href="https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en">European Commission</a><span class="sep">·</span><a href="https://www.cnbc.com/2026/07/16/google-required-to-open-up-to-ai-search-engine-rivals-under-eu-mandated-changes.html">CNBC</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story lead">
+  <h3>Commission proposes a major softening of the EU carbon market</h3>
+  <p>The Commission on Friday July 17 proposed an ETS overhaul cutting the annual emissions cap reduction rate to roughly 3.7% from 2031, down from 4.3%; extending free allowances to end-2037 instead of 2034, likely delaying full phase-in of the carbon border levy; and granting 80% of permits upfront to firms with EU decarbonisation investment plans. Governments would have to reinvest 50% of ETS revenue in domestic industry, and the ETS would expand to international flights departing Europe for destinations up to 5,000km away, capturing Turkey and Middle East hubs but excluding the US.</p>
+  <p>It follows a July 15 joint declaration by ten member states — Bulgaria, Cyprus, Czechia, Estonia, Greece, Hungary, Italy, Poland, Romania, Slovakia — representing just over 35% of EU population, enough for a Council blocking minority. It is the clearest rollback of the Green Deal's core instrument to date.</p>
+  <div class="meta"><span class="tag eu">EU · Energy</span> <a href="https://wkzo.com/2026/07/17/eu-to-revamp-carbon-market-to-ease-pressure-on-industry/">Reuters via WKZO</a><span class="sep">·</span><a href="https://brusselssignal.eu/2026/07/ten-eu-members-demand-looser-carbon-market-rules-as-commission-prepares-to-give-ground/">Brussels Signal</a><span class="sep">·</span>July 15–17</div>
+</div>
+
+<div class="story">
+  <h3>Zelensky's reshuffle: Fedorov sacked as defence minister, SBU general named acting successor</h3>
+  <p>Ukraine's parliament confirmed Serhiy Koretsky as prime minister on July 16 with 289 votes, while Mykhailo Fedorov was removed as defence minister after six months. Zelensky named Major General Yevhen Khmara — head of the SBU and former chief of its Alpha special operations centre — acting defence minister, a move that sits awkwardly with Ukrainian law requiring a civilian in the post.</p>
+  <p>The dismissal triggered public protests in several Ukrainian cities and anger among soldiers and veterans; Russian military bloggers publicly welcomed it. It is Zelensky's fourth reshuffle since February 2022.</p>
+  <div class="meta"><span class="tag eu">Ukraine · Politics</span> <a href="https://brusselssignal.eu/2026/07/zelensky-names-security-service-general-as-acting-defence-minister/">Brussels Signal</a><span class="sep">·</span><a href="https://kyivindependent.com/">Kyiv Independent</a><span class="sep">·</span>July 14–16</div>
+</div>
+
+<div class="story">
+  <h3>Russian strikes kill 7 across Ukraine; Ukrainian drones hit 12 Russian "shadow fleet" vessels</h3>
+  <p>Russian attacks killed seven people and injured 67 across Ukraine in the 24 hours to July 17, with the port city of Odesa targeted again during peak tourist season. A separate missile strike on Odesa on July 16 killed two and injured at least eight, including children; ballistic missiles hit Kyiv the same day, killing two and injuring six.</p>
+  <p>Ukraine's Unmanned Systems Forces commander Robert Brovdi said a large-scale July 17 operation damaged nine dry cargo ships, one oil tanker, one gas carrier and one tugboat in the Black Sea, all described as part of Russia's sanctions-evading shadow fleet. The operation coincided with strikes across occupied Crimea, following a total blackout in Kerch after an earlier drone attack. Russia separately said a Ukrainian drone attack killed the chief engineer at the Zaporizhzhia nuclear plant.</p>
+  <div class="meta"><span class="tag eu">Ukraine · War</span> <a href="https://kyivindependent.com/">Kyiv Independent</a><span class="sep">·</span><a href="https://www.themoscowtimes.com/">Moscow Times</a><span class="sep">·</span>July 15–17</div>
+</div>
+
+<div class="story">
+  <h3>EU's top court upholds Spain's amnesty law for Catalan separatists</h3>
+  <p>The Court of Justice of the EU ruled on July 16 that "EU law does not preclude" Spain's contested 2024 amnesty law, finding it "seeks to reduce institutional and political tensions and to facilitate a scenario for reconciliation." The ruling is a win for Pedro Sánchez, who passed the law to secure Catalan separatist backing after the inconclusive 2023 election, and could clear the way for Carles Puigdemont to return from self-imposed exile in Belgium before an election due by 2027. Puigdemont still faces a separate embezzlement charge outside the amnesty's scope; Spain's Constitutional Court is expected to rule on that in coming months.</p>
+  <div class="meta"><span class="tag eu">Spain · EU law</span> <a href="https://www.euronews.com/my-europe/2026/07/16/eu-court-of-justice-clears-way-for-puigdemont-amnesty-as-it-backs-spain">Euronews</a><span class="sep">·</span><a href="https://www.thelocal.es/20260716/eu-court-upholds-spains-amnesty-law-for-catalan-separatists">The Local ES</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>France adopts landmark assisted dying law</h3>
+  <p>The National Assembly gave final approval to France's assisted dying bill on July 15 by 291 votes to 241, completing legislation Macron first announced more than three years ago. Adults with an incurable condition, able to express themselves in a "free and informed" manner and suffering physical pain, may receive a lethal substance to self-administer — or have it administered by a doctor or nurse if physically unable. Prime Minister Sébastien Lecornu is set to refer the text to the Constitutional Council before it takes effect.</p>
+  <div class="meta"><span class="tag eu">France · Society</span> <a href="https://www.france24.com/en/france/20260715-france-expected-to-pass-final-vote-on-assisted-dying-after-years-of-debate">France 24</a><span class="sep">·</span><a href="https://www.aljazeera.com/news/2026/7/15/french-parliament-approves-landmark-assisted-dying-bill">Al Jazeera</a><span class="sep">·</span>July 15</div>
+</div>
+
+<div class="story">
+  <h3>Ex-motorway chief jailed 12 years over Genoa bridge collapse</h3>
+  <p>A Genoa court on July 16 sentenced Giovanni Castellucci, former CEO of Atlantia and Autostrade per l'Italia, to 12 years for vehicular homicide and negligence over the Morandi bridge collapse that killed 43 people on August 14, 2018. Around 30 defendants were convicted with sentences from one year 11 months to 12 years — former maintenance head Michele Donferri Mitelli got 11 years, ex-deputy Paolo Berti five years six months — while others were acquitted or saw charges time-barred. Castellucci did not attend; he is already serving six years over a separate 2013 viaduct incident.</p>
+  <div class="caution"><strong>Count unsettled:</strong> France 24 reports 32 found guilty; Al Jazeera and CNN report 30.</div>
+  <div class="meta"><span class="tag eu">Italy · Justice</span> <a href="https://www.aljazeera.com/news/2026/7/16/ex-ceo-of-italian-motorway-sentenced-to-12-years-for-genoa-bridge-collapse">Al Jazeera</a><span class="sep">·</span><a href="https://www.ansa.it/english/">ANSA</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Meloni's electoral reform clears Italy's lower house</h3>
+  <p>The Chamber of Deputies approved the governing coalition's electoral reform on July 16 by 217 votes to 152 with two abstentions. It introduces a fully proportional system but guarantees a majority to any bloc winning over 42%, awarding a bonus of 70 seats in the 400-seat lower house and 35 in the 200-seat Senate. Lawmakers rejected a government proposal for preference votes, partly due to coalition defections. The bill goes to the Senate, where the government hopes to pass it after the summer recess; opponents call it an attempt to keep Meloni in power at the 2027 election.</p>
+  <div class="meta"><span class="tag eu">Italy · Politics</span> <a href="https://www.ansa.it/english/news/2026/07/16/lower-house-approves-controversial-bill-for-new-election-system_1dcb7cf0-642d-4ed9-95b7-691f99322eb4.html">ANSA</a><span class="sep">·</span><a href="https://www.thelocal.it/20260716/italys-electoral-reform-clears-first-vote-as-coalition-splits-deepen">The Local IT</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Italian police raid Bulgari, Chanel and others in luxury labour-abuse probe</h3>
+  <p>Milan prosecutors on July 16 raided offices of several luxury brands — including Bulgari, Chanel, Brunello Cucinelli, Etro, Goyard Italie, Jacob Cohen, Moncler and Stefano Ricci — over allegations their subcontractors exploited Chinese workers. Investigators sought governance documents from 13 fashion firms. It is the second such operation after a December 2025 sweep of 13 other brands; the wider probe has already implicated Prada, Givenchy and Dolce &amp; Gabbana, centring on multi-layered subcontracting that ends in exploitative workshops.</p>
+  <div class="meta"><span class="tag eu">Italy · Business</span> <a href="https://www.euronews.com/my-europe/2026/07/16/italian-police-conduct-raids-on-several-luxury-brands-in-labour-abuse-probe">Euronews</a><span class="sep">·</span><a href="https://www.scmp.com/news/world/europe/article/3360847/italian-police-raid-luxury-brands-bulgari-and-chanel-over-exploitation-chinese-workers">SCMP</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Britain nationalises British Steel; China "firmly opposes"</h3>
+  <p>The UK fully nationalised British Steel on July 16, taking the loss-making firm from Chinese owner Jingye Group, with the Department for Business and Trade saying the move was essential to maintain production at Scunthorpe and protect UK supply chains. China's commerce ministry said on Friday it "firmly opposes" and is "strongly dissatisfied" with the decision, saying Britain "forcibly" took over the company, "seriously damaged" Jingye's rights and "severely undermined" Chinese firms' confidence in investing in Britain. Beijing urged the UK to honour the China-UK Investment Protection Agreement.</p>
+  <div class="meta"><span class="tag eu">UK · Trade</span> <a href="https://english.news.cn/20260717/12bf3b50ba7d4c0dad7136a7674c18f4/c.html">Xinhua</a><span class="sep">·</span><a href="https://www.euronews.com/business/2026/07/17/china-firmly-opposes-uk-nationalisation-of-british-steel">Euronews</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Polish president vetoes legal rights for unmarried and same-sex couples</h3>
+  <p>President Karol Nawrocki on July 17 vetoed two bills, passed by parliament in May and June, that would have let unmarried couples — same-sex and opposite-sex — sign a notarised agreement granting joint property and tax settlement, medical information access, inheritance and gift tax exemptions, and burial decision rights. Nawrocki said the measures would "introduce civil partnerships through the back door" and threaten marriage's constitutional status, arguing "the family is a community fundamental to the survival of the nation." Polling shows a record 62% of Poles favour same-sex civil partnerships; government equality official Katarzyna Kotula said the "veto will not halt social change."</p>
+  <div class="meta"><span class="tag eu">Poland · Politics</span> <a href="https://notesfrompoland.com/2026/07/17/president-vetoes-legal-rights-for-same-sex-couples-in-poland/">Notes from Poland</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story">
+  <h3>Spain battles a major Aragón wildfire as a heatwave grips southern Europe</h3>
+  <p>A fire that broke out near Ores in Aragón on July 15 during an intense heatwave has destroyed more than 4,500 hectares, forced evacuation of at least five villages and reached the urban area of Asín, damaging homes. Spain's Unidad Militar de Emergencias deployed alongside civilian crews, with helicopters and water-bombing aircraft. In Italy, the number of major cities on heatwave red alert was set to rise to 19 on Saturday, energy consumption hit a yearly peak of 57.98 GW, and June saw 3% excess mortality among over-65s.</p>
+  <div class="meta"><span class="tag eu">Spain/Italy · Climate</span> <a href="https://www.euronews.com/video/2026/07/16/spain-battles-major-aragon-wildfire-amid-heatwave-and-climate-fears">Euronews</a><span class="sep">·</span><a href="https://www.ansa.it/english/">ANSA</a><span class="sep">·</span>July 15–17</div>
+</div>
+
+<div class="story">
+  <h3>Netherlands declares an official water shortage as drought bites</h3>
+  <p>The Dutch government declared the second level of its water crisis framework — a state of "de facto water shortage" — on July 16, after historically low river inflows and weeks with almost no rain. Authorities are adjusting dam operation, preparing additional pumping stations and reducing sluice openings, and have banned abstraction from canals, rivers and groundwater in some regions. Drinking water supply is unaffected as stocks were raised before summer.</p>
+  <div class="meta"><span class="tag eu">Netherlands · Climate</span> <a href="https://kfgo.com/2026/07/16/heat-and-drought-cause-water-shortage-in-netherlands-government-says/">Reuters via KFGO</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Russia's fuel crisis fuels stagflation fears as Gazprom shares hit a record low</h3>
+  <p>Accelerating inflation alongside stalling growth is pushing Russia toward stagflation, driven by the loss of a significant share of refining capacity to Ukrainian drone strikes — including a June 18 explosion at a Moscow refinery. Promsvyazbank analysts abandoned their 0.6% GDP growth forecast for this year in favour of stagnation and cut 2027 growth to 0.5% from 2%; the pro-government CMAKP had already concluded recession was likely by July, lasting more than a year. Gazprom shares sank to a record low, and on July 17 the agriculture minister admitted "rough patches" as fuel shortages squeezed farmers mid-harvest.</p>
+  <div class="meta"><span class="tag eu">Russia · Economy</span> <a href="https://www.themoscowtimes.com/2026/07/16/russias-fuel-crisis-raises-stagflation-fears-as-growth-stalls-and-inflation-accelerates-a93272">The Moscow Times</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Nine European states and Ukraine launch an anti-ballistic missile coalition; Switzerland joins NATO ammunition pact</h3>
+  <p>Leaders of Denmark, France, Germany, Italy, the Netherlands, Norway, Spain, Sweden, the UK and Ukraine met in Paris on July 13 and declared an Integrated Anti-Ballistic Missile Coalition, citing "the growing threat" of ballistic missiles and promising an integrated defence architecture built on shared industrial capacity. Zelensky said partners could jointly field a mass-produced, low-cost anti-ballistic system within 12 months, built around Ukraine's Freyja programme — pitched as a cheaper Patriot alternative.</p>
+  <p>Separately, neutral Switzerland announced on July 17 that it is joining NATO's ammunition purchasing pact, a further step in Swiss alignment with European defence structures. Bern is also weighing an extension of the service life of its F/A-18 fleet.</p>
+  <div class="meta"><span class="tag eu">EU/NATO · Defence</span> <a href="https://www.euronews.com/my-europe/2026/07/13/nine-european-countries-and-ukraine-form-anti-ballistic-missile-coalition">Euronews</a><span class="sep">·</span><a href="https://www.swissinfo.ch/eng/">SWI swissinfo</a><span class="sep">·</span>July 13–17</div>
+</div>
+
+<!-- ============ TURKEY ============ -->
+<h2><span class="flag">🇹🇷</span> Turkey</h2>
+
+<div class="story lead">
+  <h3>Özgür Özel says a new party will be formally launched late July or early August</h3>
+  <p>Özel gave his most explicit statement yet on founding a new party, saying work on the name and logo is underway and that a formal step would come "end of July or beginning of August," pending completion of CHP legal proceedings in one to two weeks. He said a 30-person technical team is preparing the launch and that he would be its chairman if they leave CHP. Journalist İsmail Saymaz reported the working name under most consideration is simply "Yeni Parti" (New Party). Özel said: "Kurar, gene birinci parti oluruz" — we'd found it and be the first party again.</p>
+  <p>The structural cause is the "mutlak butlan" ruling: the Ankara Regional Court of Justice 36th Civil Chamber declared the CHP's 38th Ordinary Congress (November 4–5, 2023) and the October 8, 2023 İstanbul provincial congress absolutely null and void, annulling all subsequent congresses, restoring Kemal Kılıçdaroğlu and pre-congress organs, and provisionally suspending Özel, the MYK, the Party Assembly and the High Disciplinary Board. On July 16 the Kılıçdaroğlu-led MYK removed eight provincial chairs and referred the Konya and Tokat chairs for permanent expulsion.</p>
+  <div class="framing"><strong>Framing:</strong> Pro-government Takvim casts this as Özel repeatedly threatening to split, highlighting his jab that a court-appointed trustee "would have been better" than Kılıçdaroğlu. Opposition outlets — Cumhuriyet, Bianet, Sözcü — frame it as a legitimate response to judicial interference in a party's internal affairs.</div>
+  <div class="meta"><span class="tag tr">Politics</span> <a href="https://www.cumhuriyet.com.tr/turkiye/ozgur-ozel-den-yeni-parti-hakkinda-en-net-aciklama-kilicdaroglu-na-feto-yaniti-verdi-2520982">Cumhuriyet</a><span class="sep">·</span><a href="https://bianet.org/haber/ozgur-ozel-yeni-parti-secenegini-acikca-tartisti-kurar-gene-birinci-parti-oluruz-321401">Bianet</a><span class="sep">·</span><a href="https://www.sozcu.com.tr/chp-ye-mutlak-butlan-karari-p321670">Sözcü</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story lead">
+  <h3>Erdoğan marks the 10th anniversary of the July 15 coup attempt; Özel says the reckoning stopped at FETÖ's "political wing"</h3>
+  <p>President Erdoğan attended the "15 July Democracy and National Unity Day" commemoration in the TBMM Ceremonial Hall and a program titled "10th Anniversary of July 15: Our Will Our Victory" at Ankara People's Garden. He prayed for "253 martyrs," said the eyes of the world are again on Turkey, and vowed to fight FETÖ "until totally eradicated" — warning that despite the network losing "guard, hope and motivation" after the death of its leader, "we can never afford to become complacent."</p>
+  <p>Özel marked the same anniversary differently: "I'm the person who said 'not theater, a real bloody coup' — my opinion hasn't changed since that day." He said CHP stood against the coup that night and that deputies who pushed to open parliament were bombed for doing so. He argued FETÖ's structures in the military, judiciary, police and religious affairs were addressed but "when it came to FETÖ's political wing, the matter stopped," and asked how those who resisted alongside him on July 15 can now "hope for salvation from the butlan process."</p>
+  <div class="framing"><strong>Framing:</strong> This is the sharpest contrast of the anniversary. Pro-government outlets (Sabah, Star, Yeni Asır, Haber7) led with Erdoğan's "traitors still lie in wait" line and "the imperialist project was thrown in the bin." Opposition framing centres on the unfinished reckoning with FETÖ's political wing — pointing at the government itself — and on the irony of the judiciary now being turned on CHP.</div>
+  <div class="meta"><span class="tag tr">Politics</span> <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-tbmmde-15-temmuz-anma-torenine-katildi-951294.html">TRT Haber</a><span class="sep">·</span><a href="https://www.cnnturk.com/turkiye/ozgur-ozelden-15-temmuz-degerlendirmesi-tiyatro-degil-kanli-bir-darbe-diyen-kisiyim-3442878">CNN Türk</a><span class="sep">·</span><a href="https://www.turkiyetoday.com/nation/feto-terrorist-group-still-active-erdogan-says-on-10th-anniversary-of-coup-attempt-3223987">Türkiye Today</a><span class="sep">·</span>July 15</div>
+</div>
+
+<div class="story lead">
+  <h3>Arrest wave in 48 hours: Çankaya's mayor, Haluk Levent, and 25 celebrity drug detentions</h3>
+  <p><strong>Çankaya Mayor Hüseyin Can Güner</strong> was detained at Esenboğa Airport on return from Northern Cyprus. The Ankara Chief Public Prosecutor's Office sought detention of 36 suspects including municipal bureaucrats on charges of founding or joining a criminal organisation, bribery, and rigging tenders; 30 were detained and 24 arrested, with 6 released under judicial control. Güner told the court "There is no public harm, rather public benefit occurred"; his lawyer said the case rests on secret witness testimony rather than concrete evidence. Ankara Mayor Mansur Yavaş asked why "the heaviest measure restricting personal freedom" was used against someone who voluntarily returned from abroad.</p>
+  <p><strong>Singer Haluk Levent</strong> and 13 others were arrested in a probe into the Ahbap charity, on charges of violating the Associations Law, laundering proceeds of crime, and organisation membership. Prosecutors allege donations were moved to suspects' personal accounts, that Levent placed 990 million lira in bets between 2020 and 2026 and lost 390 million lira, and that 120 million lira went from Ahbap's account to an assistant's. Ahbap collected roughly $158 million in earthquake donations; the file alleges some homes were never completed and funds went abroad.</p>
+  <p><strong>A celebrity drug operation</strong> saw the Bakırköy prosecutor issue detention orders for 25 people — artists, actors, businesspeople and venue operators — including Sıla Gençoğlu, MED Yapım owner Mehmet Fatih Aksoy and İlyas Yalçıntaş. Yalçıntaş, Ayşe Nur Balcı, Orhan Yıldız and Şefik Ömer Dolman were arrested.</p>
+  <div class="framing"><strong>Framing:</strong> AA, NTV and Hürriyet report these as criminal-organisation and bribery operations. Cumhuriyet and BirGün foreground the secret-witness basis; Özel called the Çankaya case a "political operation." On Ahbap, Yeni Şafak and Haber7 run maximalist tabloid treatments presenting guilt as established, while Cumhuriyet's Murat Ağırel takes an investigative-but-questioning line.</div>
+  <div class="meta"><span class="tag tr">Justice</span> <a href="https://medyascope.tv/2026/07/15/cankaya-belediye-baskani-huseyin-can-guner-tutuklandi/">Medyascope</a><span class="sep">·</span><a href="https://www.aa.com.tr/tr/gundem/cankaya-belediye-baskani-huseyin-can-guner-gozaltina-alindi/3994783">Anadolu Agency</a><span class="sep">·</span><a href="https://www.hurriyet.com.tr/gundem/ahbap-dernegine-sorusturma-haluk-levent-adim-adim-takip-edilmis-yeni-goruntuler-ortaya-cikti-43238955">Hürriyet</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>Fidan in Kyiv: receives Ukrainian state honour, pushes the Istanbul format and a Black Sea moratorium</h3>
+  <p>Foreign Minister Hakan Fidan visited Kyiv July 15–16, meeting President Zelenskyy, FM Andrii Sybiha, Rustem Umerov, and Crimean Tatar leaders Mustafa Abdülcemil Kırımoğlu and Refat Chubarov. Zelenskyy conferred the Second Class Order of Merit on Fidan by presidential decree.</p>
+  <p>Fidan urged both sides to keep the Istanbul negotiation process alive — "the fact that the war is continuing does not mean negotiations in this format cannot continue" — said both parties are "psychologically prepared for a ceasefire," and proposed a Black Sea moratorium on attacks against ports and vessels, calling strikes on tankers and fishing boats unjustifiable. He welcomed Ukraine's ratification of the Türkiye–Ukraine free trade agreement, with bilateral trade at $6.6 billion annually.</p>
+  <div class="caution"><strong>Unconfirmed:</strong> A claim that Türkiye has agreed to take the naval component of future Ukraine security guarantees surfaced only via a Russian-linked aggregator, with no independent Turkish-source confirmation. It is not treated as established here. Fidan's Black Sea remarks above are separately and reliably sourced.</div>
+  <div class="meta"><span class="tag tr">Foreign policy</span> <a href="https://www.turkiyetoday.com/nation/turkiyes-top-diplomat-receives-ukrainian-state-honor-on-kyiv-visit-3224050">Türkiye Today</a><span class="sep">·</span><a href="https://www.dailysabah.com/politics/diplomacy/turkiye-seeks-to-stop-the-war-as-fidan-travels-to-ukraine">Daily Sabah</a><span class="sep">·</span><a href="https://yetkinreport.com/en/2026/07/15/russia-china-meeting-in-ankara-and-fidans-visit-to-ukraine/">Yetkin Report</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>Turkey and the renewed US–Iran war</h3>
+  <p>Hürriyet Daily News led with "US strikes Iran as Tehran warns of Mideast reprisals" and "US-Israel rift widens as Vance steps up criticism." Turkish reporting indicates the US–Iran ceasefire — the "Ilamabad Accord" — collapsed before its term expired, and that CENTCOM announced the latest wave of strikes on Iran concluded at 21:00 on July 15.</p>
+  <div class="caution"><strong>Partially unconfirmed:</strong> Reporting that Turkey's Foreign Ministry re-summoned Iran's ambassador Mohammad Hasan Habibollahzadeh, and that Fidan warned Iranian officials no further missiles should be directed at Turkey, reached this briefing through aggregator summaries rather than a primary MFA statement. The broad picture — strikes, ceasefire collapse — is corroborated by Hürriyet Daily News and Türkiye Gazetesi; the Turkey-specific diplomatic detail should be re-verified.</div>
+  <div class="meta"><span class="tag tr">Foreign policy</span> <a href="https://www.hurriyetdailynews.com/">Hürriyet Daily News</a><span class="sep">·</span><a href="https://www.turkiyegazetesi.com.tr/dunya/abd-vurdu-iran-misillemeye-gecti-mutabakat-ortadan-kalkti-1803327">Türkiye Gazetesi</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>"Terörsüz Türkiye" framework law slips to October; DEM Parti warns the process is stalling</h3>
+  <p>AK Party planned to share its draft law with parliamentary parties after July 15, but with parliament in summer recess the commission phase is now expected in October at the start of the new legislative year, with the summer treated as a period of negotiation and technical preparation. A commission of constitutional law experts is working on the regulations, and a "Social Integration Monitoring and Coordination Board" is planned — drawing on MİT and the Interior, Defence, Justice, Family, Labour and Health ministries — to monitor PKK disarmament.</p>
+  <p>DEM Parti's Party Council (July 11–12) said there is neither a draft nor a consensus, that there has been no contact with İmralı since May 24, and that roughly 50 days of isolation of Öcalan — who they insist must function as chief negotiator with proper communication conditions — contradicts the process. DEM officials say that if the law passes, Öcalan would move to a new facility with his secretariat.</p>
+  <div class="framing"><strong>Framing:</strong> Yeni Şafak presents the delay as orderly sequencing, a "new timeline." DEM Parti and Kurdish and independent outlets present the same facts as drift and bad faith — no draft shared, İmralı cut off. Sabah separately ran "PKK has fully withdrawn from the Turkish border" as evidence of progress.</div>
+  <div class="meta"><span class="tag tr">Kurdish issue</span> <a href="http://www.yenisafak.com/gundem/terorsuz-turkiye-yasasinda-yeni-takvim-4840028">Yeni Şafak</a><span class="sep">·</span><a href="https://kisadalga.net/haber/ozel-haber/dem-partiden-surec-degerlendirmesi-taslak-da-uzlasma-da-yok-139161">Kısa Dalga</a><span class="sep">·</span><a href="https://artigercek.com/politika/dem-parti-pm-sonuc-bildirgesi-cozum-iradesi-hukuki-adimlarla-guclendirilmeli-348353h">Artı Gerçek</a><span class="sep">·</span>July 9–16</div>
+</div>
+
+<div class="story">
+  <h3>Lira at 47.05/$; central bank decision due July 23 with no August meeting</h3>
+  <p>On July 16 the dollar was quoted at 47.05 TL, opening 0.04% higher than the prior day; the euro traded at 54.07 TL, up 0.17%. BIST 30 futures opened 0.6% lower from 16,650 points.</p>
+  <p>The macro backdrop: June CPI came in at 0.99% m/m and 32.11% y/y, down 0.50 points from May; core inflation 29.84%; PPI 1.80% m/m and 28.09% y/y. Unemployment was 8.2% in May (youth 14.8%) with 32.463 million employed. The May current account deficit was $1.46 billion against a roughly $960 million forecast, with the 12-month rolling deficit at $37.3 billion. The TCMB Monetary Policy Committee announces its July decision on Thursday July 23 at 14:00; most economists expect no change. Because the published 2026 calendar has no August meeting, this decision and its statement will guide markets through to September.</p>
+  <div class="meta"><span class="tag tr">Economy</span> <a href="https://veriportali.tuik.gov.tr/en/press/58289">TÜİK</a><span class="sep">·</span><a href="https://www.bloomberght.com/dolar-ne-kadar-oldu-16-temmuz-2026-dolar-kurunda-son-durum-ne-pkh2-3782965">BloombergHT</a><span class="sep">·</span><a href="https://www.tcmb.gov.tr/wps/wcm/connect/TR/TCMB+TR/Main+Menu/Duyurular/Takvim">TCMB</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Lawyers protest at İstanbul courthouse over NATO-summit-related detentions</h3>
+  <p>Lawyers demonstrated at the İstanbul courthouse over the arrest of colleagues during operations preceding the NATO summit, saying "our colleagues' political identities and legal practices are under attack." The Progressive Lawyers Association (ÇHD) documented 84 arrests in İstanbul operations ahead of the meeting, alleging physical violence against detainees and noting one prisoner on hunger strike. Nine detainees filed complaints against police alleging torture and coercion into confessions. Actor Levent Üzümcü and former AKUT president Nasuh Mahruki were detained in separate incidents.</p>
+  <div class="framing"><strong>Framing:</strong> Carried prominently by opposition and independent outlets; largely absent from pro-government coverage, which emphasised the summit's economic yield — roughly 900 million lira to Ankara's economy.</div>
+  <div class="meta"><span class="tag tr">Civil liberties</span> <a href="https://medyascope.tv/2026/07/16/16-temmuz-2026-gunun-en-onemli-haberleri/">Medyascope</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Guterres to visit Cyprus July 27–28 to revive leader-level talks</h3>
+  <p>UN Secretary-General António Guterres, with special representative María Ángela Holguín, is expected in Cyprus on July 27–28 to try to bring the Turkish and Greek Cypriot leaders back to the table. Context: on July 8 the European Parliament adopted, by 575 votes to 33 with 43 abstentions, a resolution on the effects of the 1974 Turkish intervention in Cyprus — condemned by Turkey's MFA, the Communications Directorate, the Defence Ministry, nearly all parties in parliament, and the TRNC MFA. Turkey and the TRNC have signed an MoU for a 101-km bidirectional undersea natural gas pipeline linking Turkey's Mediterranean coast to Northern Cyprus. Greek PM Mitsotakis said he remains a strong advocate of developing Turkish–Greek relations, speaking around the Ankara NATO summit of July 7–8.</p>
+  <div class="meta"><span class="tag tr">Foreign policy</span> <a href="https://www.hurriyet.com.tr/dunya/turk-ve-rumlari-masaya-oturtmaya-calisacak-guterres-kibrisa-gidiyor-43242420">Hürriyet</a><span class="sep">·</span><a href="https://yetkinreport.com/2026/07/16/abnin-agababalari-yunanistan-ve-g-kibrisi-turkiyeye-karsi-kullaniyor/">Yetkin Report</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Forest fire in İzmir's Torbalı forces evacuation of an organised industrial zone</h3>
+  <p>A fire broke out in woodland near Ahmetli neighbourhood in Torbalı, İzmir, spreading rapidly on strong winds. Businesses in the organised industrial zone in the threatened area were evacuated as a precaution. İzmir Forest Regional Directorate and fire brigade teams responded with helicopters, aircraft and fire trucks, and the fire was partially brought under control with the immediate danger passing. AFAD had warned that forest fire risk in Antalya would reach its highest level between July 15–18 due to extreme heat and low humidity. Crews had fully contained earlier fires in Manisa and Muğla.</p>
+  <div class="meta"><span class="tag tr">Environment</span> <a href="https://www.yeniasir.com.tr/izmir/2026/07/16/izmirde-orman-yangini-buyudu-is-yerleri-tahliye-edildi">Yeni Asır</a><span class="sep">·</span><a href="https://www.ahaber.com.tr/yasam/2026/07/16/izmir-torbalida-orman-yangini-alevler-kismen-kontrol-altinda">A Haber</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Friday's official agenda: COP31 D-8 ministerial, Bolat in Brussels, CBRT data</h3>
+  <p>The July 17 Official Gazette (No. 33312) carried decisions allowing certain parliamentary commissions to continue working during the summer recess, and changes to import supervision notification. Vice President Cevdet Yılmaz attended the Turkey Report presentation by the Cihannüma Association and AYBİR in İstanbul. Environment, Urbanisation and Climate Change Minister and COP31 President Murat Kurum opened the COP31 D-8 International Ministers Meeting in İstanbul. Trade Minister Ömer Bolat met civil society representatives at Turkey's EU Permanent Representation in Brussels. The CBRT released the housing price index, short-term external debt statistics and weekly money and banking data; BDDK released weekly banking sector data; TÜİK published employment and vehicle sales data.</p>
+  <div class="meta"><span class="tag tr">Politics</span> <a href="https://www.ntv.com.tr/turkiye/resmi-gazetede-bugun-17-temmuz-2026-resmi-gazete-kararlari-1733273">NTV</a><span class="sep">·</span><a href="https://t24.com.tr/gundem/resm-gazetede-bugun-17-temmuz-2026-resm-gazete-kararlari,1336625">T24</a><span class="sep">·</span>July 17</div>
+</div>
+
+<!-- ============ CHINA ============ -->
+<h2><span class="flag">🇨🇳</span> China &amp; Greater China</h2>
+
+<div class="story lead">
+  <h3>Xi headlines the World AI Conference; 29 countries found a Shanghai-based World AI Cooperation Organization</h3>
+  <p>Xi delivered his first-ever keynote at the World AI Conference in Shanghai on July 17, pledging China would "encourage open source, openness, collaboration and sharing," calling for "people-centered" AI governance that stays "secure and controllable," and warning against any country putting its own security above others'. He pledged 5,000 AI training and seminar places for developing countries over five years, plus AI cooperation frameworks with ASEAN and the League of Arab States.</p>
+  <p>The day before, 29 countries signed the founding agreement for the World Artificial Intelligence Cooperation Organization (WAICO), an intergovernmental body headquartered in Shanghai. Signatories include Russia, Belarus, Serbia, Cuba, Brazil and Venezuela, plus 10 African and 12 Asian states. Notably absent: the US and major EU economies.</p>
+  <div class="framing"><strong>Attribution:</strong> The framing of WAICO as evidence of broad global buy-in is state-media emphasis (Global Times, china.org.cn); the membership list is independently confirmed by Reuters. Western coverage frames it explicitly as a counter-bloc to US-led AI governance.</div>
+  <div class="meta"><span class="tag cn">Tech/AI</span> <a href="https://www.npr.org/2026/07/17/nx-s1-5897285/chinas-xi-calls-for-step-up-of-global-effort-in-ai-as-us-curbs-squeeze-chinas-tech-access">NPR</a><span class="sep">·</span><a href="https://www.scmp.com/tech/tech-war/article/3360870/top-takeaways-xi-jinpings-opening-address-world-ai-conference-shanghai">SCMP</a><span class="sep">·</span><a href="https://www.usnews.com/news/world/articles/2026-07-16/twenty-nine-countries-sign-agreement-to-establish-global-ai-cooperation-body">Reuters via US News</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story lead">
+  <h3>Q2 GDP grows 4.3% — the first miss of Beijing's own target since Covid</h3>
+  <p>The National Bureau of Statistics reported on July 15 that Q2 GDP rose 4.3% y/y, missing the 4.5% Reuters consensus and falling below the government's full-year 4.5–5.0% target band — itself the least ambitious target in decades. H1 GDP totalled RMB 69.57 trillion (about US$10.25tn), up 4.7% y/y, after 5.0% in Q1.</p>
+  <p>The composition is uneven. June industrial output rose 5.3% y/y (vs 4.7% expected) and retail sales returned to growth at +1.0% (vs −0.1% expected) after May's −0.6%, the first drop in over three years. But fixed-asset investment contracted 5.7% in H1, with real estate investment down about 18%, infrastructure −2.4% and manufacturing −1.2%. Investors are watching an expected late-July Politburo meeting for stimulus signals; analysts largely expect targeted fiscal measures rather than broad easing.</p>
+  <div class="framing"><strong>Attribution:</strong> NBS headlines the same dataset as the economy having "operated within an appropriate range with new growth drivers developing rapidly." Independent outlets lead on the target miss and the investment slump — a sharp divergence in emphasis from identical numbers.</div>
+  <div class="meta"><span class="tag cn">Economy</span> <a href="https://www.stats.gov.cn/english/PressRelease/">NBS</a><span class="sep">·</span><a href="https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk">CNN Business</a><span class="sep">·</span><a href="https://www.brecorder.com/news/40430117/chinas-june-industrial-output-up-53-yy-retail-sales-return-to-growth">Reuters via Business Recorder</a><span class="sep">·</span>July 15</div>
+</div>
+
+<div class="story">
+  <h3>June exports surge 27% to a record $412bn on AI hardware demand and tariff front-running</h3>
+  <p>Customs data showed exports up 27% y/y in USD terms — the fastest since October 2021, against 18.2% expected — to a record $412.39bn. Imports jumped 36%, the fastest in five years, to a record $286.76bn; the trade surplus hit $125.62bn. The surplus with the US rose to $28.9bn from $26.02bn in May; the EU surplus widened 27% to a record $32.9bn. Fastest-growing H1 export categories: semiconductors, rare earths, autos and ships. Laggards: toys, footwear, steel, furniture. Exports are now effectively the only thing carrying the economy.</p>
+  <div class="meta"><span class="tag cn">Trade</span> <a href="https://www.cnbc.com/2026/07/14/china-june-trade-data-exports-imports.html">CNBC</a><span class="sep">·</span><a href="https://www.scmp.com/economy/economic-indicators/article/3360451/chinas-trade-surges-june-maintaining-growth-streak-despite-global-tensions">SCMP</a><span class="sep">·</span>July 14</div>
+</div>
+
+<div class="story">
+  <h3>TSMC posts a record Q2 and adds $100bn to Arizona — US total now $265bn</h3>
+  <p>TSMC reported Q2 net income of NT$706.56bn, up 77.4% y/y — a fifth consecutive record quarter — on revenue of NT$1.27tn (US$40.20bn), up 36% y/y. Chairman and CEO C.C. Wei announced an additional US$100bn for Arizona, lifting committed US spend to US$265bn, funding 2nm-capable fabs and advanced packaging; roughly four more plants could follow the eight already announced. TSMC raised 2026 capex guidance to $60–64bn from $52–56bn and now sees full-year revenue growth "slightly above 40%" in USD terms. Wei said AI demand will stay strong through 2030. The stock fell more than 4%.</p>
+  <div class="meta"><span class="tag cn">Semiconductors</span> <a href="https://finance.yahoo.com/markets/stocks/articles/tsmc-q2-2026-earnings-record-112109987.html">Yahoo Finance</a><span class="sep">·</span><a href="https://focustaiwan.tw/society/202607170003">Focus Taiwan</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Tech selloff drives Shanghai and Shenzhen to three-month lows</h3>
+  <p>On July 16 the Shanghai Composite fell 1.85% to 3,882.4 and the Shenzhen Component 1.97% to 14,488.7 — both at their lowest in over three months — on a broad tech and chip selloff plus the GDP miss. Losers included Cambricon (−5.06%), NAURA (−5.37%), Zhongji Innolight (−4.82%), Eoptolink (−2.41%) and SMIC (−1.2%). Hong Kong diverged, with the Hang Seng up 1.4%. Reuters-polled economists see the PBOC policy rate unchanged for the rest of 2026, with a possible 20bp RRR cut in Q4.</p>
+  <div class="meta"><span class="tag cn">Markets</span> <a href="https://www.brecorder.com/news/amp/40430209">Business Recorder</a><span class="sep">·</span><a href="https://tradingeconomics.com/china/stock-market">Trading Economics</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Hong Kong police raid two bookstores, arrest five over "seditious" publications</h3>
+  <p>On July 15, police raided two shops in Mong Kok — Have A Nice Stay, founded by former journalists, and the longstanding Greenfield Book Store — arresting five people aged 30–59 on suspicion of displaying and selling seditious publications said to stir hatred against the government, judiciary and law enforcement. Police said Customs referred the case after allegedly seditious books were found in an overseas shipment; no titles were specified. A senior official publicly warned booksellers on security risks the following day. It is the third such raid in four months. Have A Nice Stay had already announced it will close on August 30, citing financial difficulty and an "elusive red line."</p>
+  <div class="meta"><span class="tag cn">Hong Kong</span> <a href="https://www.npr.org/2026/07/15/g-s1-133697/hong-kong-booksellers-arrested-for-allegedly-selling-seditious-books">NPR</a><span class="sep">·</span><a href="https://fortune.com/2026/07/16/hong-kong-bookshelf-crackdown-third-raid/">Fortune</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>Pew: China viewed more favorably than the US in most countries for the first time in about 20 years</h3>
+  <p>Pew's global survey — 42,151 adults, 35 countries plus the West Bank and East Jerusalem, fielded February 8 to May 13, 2026 — found China rated more favorably than the US in 25 of 36 countries and territories surveyed, including Canada and Mexico. The US led China in only six, four of them Asia-Pacific: India, Japan, the Philippines and South Korea. Across 20 countries surveyed annually since 2023, median confidence in Xi now exceeds confidence in Trump by 10 points; China averaged 46% favorability against 36% for the US.</p>
+  <div class="framing"><strong>Attribution:</strong> The data is independent (Pew). Chinese state media amplified it heavily as validation of Beijing's diplomacy — treat the framing, not the numbers, as the state-media layer.</div>
+  <div class="meta"><span class="tag cn">Foreign policy</span> <a href="https://www.pewresearch.org/global/2026/07/15/people-in-many-countries-now-view-china-more-positively-than-the-u-s/">Pew Research Center</a><span class="sep">·</span><a href="https://www.npr.org/2026/07/15/g-s1-133827/china-and-xi-favored-over-us-and-trump-in-many-nations-survey">NPR</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>Papua New Guinea moves to close Taiwan's representative office; Taipei says it stays open</h3>
+  <p>PNG Foreign Minister Justin Tkatchenko said on July 16 that the "physical presence of Chinese Taipei will no longer be recognised or required" in PNG, ordering the office's immediate closure. Taiwan's foreign ministry said the decision was not discussed in advance, protested the move, said the office will keep operating normally, and will reassess bilateral ties. China's foreign ministry said it "highly appreciated" the decision; its embassy in Port Moresby called it the "right decision." Taiwan retains formal ties with only three Pacific states — Palau, Tuvalu and the Marshall Islands.</p>
+  <div class="framing"><strong>Attribution:</strong> Global Times framed this as growing international recognition of the one-China principle. The underlying factual dispute — whether the office actually closes — is unresolved; Taipei publicly contradicts PNG's own announcement.</div>
+  <div class="meta"><span class="tag cn">Taiwan</span> <a href="https://asia.nikkei.com/politics/international-relations/taiwan-tensions/papua-new-guinea-says-it-will-shut-taiwan-s-office-winning-china-s-praise">Nikkei Asia</a><span class="sep">·</span><a href="https://focustaiwan.tw/politics/202607160024">Focus Taiwan</a><span class="sep">·</span><a href="https://www.taipeitimes.com/News/front/archives/2026/07/16/2003860860">Taipei Times</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Wang Huning meets Kim Jong Un in Pyongyang; China pledges support will "never change"</h3>
+  <p>Politburo Standing Committee member Wang Huning, China's fourth-ranked official, led a party-and-government delegation to Pyongyang from July 15 on a three-day visit marking the 65th anniversary of the China–DPRK Treaty of Friendship, Cooperation and Mutual Assistance. He met Workers' Party secretary Jo Yong Won on July 15–16 and Kim Jong Un on July 16–17, saying China's support "will never change" and affirming implementation of agreements reached during Xi's June visit to Pyongyang — his first in seven years. Analysts read the cadence of exchanges as Beijing reasserting influence against North Korea's deepening ties with Russia.</p>
+  <div class="framing"><strong>Attribution:</strong> Meeting readouts are sourced to KCNA and Xinhua — both state outlets. No independent verification of the substance of talks.</div>
+  <div class="meta"><span class="tag cn">Foreign policy</span> <a href="https://www.aljazeera.com/news/2026/7/17/north-korean-leader-kim-jong-un-meets-with-top-chinese-official">Al Jazeera</a><span class="sep">·</span><a href="https://www.upi.com/Top_News/World-News/2026/07/16/China-Wang-Huning-adviser-meeting-Jo-Yong-Won-North-Korea-talks/1311784187128/">UPI</a><span class="sep">·</span>July 15–17</div>
+</div>
+
+<div class="story">
+  <h3>IEA: China's rare-earth curbs endanger $6.5 trillion of production outside China</h3>
+  <p>The International Energy Agency warned on July 16 that China's rare earth export controls expose roughly $6.5tn of production outside China to supply shocks, with automotive most exposed at over $3tn, followed by electronics and transport. This lands alongside active enforcement: a new mechanism effective July 1, 2026 encourages reporting of suspected rare-earth export-control violations including transshipment through third countries; two Japanese nationals were detained in Dalian in May over alleged rare-earth-related smuggling; and in June China added 10 US entities to its control list, including MP Materials and USA Rare Earth.</p>
+  <div class="meta"><span class="tag cn">Trade</span> <a href="https://chinaglobalsouth.com/2026/07/16/china-rare-earth-curbs-threaten-western-industry-iea/">China-Global South Project</a><span class="sep">·</span><a href="https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals">Morgan Lewis</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>China clears seven mobile AI models — Apple Intelligence enters China on Alibaba's Qwen</h3>
+  <p>The Cyberspace Administration of China approved seven smartphone-tailored AI services on July 15 — the first time it has cleared on-device AI models. Approved: Apple Intelligence, Samsung Galaxy AI, Huawei, Xiaomi, Oppo, Vivo, and ZTE's Nubia. To comply with Chinese data rules, Apple will run Apple Intelligence on Alibaba's Tongyi Qwen model rather than OpenAI or Google, across iOS, iPadOS, macOS and visionOS. The partnership was first disclosed in February 2025 and is only now cleared to ship.</p>
+  <div class="meta"><span class="tag cn">Tech/AI</span> <a href="https://www.caixinglobal.com/2026-07-16/china-clears-mobile-based-ai-models-opening-path-for-apple-intelligence-in-china-102464642.html">Caixin Global</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>DeepSeek begins IPO preparations; seeking a valuation around $71bn</h3>
+  <p>DeepSeek has started IPO preparations and could file as soon as this year, with a possible 2027 debut, opening discussions with accounting firms and investment banks. It is also in talks with investors for a new round at a pre-money valuation of at least RMB 480bn (about $71bn), weeks after a reported $7bn round. Venue is undecided between the mainland and Hong Kong — HKEX has become the default for unprofitable Chinese LLM firms after Zhipu listed there in January 2026 and MiniMax followed. Separately, DeepSeek is reported to be developing its own inference AI chip to cut reliance on Nvidia and Huawei.</p>
+  <div class="caution"><strong>Sourcing:</strong> Attributed to unnamed people familiar with the matter. DeepSeek has not confirmed. Treat the valuation and timeline as reported, not established.</div>
+  <div class="meta"><span class="tag cn">Tech/AI</span> <a href="https://www.bloomberg.com/news/articles/2026-07-14/deepseek-mulls-new-funding-weeks-after-7-billion-round-ft-says">Bloomberg</a><span class="sep">·</span><a href="https://www.caixinglobal.com/2026-07-16/business-brief-july-16-deepseek-said-to-prepare-for-ipo-102464840.html">Caixin</a><span class="sep">·</span>July 14–16</div>
+</div>
+
+<div class="story">
+  <h3>Property: June new-home price decline eases to the mildest in four months — but it's the 36th straight month of falls</h3>
+  <p>NBS data showed new-home prices across 70 cities fell 3.3% y/y in June, easing from −3.5% in May — the mildest contraction since February, and the 36th consecutive month of annual declines. Beijing −2.1%, Guangzhou −2.6%, Shenzhen −3.6%, Chongqing −4.2%, Tianjin −4.6%; Shanghai was the sole major outlier at +3.1%. The secondary market is weaker: no city posted y/y gains, most fell 5–8%, and second-hand prices across 100 major cities fell 0.42% m/m in June to an average RMB 12,639/sqm (about US$1,750), with 88 of 100 cities declining.</p>
+  <div class="framing"><strong>Attribution:</strong> State media (china.org.cn) headlined "declines continue to ease." Asia Times and the secondary-market data describe a market still in free-fall with buyers waiting for a price floor. Same data, opposite framings.</div>
+  <div class="meta"><span class="tag cn">Property</span> <a href="https://www.bloomberg.com/news/articles/2026-07-15/china-new-home-price-slump-eases-in-sign-market-is-stabilizing">Bloomberg</a><span class="sep">·</span><a href="https://asiatimes.com/2026/07/chinas-housing-market-free-falls-as-buyers-wait-for-floor-prices/">Asia Times</a><span class="sep">·</span>July 15</div>
+</div>
+
+<div class="story">
+  <h3>China protests new US visa caps cutting Chinese journalists to 90 days</h3>
+  <p>The US Department of Homeland Security moved on July 16 to cap foreign journalist visas — currently open-ended for years — at 240 days, and at just 90 days for Chinese nationals; the rule also tightens durations for foreign students and cultural exchange visitors. It takes effect 60 days after Federal Register publication, subject to congressional review. Foreign ministry spokesperson Lin Jian said on July 17 that China rejects the decisions, urged withdrawal of the "discriminatory" regulations, and reserves the right to reciprocal countermeasures.</p>
+  <div class="meta"><span class="tag cn">US-China</span> <a href="https://www.nbcnews.com/world/asia/china-calls-new-us-visa-regulations-discriminatory-threatens-counterme-rcna587958">NBC News</a><span class="sep">·</span><a href="https://www.washingtontimes.com/news/2026/jul/16/homeland-security-foreign-journalist-visas-set-240-days-chinese/">AP via Washington Times</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Taiwan says two police officers were seized and interrogated in Fujian about critical infrastructure</h3>
+  <p>Taiwan's Mainland Affairs Council said a serving and a retired police officer were forcibly moved from their lodgings to an unknown location by Chinese state security personnel in Fujian in June and questioned about the organizational structure and lists of Taiwan's critical infrastructure — the interrogators already knew which agency they had worked for. They were warned not to report the incident on return. MAC also said four Taiwanese travelling together in China are detained for unknown reasons and five more reported missing this month remain unaccounted for, among 10 whose families lost contact in July.</p>
+  <div class="caution"><strong>Single-source:</strong> This is the Taiwanese government's (MAC) account only. No Chinese comment or independent corroboration.</div>
+  <div class="meta"><span class="tag cn">Taiwan</span> <a href="https://www.taipeitimes.com/News/taiwan/archives/2026/07/17/2003860893">Taipei Times</a><span class="sep">·</span><a href="https://focustaiwan.tw/politics/202607160027">Focus Taiwan</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Taiwan tightens eligibility rules for China-born election candidates</h3>
+  <p>Taiwan's Central Election Commission announced that people born in China seeking public office must have filed proof of cancellation of their Chinese household registration at least 10 years before candidate registration, and must have held Taiwan household registration for 10 years after that filing date. Local election commissions will task household registration offices with verifying the filing date. The rules follow the case of China-born TPP legislator-at-large Li Zhenxiu, sworn in on February 3, embroiled in nationality and eligibility disputes, expelled from the party in June and stripped of her seat.</p>
+  <div class="meta"><span class="tag cn">Taiwan</span> <a href="https://www.taipeitimes.com/News/front/archives/2026/07/17/2003860880">Taipei Times</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story">
+  <h3>Level II national emergency response activated after Chongqing landslide</h3>
+  <p>A landslide struck Pengshui Miao and Tujia Autonomous County, Chongqing, at around 9:08 a.m. on July 17, damaging buildings and trapping an unknown number of people. The Ministry of Emergency Management activated a Level II national response for geological disasters, dispatching a working group and 100 professional rescuers, plus 206 firefighters and 49 vehicles; 8,000 relief items were allocated. Nine people had been rescued and hospitalised as of latest reports; rescuers are racing incoming thunderstorms.</p>
+  <div class="caution"><strong>Moving figures:</strong> Casualty and rescue counts are official and state-media only, with no independent count. Earlier state reports said 8 rescued, later updated to 9.</div>
+  <div class="meta"><span class="tag cn">Society</span> <a href="https://www.scmp.com/news/china/politics/article/3360928/rescuers-southwest-china-race-extreme-weather-reach-residents-trapped-landslide">SCMP</a><span class="sep">·</span><a href="https://news.cgtn.com/news/2026-07-17/news-1OQzLVFljZC/p.html">CGTN</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story">
+  <h3>US Coast Guard shifts Expeditionary Cutter Squadron to the western Pacific</h3>
+  <p>The US Coast Guard has relocated its Expeditionary Cutter Squadron to the western Pacific — six 154-foot fast-response cutters operating out of Singapore for command and logistics, and rotating through Subic Bay, Luzon, the first time these smaller cutters have operated from there. Approved through at least September. The cutters were pulled from Bahrain earlier this year amid US-Iran tensions.</p>
+  <div class="framing"><strong>Framing:</strong> US officials cast the deployment as deterrence against Chinese coercion in the South China Sea and as routine partner-nation maritime security. Global Times ran a rebuttal headlined "No place for US Coast Guard overreach in China's adjacent waters."</div>
+  <div class="meta"><span class="tag cn">US-China</span> <a href="https://www.scmp.com/news/china/diplomacy/article/3360824/us-coastguard-cutters-have-south-china-sea-mission-will-it-make-difference">SCMP</a><span class="sep">·</span><a href="https://www.globaltimes.cn/page/202607/1366057.shtml">Global Times</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<div class="story">
+  <h3>Guangdong dog-abuse case fuels backlash — now spilling into Hong Kong</h3>
+  <p>Videos went viral on Chinese social media this week showing four boys, all under 14, beating a nursing stray dog with sticks and setting her on fire in a Jieyang, Guangdong village on June 28; her three puppies were also abused. Authorities said the boys cannot face criminal charges as they are below the age of criminal responsibility, and placed them in specialized education while urging parental supervision. The case reignited debate over juvenile justice leniency and the absence of a national animal protection law. On July 16, backlash followed reports that Hong Kong police told the SPCA it would seek removal of the footage from local platforms; the SPCA said it hoped removal would prevent copycat incidents, then cancelled its flag day after further backlash. A mainland actress's post about the abuse was also removed.</p>
+  <div class="meta"><span class="tag cn">Society</span> <a href="https://hongkongfp.com/2026/07/16/backlash-after-hong-kong-police-tells-spca-it-will-seek-removal-of-guangdong-dog-abuse-videos-from-internet/">HKFP</a><span class="sep">·</span><a href="https://www.thestandard.com.hk/news/article/337477/SPCA-cancels-flag-day-after-backlash-over-request-to-remove-dog-cruelty-footage">The Standard</a><span class="sep">·</span>July 15–16</div>
+</div>
+
+<!-- ============ JAPAN ============ -->
+<h2><span class="flag">🇯🇵</span> Japan &amp; Korea</h2>
+
+<div class="story lead">
+  <h3>Japan's parliament enacts male-only imperial succession — first substantive revision in 79 years</h3>
+  <p>The House of Councillors passed the revision by majority vote on July 17, after the House of Representatives approved it July 10. The law entrenches paternal-line male-only succession — excluding Emperor Naruhito's popular 24-year-old daughter Princess Aiko — while permitting adoption of unmarried male descendants aged 15 and over from 11 former imperial branch families that renounced royal status in 1947, some at least 36 generations removed. Princesses may retain status and duties if they marry commoners, though spouses and children gain no status.</p>
+  <p>LDP, Japan Innovation Party, DPP, Komeito and Sanseito backed it; the CDP, JCP and Reiwa Shinsengumi opposed. Polls show 60–90% support for female emperors. Feminist scholar Chizuko Ueno called it "ironic" that Japan's first female prime minister led the effort.</p>
+  <div class="meta"><span class="tag jp">Politics</span> <a href="https://www.nippon.com/en/news/yjj2026071700121/">Nippon.com</a><span class="sep">·</span><a href="https://www.ksat.com/news/world/2026/07/17/japans-parliament-enshrines-male-only-succession-for-the-shrinking-imperial-family/">AP via KSAT</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story lead">
+  <h3>Nikkei plunges 4.03% to 64,140 as the global AI rout hits Tokyo; Kioxia loses about $185bn from its peak</h3>
+  <p>The Nikkei 225 closed Friday at 64,140.12, down 4.03%, briefly diving over 4,100 points intraday; the Topix fell 2.72% to 3,919. Both finished at their lowest in more than a month, with the Nikkei down roughly 6.4% on the week. Tokyo Electron sank 8.2%, Advantest 7.2%, SoftBank Group 9%, Taiyo Yuden 11.9%.</p>
+  <p>Kioxia Holdings fell as much as 16%, now down 52% from its June peak and shedding at least ¥30 trillion (about $185bn) in value. The stock had rallied more than 600% from the start of 2026 on AI memory demand and briefly overtook Toyota in market cap in mid-June; it has now slipped to Japan's fourth-largest company. Compounding the fall, a federal jury in Texas on Thursday ordered Kioxia to pay $229 million for infringing a Viasat computer-memory patent.</p>
+  <div class="caution"><strong>Figures vary slightly:</strong> The Friday close is reported as 64,140.12 and 64,141.12 (−4.03%) by two independent sources; Trading Economics showed a live intraday 63,795. The intraday drop is reported variously as "as much as 4.4%" and "more than 5%."</div>
+  <div class="meta"><span class="tag jp">Markets</span> <a href="https://www.japantimes.co.jp/business/2026/07/17/markets/nikkei-index-drop-july/">Japan Times</a><span class="sep">·</span><a href="https://www.bloomberg.com/news/articles/2026-07-17/chipmaker-kioxia-s-market-value-halves-from-peak-on-ai-selloff">Bloomberg</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story lead">
+  <h3>Nvidia and Japan launch "world's first national AI infrastructure" — 27,500 Rubin GPUs</h3>
+  <p>Nvidia announced on July 16 it will build a 140-megawatt AI factory with Noetra Corp., packing 27,500 Rubin GPUs and 13,750 Vera CPUs on Vera Rubin NVL72 racks with Spectrum-X Ethernet. It is the compute base for FRONTia, METI's state-funded physical-AI program.</p>
+  <p>Noetra — founded by SoftBank Corp., Sony, NEC and Honda with investment from 44 companies — and AIST won a NEDO tender on June 30 to run FRONTia from FY2026 to FY2030, with ¥387.3bn (about $2.4bn) first-year funding and up to ¥1 trillion (about $6.1bn) over five years. Japan's AI Robotics Strategy targets over 30% of the global AI robotics market by 2040, a $133bn opportunity. Jensen Huang: "Japan invented modern manufacturing." The bet landed the same week markets punished the AI trade.</p>
+  <div class="meta"><span class="tag jp">Tech/Robotics</span> <a href="https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure">NVIDIA</a><span class="sep">·</span><a href="https://www.japantimes.co.jp/business/2026/07/16/japan-nvidia-rubin-chips-robots/">Japan Times</a><span class="sep">·</span><a href="https://www.tomshardware.com/pc-components/gpus/nvidia-and-japans-noetra-consortium-to-build-140mw-rubin-ai-factory-with-27500-gpus">Tom's Hardware</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Japan enacts a flag-desecration law over free-speech objections</h3>
+  <p>The Diet enacted a law Friday punishing public damage, removal or defacement of the hinomaru — including livestreaming such acts — in ways causing "extreme discomfort or sense of disgust to others." The penalty is up to 2 years' imprisonment or a fine up to ¥200,000 (about $1,230). A key Takaichi and LDP right-wing priority; the CDP opposed, and 148 legal experts voiced "strong concerns that it could curb freedom of political expression." Chuo University constitutional law professor Motohiro Hashimoto said punishing flag vandals "means a prohibition of criticism against the government." The government argued Japan already criminalized damaging foreign flags but had no equivalent for its own.</p>
+  <div class="meta"><span class="tag jp">Civil liberties</span> <a href="https://abcnews.com/International/wireStory/japan-enacts-law-punish-national-flag-vandals-opponents-134840135">AP via ABC News</a><span class="sep">·</span><a href="https://www.hrw.org/news/2026/03/25/japans-flag-desecration-law-poses-a-threat-to-freedom-of-expression">HRW background</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story">
+  <h3>Takaichi vows to steer households and GPIF's ¥293.6 trillion toward domestic assets; yen firms</h3>
+  <p>PM Sanae Takaichi said Friday the government will "pursue measures that encourage households and pension funds…to make further investments in Japanese financial assets," noting GPIF has "contributed Japan's economic growth." The yen strengthened to 162.13 per dollar as markets anticipated GPIF repatriation. Finance Minister Satsuki Katayama had earlier said the government would aim to significantly raise state pension fund domestic allocations, spurring yen and bond gains.</p>
+  <div class="meta"><span class="tag jp">Economy</span> <a href="https://finance.yahoo.com/economy/policy/articles/japan-pm-vows-pursue-steps-071139445.html">Reuters via Yahoo Finance</a><span class="sep">·</span><a href="https://asia.nikkei.com/business/markets/yen-rises-jgb-yields-fall-on-japan-finance-minister-s-pension-fund-remarks">Nikkei Asia</a><span class="sep">·</span>July 17</div>
+</div>
+
+<div class="story">
+  <h3>JGB yields near 30-year highs as the bond market pressures Takaichi's spending plans</h3>
+  <p>The 10-year JGB yield reached 2.865–2.901% in July, the highest in roughly 30 years and levels unseen since 1996, up over 70bp since the start of the year. Pressure stems from BOJ normalization and the government's ¥370 trillion investment strategy across AI, semiconductors and strategic sectors through 2040. Former BOJ policymaker Seiji Adachi warned the BOJ "could face pressure to expand bond purchases if the 10-year JGB yield rises above 3%." The BOJ's policy rate stands at 1.0% after a June hike — the highest in over 30 years, decided 7-1 — with the July 30–31 meeting carrying the quarterly Outlook Report; board member Naoki Tamura has said the rate should gradually move toward a neutral level around 2%.</p>
+  <div class="meta"><span class="tag jp">Bonds</span> <a href="https://newsonjapan.com/article/149994.php">News On Japan</a><span class="sep">·</span><a href="https://www.cnbc.com/2026/07/14/japan-bond-jgb-yields-.html">CNBC</a><span class="sep">·</span><a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/index.htm">Bank of Japan</a><span class="sep">·</span>July 14–16</div>
+</div>
+
+<div class="story">
+  <h3>Bank of Korea raises rates to 2.75% — first hike in 3.5 years — triggering a regional chip selloff</h3>
+  <p>The BOK's Monetary Policy Board voted unanimously on Thursday July 16 to lift the base rate 25bp from 2.50% to 2.75%, its first increase since early 2023, ending 14 months on hold and reversing the easing cycle begun in October 2024. Drivers: May CPI at 3.1% against a 2% target, elevated housing prices and household debt, and oil prices climbing on Middle East tensions. Q1 growth was 3.8%, the strongest since Q4 2021. The BOK signaled further tightening, calling all upcoming meetings "live." The hike pressured Samsung and SK Hynix and spilled into Japanese chip and AI names.</p>
+  <div class="meta"><span class="tag jp">Korea · Economy</span> <a href="https://www.cnbc.com/2026/07/16/bok-interest-rate-monetary-policy-markets-kospi-skhynix.html">CNBC</a><span class="sep">·</span><a href="https://www.koreajoongangdaily.com/business/bok-signals-further-rate-hikes-after-first-increase-in-three-and-half-years/12777037">Korea JoongAng Daily</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Diet session extension sought as the secondary capital bill runs out of road</h3>
+  <p>The Takaichi administration moved to extend the 150-day session — originally due to close July 17 — by up to 10 days, with the ruling bloc planning to submit the request to both chamber speakers. The driver is the secondary capital bill, an Osaka-focused Japan Innovation Party priority, which cleared the Lower House Wednesday but stalled amid opposition objections over Osaka bias. Ishin's rival demand — a 45-seat (10%) Lower House reduction — was dropped, effectively traded for imperial succession passage. Takaichi agreed to attend intensive Budget Committee deliberations July 17 after opposition criticism of her rare appearances.</p>
+  <div class="caution"><strong>Unresolved:</strong> Sources conflict on whether the extension was formally voted through Friday or the session simply closed. Both the imperial and flag bills were definitively enacted July 17 regardless.</div>
+  <div class="meta"><span class="tag jp">Politics</span> <a href="https://www.nippon.com/en/news/yjj2026071500937/">Nippon.com</a><span class="sep">·</span><a href="https://observingjapan.substack.com/p/diet-session-enters-final-days-japan">Observing Japan</a><span class="sep">·</span>July 15–17</div>
+</div>
+
+<div class="story">
+  <h3>Seven &amp; i in advanced talks for a multibillion-dollar stake in Poland's Żabka</h3>
+  <p>The 7-Eleven parent is in final-stage negotiations to invest several hundred billion yen for a stake of "several tens of percent" in Żabka Group SA, Poland's largest convenience-store operator, buying from investment funds and other shareholders. It would sharply expand a European footprint currently limited to about 360 stores in the Nordics. Seven &amp; i shares rose 3–4% in Tokyo Friday; Żabka jumped 16% Thursday to a record, valuing it at 32.7bn zloty ($8.7bn).</p>
+  <div class="meta"><span class="tag jp">Business</span> <a href="https://www.japantimes.co.jp/business/2026/07/17/seven-and-i-poland-zabka/">Japan Times</a><span class="sep">·</span><a href="https://asia.nikkei.com/business/business-deals/seven-i-set-for-major-investment-in-poland-s-largest-store-chain">Nikkei Asia</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Japan-China coast guard standoffs continue near the Senkakus amid a diplomatic deep freeze</h3>
+  <p>Japanese and Chinese coast guards traded conflicting accounts of a July 7 confrontation near the Senkaku Islands — Japan said it expelled two Chinese vessels that approached a Japanese fishing boat; China said it warned and expelled the Japanese vessel Zuihou Maru from waters it claims. It followed a similar June 10 incident. Relations have been frozen since Takaichi's November remarks that Tokyo could intervene militarily in a Taiwan contingency; Beijing has discouraged travel to Japan, tightened trade restrictions on some Japanese firms, and restricted rare-earth exports. Japan has announced plans to counter China's armed coast guard fleet.</p>
+  <div class="meta"><span class="tag jp">Regional security</span> <a href="https://www.japantimes.co.jp/news/2026/07/07/japan/japan-china-ships-expel-near-senkaku/">Japan Times</a><span class="sep">·</span><a href="https://www.usnews.com/news/world/articles/2026-07-07/china-japan-trade-conflicting-accounts-of-confrontation-around-senkaku-islands">Reuters via US News</a><span class="sep">·</span>July 7, ongoing</div>
+</div>
+
+<div class="story">
+  <h3>Rapidus to price 2nm chips at or below TSMC levels ahead of 2027 mass production</h3>
+  <p>Rapidus President Atsuyoshi Koike said at an event in Karuizawa, Nagano Prefecture on July 9 that the company will price its 2-nanometer semiconductors "at the same level as, or a little lower than," TSMC's — benchmarked against TSMC wafers expected around ¥3–3.5 million each. Mass production is scheduled for 2027 at the IIM hub in Chitose, Hokkaido, where a pilot line has run since April 2025. Koike said 1.4nm and 1nm development follows.</p>
+  <div class="meta"><span class="tag jp">Semiconductors</span> <a href="https://www.japantimes.co.jp/business/2026/07/09/companies/rapidus-chip-price/">Japan Times</a><span class="sep">·</span>July 9</div>
+</div>
+
+<div class="story">
+  <h3>June core inflation expected at 1.6%, below the BOJ target for a fifth straight month</h3>
+  <p>A Reuters poll of 16 economists forecasts nationwide core CPI — excluding fresh food, including energy — rose 1.6% year-on-year in June, up from 1.4% in May, on elevated energy prices and technical factors including medical service fee revisions. That would keep inflation under the BOJ's 2% target for a fifth consecutive month. Tokyo core CPI rose 1.6% in June from 1.3%, the first acceleration since September and fastest in three months. Official national data is due at 8:30 a.m. on July 24.</p>
+  <div class="caution"><strong>This is a forecast, not a release.</strong> The actual print lands July 24.</div>
+  <div class="meta"><span class="tag jp">Economy</span> <a href="https://kfgo.com/2026/07/16/japan-june-core-inflation-seen-at-1-6-on-elevated-energy-prices-reuters-poll/">Reuters via KFGO</a><span class="sep">·</span>July 16–17</div>
+</div>
+
+<div class="story">
+  <h3>Nissan launches the all-new Elgrand — first full revamp in 16 years</h3>
+  <p>Nissan announced the launch and start of sales of the redesigned Elgrand premium minivan in Japan on July 16, priced from ¥6,897,000. It adopts the third-generation e-POWER hybrid system, enhanced e-4ORCE all-wheel control and Intelligent Dynamic Suspension, with improved quietness and fuel efficiency. Design concept: "The private MAGLEV." First unveiled at the Japan Mobility Show 2025, it targets a segment dominated by Toyota as Nissan seeks to revive sluggish sales.</p>
+  <div class="meta"><span class="tag jp">Business</span> <a href="https://global.nissannews.com/en/releases/all-new-elgrand-launched-in-japan">Nissan</a><span class="sep">·</span><a href="https://www.nippon.com/en/news/yjj2026071600235/">Nippon.com</a><span class="sep">·</span>July 16</div>
+</div>
+
+<div class="story">
+  <h3>Society and weather: Gion Matsuri, typhoons, and a ¥1 million bunch of grapes</h3>
+  <p>Kyoto's Gion Matsuri Yamaboko float parade — the July 17 Saki Matsuri, 34 floats — ran today. A new typhoon is likely forming far south of Japan; Typhoon Bavi, the season's third Cat-5, recently tracked near Okinawa, and Typhoon No. 9 approached the Sakishima Islands on July 11. Tokyo was forecast at 35°C and Nagoya 37°C, with research showing Japan faces increasingly scorching summers. Also: a protest against the flag protection bill, Tokyo's Koto Ward distributing emergency toilets to all residents, lithium-ion battery fires running at a record pace, and Ruby Roman grapes fetching ¥1 million at first auction.</p>
+  <div class="meta"><span class="tag jp">Society</span> <a href="https://newsonjapan.com/">News On Japan</a><span class="sep">·</span><a href="https://yaleclimateconnections.org/2026/07/super-typhoon-bavi-becomes-the-3rd-cat-5-of-2026/">Yale Climate Connections</a><span class="sep">·</span>July 17</div>
+</div>
+
+<!-- ============ THREADS ============ -->
+<h2>What to watch next</h2>
+<div class="story">
+  <ul class="threads">
+    <li><strong>Iran and the Strait of Hormuz.</strong> Tehran has named the strait a red line while the US maintains a naval blockade. Oil is elevated but not panicked — WTI around $79, Brent around $85. Any move against shipping reprices energy, and with it the inflation path in every section above.</li>
+    <li><strong>Does the AI selloff find a floor?</strong> TSMC's record quarter failing to lift its own stock is the tell. Watch whether Monday's Asian open follows Tokyo's −4% or stabilises.</li>
+    <li><strong>Turkey, July 23.</strong> The TCMB decides rates with no August meeting scheduled, so this statement guides markets to September. Consensus is a hold, with June CPI at 32.11%.</li>
+    <li><strong>Turkey's opposition splits.</strong> Özel has named a late-July or early-August window for a new party. If it happens, Turkey's main opposition fractures ahead of any election.</li>
+    <li><strong>China's late-July Politburo meeting.</strong> After the first target miss since Covid, this is the quarter's pivotal policy event. Analysts expect targeted fiscal measures, not broad easing.</li>
+    <li><strong>Burnham takes office Monday.</strong> A new UK prime minister, uncontested, in a G7 economy — with no general election behind it.</li>
+    <li><strong>ECB holds July 23; UK June CPI lands July 22.</strong> Markets price about 93% odds of no change after June's surprise 25bp hike to a 2.25% deposit rate.</li>
+    <li><strong>Xi's September US trip.</strong> SCMP is already asking openly whether Trump's election-interference allegations derail a visit both sides had been building toward.</li>
+    <li><strong>BOJ July 30–31.</strong> Quarterly Outlook Report, with the policy rate at 1.0% and 10-year JGB yields near 3%.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Compiled Friday, July 17, 2026 from roughly 145 public news sources across the United States, Europe, Turkey, China and Japan. Story selection and summarisation are automated; source links are provided for every item so you can check the original.</p>
+  <p>Items that could not be independently verified are labelled rather than dropped silently, and where outlets disagree — on Burnham's dates, the Genoa conviction count, the Nikkei's close, or whether Taiwan's PNG office is actually closing — the disagreement is shown instead of resolved. Where state media and independent outlets describe the same facts differently, both framings appear.</p>
+  <p>No <code>request.md</code> or <code>learngoals.md</code> was present for this run, so no specific-topics or learning-goals additions were generated.</p>
+  <p><a href="index.html">All reports</a> <span class="sep">·</span> <a href="weekly-report.html">Weekly report</a> <span class="sep">·</span> <a href="https://github.com/Mertan2/daily-news">Source on GitHub</a></p>
+</footer>
+
 </div>
 <script src="./tts.js" defer></script>
 </body>
