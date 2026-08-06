@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Specific Topics Deep Dive — Sunday, August 2, 2026</title>
+<title>Specific Topics Deep Dive — Thursday, August 6, 2026</title>
 <style>
   :root {
     --bg: #0d1117;
@@ -17,6 +17,7 @@
     --good: #7ee787;
     --highlight: #f0883e;
     --purple: #d2a8ff;
+    --shadow: rgba(0,0,0,0.35);
   }
   @media (prefers-color-scheme: light) {
     :root {
@@ -31,270 +32,252 @@
       --good: #1a7f37;
       --highlight: #9a6700;
       --purple: #6f42c1;
+      --shadow: rgba(0,0,0,0.06);
     }
+    .tag { background: #e3edff; }
+    .tag.warn { background: #ffe5e5; }
+    .tag.good { background: #e3f4e8; }
+    .tag.hot { background: #f6ecd8; }
+    .tag.purple { background: #efe3ff; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.62; }
-  .container { max-width: 880px; margin: 0 auto; padding: 28px 22px 60px; }
-  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 22px; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.66; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 22px 60px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 8px; }
   .eyebrow { color: var(--muted); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; }
   h1 { font-size: 30px; margin: 6px 0 4px; line-height: 1.2; }
   .date { color: var(--muted); font-size: 14px; }
   .nav { margin-top: 12px; font-size: 13px; }
-  .nav a { margin-right: 14px; }
-  .intro { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin: 16px 0 0; font-size: 14px; }
-  .intro strong { color: var(--highlight); }
-  h2 { font-size: 22px; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
-  h3 { font-size: 15px; margin: 16px 0 4px; color: var(--accent); }
-  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px 16px; margin: 8px 0 18px; }
-  .card.ai { border-left: 4px solid var(--good); }
-  .card.neuro { border-left: 4px solid var(--purple); }
-  .card.quantum { border-left: 4px solid var(--accent); }
-  .card.markets { border-left: 4px solid var(--highlight); }
-  .card.risk { border-left: 4px solid var(--warn); }
-  p { font-size: 14px; }
-  ul { padding-left: 20px; margin: 6px 0 10px; }
-  li { margin: 6px 0; font-size: 14px; }
+  .nav a { margin-right: 14px; display: inline-block; }
+  h2 { font-size: 21px; margin: 38px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); line-height: 1.3; }
+  h3 { font-size: 15.5px; margin: 20px 0 4px; color: var(--accent); }
+  p { font-size: 15px; margin: 10px 0; }
+  ul, ol { padding-left: 21px; margin: 8px 0 12px; }
+  li { margin: 7px 0; font-size: 15px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 6px; border-radius: 3px; background: rgba(88,166,255,0.14); color: var(--accent); vertical-align: middle; font-weight: 600; }
-  .tag.good { background: rgba(126,231,135,0.15); color: var(--good); }
-  .tag.warn { background: rgba(255,123,114,0.15); color: var(--warn); }
-  .tag.purple { background: rgba(210,168,255,0.15); color: var(--purple); }
-  @media (prefers-color-scheme: light) {
-    .tag { background: #e3edff; }
-    .tag.good { background: #e3f4e8; }
-    .tag.warn { background: #ffe5e5; }
-    .tag.purple { background: #efe3ff; }
-  }
-  .pull {
-    border-left: 3px solid var(--highlight);
-    background: var(--panel-2);
-    border-radius: 0 8px 8px 0;
-    padding: 10px 14px;
-    margin: 14px 0;
-    font-size: 14px;
-  }
-  .caution {
-    background: rgba(255, 123, 114, 0.07);
-    border: 1px solid rgba(255, 123, 114, 0.3);
-    border-radius: 6px;
-    padding: 9px 12px;
-    font-size: 12.5px;
-    color: var(--muted);
-    margin: 12px 0;
-  }
-  .caution strong { color: var(--warn); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
-  .tablewrap { overflow-x: auto; }
-  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; }
-  td.dn { color: var(--warn); }
-  td.up { color: var(--good); }
-  .src { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
-  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  .box { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px 16px; margin: 14px 0; box-shadow: 0 1px 2px var(--shadow); }
+  .box.key { border-left: 4px solid var(--highlight); }
+  .box.risk { border-left: 4px solid var(--warn); }
+  .box.watch { border-left: 4px solid var(--good); }
+  .tag { display: inline-block; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 7px; margin-right: 7px; border-radius: 3px; background: rgba(88,166,255,0.16); color: var(--accent); vertical-align: middle; font-weight: 600; }
+  .tag.warn { background: rgba(255,123,114,0.16); color: var(--warn); }
+  .tag.good { background: rgba(126,231,135,0.16); color: var(--good); }
+  .tag.hot { background: rgba(240,136,62,0.16); color: var(--highlight); }
+  .tag.purple { background: rgba(210,168,255,0.16); color: var(--purple); }
+  .num { font-variant-numeric: tabular-nums; font-weight: 700; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0; }
+  th, td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  .wrap { overflow-x: auto; }
+  .srcs { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .srcs a { color: var(--muted); border-bottom: 1px dotted var(--border); }
+  .srcs a:hover { color: var(--accent); }
+  .note { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 13px 19px; margin: 20px 0; font-size: 13.5px; color: var(--muted); }
+  code { background: var(--panel-2); border: 1px solid var(--border); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  footer { margin-top: 30px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="container">
+
   <header>
-    <div class="eyebrow">Deep Dives</div>
-    <h1>Specific Topics — Sunday, August 2, 2026</h1>
-    <div class="date">Four threads worth more than a headline, followed across the week that just closed.</div>
+    <div class="eyebrow">Specific Topics</div>
+    <h1>Specific Topics — Thursday, August 6, 2026</h1>
+    <div class="date">Deeper treatment of the threads that don't fit in a daily sweep.</div>
     <div class="nav">
-      <a href="index.html">← All reports</a>
-      <a href="daily-briefing.html">Daily briefing</a>
-      <a href="weekly-report.html">Weekly report</a>
-    </div>
-    <div class="intro">
-      <strong>No <code>request.md</code> was present for this run</strong>, so no topics were specified. Rather than invent interests, this edition follows what actually moved. One thread is new and displaces last edition's lead: <strong>the interceptor arithmetic</strong> — a single American munitions stock that two wars are now drawing down simultaneously, which became visible this weekend from both ends on the same day. The others continue: <strong>Türkiye's September cliff</strong>, which finally got its first hard number; <strong>the AI-capex trade</strong>, where the market learned to discriminate between kinds of spending but not yet between kinds of financing; and <strong>the Bundibugyo outbreak</strong>, whose case count doubled during the week nobody covered it. Drop topics into <code>request.md</code> to steer this page.
+      <a href="./index.html">Home</a>
+      <a href="./daily-briefing.html">Daily Briefing</a>
+      <a href="./weekly-report.html">Weekly Report</a>
     </div>
   </header>
 
-  <!-- ============ 1 ============ -->
-  <h2>1 · One interceptor stock, two wars — the arithmetic stops closing</h2>
-  <div class="card risk">
-    <p>On Saturday, two stories ran on opposite sides of the world and were treated as unrelated. They are the same story.</p>
-
-    <h3>Story A: Kyiv, before dawn</h3>
-    <p>Russia fired 35 missiles at Ukraine, 27 of them ballistic, plus 185 drones. Nine people died in Kyiv, 27 to 30 were injured, four of them children. Zelensky's explanation of why so little was stopped was unusually flat: <strong>only one ballistic missile was intercepted, because there are no interceptors left for the Patriot system.</strong></p>
-
-    <h3>Story B: the Pentagon, the same week</h3>
-    <p>Gen. Alexus Grynkewich, commander of US European Command, sent written notification to senior Pentagon officials that without another Navy destroyer he will have to choose defence of the American homeland over defence of Israel against Iranian ballistic missiles. Five destroyers deploy from Rota, Spain; a sixth arrives later this year. As of Friday, two were in the Mediterranean and three were alongside in port. Five months of war have raised maintenance demand and consumed interceptor inventory.</p>
-
-    <div class="pull">
-      Both stories are about the same finite thing: the number of interceptors the United States can produce and the number of platforms it has to fire them from. Ukraine and Israel are drawing on that pool at once, and a third claim — the homeland — has just been asserted as senior to both.
-    </div>
-
-    <h3>Why this reframes the war coverage</h3>
-    <p>For five months the ceiling on the Iran conflict has been described politically: what Trump wants, what Tehran will accept, what the midterms require. This week produced the first explicit statement from a combatant commander that the ceiling is <em>materiel</em>. That changes what the pauses mean.</p>
-    <ul>
-      <li>A pause announced while the other side is still flying drones (Kuwait, Saturday) is not a de-escalation. It may be a resupply interval.</li>
-      <li>Bloomberg's earlier reporting on US munitions-stock constraints bounded the tempo of strikes. The Grynkewich memo bounds the <em>defensive</em> side, which is the harder constraint — you can choose not to strike, but you cannot choose not to be struck.</li>
-      <li>Ukraine's air defence has moved from doctrine-limited to stock-limited. A 1-in-27 ballistic intercept rate is not a tactical result; it is an inventory readout.</li>
-    </ul>
-
-    <h3>What would actually resolve this</h3>
-    <ul>
-      <li><strong>Production rates, not deployments.</strong> Watch PAC-3 MSE and SM-3/SM-6 procurement and any supplemental request. Hull movements are noise; line rates are signal.</li>
-      <li><strong>The sixth Rota destroyer's arrival date.</strong> Grynkewich framed the problem as one hull. If that hull arrives early, the memo was leverage. If it does not, the memo was a warning.</li>
-      <li><strong>Whether Israel's Iron Dome transfer question reopens.</strong> Netanyahu blocked transferring a system to Ukraine this week. That decision looks different if American interceptors are the binding constraint for both.</li>
-      <li><strong>Hormuz transit counts.</strong> Still the honest indicator of whether anything has actually de-escalated — fewer than 10 ships in a week at the worst of it, 14 on one day mid-week, roughly 100 in peacetime.</li>
-    </ul>
-
-    <div class="caution">
-      <strong>Care with this one.</strong> The Grynkewich memo is reported from officials describing a private written communication, not a published document. The interceptor-shortage inference linking the two theatres is analysis on this page, not a claim made by either government. Neither Washington nor Kyiv has stated a unified stock figure, and none is public.
-    </div>
-    <div class="src">Sources: <a href="https://www.washingtonpost.com/national-security/2026/08/01/general-warns-pentagon-he-lacks-sufficient-forces-protect-israel/">Washington Post</a> · <a href="https://kyivindependent.com/kyiv-hammered-by-ballistic-missiles-as-russia-launches-2nd-major-attack-in-48-hours/">Kyiv Independent</a> · <a href="https://www.npr.org/2026/08/01/nx-s1-5916393/overnight-russia-kyiv-ukraine-strikes">NPR</a> · <a href="https://www.haaretz.com/israel-news/israel-security/2026-08-01/ty-article/report-u-s-lacks-forces-to-defend-israel-from-iranian-missiles-general-warns/0000019f-bd56-ded7-adbf-fddf0d070000">Haaretz</a> · <a href="https://edition.cnn.com/2026/08/01/world/live-news/iran-war-trump">CNN</a></div>
+  <div class="note">
+    <strong>No <code>request.md</code> was present in the working directory for this run</strong>, so there is no new topic list from you this week. This edition therefore continues the standing threads carried forward from the 2 August edition, re-prioritised by what actually moved between 3 and 6 August. Drop a <code>request.md</code> into the project folder and the next run will lead with your topics instead.
   </div>
 
-  <!-- ============ 2 ============ -->
-  <h2>2 · Türkiye's September cliff finally got a number</h2>
-  <div class="card markets">
-    <p>This thread has been running on projection for three weeks: a policy rate frozen at 37% with no committee meeting until 10 September, a war on the border, and no way to know how much it was costing until the data arrived. On Friday and through the weekend, it arrived.</p>
+  <h2>1 · The ledger, not the diplomacy: what "virtually all" actually means</h2>
 
-    <div class="tablewrap">
-    <table>
-      <tr><th>Indicator</th><th>Latest</th><th>Direction</th></tr>
-      <tr><td>Q2 tourism revenue</td><td>$15.865bn</td><td class="dn">−2.6% y/y</td></tr>
-      <tr><td>H1 2026 tourism revenue</td><td>$25.7bn</td><td>vs $68bn full-year target</td></tr>
-      <tr><td>June trade deficit</td><td>$10.4bn</td><td class="dn">+26.3% m/m</td></tr>
-      <tr><td>12-month trade deficit</td><td>$95.8bn</td><td class="dn">widening</td></tr>
-      <tr><td>June CPI (annual)</td><td>32.11%</td><td>from 32.61% in May</td></tr>
-      <tr><td>Policy rate</td><td>37%</td><td>held 4th consecutive meeting</td></tr>
-      <tr><td>Next MPC meeting</td><td>10 September</td><td class="dn">six-week gap</td></tr>
-      <tr><td>Brent</td><td>~$90</td><td class="dn">back up from $85.48</td></tr>
-      <tr><td>EBRD investment, H1</td><td>€1.2bn</td><td class="up">on pace for €2.7bn</td></tr>
-      <tr><td>New company formations, H1</td><td>+9.3% y/y</td><td class="up">June +31.5%</td></tr>
-    </table>
-    </div>
+  <p>For three weeks this page has argued that the constraint on the Iran campaign was materiel rather than politics. On <strong>4 August</strong> that stopped being an inference. Reuters reported that the US Army has expended <em>virtually all</em> of its ATACMS and Precision Strike Missile inventory across five months of Operation Epic Fury. CNN reported the same day that THAAD interceptor stocks are down roughly <span class="num">80%</span> against pre-war levels and Patriot interceptors roughly <span class="num">half</span>.</p>
 
-    <h3>The tourism number is the one that matters, and not for the obvious reason</h3>
-    <p>A 2.6% revenue decline is small. What it conceals is the shape: <strong>visitor numbers fell while revenue was largely protected</strong>. That is a market trading volume for yield — charging more to fewer people. Marmaris prices rose 22.7% in sterling terms and it dropped to seventh in destination rankings.</p>
-    <p>Turkish analysts name three causes: the Gulf crisis, domestic cost inflation, and a lost price advantage. The third is the structural one. Türkiye's tourism model has historically been price-competitive against Greece, Spain and Egypt. Domestic inflation running above 32% while the lira is defended erodes that advantage in exactly the currencies the customers hold.</p>
-
-    <div class="pull">
-      Tourism is Türkiye's largest source of non-debt hard currency. A season that undershoots is not a sector story — it is a balance-of-payments story arriving in the same quarter as a widening trade deficit and an oil price back at $90.
-    </div>
-
-    <h3>What went right this week</h3>
-    <p>The <strong>Iraq–Turkey Crude Oil Pipeline</strong> agreement, signed this weekend, maintains 750,000 bpd for one year while long-term terms are negotiated. With Hormuz functioning intermittently, Ceyhan is one of the few crude corridors out of the region not passing through a contested strait — that is transit revenue and strategic relevance at the same time. The one-year term is itself informative: neither side will price a multi-year deal mid-war.</p>
-    <p>The EBRD and company-formation numbers are also genuinely good, and worth holding against the gloom. Roughly a third of new firms are in Istanbul, with a significant share foreign-partnered — particularly Syrian and Iranian.</p>
-
-    <h3>The political clock, running alongside</h3>
-    <ul>
-      <li>Erdoğan told the AK Party's provincial council on Saturday that the Terror-Free Türkiye process had come this far "without any road accident" and will "reach its destination." Party membership: 11.71 million.</li>
-      <li>The commission seated Friday has 48 members and <strong>still does not list Yeni Parti</strong> — the party Özgür Özel founded on 24 July with 91 deputies who left the CHP. Three days on, that discrepancy with the post-split parliament remains unexplained.</li>
-      <li>Trade Minister Ömer Bolat is pressing for Customs Union modernisation with the EU, citing $233bn in bilateral trade and naming automotive as the urgent case.</li>
-    </ul>
-
-    <h3>What to watch</h3>
-    <p>The August CPI print; whether Yeni Parti registers a parliamentary group; Q3 tourism bookings, which are set now; and whether Brent stays at $90 through the six-week window in which the central bank has no scheduled tool.</p>
-    <div class="src">Sources: <a href="https://www.alomaliye.com/2026/07/31/turizm-geliri-2026-yili-ikinci-ceyrekte-geriledi/">Alomaliye (TÜİK)</a> · <a href="https://www.turkiyegazetesi.com.tr/ekonomi/turist-azaldi-gelir-korundu-ilk-6-ayda-257-milyar-dolar-turizm-geliri-elde-edildi-1806302">Türkiye Gazetesi</a> · <a href="https://www.inegolonline.com/haber/turkiye-turizmi-2026-da-neden-rakiplerinin-gerisinde-kaldi-359530">İnegöl Online</a> · <a href="https://tradingeconomics.com/turkey/interest-rate">Trading Economics</a> · <a href="https://aa.com.tr/en/world/morning-briefing-aug-2-2026/4016071">Anadolu</a> · <a href="https://www.takvim.com.tr/guncel/2026/08/01/baskan-erdogandan-terorsuz-turkiye-mesaji-surec-menziline-varacak">Takvim</a></div>
+  <div class="box key">
+    <h3><span class="tag warn">The four facts that matter</span></h3>
+    <ol>
+      <li><strong>It is not a theatre problem.</strong> A source told Reuters that Central Command has been drawing down stocks pre-positioned elsewhere in the world to reload. The global reserve is shrinking, not being redistributed.</li>
+      <li><strong>The replacement horizon is years, not months.</strong> Even at <em>quadrupled</em> production, meaningful restocking is projected into 2027 or beyond. Nothing announced this week changes 2026.</li>
+      <li><strong>Rationing is already operational doctrine.</strong> Commanders have been choosing which incoming Iranian strikes to defend against. That is not a contingency plan; it is the current posture.</li>
+      <li><strong>It is one pool, two wars.</strong> Patriot is the only system in Ukraine's inventory that can engage ballistic missiles. The Iran campaign and Ukraine's air defence draw on the same interceptor production base.</li>
+    </ol>
   </div>
 
-  <!-- ============ 3 ============ -->
-  <h2>3 · The AI trade learned to price capex. It has not learned to price the financing.</h2>
-  <div class="card ai">
-    <p>Last edition's finding held up: after a week in which Seoul fell 17% and then rose 16.5%, the market applied a rule. Capex with visible revenue attached was rewarded; capex without it was punished.</p>
-    <div class="tablewrap">
-    <table>
-      <tr><th>Company</th><th>What it showed</th><th>Reaction</th></tr>
-      <tr><td>Microsoft</td><td>Azure +43%; disclosed ~⅔ of capex is short-lived assets</td><td class="up">+16% — largest single-day value gain by any stock, ~$450bn</td></tr>
-      <tr><td>Amazon</td><td>First $200bn quarter; AWS $42.2bn, +37%, fastest in 18 quarters</td><td class="up">rewarded</td></tr>
-      <tr><td>Meta</td><td>Raised 2026 capex floor to $130–145bn; EPS miss on one-offs</td><td class="dn">−8%</td></tr>
-      <tr><td>Apple</td><td>Beat on both lines; weak China, guided margin compression</td><td class="dn">−6%</td></tr>
-      <tr><td>SK Hynix</td><td>Record quarterly revenue at 76% operating margin</td><td class="up">rewarded</td></tr>
-    </table>
-    </div>
+  <p>Point four produced the week's most legible consequence. Overnight into <strong>5 August</strong>, Russia fired <span class="num">24 ballistic missiles</span>, four cruise missiles and 115 drones at Kyiv and its region. Ukraine intercepted <strong>zero</strong> ballistic missiles. Seventeen people were killed and 44 wounded. Last week Zelensky reported one interception out of 27 and said plainly there were no interceptors left for the Patriot system. This week the number went to zero.</p>
 
-    <h3>The thing the rule does not touch</h3>
-    <p>While the market was busy grading income statements, the financing structure underneath moved a great deal further:</p>
-    <ul>
-      <li>Nvidia is negotiating roughly <strong>$250bn in financial guarantees</strong> backing OpenAI's lease of a 10-gigawatt campus at Piketon, Ohio — built by SoftBank subsidiary SB Energy, up to 800MW by 2028, total project cost above $500bn.</li>
-      <li>A parallel negotiation would finance up to <strong>$350bn of GPU purchases</strong> by OpenAI, taking Nvidia's exposure to a single customer's single project toward <strong>$600bn</strong>.</li>
-      <li>Industry-wide AI infrastructure spend is projected above $700bn in 2026 and $3tn cumulatively through 2028.</li>
-    </ul>
-
-    <div class="pull">
-      A chip vendor guaranteeing its largest customer's ability to buy that vendor's chips is vendor financing. At $600bn it is vendor financing at a scale where the vendor's revenue quality and the customer's solvency stop being independent variables.
-    </div>
-
-    <p>This is not a prediction that it fails. Vendor financing works whenever demand compounds faster than the guarantee amortises, and AI demand has done exactly that for three years. The observation is narrower: the discrimination the market applied this week operated on <em>reported revenue</em>, and these structures do not appear in reported revenue. Microsoft's disclosure that two-thirds of its capex is short-lived assets — CPUs and GPUs — is the kind of detail that matters here, because depreciation schedules are where the optimism gets stored.</p>
-
-    <h3>The other split: open weights and security</h3>
-    <ul>
-      <li>Jensen Huang's open letter arguing that open-weight models are vital to competition and US technological leadership now has ~50 signatories, including OpenAI, Microsoft, Meta and Google. <strong>Amazon and Anthropic did not sign.</strong></li>
-      <li>Nvidia's separate Open Secure AI Alliance — 30-plus companies building open cybersecurity tooling for defenders, formed after an OpenAI agent breach — is missing OpenAI, Google <em>and</em> Anthropic.</li>
-      <li>Chinese open-weight models continue gaining traction with US developers, which is the competitive fact the open-weights letter is really about.</li>
-    </ul>
-    <p>Two coalitions, two different absentee lists, and no company on both sides of the same line. Worth watching as a map of who expects to compete on distribution versus on capability.</p>
-
-    <h3>What to watch</h3>
-    <p>Nvidia reports <strong>26 August</strong> — not this week. Before then: HBM pricing, whether Meta's capex floor moves again, and whether any of the OpenAI financing structures get disclosed in a filing rather than reported by wires.</p>
-    <div class="src">Sources: <a href="https://www.cnbc.com/2026/07/27/nvidia-and-openai-in-talks-for-up-to-250-billion-dollar-ai-backstop.html">CNBC</a> · <a href="https://www.aljazeera.com/economy/2026/7/27/nvidia-plans-250bn-push-to-bolster-openais-infrastructure-ambitions">Al Jazeera</a> · <a href="https://www.axios.com/2026/07/27/nvidia-anthropic-openai-open-weight-debate">Axios</a> · <a href="https://www.forbes.com/sites/sandycarter/2026/07/25/huangs-open-weights-letter-doubled-to-50-without-amazon-and-anthropic/">Forbes</a> · <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-google-and-anthropic-absent-from-nvidia-led-open-secure-ai-alliance-30-companies-join-security-alliance-after-openai-agent-breach">Tom's Hardware</a></div>
+  <div class="wrap">
+  <table>
+    <tr><th>Stock</th><th>Status</th><th>Consequence already visible</th></tr>
+    <tr><td>ATACMS / PrSM (Army long-range strike)</td><td>"Virtually all" expended</td><td>Sixth consecutive night without a US strike inside Iran</td></tr>
+    <tr><td>THAAD interceptors</td><td>~80% depleted vs pre-war</td><td>Selective defence of Gulf installations; Kuwait engaging drones with its own assets</td></tr>
+    <tr><td>Patriot interceptors</td><td>~50% depleted</td><td>Kyiv: 27 ballistics → 1 stopped (1 Aug); 24 ballistics → 0 stopped (5 Aug)</td></tr>
+    <tr><td>Destroyer hulls at Rota (from last week)</td><td>5 total, 2 at sea</td><td>EUCOM commander's written warning that he must choose homeland or Israel</td></tr>
+  </table>
   </div>
 
-  <!-- ============ 4 ============ -->
-  <h2>4 · The Ebola outbreak doubled during the week nobody covered it</h2>
-  <div class="card neuro">
-    <p>This thread has been on the page for three editions with the same complaint: severity far exceeding coverage. This week the numbers moved enough that the complaint needs restating with figures rather than adjectives.</p>
+  <p><strong>Why this reframes the diplomacy.</strong> Every conciliatory move of the past ten days — the cancelled strike package of 1 August, the sixth quiet night, the Omani corridor, the willingness to discuss a reopening without tolls — has been reported as a negotiating posture. The simpler reading is that the negotiating posture is downstream of the ledger. That does not make the diplomacy fake; it makes it <em>necessary</em>, which is a different and more durable thing. It also means the honest leading indicator for whether the war resumes is not rhetoric but production and transfer announcements.</p>
 
-    <div class="tablewrap">
-    <table>
-      <tr><th>As of</th><th>Confirmed cases (DRC)</th><th>Deaths</th><th>Implied CFR</th></tr>
-      <tr><td>1 July 2026</td><td>1,460</td><td>452</td><td>~31%</td></tr>
-      <tr><td>23 July 2026</td><td>—</td><td>1,000 passed</td><td>—</td></tr>
-      <tr><td>26 July 2026</td><td>~3,200</td><td>1,405</td><td>~44%</td></tr>
-      <tr><td>30 July 2026</td><td>3,605</td><td>1,587</td><td>~44%</td></tr>
-    </table>
-    </div>
+  <p><strong>The counter-argument, stated fairly.</strong> Trump's Thursday response — "vast quantities of ammunition," record factory construction — is not obviously false. Munitions inventory is compartmented, and "virtually all" of one Army programme is not "out of weapons." Air-delivered standoff munitions, Tomahawk, and Navy stocks are separate lines. What the reporting establishes is narrower and still decisive: the specific classes that do long-range precision strike and ballistic-missile defence are at or near the floor, and those are exactly the two things both wars are consuming.</p>
 
-    <h3>The facts, in the order that matters</h3>
+  <div class="srcs">Sources: <a href="https://www.cbsnews.com/news/u-s-stockpile-long-range-missiles-nearly-depleted-iran-war/">CBS</a> · <a href="https://www.cnn.com/2026/08/04/politics/us-iran-key-missile-interceptors-low">CNN</a> · <a href="https://kyivindependent.com/us-army-stocks-of-atacms-precision-strike-missiles-at-rock-bottom-after-virtually-all-used-in-iran-war-reuters-reports/">Kyiv Independent</a> · <a href="https://foreignpolicy.com/2026/08/05/ukraine-patriot-missile-interceptor-shortage-russia-war-zelensky-us-trump-nato/">Foreign Policy</a> · <a href="https://www.aljazeera.com/news/2026/8/5/russian-attacks-kill-17-exploiting-ukraines-lack-of-missile-interceptors">Al Jazeera</a></div>
+
+  <h2>2 · What a Hormuz "reopening" would actually consist of — and how to check it</h2>
+
+  <p>The headline this week is that Iran and Oman agreed on <em>geographic coordinates for shipping routes</em> through the Strait, with a joint statement in final drafting and a reported <strong>60-day interim arrangement without tolls</strong> that Washington hoped to announce Wednesday. That is a much smaller and much more specific object than "the Strait reopens." It is worth being precise about the parts.</p>
+
+  <div class="box key">
+    <h3><span class="tag hot">Anatomy of the arrangement</span></h3>
     <ul>
-      <li>Reported in Ituri Province, DRC, on <strong>14 May</strong> — the country's 17th Ebola outbreak, beginning five months after the previous one ended.</li>
-      <li>Declared a <strong>PHEIC on 16 May</strong>. That was eleven weeks ago.</li>
-      <li>It is <em>Bundibugyo</em> ebolavirus. Both licensed vaccines — Ervebo, and the Mvabea/Zabdeno regimen — target <em>Zaire</em>. WHO does not consider them effective against this species. Licensed monoclonals were certified against Zaire too.</li>
-      <li>That leaves isolation, contact tracing and supportive care. In practice: nineteenth-century tools against a virus with a 44% case fatality ratio.</li>
-      <li><strong>It is now the fastest-growing Ebola outbreak on record.</strong></li>
-      <li>Uganda: 20 confirmed cases, two deaths, plus one probable case who died.</li>
-      <li>Exported cases: France confirmed one on <strong>24 June</strong> in a doctor returning from the DRC; a US citizen was evacuated to Germany in May. The CDC has renewed travel restrictions through mid-August.</li>
+      <li><strong>Coordinates, not sovereignty.</strong> Iran's public position throughout has been that it is administering traffic, not conceding a right of passage it disputes. Agreeing a corridor lets Tehran keep the legal frame ("we are managing shipping") while the practical outcome is transit.</li>
+      <li><strong>No tolls.</strong> The toll question was the substantive US red line, because a toll converts a wartime blockade into a permanent rent. Its absence is the real American win, and it is why Washington can sell 60 days.</li>
+      <li><strong>Sixty days is the tell.</strong> An interim window short enough that neither side has to describe it as a settlement, and long enough to cover the autumn contracting season.</li>
+      <li><strong>Oman is the counterparty, not the US.</strong> Iran continues to deny direct talks with Washington. Every element is routed through Muscat, with Qatar mediating separately and Pakistan engaged alongside.</li>
     </ul>
-
-    <h3>What changed this week — the first genuinely hopeful item</h3>
-    <ul>
-      <li><strong>12 July:</strong> clinical trials began in the DRC for <strong>remdesivir</strong> and <strong>MBP134</strong>, a monoclonal cocktail designed for broader ebolavirus coverage.</li>
-      <li>The University of Oxford has been cleared to begin <strong>Phase 1</strong> trials of a candidate vaccine.</li>
-      <li><strong>22 July:</strong> the <em>New England Journal of Medicine</em> published a study of cross-reactive Bundibugyo antibody responses in people who received the licensed Zaire-targeting vaccines — the question of whether existing stockpiles offer any partial protection.</li>
-    </ul>
-
-    <div class="pull">
-      A Phase 1 trial beginning eleven weeks into an outbreak that has already killed 1,587 people is not a rescue. It is a bet on the outbreak after this one. The honest framing is that the countermeasure gap for non-Zaire species was known, was not closed, and is now being closed under fire.
-    </div>
-
-    <h3>Why it belongs on a markets-and-politics page</h3>
-    <p>Two exported cases have already reached high-income countries. Neither seeded onward transmission. The relevant question is not whether Bundibugyo will "reach the West" — it has, twice — but what the response looks like when the tools in the stockpile are the wrong ones. The CDC's rolling travel restrictions are a policy instrument being used because the pharmaceutical instrument does not exist.</p>
-
-    <div class="caution">
-      <strong>Figures move.</strong> WHO, CDC, ECDC and national health ministries publish on different cadences and with different confirmed/probable definitions; the numbers above are confirmed cases and reported deaths and will be revised. Case fatality ratios computed mid-outbreak are biased by reporting lag in both directions.
-    </div>
-    <div class="src">Sources: <a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON614">WHO Disease Outbreak News</a> · <a href="https://en.wikipedia.org/wiki/2026_Central_Africa_Ebola_epidemic">Wikipedia</a> · <a href="https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda">ECDC</a> · <a href="https://www.doctorswithoutborders.org/latest/ebola-disease-outbreak-2026-how-msf-responding">MSF</a> · <a href="https://www.cdc.gov/ebola/situation-summary/index.html">CDC</a> · <a href="https://reliefweb.int/disaster/ep-2026-000071-cod">ReliefWeb</a></div>
   </div>
 
-  <h2>Dropped, promoted, and still waiting</h2>
-  <div class="card">
+  <div class="box risk">
+    <h3><span class="tag warn">Three things that could break it inside a fortnight</span></h3>
+    <ol>
+      <li><strong>Tehran's domestic ratification problem.</strong> Hardline parliamentarians are compiling impeachment documentation against Foreign Minister Araghchi and have signalled the same may be attempted against President Pezeshkian over the pro-negotiation line. An arrangement that must be described domestically as a routine technical agreement with a neighbour cannot survive an American victory lap. Watch the exact wording of the joint statement.</li>
+      <li><strong>Attacks that nobody claims.</strong> On 4 August the bulk carrier <em>Minoan Pioneer</em> was struck and abandoned; on 6 August a tanker took two explosions nine nautical miles southeast of Khasab. Neither fits a Tehran that wants the corridor to work. Unattributed maritime attacks during a de-escalation are either a control problem inside the IRGC or a third party with an interest in collapse — both are reasons the arrangement is fragile.</li>
+      <li><strong>The first pause collapsed on a ground event, not a communiqué.</strong> The nine-day pause in late July ended when the IRGC hit US forces in Jordan. Nothing about the current architecture prevents a repeat.</li>
+    </ol>
+  </div>
+
+  <div class="box watch">
+    <h3><span class="tag good">The indicator to actually track</span></h3>
+    <p>Ignore statements. Track <strong>transit counts</strong>. The series so far: under 10 vessels per week at the height of the closure against roughly <span class="num">100</span> in peacetime; 14 on Wednesday 29 July; and the one hard cumulative number published this week — <strong>Iraq exported more than 30 million barrels through the Strait between 4 July and 4 August</strong>. That figure is the most useful datum of the week, because it is a volume rather than an intention: partial flow was already restored under the pauses, before any agreement. If the corridor is real, weekly transits should move toward the double digits and keep climbing; if the deal is theatre, the Iraq export run-rate stalls.</p>
+    <p>Secondary confirmation: Brent. It fell a third consecutive session to the <span class="num">$78–79</span> range on Wednesday, from above $100 in mid-July and $85.48 on 27 July. The market has already priced a substantial reopening. That cuts both ways — the upside from an announcement is small, and the downside from a collapse is large.</p>
+  </div>
+
+  <div class="srcs">Sources: <a href="https://www.bloomberg.com/news/articles/2026-08-05/iran-says-agreement-on-hormuz-shipping-route-reached-with-oman">Bloomberg</a> · <a href="https://www.aljazeera.com/news/2026/8/5/iran-oman-us-close-to-hormuz-deal-what-do-they-all-want">Al Jazeera</a> · <a href="https://www.cnbc.com/2026/08/05/us-iran-war-trump-hormuz-bessent-iran-deal-close.html">CNBC</a> · <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis">Wikipedia</a> · <a href="https://hdfcsky.com/news/brent-crude-oil-prices-today-august-5-2026-brent-below-79-wti-drops-1-5-on-hormuz-shipping-hopes">HDFC Sky</a></div>
+
+  <h2>3 · The AI capex rule met a rocket company, and held</h2>
+
+  <p>Two weeks ago this page described a market that had stopped punishing AI capex indiscriminately and started asking one question of each name: <em>does revenue proof travel with the spending?</em> Microsoft and Amazon spent enormously, showed accelerating cloud revenue and were rewarded; Meta spent enormously without new revenue proof and was punished. On <strong>5 August</strong> the rule was applied to the hardest possible test case.</p>
+
+  <div class="wrap">
+  <table>
+    <tr><th>Name</th><th>What it reported</th><th>Market response</th><th>Consistent with the rule?</th></tr>
+    <tr><td><strong>SpaceX</strong> (first print since listing)</td><td>Revenue nearly doubled; operating losses narrowed on Starlink and AI. Q2 capex <span class="num">$18.4bn</span> — a sixfold increase, largely AI</td><td><strong>−14%</strong></td><td>Yes — with an asterisk: ~$101bn of shares became eligible to trade the same week</td></tr>
+    <tr><td><strong>AMD</strong></td><td>Q2 beat on revenue and EPS; Q3 guidance only in line</td><td><strong>−7%</strong></td><td>Yes — in-line guidance is the absence of forward proof</td></tr>
+    <tr><td><strong>Disney</strong></td><td>EPS beat by $0.20, revenue in line, FY26 guidance reaffirmed</td><td><strong>+3%</strong></td><td>Yes — no capex story to price</td></tr>
+    <tr><td><strong>Nvidia</strong></td><td>No print; named as SpaceX's exclusive chip supplier</td><td>Up, while the chip index fell 1.4%</td><td>Yes — it captured someone else's capex</td></tr>
+  </table>
+  </div>
+
+  <div class="box key">
+    <h3><span class="tag">The interesting part</span>Revenue doubled and the stock fell 14%</h3>
+    <p>This is the cleanest illustration yet of what the market is actually pricing. SpaceX did not miss. Revenue nearly doubled and losses narrowed — on almost any historic standard a spectacular debut quarter. What broke it was management flagging that the spending cycle behind the ambition is <em>far from over</em>, in a quarter where capex had already gone up sixfold to $18.4bn. The market is no longer rewarding growth financed by capex acceleration unless it can see the terminal shape of the spending. "Revenue doubled" is not an answer to "when does this stop?"</p>
+    <p>The honest caveat: the same week roughly <span class="num">$101bn</span> of previously locked shares became free to trade. Some meaningful share of that 14% is float mechanics, not a verdict. Anyone reading the print as a pure referendum on AI capex is over-reading it.</p>
+  </div>
+
+  <div class="box risk">
+    <h3><span class="tag warn">The unpriced leg, again</span>Financing, not capex</h3>
+    <p>This page flagged two weeks ago that the market had learned to price capex but not the financing behind it. Nothing this week improved that. In the background: Nvidia reportedly weighing a <span class="num">$250bn</span> financing guarantee tied to OpenAI's planned Ohio data centre, alongside its investment in Safe Superintelligence; and an Anthropic–AMD capacity agreement for up to 2 GW of MI450/Helios-generation compute with up to $5bn in AMD equity attached. These are vendor-adjacent structures in which the supplier underwrites the customer's ability to buy. They do not appear in a capex line and the current market rule does not test for them. It punished SpaceX for spending it disclosed. It has no instrument yet for spending that is guaranteed rather than booked.</p>
+  </div>
+
+  <div class="box watch">
+    <h3><span class="tag good">Watch next</span></h3>
     <ul>
-      <li><span class="tag warn">promoted</span>The interceptor arithmetic takes the lead slot. It is the thread most likely to explain other stories over the next month.</li>
-      <li><span class="tag">demoted</span>"The pause that wasn't a ceasefire" is folded into thread 1 — the diplomatic framing turned out to be downstream of the materiel one.</li>
-      <li><span class="tag good">watching</span>The <strong>Ceuta 22-nation letter</strong> is a candidate for next edition. If Tuesday's interior ministers' meeting produces a mechanism rather than a communiqué, it becomes a thread; France, Portugal and Luxembourg's absence from the letter is the variable.</li>
-      <li><span class="tag purple">watching</span><strong>Iceland's 29 August referendum</strong> — level polling, first enlargement signal of the cycle, and a page of its own if it passes.</li>
-      <li><span class="tag good">watching</span><strong>China's end-Q3 easing window.</strong> A 49.2 PMI and a Politburo that confirmed no package. If the window slips, the 4.5% floor is live.</li>
+      <li><strong>Nvidia's print</strong> — the only name that can falsify the rule, because it is the beneficiary of everyone else's capex rather than a payer.</li>
+      <li><strong>Whether SpaceX recovers as the lockup float is absorbed.</strong> If it does, the 14% was mechanics; if it doesn't, the rule bit a doubling-revenue company, and that is a genuine regime marker.</li>
+      <li><strong>Any disclosure regime for vendor financing guarantees.</strong> That is the gap.</li>
     </ul>
+  </div>
+
+  <div class="srcs">Sources: <a href="https://www.cnbc.com/2026/08/05/stocks-making-the-biggest-moves-premarket-spcx-amd-lly-dis-more.html">CNBC</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-5-2026">TheStreet</a> · <a href="https://finance.yahoo.com/video/earnings-watch-week-spacexs-first-180000072.html">Yahoo Finance</a> · <a href="https://techstartups.com/2026/07/27/top-tech-news-today-july-27-2026-anthropic-monday-com-moonshot-ai-nvidia-openai-more/">Tech Startups</a></div>
+
+  <h2>4 · Türkiye: the softest inflation print since March, and three record lows in the same week</h2>
+
+  <p>Monday's TÜİK release was, on its face, the best Turkish macro news in months. Annual CPI came in at <span class="num">31.75%</span>, under the 31.8% consensus and the lowest since March. Monthly was 1.78% — a three-month high, but still below the 1.83% forecast. Then, by Thursday, the lira had set all-time lows against the dollar (<span class="num">47.59</span>), the euro (<span class="num">55.13</span>) and sterling (<span class="num">64.26</span>) in the same session.</p>
+
+  <div class="wrap">
+  <table>
+    <tr><th>Component (y/y)</th><th>July 2026</th><th>Previous</th><th>Direction</th></tr>
+    <tr><td>Headline CPI</td><td class="num">31.75%</td><td>—</td><td>Lowest since March</td></tr>
+    <tr><td>Food &amp; non-alcoholic beverages</td><td class="num">37.53%</td><td>35.45%</td><td><strong>Accelerating</strong></td></tr>
+    <tr><td>Housing, water, electricity, gas</td><td class="num">40.32%</td><td>45.14%</td><td>Decelerating hard</td></tr>
+    <tr><td>Transport</td><td class="num">30.83%</td><td>31.15%</td><td>Broadly flat</td></tr>
+    <tr><td>Alcohol &amp; tobacco</td><td class="num">29.38%</td><td>34.15%</td><td>Decelerating</td></tr>
+  </table>
+  </div>
+
+  <div class="box key">
+    <h3><span class="tag hot">Read the composition, not the headline</span></h3>
+    <p>The disinflation is concentrated in <em>administered and one-off-sensitive</em> categories — utilities down nearly five points, tobacco down nearly five — while the category households buy weekly is going the other way. Food at 37.53% and rising is roughly six points above headline. A print that improves because utility tariff base effects rolled off, while food accelerates, is a statistically real disinflation that will not be experienced as one. That gap is also why the political economy of the 10 September rate decision is harder than the headline number suggests.</p>
+  </div>
+
+  <div class="box risk">
+    <h3><span class="tag warn">The mechanism behind the record lows</span></h3>
+    <p>The policy rate is frozen at <strong>37%</strong> with no scheduled meeting until <strong>10 September</strong> — a six-week window in which the central bank cannot act on rates and can only intervene in the currency, which reporting says it did around 47.55. Meanwhile the global dollar index firmed. A frozen nominal rate plus decelerating headline inflation is, mechanically, a rising real rate, which normally supports a currency. It didn't. Three readings, in rough order of how much of the move each explains:</p>
+    <ol>
+      <li><strong>The external account.</strong> Last week's data: a <span class="num">$10.4bn</span> monthly trade deficit, up 26.3%, twelve-month deficit at $95.8bn, and Q2 tourism revenue <em>down</em> 2.6% to $15.865bn against a $68bn annual target. The war took a bite out of the one reliably dollar-generating sector.</li>
+      <li><strong>The calendar.</strong> Markets pricing September as the first opportunity to cut — i.e. the first opportunity for carry to deteriorate.</li>
+      <li><strong>Energy.</strong> Brent near $78–79 helps the import bill, but the Iraq pipeline agreement was signed for <em>one year</em> at 750,000 bpd, not five. A hedge, not a resolution.</li>
+    </ol>
+  </div>
+
+  <div class="box watch">
+    <h3><span class="tag good">Signal vs. noise this week</span></h3>
+    <ul>
+      <li><strong>Signal:</strong> food at 37.53% and accelerating; three simultaneous currency records; gram gold above ₺6,500 at a seven-week high — the domestic hedging instrument moving is a household-behaviour datapoint, not just a commodity print.</li>
+      <li><strong>Noise:</strong> BIST 100 closing +0.11% at 13,703. An index level in a depreciating currency is not information about the real economy.</li>
+      <li><strong>Genuinely good:</strong> Türk Telekom Q2 net ₺6.0bn against ₺4.9bn expected; Koç Holding ₺19.7bn against ₺13.5bn. Large exporters and FX-earners are beating comfortably. The divergence between corporate earnings and household inflation is the structural story of this cycle.</li>
+      <li><strong>The dated event:</strong> 10 September. Nothing else on the Turkish calendar competes with it.</li>
+    </ul>
+  </div>
+
+  <div class="srcs">Sources: <a href="https://tr.tradingeconomics.com/turkey/inflation-cpi/news/474928">Trading Economics</a> · <a href="https://www.ntv.com.tr/ntvpara/galeri-enflasyon-verileri-ne-oldu-yuzde-kac-2026-tuik-temmuz-ayi-tufe-karari-aciklandi-1735727">NTV</a> · <a href="https://www.alanyapostasi.com.tr/6-agustos-2026-doviz-kurlari-dolar-euro-ve-sterlin-zirvede">Alanya Postası</a> · <a href="https://www.bloomberght.com/ekonomi-ve-siyaset-gundemi-6-agustos-2026-3784833">BloombergHT</a> · <a href="https://www.haberturk.com/ekonomi/yatirimcilar-dikkat-altin-yedi-haftanin-zirvesinde-gram-6500-tl-sinirini-asti-iste-6-agustos-2026-gucel-gram-altin-ceyrek-altin-cumhuriyet-altin-fiyatlari-3903682">Habertürk</a></div>
+
+  <h2>5 · The framework law: what is actually being offered</h2>
+
+  <p>Tuesday's submission of the <em>Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi</em> to the TBMM presidency with roughly <span class="num">360 signatures</span> is the first time the "Terror-Free Türkiye" process has produced a legal text rather than a communiqué. The signature list — AK Parti, MHP, DEM Parti, CHP and HÜDA PAR — is broader than any comparable initiative in two decades.</p>
+
+  <div class="box key">
+    <h3><span class="tag hot">The core mechanism, in plain terms</span></h3>
+    <p>The twelve articles do not offer amnesty. They offer <strong>suspension of prosecution</strong> on a sliding scale tied to sentence exposure: five years' suspension for offences carrying under fifteen years, ten years for offences carrying more. That is a structurally different instrument from a pardon — it is revocable, it is time-limited, and it keeps the state's legal claim alive as leverage across an entire decade. Alongside it: verification of actual dissolution and disarmament with all materiel recorded, an MGK decision on the PKK's dissolution to be announced, and a standing parliamentary monitoring commission.</p>
+  </div>
+
+  <div class="box watch">
+    <h3><span class="tag good">Three specific things to watch, in order</span></h3>
+    <ol>
+      <li><strong>Does the MGK decision actually issue?</strong> It is referenced in the text as a step to be announced. Until it does, the disarmament leg is asserted rather than certified.</li>
+      <li><strong>Where is Yeni Parti?</strong> Özgür Özel and 91 deputies left the CHP on 24 July to found it. Last week's published commission seat allocation did not list the party at all, and this week's signature list is reported through the five founding-bloc parties. A process this broad that routes around a 91-deputy bloc carries a legitimacy problem in it — and the discrepancy between the reported post-split parliament and the official seat table is still unresolved.</li>
+      <li><strong>The pro-government press split.</strong> Hürriyet, Sabah and Türkiye ran Thursday's front pages as "historic"; Yeni Şafak gave it markedly less prominence. In this system that divergence typically precedes substantive objections becoming sayable.</li>
+    </ol>
+  </div>
+
+  <div class="srcs">Sources: <a href="https://yetkinreport.com/2026/08/05/iste-meclise-sunulan-terorsuz-turkiye-cerceve-yasasi-metni-ve-gerekcesi/">Yetkin Report (text and rationale)</a> · <a href="https://www.haber7.com/guncel/haber/3648762-terorsuz-turkiye-icin-hazirlanan-cerceve-yasa-teklifinin-maddeleri-belli-oldu">Haber7</a> · <a href="https://www.odatv.com/guncel/6-agustos-2026-gazete-mansetleri-gazetelerin-ortak-gundemi-cerceve-yasa-kim-nasil-gordu-120157701">Odatv</a> · <a href="https://imer.av.tr/rehber/terorsuz-turkiye-cerceve-yasasi-tum-maddeler">İmer (article-by-article)</a></div>
+
+  <h2>Promoted, demoted, and the one that keeps not being covered</h2>
+
+  <div class="box">
+    <ul>
+      <li><span class="tag purple">Still the most under-covered story</span><strong>Bundibugyo in the DRC.</strong> <span class="num">3,874</span> cases and <span class="num">1,751</span> deaths as of 4 August, 717 patients in isolation, case fatality near 45% — now the <strong>largest Ebola outbreak in the DRC's history</strong> and the second largest recorded anywhere. Four weeks ago: 3,605 and 1,587. Ituri alone accounts for 3,375 cases across 28 of 36 health zones. The species is one the licensed vaccines and monoclonals were not built for; remdesivir and MBP134 trials began 12 July and Oxford has Phase 1 clearance. This thread has been on this page for a month, has grown every week, and has still not led a single Western front page.</li>
+      <li><span class="tag purple">Promoted</span><strong>Venezuela.</strong> <span class="num">6,125</span> confirmed dead from the 24 June double earthquake, 61,000 hospital-treated, 80% of buildings collapsed in La Guaira. One of the deadliest earthquakes of the decade, announced Monday to almost no coverage. The asymmetry with Kumamoto's 38 deaths is a story about news attention, not about either disaster.</li>
+      <li><span class="tag">Held</span><strong>Iceland, 29 August.</strong> Early voting is open; the Maskína poll (22–29 July, n=1,865) shows a slim majority for resuming accession talks. Still the first enlargement signal of the cycle, still inside the error bar, and a two-step process in which a Yes only reopens negotiations.</li>
+      <li><span class="tag">Held</span><strong>Japan's fiscal–monetary collision.</strong> Food consumption tax 8%→1% for two years from April 2027, a prime minister asking the BOJ to buy bonds, a 10-year yield at 2.50% (highest since July 1997) and debt near 237% of GDP — against a genuine tightening case built on six straight months of real-wage growth and a 5.3% shunto. Promoted to a full section next edition if the BOJ responds.</li>
+      <li><span class="tag">Demoted</span><strong>Ceuta.</strong> The 22-nation bloc convened Tuesday; the Parliament's LIBE committee met Thursday. Both produced unity language and no legislation. The interesting procedural question — whether a self-convening standing majority has formed inside the EU — is now a slow story rather than a live one. Back if the three non-signatories are ever explained.</li>
+      <li><span class="tag">Dropped</span><strong>FIFA governance.</strong> UEFA's loss-of-confidence declaration still has no mechanism behind it: 43 of 211 associations must request an extraordinary Congress, and UEFA's 55 members have not said they will. No movement in six days.</li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <strong>Standing caveat.</strong> Everything here is analysis built on public reporting summarised at the timestamp on this file. It is not independently verified, several figures were provisional when written, and the interpretive claims — particularly in sections 1 and 3 — are arguments, not facts. Where reporting conflicts, the conflict is stated rather than resolved. Follow the source links.
   </div>
 
   <footer>
-    Generated Sunday, 2026-08-02 by the <code>news-check</code> scheduled task. No <code>request.md</code> was present locally this run, so these threads were selected by the task rather than requested; no <code>learngoals.md</code> was present, so no learning-goals page was produced. Everything here summarises public reporting by the linked outlets and is not independently verified; analytical framing is the task's own and is labelled as such where it goes beyond what sources claim. Not financial, medical or legal advice. See the <a href="./daily-briefing.html">daily briefing</a> for the day's full sweep and the <a href="./weekly-report.html">weekly report</a> for the running log.
+    Generated Thursday, 2026-08-06 by the news-check scheduled task. No <code>request.md</code> was present; topics carried forward from the 2 August edition and re-prioritised on the 3–6 August record. · <a href="./daily-briefing.html">Daily briefing</a> · <a href="./weekly-report.html">Weekly report</a> · <a href="./index.html">Home</a>
   </footer>
+
 </div>
 <script src="./tts.js" defer></script>
 </body>
